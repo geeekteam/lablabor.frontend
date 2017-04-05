@@ -1,0 +1,144 @@
+.section__header
+	padding: 10px 0 0
+
+.header
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.main-menu
+	font-family: "Gotham Pro Medium", sans-serif
+	text-transform: uppercase
+	width: 445px
+	display: flex
+	list-style-type: none
+	line-height: 1
+	flex-shrink: 0
+	justify-content: space-between
+
+.main-menu__item
+	position: relative
+	letter-spacing: 0px
+	&:after
+		position: absolute
+		content: "/"
+		top: 0
+		right: -25px
+	&:last-child
+		margin-right: 0
+		&:after
+			display: none
+
+.logo
+	flex-basis: 43px
+	flex-shrink: 1
+	
+.search
+	display: flex
+	flex-shrink: 1
+	height: 35px
+	width: 100%
+
+.search__query-input
+	max-width: 300px
+	width: 100%
+	display: flex
+	flex-shrink: 1
+	height: 35px
+	input
+		width: 100%
+
+		border: 1px solid #1c9d22
+		border-bottom-left-radius: 15px
+		border-top-left-radius: 15px
+		padding: 0 10px
+
+.search__query-select
+	position: relative
+	flex-shrink: 0
+	select
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		position: relative
+		width: 105px
+		border: 1px solid #1c9d22
+		border-left: none
+		height: 35px
+		padding: 0 15px
+
+	&:after
+		z-index: 1
+		position: absolute
+		content: ''
+		top: 8px
+		right: 6px
+
+	&:before
+		z-index: 1
+		position: absolute
+		content: ''
+		top: 20px
+		right: 6px
+
+.login
+	position: relative
+
+.search__button
+	height: 35px
+	display: flex
+	flex-shrink: 0
+	width: 40px
+	background: #1c9d22
+	border-bottom-right-radius: 15px
+	border-top-right-radius: 15px
+
+.search__loupe
+	margin: auto
+
+.search__advanced-search
+	padding: 6px 0
+	font-size: 14px
+	letter-spacing: 0.5px
+
+.login-form
+	position: absolute
+	display: flex
+	flex-direction: column
+
+.login__form
+	background: #ffffff
+	padding: 30px 7px
+	width: 200px
+	right: -10px
+	top: 75px
+	text-align: center
+	border-radius: 5px
+	box-shadow: 0 0px 15px #8e8e8e
+	&:after
+		content: ''
+		position: absolute
+		border: 10px solid transparent
+		border-bottom: 10px solid #ffffff
+		top: -20px
+		left: 120px
+
+.login-form__input
+	position: relative
+	border-radius: 15px
+	border: 1px solid #1c9d22
+	padding: 1px 10px
+	width: 160px
+
+.login-form__button
+	font-size: 14px
+	border: 1px solid #1c9d22
+	border-radius: 15px
+	padding: 2px 25px
+	text-align: center
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	text-transform: uppercase
+	font-family: "Gotham Pro", sans-serif
+	color: #ffffff

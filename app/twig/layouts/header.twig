@@ -1,22 +1,36 @@
-<header class="section">
+<header class="section section__header">
     <div class="container">
-        <div class="logo">
-            <img class="logo__image" src="" alt="">
-        </div>
-        <div class="main-menu">
-            <ul class="main-menu">
-                <li class="main-menu__item"></li>
-                <li class="main-menu__item"></li>
-                <li class="main-menu__item"></li>
+        <div class="header">
+            <div class="logo mr30">
+                <img class="logo__image" src="images/logo.png" alt="">
+            </div>
+            <ul class="main-menu mr30">
+                <li class="main-menu__item"><a href="#" class="">Прайс-лист</a></li>
+                <li class="main-menu__item"><a href="#" class="">Помощь</a></li>
+                <li class="main-menu__item"><a href="#" class="">Договор-оферта</a></li>
             </ul>
-        </div>
-        <div class="search">
-            <input type="text" class="search__text-query">
-            <input type="text" class="search__select-query">
-            <i class="search__loupe"></i>
-        </div>
-        <div class="login">
-            <span class="login__button button"></span>
+            <div class="search mr30">
+                <div class="search__query-input">
+                    <input class="gray-text italic" type="text" placeholder="Введите запрос">
+                </div>
+                <div class="search__query-select">
+                    <select class="gray-text italic">
+                        <option>Вакансии</option>
+                    </select>
+                </div>
+                <div class="search__button mr10">
+                    <i class="search__loupe"></i>
+                </div>
+                <p class="search__advanced-search gray-text italic"><a href="#">Расширенный поиск</a></p>
+            </div>
+            <div class="login">
+                <p><span class="button button_green">Войти</span></p>
+                <form class="login__form login-form">
+                    <div class="mb10"><input class="login-form__input gray-text italic" type="text"></div>
+                    <div class="mb15"><input class="login-form__input gray-text italic" type="text"></div>
+                    <div><button class="login-form__button green-text" type="submit">Вход</button></div>
+                </form>
+            </div>
         </div>
     </div>
 </header>

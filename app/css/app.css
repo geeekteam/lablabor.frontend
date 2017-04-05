@@ -1,3 +1,230 @@
+@import url(../css/fonts.css);
+.gray-text {
+  color: #6e6e6e !important;
+}
+
+.green-text {
+  color: #1c9d22 !important;
+}
+
+.italic {
+  font-family: "PT Serif Italic", sans-serif;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.mr30 {
+  margin-right: 30px;
+}
+
+.mr45 {
+  margin-right: 45px;
+}
+
+.section__header {
+  padding: 10px 0 0;
+}
+
+.header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.main-menu {
+  font-family: "Gotham Pro Medium", sans-serif;
+  text-transform: uppercase;
+  width: 445px;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  line-height: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.main-menu__item {
+  position: relative;
+  letter-spacing: 0px;
+}
+.main-menu__item:after {
+  position: absolute;
+  content: "/";
+  top: 0;
+  right: -25px;
+}
+.main-menu__item:last-child {
+  margin-right: 0;
+}
+.main-menu__item:last-child:after {
+  display: none;
+}
+
+.logo {
+  -ms-flex-preferred-size: 43px;
+  flex-basis: 43px;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.search {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  height: 35px;
+  width: 100%;
+}
+
+.search__query-input {
+  max-width: 300px;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  height: 35px;
+}
+.search__query-input input {
+  width: 100%;
+  border: 1px solid #1c9d22;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 0 10px;
+}
+
+.search__query-select {
+  position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.search__query-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 105px;
+  border: 1px solid #1c9d22;
+  border-left: none;
+  height: 35px;
+  padding: 0 15px;
+}
+.search__query-select:after {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  top: 8px;
+  right: 6px;
+}
+.search__query-select:before {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 6px;
+}
+
+.login {
+  position: relative;
+}
+
+.search__button {
+  height: 35px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 40px;
+  background: #1c9d22;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.search__loupe {
+  margin: auto;
+}
+
+.search__advanced-search {
+  padding: 6px 0;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.login-form {
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.login__form {
+  background: #ffffff;
+  padding: 30px 7px;
+  width: 200px;
+  right: -10px;
+  top: 75px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0px 15px #8e8e8e;
+}
+.login__form:after {
+  content: "";
+  position: absolute;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #ffffff;
+  top: -20px;
+  left: 120px;
+}
+
+.login-form__input {
+  position: relative;
+  border-radius: 15px;
+  border: 1px solid #1c9d22;
+  padding: 1px 10px;
+  width: 160px;
+}
+
+.login-form__button {
+  font-size: 14px;
+  border: 1px solid #1c9d22;
+  border-radius: 15px;
+  padding: 2px 25px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-family: "Gotham Pro", sans-serif;
+  color: #ffffff;
+}
+
+.section_main {
+  width: 100%;
+  height: 1000px;
+  background: url("../images/main-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
 .mb10 {
   margin-bottom: 10px;
 }
@@ -7,36 +234,50 @@
   vertical-align: middle;
 }
 
-.fri-qube-logo {
-  background-image: url('../images/icons-s1778167d02.png');
+.search__query-select:after {
+  background-image: url('../images/icons-s0b6eb578e6.png');
+  background-position: 0 -12px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 7px;
+  width: 15px;
+}
+.search__query-select:before {
+  background-image: url('../images/icons-s0b6eb578e6.png');
   background-position: 0 0;
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
   vertical-align: middle;
-  height: 79px;
-  width: 75px;
+  height: 7px;
+  width: 15px;
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
-  .fri-qube-logo {
-    background-image: url('../images/icons-2x-sf4ea60d45b.png');
-    background-size: 75px auto;
-    background-position: 0 0;
-    height: 79px;
-    width: 75px;
-  }
+
+.search__loupe {
+  background-image: url('../images/icons-s0b6eb578e6.png');
+  background-position: 0 -24px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 22px;
+  width: 21px;
 }
 
 html, body {
+  font-family: "Gotham Pro", sans-serif;
   margin: 0;
   height: 100%;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,14 +288,50 @@ strong, b {
   font-weight: normal;
 }
 
-* {
+*, *:after, *:before {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+.section {
+  padding: 15px 0;
 }
 
 button {
   border: none;
   outline: none;
   background: none;
+}
+
+.container {
+  min-width: 1210px;
+  max-width: 1960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "Gotham Pro", sans-serif;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 15px;
+}
+
+.button_green {
+  background: #1c9d22;
 }

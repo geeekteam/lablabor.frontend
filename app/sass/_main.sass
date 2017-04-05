@@ -1,11 +1,13 @@
 html, body
+  font-family: "Gotham Pro", sans-serif
   margin: 0
   height: 100%
 
 a
   color: inherit
+  text-decoration: none
   &:hover
-    text-decoration: none
+    text-decoration: underline
 
 h1, h2, h3, h4, h5, h6
   font-weight: normal
@@ -13,12 +15,44 @@ h1, h2, h3, h4, h5, h6
 strong, b
   font-weight: normal
 
-*
+*, *:after, *:before
   box-sizing: border-box
-  padding: 0
   margin: 0
+  padding: 0
+
+input
+  &:focus
+    outline: none
+
+select
+  &:focus
+    outline: none
+
+.section
+  padding: 15px 0
 
 button
   border: none
   outline: none
   background: none
+
+.container
+  min-width: 1210px
+  max-width: 1960px
+  margin: 0 auto
+  padding: 0 20px
+  width: 100%
+
+.button
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  font-size: 18px
+  text-transform: uppercase
+  font-family: "Gotham Pro", sans-serif
+  color: #ffffff
+  padding: 8px 20px
+  border-radius: 15px
+
+.button_green
+  background: #1c9d22
