@@ -1,3 +1,4 @@
+@import url(icons.css);
 @import url(../css/fonts.css);
 .gray-text {
   color: #6e6e6e !important;
@@ -93,6 +94,7 @@
   flex-shrink: 1;
   height: 35px;
   width: 100%;
+  max-width: 600px;
 }
 
 .search__query-input {
@@ -164,6 +166,8 @@
 }
 
 .search__advanced-search {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   padding: 6px 0;
   font-size: 14px;
   letter-spacing: 0.5px;
@@ -227,43 +231,6 @@
 
 .mb10 {
   margin-bottom: 10px;
-}
-
-.fri {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.search__query-select:after {
-  background-image: url('../images/icons-s0b6eb578e6.png');
-  background-position: 0 -12px;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  height: 7px;
-  width: 15px;
-}
-.search__query-select:before {
-  background-image: url('../images/icons-s0b6eb578e6.png');
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  height: 7px;
-  width: 15px;
-}
-
-.search__loupe {
-  background-image: url('../images/icons-s0b6eb578e6.png');
-  background-position: 0 -24px;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  height: 22px;
-  width: 21px;
 }
 
 html, body {
