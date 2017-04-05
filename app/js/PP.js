@@ -152,7 +152,7 @@ $(document).ready(function(){
 	');
 
 	$('body > *').wrapAll('<div id="wraaap"><div id="wrap_verstka"></div></div>');
-	
+
 	$('#wraaap').prepend('<div id="pixel_perfect_buttons">\
 		<div id="pixel_perfect_button_1">off</div>\
 		<div id="pixel_perfect_button_2">50%x50%</div>\
@@ -165,28 +165,28 @@ $(document).ready(function(){
 			<img src="PP/shab.jpg" alt="" style="opacity:0" />\
 		</div>\
 	</div>');
-	
+
 	var c_img = $.cookie('cookie_img');
-	
+
 	if(c_img != '') {
 		$('#wrap_scrin img').attr('src', c_img);
 		$('#wrap_scrin').css({'background-image': 'url('+c_img+')'})
 		console.log(c_img)
 	}
-	
+
 	$('#the_img_field input').bind('keypress', function(e) {
 		if(e.keyCode==13){
 			var img = 'PP/'+$(this).val();
 			$('#wrap_scrin img').attr('src', img);
 			$('#wrap_scrin').css({'background-image': 'url('+img+')'})
-			
+
 			$.cookie('cookie_img', img);
 		}
 	});
-	
+
 	var cons = $.cookie('consistent');
 	// console.log(cons)
-	
+
 	if(cons == 'on') {
 		$('#wrap_scrin').css('opacity', '1');
 		$('#wrap_verstka').css('opacity', '0');
