@@ -245,6 +245,13 @@
     app.appLoad('loading', function () {
         console.log('App is loading... Paste your app code here.');
         // App is loading... Paste your app code here. 4example u can run preloader event here and stop it in action appLoad dom or full
+
+        (function($) {
+            $(function() {
+                $('input, select').styler();
+            });
+        })(jQuery);
+
     });
 
     app.appLoad('dom', function () {

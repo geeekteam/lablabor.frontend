@@ -1,5 +1,166 @@
 .section_main
+	height: 100%
 	width: 100%
-	height: 1000px
-	background: url("../images/main-bg.jpg") no-repeat center
-	background-size: cover
+	background: url("../images/main-bg.jpg") no-repeat top
+	-moz-box-shadow: inset 0px -100px 100px #fff
+	-webkit-box-shadow: inset 0px -100px 100px #fff
+	-o-box-shadow: inset 0px -100px 100px #fff
+	box-shadow: inset 0px -100px 100px #fff
+
+.dashboard
+	width: 720px
+	margin: 230px 0 0px 170px
+
+.dashboard__title
+	font-family: "Gotham Pro Medium", sans-serif
+	font-size: 30px
+	color: #e7ecf0
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.61)
+	text-transform: uppercase
+	letter-spacing: 0.65px
+
+.dashboard__subtitle
+	font-size: 30px
+	color: #e7ecf0
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.61)
+	letter-spacing: 0.85px
+	margin-bottom: 30px
+
+.dashboard__buttons
+	display: flex
+	margin-bottom: 95px
+
+.dashboard__button
+	font-family: "Gotham Pro Light", sans-serif
+	width: 250px
+	height: 50px
+	border-radius: 25px
+	margin-right: 70px
+	color: #ffffff
+	font-size: 18px
+
+.dashboard__form-wrapper
+	position: relative
+	margin-left: 100px
+	height: 350px
+	width: 355px
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		width: 0
+		height: 0
+		border-top: 70px solid transparent
+		border-left: 70px solid #449a37
+
+.dashboard__form-header
+	width: 285px
+	height: 70px
+	background: -moz-linear-gradient(-45deg, #73b260 0%, #51a843 100%)
+	background: -webkit-linear-gradient(-45deg, #73b260 0%,#51a843 100%)
+	background: linear-gradient(135deg, #73b260 0%,#51a843 100%)
+
+.dashboard-form__body
+	width: 355px
+	height: 285px
+	padding: 10px 70px
+	background: -moz-linear-gradient(-45deg, #6fb05c 0%, #229e25 100%)
+	background: -webkit-linear-gradient(-45deg, #6fb05c 0%,#229e25 100%)
+	background: linear-gradient(135deg, #6fb05c 0%,#229e25 100%)
+
+.dashboard-form__title
+	font-family: "Gotham Pro Light", sans-serif
+	font-size: 18px
+	padding-top: 46px
+	text-align: right
+	color: #ffffff
+	text-transform: uppercase
+
+.dashboard-form__social
+	display: flex
+	justify-content: space-between
+	margin-bottom: 25px
+
+.dashboard-form__input
+	display: inline-block
+	border-radius: 20px
+	border: none
+	height: 30px
+	width: 215px
+
+.dashboard-form__button
+	font-size: 14px
+	color: #ffffff
+	display: block
+	width: 100%
+	border: 1px solid #ffffff
+	border-radius: 15px
+	height: 30px
+	padding: 1px 10px
+
+.dashboard-form__remember-me
+	margin-left: 20px
+
+.checkbox
+	display: flex
+	align-items: center
+
+.checkbox
+	.jq-checkbox
+		cursor: pointer
+		line-height: 1
+
+.checkbox__label
+	color: #ffffff
+	font-size: 12px
+	cursor: pointer
+	line-height: 1
+
+.remember-me__forgot-pass
+	color: #ffffff
+	font-size: 12px
+	margin-left: 13px
+	text-decoration: underline
+	line-height: 1
+	&:hover
+		text-decoration: none
+
+.main-content
+	display: flex
+	justify-content: space-between
+
+.main-content__banner
+	flex-shrink: 0
+
+.main-features__title
+	font-family: "Gotham Pro Medium"
+	font-size: 16px
+	color: #616161
+	text-transform: uppercase
+	letter-spacing: 1.8px
+
+.main-content__content
+	position: relative
+	padding: 15px 20px 0
+	width: 100%
+
+.main-features
+	width: 100%
+	&:after
+		//bottom: auto
+		margin-top: 75px
+		left: calc(50% - 25%)
+		width: 50%
+		height: auto
+		content: ''
+		position: absolute
+		border-bottom: 1px solid #000
+
+.feautures-item__title
+	font-family: "Gotham Pro Light"
+	font-size: 14px
+	text-transform: uppercase
+
+.feautures-item__descr
+	text-align: justify

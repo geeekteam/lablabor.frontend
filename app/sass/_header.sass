@@ -40,7 +40,7 @@
 	max-width: 600px
 	width: 100%
 
-.search__query-input
+.input__header
 	height: 35px
 	max-width: 300px
 	width: 100%
@@ -48,39 +48,70 @@
 	flex-shrink: 1
 	input
 		width: 100%
-
 		border: 1px solid #1c9d22
 		border-bottom-left-radius: 15px
 		border-top-left-radius: 15px
 		padding: 0 10px
+		&:hover
+			box-shadow: inset 0 0 1px rgba(28, 157, 34, 1)
 
-.search__query-select
-	position: relative
-	flex-shrink: 0
-	select
-		-webkit-appearance: none
-		-moz-appearance: none
-		appearance: none
-		position: relative
-		width: 105px
+.selectbox__header
+	.jq-selectbox
+		width: 115px
 		border: 1px solid #1c9d22
 		border-left: none
+		cursor: pointer
+		font-size: 14px
 		height: 35px
-		padding: 0 15px
 
-	&:after
-		z-index: 1
-		position: absolute
-		content: ''
-		top: 8px
-		right: 6px
+	.jq-selectbox__select
+		height: 100%
+		padding: 6px 25px 6px 10px
+		&:hover
+			box-shadow: inset 0 0 1px rgba(28, 157, 34, 1)
 
-	&:before
-		z-index: 1
-		position: absolute
-		content: ''
-		top: 20px
-		right: 6px
+	.jq-selectbox__dropdown
+		top: 33px
+		left: -1px
+		background: #fff
+		border: 1px solid #1c9d22
+		padding: 10px
+
+	.jq-selectbox__select-text
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+
+	.jq-selectbox li
+		width: 100%
+		margin-bottom: 10px
+		cursor: pointer
+		&:hover
+			color: #1c9d22
+		&:last-child
+			margin-bottom: 0
+
+	.jq-selectbox li.selected
+		color: #1c9d22
+		text-decoration: underline
+
+	.jq-selectbox__trigger
+		.jq-selectbox__trigger-arrow
+			&:after
+				+sprite(arrow-up)
+				z-index: 0
+				position: absolute
+				content: ''
+				top: 7px
+				right: 5px
+
+			&:before
+				+sprite(arrow-down)
+				z-index: 0
+				position: absolute
+				content: ''
+				top: 19px
+				right: 5px
 
 .login
 	position: relative
@@ -90,9 +121,10 @@
 	display: flex
 	flex-shrink: 0
 	width: 40px
-	background: #1c9d22
 	border-bottom-right-radius: 15px
 	border-top-right-radius: 15px
+	cursor: pointer
+
 
 .search__loupe
 	margin: auto
@@ -103,44 +135,54 @@
 	font-size: 14px
 	letter-spacing: 0.5px
 
-.login-form
+.header-login-form
 	position: absolute
 	display: flex
 	flex-direction: column
 
-.login__form
+.header-login__form
 	background: #ffffff
 	padding: 30px 7px
 	width: 200px
-	right: -10px
-	top: 75px
+	right: 10px
+	top: 97px
 	text-align: center
 	border-radius: 5px
 	box-shadow: 0 0px 15px #8e8e8e
 	&:after
 		content: ''
 		position: absolute
-		border: 10px solid transparent
-		border-bottom: 10px solid #ffffff
-		top: -20px
-		left: 120px
+		top: -5px
+		left: 135px
+		width: 15px
+		height: 15px
+		background: #fff
+		transform: rotate(45deg)
+		box-shadow: -5px -5px 10px -1px rgba(0, 0, 0, 0.2)
 
-.login-form__input
+.header-login-form__input
 	position: relative
 	border-radius: 15px
-	border: 1px solid #1c9d22
-	padding: 1px 10px
+	border: 1px solid #616161
 	width: 160px
+	padding: 1px 10px
+	&:hover
+		box-shadow: inset 0 0 1px rgba(0, 0, 0, 1)
 
-.login-form__button
+.header__button-login
+	color: #ffffff
+	padding: 8px 20px
+	border-radius: 15px
+	transition: all 0.3s ease
+	cursor: pointer
+
+.header-login-form__button
 	font-size: 14px
 	border: 1px solid #1c9d22
 	border-radius: 15px
 	padding: 2px 25px
-	text-align: center
-	position: relative
-	display: inline-block
-	vertical-align: middle
-	text-transform: uppercase
-	font-family: "Gotham Pro", sans-serif
-	color: #ffffff
+	color: #1c9d22
+	cursor: pointer
+	transition: all 0.1s ease
+	&:hover
+		color: #ffffff

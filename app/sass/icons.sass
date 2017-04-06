@@ -1,16 +1,51 @@
 @import "mixins/mixins"
-@import "variables"
+@import "framework"
 
 .fri
 	display: inline-block
 	vertical-align: middle
 
-.search__query-select
-	&:after
-		+sprite(arrow-up)
-
-	&:before
-		+sprite(arrow-down)
-
 .search__loupe
 	+sprite(loupe)
+
+.selectbox
+	.jq-selectbox__trigger
+		.jq-selectbox__trigger-arrow
+			&:after
+				+sprite(arrow-up)
+
+			&:before
+				+sprite(arrow-down)
+
+.facebook
+	+sprite(facebook)
+
+.google
+	+sprite(google)
+
+.instagram
+	+sprite(instagram)
+
+.twitter
+	+sprite(twitter)
+
+.vkontakte
+	+sprite(vkontakte)
+
+.checkbox
+	.jq-checkbox
+		+sprite(radio-unchecked)
+	.jq-checkbox.checked
+		+sprite(radio-checked)
+
+.resume
+	+sprite(resume)
+
+.target
+	+sprite(target)
+
+.cooperation
+	+sprite(cooperation)
+
+.dream-work
+	+sprite(dream-work)
