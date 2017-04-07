@@ -1,5 +1,7 @@
 .section
 	padding: 15px 0
+	height: 100%
+	width: 100%
 
 .container
 	min-width: 1210px
@@ -7,9 +9,20 @@
 	margin: 0 auto
 	padding: 0 20px
 	width: 100%
+	z-index: 10
+	position: relative
 
-.gray-text
+.container_1160
+	max-width: 1160px
+
+.white-text
+	color: #ffffff
+
+.light-gray-text
 	color: #6e6e6e
+
+.dark-gray-text
+	color: #616161
 
 .green-text
 	color: #1c9d22
@@ -43,6 +56,36 @@
 	font-family: "PT Serif Italic", sans-serif
 	font-style: italic
 
+.medium-title
+	font-family: "Gotham Pro Medium", sans-serif
+	text-transform: uppercase
+	letter-spacing: 1px
+
+.light-title
+	font-family: "Gotham Pro Light", sans-serif
+	text-transform: uppercase
+	letter-spacing: 1px
+
+.read-more
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+
+.lts2
+	letter-spacing: 2px
+
+.fz18
+	font-size: 18px
+
+.fz16
+	font-size: 16px
+
+.fz14
+	font-size: 14px
+
+.fz12
+	font-size: 12px
+
 .mb0
 	margin-bottom: 0
 
@@ -64,6 +107,9 @@
 .mb30
 	margin-bottom: 30px
 
+.mb50
+	margin-bottom: 50px
+
 .mr5
 	margin-right: 5px
 
@@ -73,13 +119,29 @@
 .mr30
 	margin-right: 30px
 
+.pt10
+	padding-top: 10px
+
 .grid
 	display: flex
 
 .grid_4-items
 	justify-content: space-between
+	flex-wrap: wrap
 	.grid__item
-		width: 19%
+		width: 22%
 		display: flex
 		flex-direction: column
 		align-items: center
+
+.grid_2-items
+	justify-content: space-between
+	flex-wrap: wrap
+	.grid__item_large-article
+		width: 65%
+
+	.grid__item_small-article
+		width: 25%
+		
+.up-case
+	text-transform: uppercase

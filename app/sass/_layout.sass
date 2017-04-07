@@ -1,14 +1,17 @@
-.section_main
-	height: 100%
+.section_main-banner
+	height: 1080px
 	width: 100%
 	background: url("../images/main-bg.jpg") no-repeat top
-	-moz-box-shadow: inset 0px -100px 100px #fff
-	-webkit-box-shadow: inset 0px -100px 100px #fff
-	-o-box-shadow: inset 0px -100px 100px #fff
-	box-shadow: inset 0px -100px 100px #fff
+	-moz-box-shadow: inset 0px -250px 100px 0px #fff
+	-webkit-box-shadow: inset 0px -250px 100px 0px #fff
+	-o-box-shadow: inset 0px -250px 100px 0px #fff
+	box-shadow: inset 0px -250px 100px 0px #fff
+	background-size: contain
+	position: absolute
+	z-index: 1
 
 .dashboard
-	width: 720px
+	width: 100%
 	margin: 230px 0 0px 170px
 
 .dashboard__title
@@ -70,12 +73,9 @@
 	background: linear-gradient(135deg, #6fb05c 0%,#229e25 100%)
 
 .dashboard-form__title
-	font-family: "Gotham Pro Light", sans-serif
-	font-size: 18px
-	padding-top: 46px
+	padding-top: 40px
 	text-align: right
 	color: #ffffff
-	text-transform: uppercase
 
 .dashboard-form__social
 	display: flex
@@ -88,6 +88,7 @@
 	border: none
 	height: 30px
 	width: 215px
+	padding: 1px 10px
 
 .dashboard-form__button
 	font-size: 14px
@@ -126,30 +127,31 @@
 	&:hover
 		text-decoration: none
 
+.section_main-content
+	background: linear-gradient(to bottom, #ffffff 0%, #9f9fa0 100%)
+
 .main-content
 	display: flex
 	justify-content: space-between
 
 .main-content__banner
 	flex-shrink: 0
+	width: 16.3%
 
-.main-features__title
-	font-family: "Gotham Pro Medium"
-	font-size: 16px
-	color: #616161
-	text-transform: uppercase
-	letter-spacing: 1.8px
+.main-content__image
+	border: 1px solid #1c9d22
+	width: 100%
 
 .main-content__content
 	position: relative
-	padding: 15px 20px 0
+	padding: 10px 125px 0
 	width: 100%
 
 .main-features
 	width: 100%
+	margin-bottom: 80px
 	&:after
-		//bottom: auto
-		margin-top: 75px
+		margin-top: 50px
 		left: calc(50% - 25%)
 		width: 50%
 		height: auto
@@ -164,3 +166,64 @@
 
 .feautures-item__descr
 	text-align: justify
+	color: #616161
+
+.main-articles
+	width: 100%
+
+.main-articles-grid
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	margin-bottom: -30px
+
+.main-articles-grid__item-large
+	width: 61%
+	padding-bottom: 30px
+
+.main-articles-grid__item-small
+	width: 35%
+	height: 200px
+	padding-bottom: 30px
+
+.main-article
+	position: relative
+	width: 100%
+	cursor: pointer
+	&:hover
+		.main-article__text
+			max-height: 135px
+
+.main-article__wrap
+	position: absolute
+	z-index: 1
+
+.main-article__descr
+	color: #fff
+	width: 100%
+	position: absolute
+	z-index: 2
+	background: rgba(#5b6a91, 0.85)
+	overflow: hidden
+	bottom: 3px
+	padding: 0 10px
+
+.main-article__title
+	padding-top: 10px
+	max-height: 70px
+	overflow: hidden
+
+.main-article__text
+	padding-bottom: 10px
+	overflow: hidden
+	max-height: 0
+	+transition(all 0.3s ease)
+
+.main-article__image-wrap
+	position: relative
+	width: 100%
+
+.main-article__image
+	height: 200px
+	width: 100%
+	object-fit: cover
