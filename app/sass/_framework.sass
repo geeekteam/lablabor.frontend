@@ -28,26 +28,42 @@
 	color: #1c9d22
 
 .button
+	display: inline-block
 	font-family: "Gotham Pro", sans-serif
 	text-transform: uppercase
 	cursor: pointer
+	border-radius: 25px
+	color: #fff
+	padding: 2px 5px
+	text-align: center
+	cursor: pointer
+	transition: all 0.3s ease
 
 .button_green
 	background: #1c9d22
-	transition: all 0.3s ease
 	&:hover
 		box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.5)
+		color: #fff
 
 .button_blue
 	background: #5b6a91
-	transition: all 0.3s ease
 	&:hover
 		box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.5)
 
-.button_empty
+.button_empty-green
+	border: 1px solid #1c9d22
+	color: #1c9d22
 	background: transparent
 	&:hover
 		background-color: #1c9d22
+		color: #fff
+
+.button_empty-white
+	border: 1px solid #fff
+	color: #fff
+	background: transparent
+	&:hover
+		box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.5)
 
 .tac
 	text-align: center
@@ -110,6 +126,9 @@
 .mb50
 	margin-bottom: 50px
 
+.mb60
+	margin-bottom: 60px
+
 .mr5
 	margin-right: 5px
 
@@ -118,6 +137,15 @@
 
 .mr30
 	margin-right: 30px
+
+.pt0
+	padding-top: 0
+
+.pb0
+	padding-bottom: 0
+
+.pb65
+	padding-bottom: 65px
 
 .pt10
 	padding-top: 10px
