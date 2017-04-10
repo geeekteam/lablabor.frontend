@@ -5,8 +5,9 @@
 	max-width: 1500px
 	margin: 0 auto
 	padding: 0 20px
-	z-index: 10
-	position: relative
+	box-sizing: content-box
+	//z-index: 10
+	//position: relative
 
 .container_1160
 	max-width: 1160px
@@ -61,10 +62,10 @@
 	&:hover
 		box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.5)
 
-.tac
+.tac, .text-center
 	text-align: center
 
-.italic
+.italic, .text-italic
 	font-family: "PT Serif Italic", sans-serif
 	font-style: italic
 
@@ -73,18 +74,26 @@
 	text-transform: uppercase
 	letter-spacing: 1px
 
+.text-medium
+	font-family: "Gotham Pro Medium", sans-serif
+
+
+
 .light-title
 	font-family: "Gotham Pro Light", sans-serif
 	text-transform: uppercase
-	letter-spacing: 1px
+	letter-spacing: 0
 
-.read-more
+.read-more, a.text-underline
 	text-decoration: underline
 	&:hover
 		text-decoration: none
 
 .lts2
 	letter-spacing: 2px
+
+.lts1
+	letter-spacing: 1px
 
 .fz18
 	font-size: 18px
@@ -134,6 +143,9 @@
 .mr30
 	margin-right: 30px
 
+.mr35
+	margin-right: 35px
+
 .pt0
 	padding-top: 0
 
@@ -155,6 +167,9 @@
 .grid
 	display: flex
 
+.hidden
+	display: none
+
 .grid_4-items
 	justify-content: space-between
 	flex-wrap: wrap
@@ -173,5 +188,5 @@
 	.grid__item_small-article
 		width: 25%
 		
-.up-case
+.up-case, .text-uppercase
 	text-transform: uppercase

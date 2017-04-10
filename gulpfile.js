@@ -118,7 +118,7 @@ gulp.task('compass', function () {
 			css: sources.css.dist,
 			js: sources.js.dist,
 			image: 'app/images',
-			source: true
+			sourcemap: true,
 		}))
 		.pipe(prefix({
 			browsers: ['last 2 versions'],

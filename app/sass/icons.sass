@@ -1,5 +1,5 @@
 @import "mixins/mixins"
-@import "framework"
+//@import "framework"
 
 .fri
 	display: inline-block
@@ -50,11 +50,47 @@
 .logo-footer
 	+sprite(logo-footer)
 
+//.checkbox
+//	.jq-checkbox
+//		+sprite(radio-unchecked)
+//	.jq-checkbox.checked
+//		+sprite(radio-checked)
+
+.jq-checkbox
+	font-size: 0
+	line-height: 0
+
 .checkbox
-	.jq-checkbox
-		+sprite(radio-unchecked)
-	.jq-checkbox.checked
-		+sprite(radio-checked)
+	.jq-checkbox__div
+		//+sprite(radio-unchecked)
+		display: inline-block
+		vertical-align: middle
+		width: 10px
+		height: 10px
+		border: 1px solid #fff
+		border-radius: 100%
+		position: relative
+
+		&:after
+			position: absolute
+			top: 50%
+			left: 50%
+			content: ''
+			display: block
+			transform: translate(-50%, -50%)
+			width: 4px
+			height: 4px
+			background: #fff
+			border-radius: 100%
+			opacity: 0
+			+transition()
+
+	input:checked
+		& + .jq-checkbox__div
+			//+sprite(radio-checked)
+			&:after
+				opacity: 1
+
 
 .resume
 	+sprite(resume)
