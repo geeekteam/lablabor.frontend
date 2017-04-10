@@ -1,12 +1,14 @@
-@import "icons.css"
+@import "icons"
 @import "fonts"
+@import "variables"
 @import "mixins/mixins"
 @import "framework"
-@import "header"
-@import "layout"
-@import "footer"
+
 $framework: mb10
 +generate-framework($framework)
 
 @import "main"
+@import "header"
+@import "home"
+@import "footer"
 @import "responsive"

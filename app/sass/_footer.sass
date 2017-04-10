@@ -1,13 +1,12 @@
 .section_footer
 	background: #f7f7f7
 
-.footer-head
+.footer-top
 	position: relative
 	display: flex
 	align-items: center
 	justify-content: space-between
 	padding: 45px 10px
-	//margin-bottom: 80px
 	&:after
 		position: absolute
 		content: ''
@@ -39,24 +38,29 @@
 	justify-content: space-between
 
 .footer-nav__item
-	text-transform: uppercase
 	list-style-type: none
 
 .footer-head__site
 	text-transform: uppercase
 
 .footer-bottom
-	padding: 0 10px
+	padding: 32px 10px 0
 
 .footer-bottom-grid
 	display: flex
 	justify-content: space-between
 
+.footer-bottom-grid__item
+	width: 260px
+
 .footer-social
 	display: flex
-	justify-content: space-between
+	justify-content: center
 
 .footer-social__item
+	margin-right: 17px
 	+transition()
 	&:hover
 		opacity: 0.7
+	&:last-child
+		margin-right: 0

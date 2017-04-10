@@ -263,9 +263,21 @@
     });
 
     app.appLoad('full', function (e) {
-        console.log('App was fully load! Paste external app source code here... For example if your use jQuery and something else');
-        // App was fully load! Paste external app source code here... 4example if your use jQuery and something else
-        // Please do not use jQuery ready state function to avoid mass calling document event trigger!
+
+        $('.main-content__banner').owlCarousel({
+            items: 1,
+            loop: true,
+            dots: 0,
+            autoplay: true,
+            animateOut: 'fadeOut'
+        });
+
+        $('.auth-slider').owlCarousel({
+            items: 1,
+            loop: true,
+            dots: 1,
+        });
+
     });
 
 })();

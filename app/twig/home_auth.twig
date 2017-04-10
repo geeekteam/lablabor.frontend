@@ -1,0 +1,35 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Lablabor | Главная страница{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+    
+<div class="main-auth-content-area">
+        <div class="auth-slider owl-carousel">
+            <div class="auth-slider__slide" style="background-image: url('../images/auth-slide-1.jpg')">
+                <div class="auth-slider__top">
+                    <div class="auth-slider__title">21.01.2017</div>
+                    <div class="auth-slider__subtitle">Старт проекта</div>
+                </div>
+                <div class="auth-slider__bottom">
+                    <div class="auth-slider__title">Какой-то текст о студенческой практике</div>
+                    <div class="auth-slider__subtitle">Подзаголовок, немного рассказывающий о проекте</div>
+                </div>
+            </div>
+            <div class="auth-slider__slide" style="background-image: url('../images/auth-slide-1.jpg')">
+                <div class="auth-slider__top">
+                    <div class="auth-slider__title">21.01.2017</div>
+                    <div class="auth-slider__subtitle">Старт проекта</div>
+                </div>
+                <div class="auth-slider__bottom">
+                    <div class="auth-slider__title">Какой-то текст о студенческой практике</div>
+                    <div class="auth-slider__subtitle">Подзаголовок, немного рассказывающий о проекте</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

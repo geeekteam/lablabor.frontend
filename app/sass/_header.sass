@@ -33,48 +33,50 @@
 	flex-basis: 43px
 	flex-shrink: 1
 	
-.search
+.header-search
 	display: flex
 	flex-shrink: 1
-	height: 35px
 	max-width: 600px
 	width: 100%
 
 .input__header
-	height: 35px
 	max-width: 300px
 	width: 100%
 	display: flex
 	flex-shrink: 1
-	input
-		width: 100%
-		border: 1px solid #1c9d22
-		border-bottom-left-radius: 15px
-		border-top-left-radius: 15px
-		padding: 0 10px
-		&:hover
-			box-shadow: inset 0 0 1px rgba(28, 157, 34, 1)
+
+.input__header-query
+	font-size: 14px
+	width: 100%
+	border: 1px solid $forest-green
+	border-bottom-left-radius: 25px
+	border-top-left-radius: 25px
+	padding: 0 25px
+	&:hover
+		box-shadow: inset 0 0 1px rgba(28, 157, 34, 1)
+	+placeholder
+		color: $dull-gray
 
 .selectbox__header
+
 	.jq-selectbox
 		width: 115px
-		border: 1px solid #1c9d22
+		border: 1px solid $forest-green
 		border-left: none
 		cursor: pointer
 		font-size: 14px
 		height: 35px
-
-	.jq-selectbox__select
-		height: 100%
-		padding: 6px 25px 6px 10px
 		&:hover
 			box-shadow: inset 0 0 1px rgba(28, 157, 34, 1)
+
+	.jq-selectbox__select
+		padding: 6px 25px 6px 10px
 
 	.jq-selectbox__dropdown
 		top: 33px
 		left: -1px
-		background: #fff
-		border: 1px solid #1c9d22
+		background: $white
+		border: 1px solid $forest-green
 		padding: 10px
 
 	.jq-selectbox__select-text
@@ -87,18 +89,19 @@
 		margin-bottom: 10px
 		cursor: pointer
 		&:hover
-			color: #1c9d22
+			color: $forest-green
 		&:last-child
 			margin-bottom: 0
 
 	.jq-selectbox li.selected
-		color: #1c9d22
+		color: $forest-green
 		text-decoration: underline
 
 	.jq-selectbox__trigger
+
 		.jq-selectbox__trigger-arrow
+
 			&:after
-				+sprite(arrow-up)
 				z-index: 0
 				position: absolute
 				content: ''
@@ -106,7 +109,6 @@
 				right: 5px
 
 			&:before
-				+sprite(arrow-down)
 				z-index: 0
 				position: absolute
 				content: ''
@@ -117,13 +119,11 @@
 	position: relative
 
 .search__button
-	height: 35px
 	display: flex
 	flex-shrink: 0
 	width: 40px
 	border-bottom-left-radius: 0
 	border-top-left-radius: 0
-
 
 .search__loupe
 	margin: auto
@@ -140,14 +140,14 @@
 	flex-direction: column
 
 .header-login__form
-	background: #ffffff
+	background: $white
 	padding: 30px 7px
 	width: 200px
 	margin-left: -90px
 	top: 97px
 	text-align: center
 	border-radius: 5px
-	box-shadow: 0 0px 15px #8e8e8e
+	box-shadow: 0 0 15px $telegray
 	&:after
 		content: ''
 		position: absolute
@@ -155,16 +155,19 @@
 		left: 135px
 		width: 15px
 		height: 15px
-		background: #fff
+		background: $white
 		transform: rotate(45deg)
 		box-shadow: -5px -5px 10px -1px rgba(0, 0, 0, 0.2)
 
 .header-login-form__input
 	position: relative
 	border-radius: 15px
-	border: 1px solid #616161
+	border: 1px solid $dark-dull-gray
 	width: 160px
 	padding: 1px 10px
+	color: $light-gray
+	+placeholder
+		color: $light-gray
 	&:hover
 		box-shadow: inset 0 0 1px rgba(0, 0, 0, 1)
 

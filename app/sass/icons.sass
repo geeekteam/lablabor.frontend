@@ -50,11 +50,11 @@
 .logo-footer
 	+sprite(logo-footer)
 
-//.checkbox
-//	.jq-checkbox
-//		+sprite(radio-unchecked)
-//	.jq-checkbox.checked
-//		+sprite(radio-checked)
+.logo-new
+	+sprite(logo-new)
+
+.logo-text
+	+sprite(logo-text)
 
 .jq-checkbox
 	font-size: 0
@@ -62,7 +62,6 @@
 
 .checkbox
 	.jq-checkbox__div
-		//+sprite(radio-unchecked)
 		display: inline-block
 		vertical-align: middle
 		width: 10px
@@ -87,7 +86,6 @@
 
 	input:checked
 		& + .jq-checkbox__div
-			//+sprite(radio-checked)
 			&:after
 				opacity: 1
 
