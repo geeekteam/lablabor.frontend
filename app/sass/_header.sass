@@ -19,14 +19,14 @@
 .main-menu__item
 	position: relative
 	letter-spacing: 0px
-	&:after
+	&::after
 		position: absolute
 		content: "/"
 		top: 0
 		right: -25px
 	&:last-child
 		margin-right: 0
-		&:after
+		&::after
 			display: none
 
 .logo
@@ -101,14 +101,14 @@
 
 		.jq-selectbox__trigger-arrow
 
-			&:after
+			&::after
 				z-index: 0
 				position: absolute
 				content: ''
 				top: 7px
 				right: 5px
 
-			&:before
+			&::before
 				z-index: 0
 				position: absolute
 				content: ''
@@ -148,7 +148,7 @@
 	text-align: center
 	border-radius: 5px
 	box-shadow: 0 0 15px $telegray
-	&:after
+	&::after
 		content: ''
 		position: absolute
 		top: -5px

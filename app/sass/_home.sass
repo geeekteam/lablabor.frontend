@@ -5,6 +5,9 @@
 	box-shadow: inset 0px -100px 100px 0px $white
 	padding-bottom: 120px
 
+.main-auth-content-area
+	min-height: calc(100vh - 80px)
+
 .dashboard
 	padding-top: 245px
 	max-width: 1140px
@@ -47,7 +50,7 @@
 	margin-left: 100px
 	height: 350px
 	width: 355px
-	&:after
+	&::after
 		content: ''
 		position: absolute
 		top: 0
@@ -132,24 +135,26 @@
 		text-decoration: none
 
 .section_main-content
-	background: linear-gradient(to bottom, rgba($white, 0) 0, #9d9d9d 100%)
+	background: linear-gradient(to bottom, rgba($smoke-white, 0) 0, #9d9d9d 100%)
 	margin-top: -65px
+
+.section_main-content-auth
+	background: linear-gradient(to bottom, rgba($smoke-white, 0) 0, #9d9d9d 100%)
 
 .main-content
 	display: flex
 	justify-content: space-between
 
+.main-content_middle
+	align-items: center
+
 .main-content__banner
 	flex-shrink: 0
 	width: 16.3%
 
-.main-content__image-left
+.main-content__banner_wrapper
 	border: 1px solid $forest-green
-	margin-right: -1px
-
-.main-content__image-right
-	border: 1px solid $forest-green
-	margin-left: -1px
+	margin-right: 1px
 
 .main-content__content
 	position: relative
@@ -160,7 +165,7 @@
 	padding-bottom: 70px
 	margin-bottom: 25px
 	position: relative
-	&:after
+	&::after
 		left: 17.5%
 		width: 65%
 		height: auto
@@ -211,7 +216,7 @@
 			max-height: 135px
 
 		.main-article__image-wrap
-			&:after
+			&::after
 				opacity: 0.2
 
 		.main-article__image
@@ -247,7 +252,7 @@
 	width: 100%
 	height: 100%
 	+transition(all 0.3s ease)
-	&:after
+	&::after
 		position: absolute
 		content: ''
 		top: 0
@@ -274,20 +279,76 @@
 	position: relative
 	background-size: cover
 	background-position: center
-	height: 400px
+	height: 700px
 	padding-top: 50px
 
 .auth-slider__top
 	position: relative
+	margin-bottom: 300px
+	max-width: 1200px
+
+.auth-slider__top-content
+	display: inline-block
+	position: relative
+	max-width: 1050px
+	padding: 35px 0 35px 20px
 	background: rgba($pigeon-blue, 0.6)
-	width: 390px
-	&:after
+	p
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+	&::after
 		position: absolute
 		content: ''
 		top: 0
-		right: 0
-		border-top: 90px solid rgba($pigeon-blue, 0.6)
-		border-right: 45px solid transparent
+		right: -100px
+		bottom: 0
+		border-top: 150px solid rgba($pigeon-blue, 0.6)
+		border-right: 100px solid transparent
 
 .auth-slider__bottom
+	position: relative
+	max-width: 1200px
+	float: right
+	&::after
+		position: absolute
+		content: ''
+		top: 0
+		bottom: 0
+		left: -150px
+		border-top: 150px solid rgba($forest-green, 0.6)
+		border-left: 150px solid transparent
+
+.auth-slider__bottom-content
+	max-width: 1050px
+	padding: 35px 35px 35px 0
 	background: rgba($forest-green, 0.6)
+	p
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+
+.grid-home-vacancies
+	display: flex
+	justify-content: space-between
+	max-width: 750px
+	min-width: 630px
+
+.grid-home-company-vacancies
+	position: relative
+	display: flex
+	justify-content: space-between
+	width: 100%
+	flex-wrap: wrap
+
+.grid-home-vacancies__item
+	width: 45%
+
+.grid-home-company-vacancies__companies
+	width: 75%
+
+.grid-home-company-vacancies__count
+	width: 20%
+
+.grid-home-vacancies__item-count
+	width: 40px
