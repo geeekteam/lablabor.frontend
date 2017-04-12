@@ -276,6 +276,7 @@
             items: 1,
             loop: true,
             dots: 1,
+            nav: true,
         });
 
     });
