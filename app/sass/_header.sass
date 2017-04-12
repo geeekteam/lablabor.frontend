@@ -144,7 +144,7 @@
 	padding: 30px 7px
 	width: 200px
 	margin-left: -90px
-	top: 97px
+	top: 37px
 	text-align: center
 	border-radius: 5px
 	box-shadow: 0 0 15px $telegray
@@ -180,3 +180,91 @@
 	font-size: 14px
 	height: 22px
 	width: 94px
+
+
+.header-login__avatar
+	position: relative
+	width: 100%
+	cursor: pointer
+	display: inline-block
+	&::after
+		position: absolute
+		content: ''
+		bottom: 13px
+		right: -20px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 7px 7.5px 0 7.5px
+		border-color: $dark-dull-gray transparent transparent transparent
+		opacity: 1
+		+transition(all 0.2 ease)
+	&::before
+		position: absolute
+		content: ''
+		bottom: 13px
+		right: -20px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 7.5px 7px 7.5px
+		border-color: transparent transparent $dark-dull-gray transparent
+		opacity: 0
+		+transition(all 0.2 ease)
+	&:hover
+		&::before
+			opacity: 1
+		&::after
+			opacity: 0
+
+.header-login__avatar-statistic
+	box-sizing: border-box
+	position: absolute
+	top: 0
+	right: -5px
+	text-align: center
+	font-size: 12px
+	font-family: "Gotham Pro Medium", sans-serif
+	padding: 1px 4px
+	min-width: 19px
+	min-height: 19px
+	max-width: 40px
+	max-height: 40px
+	background-color: $forest-green
+	border: 2px solid $white
+	border-radius: 50%
+	color: $white
+
+.header-login__dropdown
+	position: absolute
+	z-index: 10
+	
+.user-menu
+	padding: 20px 25px 5px
+	width: 180px
+	margin-left: -110px
+	margin-top: 15px
+	background: $white
+	border: 1px solid $forest-green
+
+
+.user-menu__item
+	position: relative
+	list-style-type: none
+	padding-bottom: 10px
+	margin-bottom: 7.5px
+	word-wrap: break-word
+	&:hover
+		color: $forest-green
+	&::after
+		position: absolute
+		content: ''
+		bottom: 0
+		left: 20px
+		width: 85%
+		border-bottom: 1px solid $dark-dull-gray
+
+.user-menu__item-statistic
+	background: $forest-green
+	border-radius: 50%
+	width: 20px

@@ -26,7 +26,7 @@
                     <a class="text-without-underline" href="#">Расширенный поиск</a>
                 </p>
             </form>
-            {% if auth == 'true' %}
+            {% if auth == 'false' %}
             <div class="header-login">
                 <a href="#" class="header__button-login button button_green">Войти</a>
                 <div class="header-login__dropdown">
@@ -49,7 +49,20 @@
                 </div>
             </div>
             {% else %}
-
+            <div class="header-login">
+                <div class="header-login__avatar">
+                    <i class="user-avatar"></i>
+                    <div class="header-login__avatar-statistic">5</div>
+                </div>
+                <div class="header-login__dropdown">
+                    <ul class="user-menu">
+                        <li class="user-menu__item"><a class="fz14 text-italic" href="#">Личный кабинет</a></li>
+                        <li class="user-menu__item"><a class="fz14 text-italic" href="#">Настройки</a></li>
+                        <li class="user-menu__item"><a class="fz14 text-italic" href="#">Статистика<div class="user-menu__item-statistic">+5</div></a></li>
+                        <li class="user-menu__item"><a class="fz14 text-italic" href="#">Выход</a></li>
+                    </ul>
+                </div>
+            </div>
             {% endif %}
         </div>
     </div>
