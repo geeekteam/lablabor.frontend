@@ -130,14 +130,14 @@ button
 	text-transform: uppercase
 	letter-spacing: 0
 
-a.text-underline
+.text-underline, .text-underline > p
 	text-decoration: underline
-	&:hover
+	&:hover, &:hover > p
 		text-decoration: none
 
-a.text-without-underline
+.text-without-underline, .text-without-underline > p
 	text-decoration: none
-	&:hover
+	&:hover, &:hover > p
 		text-decoration: underline
 
 .grid
@@ -176,3 +176,7 @@ a.text-without-underline
 
 .float-right
 	float: right
+	
+.main-vacancy
+	width: 100%
+	display: inline-block

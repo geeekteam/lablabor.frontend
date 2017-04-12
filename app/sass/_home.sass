@@ -5,9 +5,6 @@
 	box-shadow: inset 0px -100px 100px 0px $white
 	padding-bottom: 120px
 
-.main-auth-content-area
-	min-height: calc(100vh - 80px)
-
 .dashboard
 	padding-top: 245px
 	max-width: 1140px
@@ -143,14 +140,15 @@
 
 .main-content
 	display: flex
-	justify-content: space-between
+	min-width: 1110px
 
 .main-content_middle
 	align-items: center
 
 .main-content__banner
 	flex-shrink: 0
-	width: 16.3%
+	max-width: 16.3%
+	min-width: 180px
 
 .main-content__banner_wrapper
 	border: 1px solid $forest-green
@@ -352,3 +350,63 @@
 
 .grid-home-vacancies__item-count
 	width: 40px
+
+
+
+.main-content-auth
+	display: flex
+
+.main-vacancies-grid
+	display: flex
+	flex-wrap: nowrap
+	justify-content: space-between
+	width: 100%
+
+.main-vacancies-grid__item
+	position: relative
+	max-width: 340px
+	flex-shrink: 0
+	margin-right: 80px
+	&::after
+		position: absolute
+		content: ''
+		top: 12.5%
+		bottom: 0
+		right: -40px
+		height: 75%
+		border-right: 1px solid $dark-dull-gray
+	&:last-child::after
+		content: none
+	&:last-child
+		margin-right: 0
+
+.main-vacancies-inner-grid
+	display: inline-block
+	width: 100%
+
+.main-vacancies-inner-grid__item-companies
+	width: 82%
+	flex-shrink: 0
+
+.main-vacancies-inner-grid__item-count
+	width: 12%
+
+.main-content_auth_page
+	align-items: center
+
+
+.company-vacancies__company
+	display: inline-block
+	float: left
+	width: 80%
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
+
+.company-vacancies__count
+	display: inline-block
+	float: right
+	width: 15%
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
