@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
     function YOURAPPNAME(doc) {
         var _self = this;
@@ -6,7 +6,7 @@
         _self.doc = doc;
         _self.window = window;
         _self.html = _self.doc.querySelector('html');
-        _self.body= _self.doc.body;
+        _self.body = _self.doc.body;
         _self.location = location;
         _self.hash = location.hash;
         _self.Object = Object;
@@ -15,7 +15,7 @@
         _self.bootstrap();
     }
 
-    YOURAPPNAME.prototype.bootstrap = function() {
+    YOURAPPNAME.prototype.bootstrap = function () {
         var _self = this;
 
         // Initialize window scollBar width
@@ -23,10 +23,10 @@
     };
 
     // Window load types (loading, dom, full)
-    YOURAPPNAME.prototype.appLoad  = function (type, callback) {
+    YOURAPPNAME.prototype.appLoad = function (type, callback) {
         var _self = this;
 
-        switch(type) {
+        switch (type) {
             case 'loading':
                 if (_self.doc.readyState === 'loading') callback();
 
@@ -38,7 +38,7 @@
 
                 break;
             case 'full':
-                _self.window.onload = function(e) {
+                _self.window.onload = function (e) {
                     callback(e);
                 };
 
@@ -49,12 +49,12 @@
     };
 
     // Detect scroll default scrollBar width (return a number)
-    YOURAPPNAME.prototype.scrollBarWidth = function() {
+    YOURAPPNAME.prototype.scrollBarWidth = function () {
         var _self = this,
             outer = _self.doc.createElement("div");
-            outer.style.visibility = "hidden";
-            outer.style.width = "100px";
-            outer.style.msOverflowStyle = "scrollbar";
+        outer.style.visibility = "hidden";
+        outer.style.width = "100px";
+        outer.style.msOverflowStyle = "scrollbar";
 
         _self.body.appendChild(outer);
 
@@ -79,20 +79,20 @@
 
         var switchers = _self.doc.querySelectorAll('[data-switcher]');
 
-        if(switchers && switchers.length > 0) {
-            for(var i=0; i<switchers.length; i++) {
+        if (switchers && switchers.length > 0) {
+            for (var i = 0; i < switchers.length; i++) {
                 var switcher = switchers[i],
                     switcherOptions = _self.options(switcher.dataset.switcher),
                     switcherElems = switcher.children,
                     switcherTargets = _self.doc.querySelector('[data-switcher-target="' + switcherOptions.target + '"]').children;
 
-                for(var y=0; y<switcherElems.length; y++) {
+                for (var y = 0; y < switcherElems.length; y++) {
                     var switcherElem = switcherElems[y],
                         parentNode = switcher.children,
                         switcherTarget = switcherTargets[y];
 
-                    if(switcherElem.classList.contains('active')) {
-                        for(var z=0; z<parentNode.length; z++) {
+                    if (switcherElem.classList.contains('active')) {
+                        for (var z = 0; z < parentNode.length; z++) {
                             parentNode[z].classList.remove('active');
                             switcherTargets[z].classList.remove('active');
                         }
@@ -103,8 +103,8 @@
                     switcherElem.children[0].addEventListener('click', function (elem, target, parent, targets) {
                         return function (e) {
                             e.preventDefault();
-                            if(!elem.classList.contains('active')) {
-                                for(var z=0; z<parentNode.length; z++) {
+                            if (!elem.classList.contains('active')) {
+                                for (var z = 0; z < parentNode.length; z++) {
                                     parent[z].classList.remove('active');
                                     targets[z].classList.remove('active');
                                 }
@@ -119,26 +119,32 @@
         }
     };
 
-    YOURAPPNAME.prototype.str2json = function(str, notevil) {
+    YOURAPPNAME.prototype.str2json = function (str, notevil) {
         try {
             if (notevil) {
                 return JSON.parse(str
-                    .replace(/([\$\w]+)\s*:/g, function(_, $1){return '"'+$1+'":';})
-                    .replace(/'([^']+)'/g, function(_, $1){return '"'+$1+'"';})
+                    .replace(/([\$\w]+)\s*:/g, function (_, $1) {
+                        return '"' + $1 + '":';
+                    })
+                    .replace(/'([^']+)'/g, function (_, $1) {
+                        return '"' + $1 + '"';
+                    })
                 );
             } else {
                 return (new Function("", "var json = " + str + "; return JSON.parse(JSON.stringify(json));"))();
             }
-        } catch(e) { return false; }
+        } catch (e) {
+            return false;
+        }
     };
 
-    YOURAPPNAME.prototype.options = function(string) {
+    YOURAPPNAME.prototype.options = function (string) {
         var _self = this;
 
-        if (typeof string !='string') return string;
+        if (typeof string != 'string') return string;
 
         if (string.indexOf(':') != -1 && string.trim().substr(-1) != '}') {
-            string = '{'+string+'}';
+            string = '{' + string + '}';
         }
 
         var start = (string ? string.indexOf("{") : -1), options = {};
@@ -146,7 +152,8 @@
         if (start != -1) {
             try {
                 options = _self.str2json(string.substr(start));
-            } catch (e) {}
+            } catch (e) {
+            }
         }
 
         return options;
@@ -246,8 +253,8 @@
         console.log('App is loading... Paste your app code here.');
         // App is loading... Paste your app code here. 4example u can run preloader event here and stop it in action appLoad dom or full
 
-        (function($) {
-            $(function() {
+        (function ($) {
+            $(function () {
                 $('input, select').styler();
             });
         })(jQuery);
@@ -278,6 +285,8 @@
             dots: 1,
             nav: true,
         });
+
+        app.popups();
 
     });
 

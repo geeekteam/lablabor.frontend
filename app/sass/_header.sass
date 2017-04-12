@@ -226,10 +226,8 @@
 	font-size: 12px
 	font-family: "Gotham Pro Medium", sans-serif
 	padding: 1px 4px
-	min-width: 19px
-	min-height: 19px
-	max-width: 40px
-	max-height: 40px
+	min-width: 20px
+	height: 20px
 	background-color: $forest-green
 	border: 2px solid $white
 	border-radius: 50%
@@ -237,8 +235,16 @@
 
 .header-login__dropdown
 	position: absolute
+	margin-top: 50px
 	z-index: 10
-	
+	visibility: hidden
+	opacity: 0
+	+transition()
+	&.opened
+		margin-top: 0
+		visibility: visible
+		opacity: 1
+
 .user-menu
 	padding: 20px 25px 5px
 	width: 180px
@@ -246,7 +252,6 @@
 	margin-top: 15px
 	background: $white
 	border: 1px solid $forest-green
-
 
 .user-menu__item
 	position: relative
@@ -256,6 +261,8 @@
 	word-wrap: break-word
 	&:hover
 		color: $forest-green
+		.user-menu__item-statistic
+			opacity: 0.8
 	&::after
 		position: absolute
 		content: ''
@@ -265,6 +272,15 @@
 		border-bottom: 1px solid $dark-dull-gray
 
 .user-menu__item-statistic
+	display: inline-block
+	margin-left: 15px
 	background: $forest-green
 	border-radius: 50%
-	width: 20px
+	min-width: 20px
+	padding: 3.5px 2px 0
+	text-align: center
+	height: 20px
+	color: $white
+	font-size: 11px
+	font-family: "Gotham Pro Medium", sans-serif
+	font-style: normal

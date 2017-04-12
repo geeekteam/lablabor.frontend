@@ -28,8 +28,8 @@
             </form>
             {% if auth == 'false' %}
             <div class="header-login">
-                <a href="#" class="header__button-login button button_green">Войти</a>
-                <div class="header-login__dropdown">
+                <span class="js-open-popup header__button-login button button_green" data-open-popup="login-bar">Войти</span>
+                <div class="js-popup header-login__dropdown" data-popup="login-bar">
                     <form class="header-login__form header-login-form">
                         <div class="mb10">
                             <input placeholder="Email или тел. номер"
@@ -50,11 +50,11 @@
             </div>
             {% else %}
             <div class="header-login">
-                <div class="header-login__avatar">
+                <div class="js-open-popup header-login__avatar" data-open-popup="login-auth">
                     <i class="user-avatar"></i>
                     <div class="header-login__avatar-statistic">5</div>
                 </div>
-                <div class="header-login__dropdown">
+                <div class="js-popup header-login__dropdown" data-popup="login-auth">
                     <ul class="user-menu">
                         <li class="user-menu__item"><a class="fz14 text-italic" href="#">Личный кабинет</a></li>
                         <li class="user-menu__item"><a class="fz14 text-italic" href="#">Настройки</a></li>
