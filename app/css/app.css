@@ -544,10 +544,6 @@ button {
   max-width: 1160px;
 }
 
-.standard-link:hover {
-  text-decoration: underline;
-}
-
 .text-white {
   color: #ffffff;
 }
@@ -701,19 +697,6 @@ button {
 
 .text-uppercase {
   text-transform: uppercase;
-}
-
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
-}
-
-.main-vacancy {
-  width: 100%;
-  display: inline-block;
 }
 
 .section__header {
@@ -1043,6 +1026,9 @@ button {
   left: 20px;
   width: 85%;
   border-bottom: 1px solid #616161;
+}
+.user-menu__item:last-child::after {
+  content: none;
 }
 
 .user-menu__item-statistic {
@@ -1533,22 +1519,6 @@ button {
   flex-wrap: wrap;
 }
 
-.grid-home-vacancies__item {
-  width: 45%;
-}
-
-.grid-home-company-vacancies__companies {
-  width: 75%;
-}
-
-.grid-home-company-vacancies__count {
-  width: 20%;
-}
-
-.grid-home-vacancies__item-count {
-  width: 40px;
-}
-
 .main-content-auth {
   display: -ms-flexbox;
   display: flex;
@@ -1644,6 +1614,7 @@ button {
 .main-vacancy {
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -ms-flex-pack: justify;
   justify-content: space-between;
   -ms-flex-align: center;
