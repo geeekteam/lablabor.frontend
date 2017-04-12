@@ -1,0 +1,50 @@
+.section-top
+	padding: 62px 0 25px 0
+	background: linear-gradient(to bottom, #aeaeae, $white)
+
+.breadcrumbs
+	margin-left: 265px
+	list-style-type: none
+	display: flex
+
+.breadcrubmbs__item
+	position: relative
+	padding-right: 15px
+	margin-right: 2px
+	letter-spacing: 0.5px
+	&::after
+		position: absolute
+		content: '/'
+		right: 0
+		top: 0
+		bottom: 0
+		color: $forest-green
+		font-weight: 800
+	&:last-child::after
+		content: none
+		
+.announce_backing
+	margin-left: 355px
+	padding-left: 65px
+	position: relative
+	&::before
+		position: absolute
+		content: ''
+		top: 9px
+		bottom: 0
+		left: 0
+
+.announce__content
+	padding: 19px 11px 19px 60px
+	position: relative
+	background: $pigeon-blue
+	&::before
+		position: absolute
+		content: ''
+		top: auto
+		bottom: auto
+		left: 28px
+
+.announce__text
+	padding-top: 4px
+	letter-spacing: 0.4px
