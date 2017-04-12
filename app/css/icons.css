@@ -264,3 +264,34 @@
   height: 48px;
   width: 48px;
 }
+
+.auth-slider .owl-prev, .auth-slider .owl-next {
+  background-image: url('../images/icons-s366eef5293.png');
+  background-position: 0 -24px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 78px;
+  width: 44px;
+}
+.auth-slider .owl-prev {
+  background-image: url('../images/icons-s366eef5293.png');
+  background-position: 0 -24px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 78px;
+  width: 44px;
+}
+.auth-slider .owl-next {
+  background-image: url('../images/icons-s366eef5293.png');
+  background-position: 0 -24px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 78px;
+  width: 44px;
+}

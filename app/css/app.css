@@ -265,6 +265,37 @@
   width: 48px;
 }
 
+.auth-slider .owl-prev, .auth-slider .owl-next {
+  background-image: url('../images/icons-s366eef5293.png');
+  background-position: 0 -24px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 78px;
+  width: 44px;
+}
+.auth-slider .owl-prev {
+  background-image: url('../images/icons-s366eef5293.png');
+  background-position: 0 -24px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 78px;
+  width: 44px;
+}
+.auth-slider .owl-next {
+  background-image: url('../images/icons-s366eef5293.png');
+  background-position: 0 -24px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 78px;
+  width: 44px;
+}
+
 @font-face {
   font-family: "PT Serif Italic";
   src: url("../fonts/subset-PTSerif-Italic.eot");
@@ -983,7 +1014,7 @@ button {
 }
 
 .user-menu {
-  padding: 20px 25px 5px;
+  padding: 20px 19px 5px;
   width: 180px;
   margin-left: -110px;
   margin-top: 15px;
@@ -1391,18 +1422,10 @@ button {
 }
 
 .auth-slider {
-  padding: 0 !important;
+  padding: 0;
 }
 .auth-slider .owl-prev, .auth-slider .owl-next {
   position: absolute;
-  background-image: url('../images/icons-s366eef5293.png');
-  background-position: 0 -24px;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  height: 78px;
-  width: 44px;
   font-size: 0;
   top: 45%;
 }
@@ -1410,29 +1433,13 @@ button {
   opacity: 0.7;
 }
 .auth-slider .owl-prev {
-  background-image: url('../images/icons-s366eef5293.png');
-  background-position: 0 -24px;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  height: 78px;
-  width: 44px;
-  left: 75px !important;
-  margin-left: 0 !important;
+  left: 75px;
+  margin-left: 0;
 }
 .auth-slider .owl-next {
-  background-image: url('../images/icons-s366eef5293.png');
-  background-position: 0 -24px;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  height: 78px;
-  width: 44px;
-  left: auto !important;
-  margin-left: 0 !important;
-  right: 75px !important;
+  left: auto;
+  margin-left: 0;
+  right: 75px;
   transform: rotate(180deg);
 }
 .auth-slider .owl-dots {
@@ -1448,31 +1455,32 @@ button {
 }
 
 .auth-slider__top {
+  display: inline-block;
   position: relative;
   margin-bottom: 300px;
   max-width: 1200px;
+  margin-right: auto;
+  padding-right: 150px;
+}
+.auth-slider__top::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 150px solid rgba(91, 106, 145, 0.6);
+  border-right: 150px solid transparent;
 }
 
 .auth-slider__top-content {
-  display: inline-block;
-  position: relative;
   max-width: 1050px;
-  padding: 35px 0 35px 20px;
+  padding: 35px 0px 35px 20px;
   background: rgba(91, 106, 145, 0.6);
 }
 .auth-slider__top-content p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-.auth-slider__top-content::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: -100px;
-  bottom: 0;
-  border-top: 150px solid rgba(91, 106, 145, 0.6);
-  border-right: 100px solid transparent;
 }
 
 .auth-slider__bottom {
@@ -1637,7 +1645,7 @@ button {
 }
 
 .main-vacancies__name {
-  width: 370px;
+  width: 240px;
   margin-right: 30px;
   overflow: hidden;
   white-space: nowrap;
@@ -1645,8 +1653,7 @@ button {
 }
 
 .main-vacancies__company {
-  width: 190px;
-  text-align: left;
+  text-align: right;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -1654,6 +1661,7 @@ button {
 
 .main-vacancies__salary {
   text-align: right;
+  width: 190px;
 }
 
 footer {

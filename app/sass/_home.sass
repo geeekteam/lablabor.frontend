@@ -304,25 +304,22 @@
 
 
 .auth-slider
-	padding: 0 !important
+	padding: 0
 	.owl-prev, .owl-next
 		position: absolute
-		+sprite(big-arrow)
 		font-size: 0
 		top: 45%
 		&:hover
 			opacity: 0.7
 
 	.owl-prev
-		+sprite(big-arrow)
-		left: 75px !important
-		margin-left: 0 !important
+		left: 75px
+		margin-left: 0
 
 	.owl-next
-		+sprite(big-arrow)
-		left: auto !important
-		margin-left: 0 !important
-		right: 75px !important
+		left: auto
+		margin-left: 0
+		right: 75px
 		transform: rotate(180deg)
 
 	.owl-dots
@@ -336,33 +333,33 @@
 	padding-top: 50px
 
 .auth-slider__top
+	display: inline-block
 	position: relative
 	margin-bottom: 300px
 	max-width: 1200px
+	margin-right: auto
+	padding-right: 150px
+	&::after
+		position: absolute
+		content: ''
+		top: 0
+		right: 0
+		bottom: 0
+		border-top: 150px solid rgba($pigeon-blue, 0.6)
+		border-right: 150px solid transparent
 
 .auth-slider__top-content
-	display: inline-block
-	position: relative
 	max-width: 1050px
-	padding: 35px 0 35px 20px
+	padding: 35px 0px 35px 20px
 	background: rgba($pigeon-blue, 0.6)
 	p
 		overflow: hidden
 		white-space: nowrap
 		text-overflow: ellipsis
-	&::after
-		position: absolute
-		content: ''
-		top: 0
-		right: -100px
-		bottom: 0
-		border-top: 150px solid rgba($pigeon-blue, 0.6)
-		border-right: 100px solid transparent
 
 .auth-slider__bottom
 	position: relative
 	max-width: 1200px
-	//float: right
 	margin-left: auto
 	padding-left: 150px
 	&::after
@@ -485,18 +482,18 @@
 	align-items: center
 
 .main-vacancies__name
-	width: 370px
+	width: 240px
 	margin-right: 30px
 	overflow: hidden
 	white-space: nowrap
 	text-overflow: ellipsis
 
 .main-vacancies__company
-	width: 190px
-	text-align: left
+	text-align: right
 	overflow: hidden
 	white-space: nowrap
 	text-overflow: ellipsis
 
 .main-vacancies__salary
 	text-align: right
+	width: 190px
