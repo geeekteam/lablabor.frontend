@@ -1603,6 +1603,9 @@ button {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.company-vacancies__company:hover {
+  text-decoration: none;
+}
 
 .company-vacancies__count {
   overflow: hidden;
@@ -1639,6 +1642,12 @@ button {
   justify-content: space-between;
   -ms-flex-align: center;
   align-items: center;
+}
+.main-vacancy:hover .company-vacancies__company {
+  text-decoration: none;
+}
+.main-vacancy:hover .company-vacancies__count {
+  text-decoration: underline;
 }
 
 .main-vacancies__name {

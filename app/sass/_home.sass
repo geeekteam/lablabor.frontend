@@ -453,6 +453,8 @@
 	overflow: hidden
 	white-space: nowrap
 	text-overflow: ellipsis
+	&:hover
+		text-decoration: none
 
 .company-vacancies__count
 	overflow: hidden
@@ -480,6 +482,11 @@
 	display: flex
 	justify-content: space-between
 	align-items: center
+	&:hover
+		.company-vacancies__company
+			text-decoration: none
+		.company-vacancies__count
+			text-decoration: underline
 
 .main-vacancies__name
 	width: 240px
