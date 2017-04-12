@@ -295,6 +295,7 @@
 		background-color: #fff
 		border: 3px solid #fff
 		opacity: 0.7
+		+transition()
 		&:hover
 			opacity: 1
 			box-shadow: 1.5px 1px 3px 0px rgba($black, 0.75)
@@ -309,17 +310,18 @@
 		position: absolute
 		font-size: 0
 		top: 45%
+		+transition()
 		&:hover
 			opacity: 0.7
 
 	.owl-prev
-		left: 75px
+		left: 225px
 		margin-left: 0
 
 	.owl-next
 		left: auto
 		margin-left: 0
-		right: 75px
+		right: 225px
 		transform: rotate(180deg)
 
 	.owl-dots
@@ -421,23 +423,23 @@
 		position: absolute
 		content: ''
 		bottom: 0
-		left: 37%
+		left: 35%
 		width: 30%
 		border-bottom: 1px solid $dark-dull-gray
 
 
 .main-vacancies-top__item
 	position: relative
-	width: 340px
+	width: 330px
 	flex-shrink: 0
 	margin-right: 80px
 	&::after
 		position: absolute
 		content: ''
-		top: 20%
+		top: 18%
 		bottom: 0
 		right: -40px
-		height: 65%
+		height: 75%
 		border-right: 1px solid $dark-dull-gray
 	&:last-child::after
 		content: none
@@ -469,19 +471,20 @@
 	flex-wrap: wrap
 	width: 100%
 	position: relative
-	padding-bottom: 30px
+	padding-bottom: 15px
 	&::after
 		position: absolute
 		content: ''
 		bottom: 0
-		left: 12.5%
-		width: 75%
+		left: 16%
+		width: 68%
 		border-bottom: 1px solid $dark-dull-gray
 
 .main-vacancy
 	display: flex
 	justify-content: space-between
 	align-items: center
+	line-height: 13px
 	&:hover
 		.company-vacancies__company
 			text-decoration: none
@@ -497,6 +500,7 @@
 	text-overflow: ellipsis
 
 .main-vacancies__company
+	flex-grow: 1
 	text-align: right
 	overflow: hidden
 	white-space: nowrap
@@ -505,4 +509,4 @@
 .main-vacancies__salary
 	flex-shrink: 0
 	text-align: right
-	width: 180px
+	width: 258px
