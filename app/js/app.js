@@ -185,7 +185,7 @@
         plugin.openPopup = function (popupName) {
             plugin.reachPopups.filter('[data-popup="' + popupName + '"]').addClass('opened');
             plugin.bodyEl.css('overflow-y', 'scroll');
-            plugin.topPanelEl.css('padding-right', scrollSettings.width);
+            // plugin.topPanelEl.css('padding-right', scrollSettings.width);
             plugin.htmlEl.addClass('popup-opened');
         };
 
@@ -237,6 +237,18 @@
                 var className = options.reachElementClass.replace('.', '');
                 if (target.hasClass(className)) {
                     plugin.closePopup($(e.target).attr('data-popup'));
+                }
+            });
+
+            $(document).click(function (e) {
+                var target = $(e.target);
+                if(
+                    !target.hasClass('js-popup')
+                    && !target.closest('.js-popup').length > 0
+                    && !target.hasClass('js-open-popup')
+                )
+                {
+                    plugin.closePopup($('.js-popup:visible').attr('data-popup'));
                 }
             });
         };
