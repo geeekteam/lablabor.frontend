@@ -1,0 +1,191 @@
+.section__content-search
+	padding: 60px 0
+
+.banner
+	padding-left: 430px
+
+.search-vacancies
+	display: flex
+	justify-content: space-between
+
+.filter
+	padding: 10px 10px 10px 13px
+	border: 1px solid $forest-green
+	width: 240px
+
+.filter__input
+	display: inline-block
+	width: 197px
+	border: 1px solid #9f9f9f
+	border-radius: 10px
+	padding: 1px 20px
+	font-size: 14px
+	color: $dark-dull-gray
+
+.filter__input_salary
+	width: 70px
+	padding: 1px 7px
+
+.filter__select-currency
+	.jq-selectbox
+		border: 1px solid #9f9f9f
+		border-radius: 10px
+		width: 70px
+		cursor: pointer
+		padding: 1px 10px 1px 7px
+
+	.jq-selectbox__select
+		padding-right: 25px
+
+	.jq-selectbox__trigger
+		position: absolute
+		top: 10px
+		right: 0
+		width: 10px
+		height: 100%
+
+	.jq-selectbox__trigger-arrow
+		float: right
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 5px 5px 0 5px
+		border-color: $light-gray transparent transparent transparent
+		cursor: pointer
+
+	.jq-selectbox__dropdown
+		background: $white
+		border: 1px solid $dark-dull-gray
+		padding: 1px 10px 1px 7px
+
+	.jq-selectbox li
+		cursor: pointer
+		&:hover
+			color: $forest-green
+
+.filter__line
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.filter-remove-input
+	cursor: pointer
+
+.filter-add-input
+	cursor: pointer
+
+.filter__add
+	padding-left: 17px
+
+.filter__line_justify-start
+	justify-content: flex-start
+
+.filter__line_align-baseline
+	align-items: baseline
+
+.filter-show-input
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: 5px 5px 0 5px
+	border-color: $light-gray transparent transparent transparent
+	cursor: pointer
+
+.results
+	padding-top: 23px
+	flex-shrink: 0
+	flex-grow: 1
+
+.search__results
+	padding-left: 187px
+	letter-spacing: 0.5px
+
+.search-wrapper
+	position: relative
+	padding-bottom: 55px
+	&::after
+		position: absolute
+		content: ''
+		bottom: 0
+		left: 255px
+		border-bottom: 1px solid $dark-dull-gray
+		width: 500px
+
+.search-grid
+	position: relative
+	display: flex
+	justify-content: space-between
+	padding: 3px 21px 3px 5px
+	border: 2px solid transparent
+	&:hover
+		.search-grid__image
+			transform: scale(1.2)
+		.search-description__name
+			text-decoration: underline
+
+.search-grid_premium
+	background: #f4f6ea
+	border: 2px solid $pigeon-blue
+	&::after
+		position: absolute
+		content: ''
+		width: 0
+		height: 0
+		top: 0
+		right: 0
+		border-style: solid
+		border-width: 0 35px 35px 0
+		border-color: transparent $pigeon-blue transparent transparent
+
+.search-grid__item-image
+	position: relative
+	display: inline-block
+	width: 125px
+	height: 125px
+	flex-shrink: 0
+
+.search-grid__image-wrapper
+	position: absolute
+	width: 125px
+	height: 125px
+	overflow: hidden
+	border: 1px solid $forest-green
+	border-radius: 50%
+
+.search-grid__image
+	position: relative
+	height: 125px
+	object-fit: cover
+	width: 100%
+	+transition()
+
+.search-grid__item-description
+	flex-shrink: 0
+	flex-grow: 1
+	padding: 15px 20px 15px 40px
+
+.search-description
+	display: flex
+	flex-direction: column
+	align-content: space-between
+
+.search-description__name
+	font-weight: 800
+	letter-spacing: 0.7px
+
+.search-description__description
+	letter-spacing: 0.4px
+	line-height: 1.3
+
+.search-grid__item-salary
+	padding: 15px 0
+
+.interesting__grid
+	width: 750px
+
+.interesting-grid
+	display: flex
+	justify-content: space-between
+
+.interesting-grid__item
+	width: 33%

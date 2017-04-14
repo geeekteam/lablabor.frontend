@@ -47,6 +47,9 @@ button
 	padding: 0 20px
 	box-sizing: content-box
 
+.container_1280
+	max-width: 1280px
+
 .container_1160
 	max-width: 1160px
 
@@ -71,13 +74,16 @@ button
 .green-text
 	color: $forest-green
 
+.text-signal-black
+	color: $signal-black
+
 .button
 	display: inline-block
 	font-family: "Gotham Pro", sans-serif
 	text-transform: uppercase
 	cursor: pointer
 	border-radius: 25px
-	color: #fff
+	color: $white
 	padding: 2px 5px
 	text-align: center
 	cursor: pointer
@@ -174,3 +180,23 @@ button
 .text-uppercase
 	text-transform: uppercase
 
+.breadcrumbs
+	list-style-type: none
+	display: flex
+
+.breadcrubmbs__item
+	position: relative
+	padding-right: 15px
+	margin-right: 2px
+	letter-spacing: 0.5px
+	color: $signal-black
+	&::after
+		position: absolute
+		content: '/'
+		right: 0
+		top: 0
+		bottom: 0
+		font-weight: 800
+		color: $forest-green
+	&:last-child::after
+		content: none
