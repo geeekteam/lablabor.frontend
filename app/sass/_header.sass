@@ -1,19 +1,32 @@
 .section__header
 	padding: 10px 0 0
 
-.header__inner
+.header-inner
 	display: flex
 	align-items: center
 	justify-content: space-between
+	flex-wrap: wrap
+
+.header-inner__left
+	display: flex
+	align-items: center
+	flex-grow: 1
+
+.header-inner__right
+	display: flex
+	align-items: center
+	justify-content: space-between
+	flex-grow: 1
+
+.desktop-main-menu
+	flex-basis: 445px
 
 .main-menu
 	font-family: "Gotham Pro Medium", sans-serif
 	text-transform: uppercase
-	width: 445px
-	display: flex
 	list-style-type: none
 	line-height: 1
-	flex-shrink: 0
+	display: flex
 	justify-content: space-between
 
 .main-menu__item
@@ -30,24 +43,32 @@
 			display: none
 
 .logo
-	flex-basis: 43px
-	flex-shrink: 1
+	flex-grow: 1
+
+.logo__link
+	display: inline-block
 	
 .header-search
 	display: flex
-	flex-shrink: 1
-	max-width: 600px
-	width: 100%
+	align-items: center
+	flex-grow: 1
 
-.input__header
-	max-width: 300px
-	width: 100%
+.header-search__left
+	margin-right: 15px
+	flex-grow: 1
+
+.header-search__right
+	flex-grow: 1
+	flex-shrink: 0
+
+.inputs-header
 	display: flex
-	flex-shrink: 1
+	align-items: center
 
-.input__header-query
+.inputs-header__input
+	flex-grow: 1
+	height: 34px
 	font-size: 14px
-	width: 100%
 	border: 1px solid $forest-green
 	border-bottom-left-radius: 25px
 	border-top-left-radius: 25px
@@ -57,15 +78,16 @@
 	+placeholder
 		color: $dull-gray
 
-.selectbox__header
+.inputs-header__select
+	height: 34px
 
 	.jq-selectbox
-		width: 115px
 		border: 1px solid $forest-green
 		border-left: none
 		cursor: pointer
 		font-size: 14px
-		height: 35px
+		height: 100%
+		width: 100%
 		&:hover
 			box-shadow: inset 0 0 1px rgba(28, 157, 34, 1)
 
@@ -118,21 +140,16 @@
 .login
 	position: relative
 
-.search__button
+.inputs-header__search-button
 	display: flex
 	flex-shrink: 0
-	width: 40px
+	width: 45px
+	height: 34px
 	border-bottom-left-radius: 0
 	border-top-left-radius: 0
 
-.search__loupe
+.inputs-header__search-button-loupe
 	margin: auto
-
-.search__advanced-search
-	flex-shrink: 0
-	padding: 6px 0
-	font-size: 14px
-	letter-spacing: 0.5px
 
 .header-login-form
 	position: absolute
@@ -280,3 +297,5 @@
 	font-size: 11px
 	font-family: "Gotham Pro Medium", sans-serif
 	font-style: normal
+
+.mobile-menu

@@ -12,3 +12,74 @@
 
 	.main-vacancies-grid__item
 		max-width: 300px
+
+
+@media screen and (max-width: 1210px)
+
+	.header-inner__left
+		width: 100%
+		justify-content: space-between
+		margin-right: 0
+		margin-bottom: 15px
+
+@media screen and (max-width: 991px)
+
+
+@media screen and (max-width: 767px)
+
+	.desktop-main-menu
+		display: none
+
+	.mobile-menu
+		display: inline-block
+		padding: 15px
+
+	.main-menu
+		flex-basis: 100%
+		flex-direction: column
+
+	.main-menu__item
+		padding: 10px 15px
+		position: relative
+		&::after
+			position: absolute
+			content: ''
+			bottom: 0
+			left: 0
+			width: 100%
+			border-bottom: 1px solid $light-gray
+
+	.header-search
+		display: inline-block
+		padding: 0 15px
+		margin-bottom: 0
+		margin-right: 0
+		width: 100%
+
+	.inputs-header
+		flex-wrap: wrap
+
+	.inputs-header__input
+		width: 100%
+		flex-grow: 1
+		flex-shrink: 0
+		border-top-right-radius: 25px
+		border-bottom-right-radius: 25px
+		margin-bottom: 10px
+
+	.inputs-header__select
+		flex-grow: 10
+		margin-right: 10px
+		.jq-selectbox
+			border: 1px solid $forest-green
+			border-radius: 25px
+
+	.inputs-header__search-button
+		flex-grow: 1
+		border-radius: 25px
+
+	.inputs-header__input
+		padding: 0 10px
+
+	.header-search__right
+		flex-grow: 0

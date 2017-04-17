@@ -1,51 +1,60 @@
 <header class="header pt15 pb15">
     <div class="container">
-        <div class="header__inner">
-            <div class="logo mr30">
-                <a class="logo__link" href="/"><i class="logo-new"></i></a>
+        <div class="header-inner">
+            <div class="header-inner__left mr30">
+                <div class="logo mr30">
+                    <a class="logo__link" href="/"><i class="logo-new"></i></a>
+                </div>
+                <div class="desktop-main-menu">
+                    <ul class="main-menu">
+                        <li class="main-menu__item"><a class="main-menu__item-link text-without-underline" href="#">Прайс-лист</a></li>
+                        <li class="main-menu__item"><a class="main-menu__item-link text-without-underline" href="#">Помощь</a></li>
+                        <li class="main-menu__item"><a class="main-menu__item-link text-without-underline" href="#">Договор-оферта</a></li>
+                    </ul>
+                </div>
             </div>
-            <ul class="main-menu mr30">
-                <li class="main-menu__item"><a class="main-menu__item-link text-without-underline" href="#">Прайс-лист</a></li>
-                <li class="main-menu__item"><a class="main-menu__item-link text-without-underline" href="#">Помощь</a></li>
-                <li class="main-menu__item"><a class="main-menu__item-link text-without-underline" href="#">Договор-оферта</a></li>
-            </ul>
-            <form action="#" class="header-search mr30">
-                <div class="input input__header">
-                    <input class="input__header-query text-dull-gray text-italic" type="text" placeholder="Введите запрос">
+            <div class="header-inner__right">
+                <div class="header-search mr30">
+                    <div class="header-search__left">
+                        <form class="inputs-header">
+                            <input class="inputs-header__input text-dull-gray text-italic" type="text" placeholder="Введите запрос">
+                            <div class="inputs-header__select">
+                                <select class="text-dull-gray text-italic">
+                                    <option>Вакансии</option>
+                                    <option>Работодатели</option>
+                                </select>
+                            </div>
+                            <div class="inputs-header__search-button button button_green">
+                                <i class="inputs-header__search-button-loupe"></i>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="header-search__right">
+                        <a class="fz14 text-dull-gray text-italic text-without-underline" href="#">Расширенный поиск</a>
+                    </div>
                 </div>
-                <div class="selectbox selectbox__header">
-                    <select class="text-dull-gray text-italic">
-                        <option>Вакансии</option>
-                        <option>Работодатели</option>
-                    </select>
-                </div>
-                <div class="search__button button button_green mr10">
-                    <i class="search__loupe"></i>
-                </div>
-                <p class="search__advanced-search text-dull-gray text-italic">
-                    <a class="text-without-underline" href="#">Расширенный поиск</a>
-                </p>
-            </form>
-            {% if auth == 'false' %}
-            <div class="header-login">
-                <span class="js-open-popup header__button-login button button_green" data-open-popup="login-bar">Войти</span>
-                <div class="js-popup header-login__dropdown" data-popup="login-bar">
-                    <form class="header-login__form header-login-form">
-                        <div class="mb10">
-                            <input placeholder="Email или тел. номер"
-                                   class="header-login-form__input input text-light-gray text-italic"
-                                   type="text">
-                        </div>
-                        <div class="mb15">
-                            <input placeholder="Пароль"
-                                   class="header-login-form__input input text-light-gray text-italic"
-                                   type="text">
-                        </div>
-                        <div>
-                            <button class="header-login-form__button button button_empty-green" type="submit">Вход
-                            </button>
-                        </div>
-                    </form>
+                {% if auth == 'false' %}
+
+                <div class="header-login">
+                    <span class="js-open-popup header__button-login button button_green" data-open-popup="login-bar">Войти</span>
+                    <div class="js-popup header-login__dropdown" data-popup="login-bar">
+                        <form class="header-login__form header-login-form">
+                            <div class="mb10">
+                                <input placeholder="Email или тел. номер"
+                                       class="header-login-form__input input text-light-gray text-italic"
+                                       type="text">
+                            </div>
+                            <div class="mb15">
+                                <input placeholder="Пароль"
+                                       class="header-login-form__input input text-light-gray text-italic"
+                                       type="text">
+                            </div>
+                            <div>
+                                <button class="header-login-form__button button button_empty-green" type="submit">Вход
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
             {% else %}
