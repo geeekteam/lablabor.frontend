@@ -249,7 +249,8 @@
                     && !target.closest('.js-open-popup').length > 0
                 )
                 {
-                    plugin.closePopup($('.js-popup:visible').attr('data-popup'));
+                    plugin.closePopup($('.js-popup.opened').attr('data-popup'));
+                    console.log($('.js-popup.opened').attr('data-popup'));
                 }
             });
         };
@@ -300,6 +301,21 @@
         });
 
         app.popups();
+
+        // $(".js-toggle-menu").click(function () {
+        //     $(".js-mobile-menu").addClass("open");
+        //     $(".js-overlay").addClass("open");
+        // });
+        //
+        //
+        // $(".js-overlay, .js-menu-close").click(function () {
+        //     $(".js-mobile-menu").removeClass("open");
+        //     $(".js-overlay").removeClass("open");
+        // });
+        //
+        // $(".js-open-popup").click(function () {
+        //     $(".js-mobile-menu").removeClass("open");
+        // });
 
     });
 

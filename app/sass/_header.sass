@@ -78,7 +78,7 @@
 	+placeholder
 		color: $dull-gray
 
-.inputs-header__select
+.inputs-header__select, .mobile-search-form__select
 	height: 34px
 
 	.jq-selectbox
@@ -140,7 +140,7 @@
 .login
 	position: relative
 
-.inputs-header__search-button
+.inputs-header__search-button, .mobile-search-form__button
 	display: flex
 	flex-shrink: 0
 	width: 45px
@@ -155,13 +155,26 @@
 	position: absolute
 	display: flex
 	flex-direction: column
+	z-index: 350
+
+.header-login__dropdown
+	position: absolute
+	top: 90px
+	margin-left: -90px
+	visibility: hidden
+	z-index: 350
+	opacity: 0
+	+transition(opacity 0.3s ease)
+	&.opened
+		margin-top: 0
+		visibility: visible
+		opacity: 1
 
 .header-login__form
+	position: relative
 	background: $white
-	padding: 30px 7px
+	padding: 30px 15px
 	width: 200px
-	margin-left: -90px
-	top: 37px
 	text-align: center
 	border-radius: 5px
 	box-shadow: 0 0 15px $telegray
@@ -180,7 +193,7 @@
 	position: relative
 	border-radius: 15px
 	border: 1px solid $dark-dull-gray
-	width: 160px
+	width: 100%
 	padding: 1px 10px
 	color: $light-gray
 	+placeholder
@@ -188,10 +201,12 @@
 	&:hover
 		box-shadow: inset 0 0 1px rgba(0, 0, 0, 1)
 
-.header__button-login
-	padding: 8px 20px
+.header-login__button-login
+	padding: 0 20px
 	height: 34px
 	width: 100px
+	display: flex
+	align-items: center
 
 .header-login-form__button
 	font-size: 14px
@@ -199,7 +214,7 @@
 	width: 94px
 
 
-.header-login__avatar
+.header-avatar
 	position: relative
 	margin-right: 25px
 	cursor: pointer
@@ -228,7 +243,7 @@
 		border-color: transparent transparent $dark-dull-gray transparent
 		opacity: 0
 
-.header-login__avatar-statistic
+.header-avatar__count
 	box-sizing: border-box
 	position: absolute
 	top: 0
@@ -244,25 +259,24 @@
 	border-radius: 50%
 	color: $white
 
-.header-login__dropdown
+.user-menu
+	padding: 20px 19px 5px
+	width: 180px
+	background: $white
+	border: 1px solid $forest-green
+
+.user-menu__dropdown
 	position: absolute
-	margin-top: 50px
-	z-index: 10
+	top: 78px
+	margin-left: -90px
 	visibility: hidden
+	z-index: 350
 	opacity: 0
-	+transition()
+	+transition(opacity 0.3s ease)
 	&.opened
 		margin-top: 0
 		visibility: visible
 		opacity: 1
-
-.user-menu
-	padding: 20px 19px 5px
-	width: 180px
-	margin-left: -115px
-	margin-top: 15px
-	background: $white
-	border: 1px solid $forest-green
 
 .user-menu__item
 	position: relative
@@ -298,4 +312,48 @@
 	font-family: "Gotham Pro Medium", sans-serif
 	font-style: normal
 
-.mobile-menu
+.main-header__menu-button
+	flex-basis: 180px
+	text-align: right
+	display: none
+
+.button-hamburger
+	width: 50px
+	height: 40px
+	position: relative
+	cursor: pointer
+	display: inline-block
+	vertical-align: middle
+	outline: none
+	background-color: $forest-green
+	+transition()
+	&.active
+		height: 50px
+		.button-hamburger__line
+			opacity: 0
+			height: 4px
+			top: 50%
+			margin-top: -2px
+			&:first-child
+				transform: rotate(45deg)
+				opacity: 1
+			&:last-child
+				transform: rotate(-45deg)
+				opacity: 1
+
+.button-hamburger__line
+	position: absolute
+	height: 2px
+	background-color: #fff
+	right: 8px
+	left: 8px
+	top: 50%
+	margin-top: -1px
+	+transition()
+	&:first-child
+		top: 8px
+		margin-top: 0
+	&:last-child
+		top: auto
+		margin-top: 0
+		bottom: 8px

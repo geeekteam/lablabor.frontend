@@ -49,34 +49,47 @@
     </div>
 </footer>
 
-<div class="mobile-menu">
-    <div class="header-login mb20">
-        <span class="js-open-popup header__button-login button button_green" data-open-popup="login-bar">Войти</span>
+<div class="mobile-menu js-popup" data-popup="mobile-menu">
+    <div class="mobile-menu__header mb20">
+        {% if auth == 'false' %}
+            <span class="header-login__button-login button button_green js-change-popup" data-closing-popup="mobile-menu" data-opening-popup="login-bar">Войти</span>
+        {% else %}
+            <span class="js-open-popup-header-avatar header-avatar" data-open-popup="user-menu">
+                <i class="header-avatar__avatar"></i>
+                <div class="header-avatar__count">5</div>
+            </span>
+        {% endif %}
+        <a class="mobile-menu__close js-close-popup" href="#"></a>
     </div>
     <ul class="main-menu mb30">
         <li class="main-menu__item">
-            <a href="#">Прайс-лист</a>
+            <a class="main-menu__item-link text-without-underline" href="#">Прайс-лист</a>
         </li>
         <li class="main-menu__item">
-            <a href="#">Помощь</a>
+            <a class="main-menu__item-link text-without-underline" href="#">Помощь</a>
         </li>
         <li class="main-menu__item">
-            <a href="#">Договор-оферта</a>
+            <a class="main-menu__item-link text-without-underline" href="#">Договор-оферта</a>
         </li>
     </ul>
-    <div class="header-search">
-        <form class="inputs-header">
-            <input class="inputs-header__input text-dull-gray text-italic" type="text" placeholder="Введите запрос">
-            <div class="inputs-header__select">
-                <select class="text-dull-gray text-italic">
-                    <option>Вакансии</option>
-                    <option>Работодатели</option>
-                </select>
+    <div class="mobile-search">
+        <form class="mobile-search-form">
+            <div class="mobile-search-form__line mb10">
+                <input class="inputs-header__input text-dull-gray text-italic" type="text" placeholder="Введите запрос">
             </div>
-            <div class="inputs-header__search-button button button_green">
-                <i class="inputs-header__search-button-loupe"></i>
+            <div class="mobile-search-form__line mb10">
+                <div class="inputs-header__select">
+                    <select class="text-dull-gray text-italic">
+                        <option>Вакансии</option>
+                        <option>Работодатели</option>
+                    </select>
+                </div>
+                <div class="inputs-header__search-button button button_green">
+                    <i class="inputs-header__search-button-loupe"></i>
+                </div>
             </div>
         </form>
         <a class="fz14 text-dull-gray text-italic text-without-underline" href="#">Расширенный поиск</a>
     </div>
 </div>
+

@@ -12,6 +12,13 @@
                         <li class="main-menu__item"><a class="main-menu__item-link text-without-underline" href="#">Договор-оферта</a></li>
                     </ul>
                 </div>
+                <div class="main-header__menu-button js-open-popup" data-open-popup="mobile-menu">
+                    <button class="button-hamburger" type="button">
+                        <span class="button-hamburger__line"></span>
+                        <span class="button-hamburger__line"></span>
+                        <span class="button-hamburger__line"></span>
+                    </button>
+                </div>
             </div>
             <div class="header-inner__right">
                 <div class="header-search mr30">
@@ -33,46 +40,43 @@
                         <a class="fz14 text-dull-gray text-italic text-without-underline" href="#">Расширенный поиск</a>
                     </div>
                 </div>
-                {% if auth == 'false' %}
-
                 <div class="header-login">
-                    <span class="js-open-popup header__button-login button button_green" data-open-popup="login-bar">Войти</span>
-                    <div class="js-popup header-login__dropdown" data-popup="login-bar">
-                        <form class="header-login__form header-login-form">
-                            <div class="mb10">
-                                <input placeholder="Email или тел. номер"
-                                       class="header-login-form__input input text-light-gray text-italic"
-                                       type="text">
-                            </div>
-                            <div class="mb15">
-                                <input placeholder="Пароль"
-                                       class="header-login-form__input input text-light-gray text-italic"
-                                       type="text">
-                            </div>
-                            <div>
-                                <button class="header-login-form__button button button_empty-green" type="submit">Вход
-                                </button>
-                            </div>
-                        </form>
-                    </div>
+                    {% if auth == 'false' %}
+                        <span class="js-open-popup header-login__button-login button button_green" data-open-popup="login-bar">Войти</span>
+                        <div class="js-popup header-login__dropdown" data-popup="login-bar">
+                            <form class="header-login__form header-login-form">
+                                <div class="mb10">
+                                    <input placeholder="Email или тел. номер"
+                                           class="header-login-form__input input text-light-gray text-italic"
+                                           type="text">
+                                </div>
+                                <div class="mb15">
+                                    <input placeholder="Пароль"
+                                           class="header-login-form__input input text-light-gray text-italic"
+                                           type="text">
+                                </div>
+                                <div>
+                                    <button class="header-login-form__button button button_empty-green" type="submit">Вход
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    {% else %}
+                        <span class="js-open-popup header-avatar" data-open-popup="user-menu">
+                            <i class="header-avatar__avatar"></i>
+                            <div class="header-avatar__count">5</div>
+                        </span>
+                        <div class="js-popup user-menu__dropdown" data-popup="user-menu">
+                            <ul class="user-menu">
+                                <li class="user-menu__item"><a class="fz14 text-italic" href="#">Личный кабинет</a></li>
+                                <li class="user-menu__item"><a class="fz14 text-italic" href="#">Настройки</a></li>
+                                <li class="user-menu__item"><a class="fz14 text-italic" href="#">Статистика<div class="user-menu__item-statistic">+5</div></a></li>
+                                <li class="user-menu__item"><a class="fz14 text-italic" href="#">Выход</a></li>
+                            </ul>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
-            {% else %}
-            <div class="header-login">
-                <span class="js-open-popup header-login__avatar" data-open-popup="user-menu">
-                    <i class="user-avatar"></i>
-                    <div class="header-login__avatar-statistic">5</div>
-                </span>
-                <div class="js-popup header-login__dropdown" data-popup="user-menu">
-                    <ul class="user-menu">
-                        <li class="user-menu__item"><a class="fz14 text-italic" href="#">Личный кабинет</a></li>
-                        <li class="user-menu__item"><a class="fz14 text-italic" href="#">Настройки</a></li>
-                        <li class="user-menu__item"><a class="fz14 text-italic" href="#">Статистика<div class="user-menu__item-statistic">+5</div></a></li>
-                        <li class="user-menu__item"><a class="fz14 text-italic" href="#">Выход</a></li>
-                    </ul>
-                </div>
-            </div>
-            {% endif %}
         </div>
     </div>
 </header>
