@@ -155,14 +155,12 @@
 	position: absolute
 	display: flex
 	flex-direction: column
-	z-index: 350
 
 .header-login__dropdown
 	position: absolute
 	top: 90px
 	margin-left: -90px
 	visibility: hidden
-	z-index: 350
 	opacity: 0
 	+transition(opacity 0.3s ease)
 	&.opened
@@ -270,8 +268,8 @@
 	top: 78px
 	margin-left: -90px
 	visibility: hidden
-	z-index: 350
 	opacity: 0
+	z-index: 101
 	+transition(opacity 0.3s ease)
 	&.opened
 		margin-top: 0
@@ -304,7 +302,7 @@
 	background: $forest-green
 	border-radius: 50%
 	min-width: 20px
-	padding: 3.5px 2px 0
+	padding: 4px 4px 0
 	text-align: center
 	height: 20px
 	color: $white

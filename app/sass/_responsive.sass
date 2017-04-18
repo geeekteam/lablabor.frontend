@@ -13,6 +13,14 @@
 	.main-vacancies-grid__item
 		max-width: 300px
 
+	.auth-slider
+
+		.owl-prev
+			left: 15px
+
+		.owl-next
+			right: 15px
+
 
 @media screen and (max-width: 1210px)
 
@@ -24,6 +32,9 @@
 
 	.header-login__dropdown
 		top: 140px
+
+	.user-menu__dropdown
+		top: 143px
 
 @media screen and (max-width: 991px)
 
@@ -52,6 +63,12 @@
 
 		.header-avatar
 			display: none
+
+	.header-avatar
+		&::before
+			content: none
+		&::after
+			content: none
 		
 	.main-header__menu-button
 		display: block
@@ -80,6 +97,13 @@
 			border-bottom: 1px solid $light-gray
 		&::after
 			content: none
+
+	.main-menu__item-link
+		display: flex
+		justify-content: space-between
+
+	.user-menu__item-statistic
+		margin-left: 0
 
 	.mobile-search
 		display: flex

@@ -1,3 +1,15 @@
+<div class="container">
+    <div class="reset-password-popup js-popup" data-popup="reset-password">
+        <div class="text-medium fz22 text-uppercase text-signal-black text-center mb35">Восстановление пароля</div>
+        <form class="reset-password">
+            <p class="mb15"><input class="input input__green-border" type="text" placeholder="Номер телефона (+7707*******)/E-mail"></p>
+            <p class="mb15"><input class="input input__green-border" type="search" placeholder="Выберите контрольный вопрос из списка"></p>
+            <p class="mb15"><input class="input input__green-border" type="text" placeholder="Ответ на контрольный вопрос"></p>
+            <p class="mb30 text-center"><button class="reset-password_button button button_green">Восстановить</button></p>
+        </form>
+    </div>
+</div>
+
 <header class="header pt15 pb15">
     <div class="container">
         <div class="header-inner">
@@ -12,8 +24,8 @@
                         <li class="main-menu__item"><a class="main-menu__item-link text-without-underline" href="#">Договор-оферта</a></li>
                     </ul>
                 </div>
-                <div class="main-header__menu-button js-open-popup" data-open-popup="mobile-menu">
-                    <button class="button-hamburger" type="button">
+                <div class="main-header__menu-button">
+                    <button class="button-hamburger js-open-popup" data-open-popup="mobile-menu" type="button">
                         <span class="button-hamburger__line"></span>
                         <span class="button-hamburger__line"></span>
                         <span class="button-hamburger__line"></span>
@@ -42,8 +54,8 @@
                 </div>
                 <div class="header-login">
                     {% if auth == 'false' %}
-                        <span class="js-open-popup header-login__button-login button button_green" data-open-popup="login-bar">Войти</span>
-                        <div class="js-popup header-login__dropdown" data-popup="login-bar">
+                        <span class="header-login__button-login button button_green js-open-popup" data-open-popup="login-bar">Войти</span>
+                        <div class="header-login__dropdown js-popup" data-popup="login-bar">
                             <form class="header-login__form header-login-form">
                                 <div class="mb10">
                                     <input placeholder="Email или тел. номер"
@@ -62,11 +74,11 @@
                             </form>
                         </div>
                     {% else %}
-                        <span class="js-open-popup header-avatar" data-open-popup="user-menu">
+                        <span class="header-avatar js-open-popup" data-open-popup="user-menu">
                             <i class="header-avatar__avatar"></i>
                             <div class="header-avatar__count">5</div>
                         </span>
-                        <div class="js-popup user-menu__dropdown" data-popup="user-menu">
+                        <div class="user-menu__dropdown js-popup" data-popup="user-menu">
                             <ul class="user-menu">
                                 <li class="user-menu__item"><a class="fz14 text-italic" href="#">Личный кабинет</a></li>
                                 <li class="user-menu__item"><a class="fz14 text-italic" href="#">Настройки</a></li>
