@@ -41,6 +41,32 @@
 
 @media screen and (max-width: 767px)
 
+	.select
+		.jq-selectbox__select
+			padding-left: 10px
+
+		.jq-selectbox__select-text
+			font-size: 12px
+
+		.jq-selectbox__dropdown
+			padding-left: 10px
+
+		li
+			font-size: 12px
+
+	.popup-wrapper
+		//align-items: flex-start
+
+	.popup
+		flex-shrink: 0
+		flex-basis: 0
+
+	.popup__title
+		font-size: 16px
+
+	.mobile-menu-popup
+		display: block
+
 	.header-login__form
 		position: fixed
 		width: 280px
@@ -87,6 +113,8 @@
 	.main-menu__item
 		padding: 15px
 		position: relative
+		display: flex
+		justify-content: space-between
 		&::before
 			position: absolute
 			content: ''
@@ -98,9 +126,10 @@
 		&::after
 			content: none
 
-	.main-menu__item-link
-		display: flex
-		justify-content: space-between
+	//.main-menu__item-link
+	//	display: flex
+	//	justify-content: space-between
+	//	width: 100%
 
 	.user-menu__item-statistic
 		margin-left: 0
@@ -155,3 +184,27 @@
 	.inputs-header__search-button
 		flex-grow: 1
 		border-radius: 25px
+
+@media screen and (max-width: 600px)
+
+	.popup
+		&::after
+			border-width: 0 0 45px 45px
+
+	.popup__header
+		width: calc(100% - 45px)
+		left: 45px
+		height: 45px
+		padding: 10px 45px 0 0
+
+	.popup__body
+		padding: 10px 15px 30px
+
+	.popup__button
+		height: 45px
+		max-width: 265px
+		width: 100%
+
+	.input
+		padding: 0 10px
+		font-size: 12px

@@ -1,0 +1,124 @@
+<div class="mobile-menu-popup js-popup" data-popup="mobile-menu">
+    <div class="mobile-menu">
+        <div class="mobile-menu__header mb20">
+            {% if auth == 'false' %}
+                <span class="header-login__button-login button button_green js-change-popup" data-closing-popup="mobile-menu" data-opening-popup="login-bar">Войти</span>
+            {% else %}
+                <span class="header-avatar">
+                    <i class="header-avatar__avatar"></i>
+                    <div class="header-avatar__count">5</div>
+                </span>
+            {% endif %}
+            <a class="mobile-menu__close js-close-popup" href="#"></a>
+        </div>
+        <ul class="main-menu mb30">
+            {% if auth == 'true' %}
+                <li class="main-menu__item">
+                    <a class="main-menu__item-link text-without-underline" href="#">Личный кабинет</a>
+                </li>
+                <li class="main-menu__item">
+                    <a class="main-menu__item-link text-without-underline" href="#">Настройки</a>
+                </li>
+                <li class="main-menu__item">
+                    <a class="main-menu__item-link text-without-underline" href="#">Статистика</a><div class="user-menu__item-statistic">+5</div>
+                </li>
+                <li class="main-menu__item">
+                    <a class="main-menu__item-link text-without-underline" href="#">Выход</a>
+                </li>
+            {% endif %}
+            <li class="main-menu__item">
+                <a class="main-menu__item-link text-without-underline" href="#">Прайс-лист</a>
+            </li>
+            <li class="main-menu__item">
+                <a class="main-menu__item-link text-without-underline" href="#">Помощь</a>
+            </li>
+            <li class="main-menu__item">
+                <a class="main-menu__item-link text-without-underline" href="#">Договор-оферта</a>
+            </li>
+        </ul>
+        <div class="mobile-search">
+            <form class="mobile-search-form">
+                <div class="mobile-search-form__line mb10">
+                    <input class="inputs-header__input text-dull-gray text-italic" type="text" placeholder="Введите запрос">
+                </div>
+                <div class="mobile-search-form__line mb10">
+                    <div class="inputs-header__select">
+                        <select class="text-dull-gray text-italic">
+                            <option>Вакансии</option>
+                            <option>Работодатели</option>
+                        </select>
+                    </div>
+                    <div class="inputs-header__search-button button button_green">
+                        <i class="inputs-header__search-button-loupe"></i>
+                    </div>
+                </div>
+            </form>
+            <a class="fz14 text-dull-gray text-italic text-without-underline" href="#">Расширенный поиск</a>
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="reset-password">
+    <div class="reset-password popup">
+        <div class="close-popup popup__close js-close-popup" ></div>
+        <div class="reset-password__header popup__header">
+            <div class="reset-password__title popup__title text-medium fz22 text-uppercase text-signal-black">Восстановление пароля</div>
+        </div>
+        <form class="reset-password__body popup__body">
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Номер телефона (+7707*******)/E-mail"></p>
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Выберите контрольный вопрос из списка"></p>
+            <p class="mb30"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Ответ на контрольный вопрос"></p>
+            <p class="text-center"><button class="popup__button button button_green fz15 text-light">Восстановить</button></p>
+        </form>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="employer-registration">
+    <div class="reset-password popup">
+        <div class="close-popup popup__close js-close-popup" ></div>
+        <div class="reset-password__header popup__header">
+            <div class="reset-password__title popup__title text-medium fz22 text-uppercase text-signal-black">Регистрация работодатея</div>
+        </div>
+        <form class="reset-password__body popup__body">
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Номер телефона (+7707*******)/E-mail"></p>
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="password" placeholder="Пароль от 8 до 20 (строчные буквы латинского алфавита и цифры)"></p>
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="password" placeholder="Повторите пароль"></p>
+            <p class="mb15">
+                <select class="select" type="text" placeholder="Выберите контрольный вопрос из списка">
+                    <option>Девичья фамилия матери</option>
+                    <option>Кличка вашего первого домашнего животного</option>
+                    <option>Первый пляж, который вы посетили</option>
+                </select>
+            </p>
+            <p class="mb25"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Ответ на контрольный вопрос"></p>
+            <p class="text-italic fz14 text-dark-dull-gray mb45">Регистрируясь на сайте, вы подтверждаете, что ознакомлены и согласны с
+                <a href="#">условиями оказания услуг</a> сайта llab.kz</p>
+            <p class="text-center"><button class="popup__button button button_green fz15 text-light">Зарегистрироваться</button></p>
+        </form>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="competitor-registration">
+    <div class="reset-password popup">
+        <div class="close-popup popup__close js-close-popup" ></div>
+        <div class="reset-password__header popup__header">
+            <div class="reset-password__title popup__title text-medium fz22 text-uppercase text-signal-black">Регистрация соискателя</div>
+        </div>
+        <form class="reset-password__body popup__body">
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Номер телефона (+7707*******)/E-mail"></p>
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="password" placeholder="Пароль от 8 до 20 (строчные буквы латинского алфавита и цифры)"></p>
+            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="password" placeholder="Повторите пароль"></p>
+            <p class="mb15">
+                <select class="select" type="text" placeholder="Выберите контрольный вопрос из списка">
+                    <option>Девичья фамилия матери</option>
+                    <option>Кличка вашего первого домашнего животного</option>
+                    <option>Первый пляж, который вы посетили</option>
+                </select>
+            </p>
+            <p class="mb25"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Ответ на контрольный вопрос"></p>
+            <p class="text-italic fz14 text-dark-dull-gray mb45">Регистрируясь на сайте, вы подтверждаете, что ознакомлены и согласны с
+                <a class="link-standard" href="#">условиями оказания услуг</a> сайта llab.kz</p>
+            <p class="text-center"><button class="popup__button button button_green fz15 text-light">Зарегистрироваться</button></p>
+        </form>
+    </div>
+</div>

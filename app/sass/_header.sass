@@ -80,6 +80,7 @@
 
 .inputs-header__select, .mobile-search-form__select
 	height: 34px
+	z-index: 1
 
 	.jq-selectbox
 		border: 1px solid $forest-green
@@ -309,6 +310,9 @@
 	font-size: 11px
 	font-family: "Gotham Pro Medium", sans-serif
 	font-style: normal
+	&a
+		&:hover
+			text-decoration: none
 
 .main-header__menu-button
 	flex-basis: 180px

@@ -1,0 +1,157 @@
+.mobile-menu
+	height: 100%
+	max-width: 400px
+	overflow: auto
+	width: 90%
+	background-color: $white
+	transform: translateX(-100%)
+	+transition()
+
+.mobile-menu-popup
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 101
+	opacity: 0
+	background-color: rgba(0, 0, 0, 0.5)
+	+transition()
+	visibility: hidden
+	display: none
+	&.opened
+		visibility: visible
+		opacity: 1
+		.mobile-menu
+			transform: translateX(0)
+
+.mobile-menu__header
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.mobile-menu__close
+	position: relative
+	width: 34px
+	height: 34px
+	&::after
+		position: absolute
+		content: ''
+		top: 15px
+		left: 0
+		width: 100%
+		border-top: 1px solid $dark-dull-gray
+		-webkit-transform: rotate(45deg)
+		-moz-transform: rotate(45deg)
+		-o-transform: rotate(45deg)
+		+transition()
+	&::before
+		position: absolute
+		content: ''
+		top: 15px
+		left: 0
+		width: 100%
+		border-bottom: 1px solid $dark-dull-gray
+		-webkit-transform: rotate(-45deg)
+		-moz-transform: rotate(-45deg)
+		-o-transform: rotate(-45deg)
+		+transition()
+	&:hover
+		&::after
+			border-color: $black
+		&::before
+			border-color: $black
+
+.popup-wrapper
+	top: 0
+	left: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100%
+	width: 100%
+	position: fixed
+	z-index: 100
+	background-color: rgba(0, 0, 0, 0.5)
+	visibility: hidden
+	opacity: 0
+	+transition()
+	overflow-y: auto
+	&.opened
+		visibility: visible
+		opacity: 1
+
+.popup
+	position: relative
+	max-width: 810px
+	width: 100%
+	padding: 10px 25px
+	margin: 0 auto
+	&::after
+		top: 10px
+		left: 25px
+		position: absolute
+		content: ''
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 0 90px 90px
+		border-color: transparent transparent #dbdbdb transparent
+
+.popup__close
+	position: absolute
+	width: 28px
+	height: 28px
+	top: 0
+	right: -10px
+	z-index: 110
+	background-color: #dbdbdb
+	border-radius: 50%
+	border: 1px solid #6e6e6e
+	transition: all 0.3s ease
+	transform: translateX(-20px)
+	cursor: pointer
+	&::after
+		position: absolute
+		content: ''
+		top: 11px
+		right: 0
+		left: 4px
+		width: 70%
+		border-bottom: 5px solid $dull-gray
+		transform: rotate(45deg)
+	&::before
+		position: absolute
+		content: ''
+		top: 11px
+		right: 0
+		left: 4px
+		width: 70%
+		border-bottom: 5px solid $dull-gray
+		transform: rotate(-45deg)
+	&:hover
+		-webkit-filter: brightness(110%)
+
+.popup__header
+	position: relative
+	width: calc(100% - 90px)
+	height: 90px
+	left: 90px
+	background: $smoke-white
+	padding: 40px 110px 25px 20px
+
+.popup__title
+	text-align: center
+
+.popup__body
+	position: relative
+	padding: 10px 110px 45px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	width: 100%
+	background: $smoke-white
+
+.popup__button
+	height: 50px
+	width: 265px
