@@ -2136,7 +2136,7 @@ button {
   content: "";
   top: 18%;
   bottom: 0;
-  right: -40px;
+  right: -20%;
   height: 75%;
   border-right: 1px solid #616161;
 }
@@ -2911,6 +2911,10 @@ footer {
   .main-content__content {
     width: 100%;
     max-width: 100%;
+  }
+
+  .main-vacancies-top__item::after {
+    content: none;
   }
 }
 @media screen and (max-width: 991px) {
