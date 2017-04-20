@@ -1,15 +1,5 @@
 @media screen and (max-width: 1500px)
 
-	.grid_4-items
-		margin-bottom: -30px
-
-	.grid__item
-		padding-bottom: 30px
-		width: 45%
-
-	.main-content__content
-		margin: 0 30px
-
 	.main-vacancies-grid__item
 		max-width: 300px
 
@@ -22,7 +12,7 @@
 			right: 15px
 
 
-@media screen and (max-width: 1210px)
+@media screen and (max-width: 1200px)
 
 	.header-inner__left
 		width: 100%
@@ -36,10 +26,193 @@
 	.user-menu__dropdown
 		top: 143px
 
+	.main-content-banner
+		display: none
+
+	.main-content__content
+		width: 100%
+		max-width: 100%
+
+
 @media screen and (max-width: 991px)
 
+	.announce_backing
+		max-width: none
+		padding-left: 0
+		&::before
+			content: none
+
+	.announce__content
+		max-width: none
+
+	.breadcrumbs
+		padding-left: 0
+
+	.order-employer-content-grid
+		flex-wrap: wrap
+
+	.order-employer-content-grid__item
+		height: 200px
+		margin: 0 auto 30px
+		&:last-child
+			margin-bottom: 0
+
+	.section__order-employer-content
+		padding: 30px 25px
+
+	.dashboard
+		padding-top: 30px
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	.dashboard__form-wrapper
+		margin-left: 0
+
+	.dashboard__buttons
+		margin-bottom: 30px
+
+	.main-content__content
+		.grid_4-items
+			margin-bottom: -30px
+
+		.grid__item
+			padding-bottom: 30px
+			max-width: 45%
+			width: 100%
+
+	.main-articles-grid__item-large
+		max-width: 47%
+		width: 100%
+
+	.main-articles-grid__item-small
+		max-width: 47%
+		width: 100%
+
+	.footer-nav
+		display: none
+
+	.footer-bottom-grid__item
+		&:first-child
+			display: none
 
 @media screen and (max-width: 767px)
+
+	.auth-slider__first-slide, .auth-slider__second-slide
+		height: 400px
+
+	.auth-slider__second-slide-announce-backing
+		width: 100%
+
+	.auth-slider__second-slide-announce-content
+		padding: 0 15px
+		font-size: 18px
+		width: 100%
+
+	.auth-slider
+		.owl-item
+			&.active
+				.auth-slider__first-slide
+					.auth-slider__first-slide-top
+						margin-bottom: 100px
+						padding-right: 86px
+						max-width: 90%
+						&::after
+							border-top: 86px solid rgba($pigeon-blue, 0.6)
+							border-right: 86px solid transparent
+
+					.auth-slider__first-slide-top-content
+						padding: 15px 0 15px 35px
+						max-width: 100%
+						> p
+							&.fz36
+								font-size: 26px
+							&.fz30
+								font-size: 20px
+
+					.auth-slider__first-slide-bottom
+						max-width: 90%
+						padding-left: 86px
+						margin-left: auto
+						margin-right: 0
+						&::after
+							border-top: 86px solid rgba($forest-green, 0.6)
+							border-left: 86px solid transparent
+
+					.auth-slider__first-slide-bottom-content
+						max-width: 100%
+						padding: 15px 35px 15px 0
+						> p
+							&.fz36
+								font-size: 26px
+							&.fz30
+								font-size: 20px
+
+	.main-vacancies-top
+		flex-wrap: wrap
+
+	.main-vacancies-top__item
+		width: 100%
+		margin-bottom: 25px
+		margin-right: 0
+		&::after
+			content: none
+
+	.main-vacancies__company
+		display: none
+
+	.auth-slider__second-slide-wrapper
+		padding: 0 15px
+
+	.auth-slider__second-slide-title
+		> p
+			font-size: 26px
+
+	.auth-slider__second-slide-subtitle
+		> p
+			font-size: 22px
+
+	.auth-slider__second-slide-announce-content
+		> p
+			font-size: 22px
+
+	.footer-bottom-grid
+		flex-wrap: wrap
+
+		.footer-bottom-grid__item
+			width: 100%
+			text-align: center
+
+	.footer-top
+		flex-wrap: wrap
+		.footer-head__logo
+			justify-content: center
+			width: 100%
+			margin-right: 0
+			margin-bottom: 15px
+
+		.footer-head__site
+			text-align: center
+			margin: 0 auto
+
+	.main-content__content
+		.grid__item
+			max-width: 100%
+
+	.dashboard__title
+		font-size: 26px
+		text-align: center
+
+	.dashboard__subtitle
+		font-size: 22px
+		text-align: center
+
+	.dashboard-form__body
+		padding: 10px 25px 70px
+
+	.dashboard-form__social
+		width: 70%
+		margin: 0 auto 25px
 
 	.select
 		.jq-selectbox__select
@@ -53,13 +226,6 @@
 
 		li
 			font-size: 12px
-
-	.popup-wrapper
-		//align-items: flex-start
-
-	.popup
-		//flex-shrink: 0
-		//flex-basis: 0
 
 	.popup__title
 		font-size: 16px
@@ -126,11 +292,6 @@
 		&::after
 			content: none
 
-	//.main-menu__item-link
-	//	display: flex
-	//	justify-content: space-between
-	//	width: 100%
-
 	.user-menu__item-statistic
 		margin-left: 0
 
@@ -187,6 +348,15 @@
 
 @media screen and (max-width: 600px)
 
+	.dashboard__buttons
+		flex-direction: column
+		> div
+			margin-bottom: 15px
+			margin-right: 0
+			&:last-child
+				margin-bottom: 0
+
+
 	.popup
 		&::after
 			border-width: 0 0 45px 45px
@@ -208,3 +378,22 @@
 	.input
 		padding: 0 10px
 		font-size: 12px
+
+	.main-articles-grid__item-large
+		max-width: 100%
+		margin-bottom: 30px
+		padding-bottom: 0
+
+	.main-articles-grid__item-small
+		max-width: 100%
+		margin-bottom: 30px
+
+@media screen and (max-width: 400px)
+
+	.dashboard-form__social
+		width: 100%
+
+	.dashboard-form__title
+		padding-top: 20px
+		padding-left: 25px
+		text-align: center

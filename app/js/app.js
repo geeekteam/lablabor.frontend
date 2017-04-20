@@ -289,8 +289,8 @@
             items: 1,
             loop: true,
             dots: 0,
-            autoplay: true,
-            animateOut: 'fadeOut'
+            autoplay: false,
+            animateOut: 'fadeOut',
         });
 
         $('.auth-slider').owlCarousel({
@@ -298,24 +298,18 @@
             loop: true,
             dots: 1,
             nav: true,
+            responsive: {
+                0: {
+                    nav: false
+                },
+                768: {
+                    nav: true
+                }
+            }
         });
 
         app.popups();
 
-        // $(".js-toggle-menu").click(function () {
-        //     $(".js-mobile-menu").addClass("open");
-        //     $(".js-overlay").addClass("open");
-        // });
-        //
-        //
-        // $(".js-overlay, .js-menu-close").click(function () {
-        //     $(".js-mobile-menu").removeClass("open");
-        //     $(".js-overlay").removeClass("open");
-        // });
-        //
-        // $(".js-open-popup").click(function () {
-        //     $(".js-mobile-menu").removeClass("open");
-        // });
 
     });
 
