@@ -242,15 +242,13 @@
 
             $(document).click(function (e) {
                 var target = $(e.target);
-                if(
+                if (
                     !target.hasClass('js-popup')
                     && !target.closest('.js-popup').length > 0
                     && !target.hasClass('js-open-popup')
                     && !target.closest('.js-open-popup').length > 0
-                )
-                {
+                ) {
                     plugin.closePopup($('.js-popup.opened').attr('data-popup'));
-                    console.log($('.js-popup.opened').attr('data-popup'));
                 }
             });
         };
@@ -308,9 +306,45 @@
             }
         });
 
+        var autoCompleteInput = $('.js-autocomplete-input');
+
+        if (autoCompleteInput.length > 0) {
+            autoCompleteInput.each(function () {
+                var url = $(this).attr("data-source");
+
+                $(this).autocomplete({
+                    source: function (request, response) {
+                        $.ajax({
+                            url: url,
+                            dataType: "json",
+                            data: {
+                                term: request.label
+                            },
+                            success: function (data) {
+                                response(data);
+                                console.log(data);
+                            }
+                        });
+                    },
+                    minLength: 1,
+                    select: function (event, ui) {
+                        $(this).closest('.filter__section').find('.filter__inputs').append(
+                            '<span class="filter-input__item">' + ui.item.label +
+                            '<input type="checkbox" checked="checked" class="hidden" name="vacancy[' + ui.item.label + ']" id="vacancy" value="1" />' +
+                            '<i class="filter-remove-input"></i>' +
+                            '</span>'
+                        );
+                        $(this).val('');
+                        return false;
+                    }
+                });
+            });
+            $(document).on('click', '.filter-input__item .filter-remove-input', function (e) {
+                e.preventDefault();
+                $(this).closest('.filter-input__item').remove();
+            });
+        }
         app.popups();
-
-
     });
 
 })();

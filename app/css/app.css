@@ -1049,6 +1049,31 @@ button {
   border-color: transparent transparent #b5b5b5 transparent;
 }
 
+.ui-menu {
+  background: #ffffff;
+  max-width: 215px;
+  margin-top: -2px;
+  border: 1px solid #000000;
+  list-style-type: none;
+  padding: 5px 20px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.ui-menu-item {
+  background: #ffffff;
+  margin-bottom: 5px;
+}
+.ui-menu-item:hover {
+  text-decoration: underline;
+}
+.ui-menu-item:last-child {
+  margin-bottom: 0;
+}
+.ui-menu-item ul {
+  background: #ffffff;
+}
+
 .section__header {
   padding: 10px 0 0;
 }
@@ -2349,7 +2374,12 @@ button {
 }
 
 .banner {
-  padding-left: 430px;
+  margin-right: 0;
+  margin-left: auto;
+  max-width: 760px;
+}
+.banner img {
+  width: 100%;
 }
 
 .search-vacancies {
@@ -2363,11 +2393,13 @@ button {
   padding: 10px 10px 10px 13px;
   border: 1px solid #1c9d22;
   width: 240px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .filter__input {
   display: inline-block;
-  width: 197px;
+  width: 90%;
   border: 1px solid #9f9f9f;
   border-radius: 10px;
   padding: 1px 20px;
@@ -2423,12 +2455,20 @@ button {
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.filter-input__item {
+  font-size: 14px;
+  font-family: "PT Serif Italic", sans-serif;
+  color: #616161;
+  margin-right: 10px;
 }
 
 .filter-remove-input {
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .filter-add-input {
@@ -2479,9 +2519,11 @@ button {
   position: absolute;
   content: "";
   bottom: 0;
-  left: 255px;
+  left: 50%;
+  transform: translateX(-50%);
   border-bottom: 1px solid #616161;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
 }
 
 .search-grid {
@@ -2523,6 +2565,7 @@ button {
   height: 125px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  margin-right: 40px;
 }
 
 .search-grid__image-wrapper {
@@ -2547,7 +2590,7 @@ button {
   flex-shrink: 0;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  padding: 15px 20px 15px 40px;
+  padding: 15px 0;
 }
 
 .search-description {
@@ -2571,6 +2614,8 @@ button {
 
 .search-grid__item-salary {
   padding: 15px 0;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .interesting__grid {
@@ -2918,6 +2963,46 @@ footer {
   }
 }
 @media screen and (max-width: 991px) {
+  .section__content-search {
+    padding-top: 30px;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .search-vacancies {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .filter {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .filter__section {
+    width: 30%;
+  }
+
+  .results {
+    padding-left: 0;
+  }
+
+  .search__results {
+    padding-left: 0;
+  }
+
+  .interesting {
+    padding-left: 0;
+    margin: 0 auto;
+  }
+
   .announce_backing {
     max-width: none;
     padding-left: 0;
@@ -2997,6 +3082,10 @@ footer {
   }
 }
 @media screen and (max-width: 767px) {
+  .filter__section {
+    width: 50%;
+  }
+
   .auth-slider__first-slide, .auth-slider__second-slide {
     height: 400px;
   }

@@ -13,99 +13,112 @@
             </div>
             <div class="search-vacancies">
                 <div class="filter">
-                    <div class="filter__line mb15">
-                        <div class="text-italic fz18">Вакансии</div>
-                    </div>
-                    <div class="filter__line mb7">
-                        <input class="filter__input text-italic" type="text" placeholder="Инженер">
-                        <i class="filter-remove-input"></i>
-                    </div>
-                    <div class="filter__line mb7">
-                        <input class="filter__input text-italic" type="text" placeholder="Инженер-технолог">
-                        <i class="filter-remove-input"></i>
-                    </div>
-                    <div class="filter__line mb20 pl20">
-                        <i class="filter-add-input"></i>
-                    </div>
-                    <div class="filter__line mb15">
-                        <div class="text-italic fz18">Город</div>
-                    </div>
-                    <div class="filter__line mb7">
-                        <input class="filter__input text-italic" type="text" placeholder="Алматы">
-                        <i class="filter-remove-input"></i>
-                    </div>
-                    <div class="filter__line mb7">
-                        <input class="filter__input text-italic" type="text" placeholder="Атырау">
-                        <i class="filter-remove-input"></i>
-                    </div>
-                    <div class="filter__line mb15 pl20">
-                        <i class="filter-add-input"></i>
-                    </div>
-                    <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                        <div class="text-italic fz18 mr5">Образование</div>
-                        <i class="filter-show-input"></i>
-                    </div>
-                    <div class="filter__line cursor-pointer mb7 pl20">
-                        <div class="text-italic fz14 text-dark-dull-gray">Высшее</div>
-                        <i class="filter-remove-input"></i>
-                    </div>
-                    <div class="filter__line mb20 pl20">
-                        <i class="filter-add-input"></i>
-                    </div>
-                    <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                        <div class="text-italic fz18 mr5">Зарплата</div>
-                        <i class="filter-show-input"></i>
-                    </div>
-                    <div class="filter__line mb7">
-                        <div class="filter__line filter__line_justify-start">
-                            <input class="filter__input filter__input_salary text-italic mr5" type="text" placeholder="100.000">
-                            <span class="mr5 text-dark-dull-gray">-</span>
-                            <input class="filter__input filter__input_salary text-italic" type="text" placeholder="150.000">
+                    <div class="filter__section">
+                        <div class="filter__line mb15">
+                            <div class="text-italic fz18">Вакансии</div>
                         </div>
-                        <i class="filter-remove-input"></i>
-                    </div>
-                    <div class="filter__line filter__line_justify-start mb20">
-                        <div class="filter__select-currency text-italic mr5">
-                            <select class="text-dull-gray text-italic">
-                                <option>KZT</option>
-                                <option>USD</option>
-                            </select>
+                        <div class="filter__line mb7">
+                            <input class="js-autocomplete-input filter__input text-italic" data-source="json/vacancies.json">
                         </div>
-                        <i class="filter-add-input"></i>
+                        <div class="filter__inputs"></div>
                     </div>
-                    <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                        <div class="text-italic fz18 mr5">Вид деятельности</div>
-                        <i class="filter-show-input"></i>
+                    <div class="filter__section">
+                        <div class="filter__line mb15">
+                            <div class="text-italic fz18">Город</div>
+                        </div>
+                        <div class="filter__line mb7">
+                            <input id="cities" class="js-autocomplete-input filter__input text-italic" data-source="json/cities.json">
+                        </div>
+                        <div class="filter__inputs"></div>
                     </div>
-                    <div class="filter__line mb20">
-                        <input class="filter__input text-italic" type="text" placeholder="Программирование">
-                        <i class="filter-remove-input"></i>
+
+                    <div class="filter__section">
+                        <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
+                            <div class="text-italic fz18 mr5">Образование</div>
+                            <i class="filter-show-input"></i>
+                        </div>
+
+                        <div class="filter__line cursor-pointer mb7 pl20">
+                            <div class="text-italic fz14 text-dark-dull-gray">Высшее</div>
+                            <i class="filter-remove-input"></i>
+                        </div>
+
+                        <div class="filter__line mb20 pl20">
+                            <i class="filter-add-input"></i>
+                        </div>
                     </div>
-                    <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                        <div class="text-italic fz18 mr5">Тип занятости</div>
-                        <i class="filter-show-input"></i>
+
+
+                    <div class="filter__section">
+                        <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
+                            <div class="text-italic fz18 mr5">Зарплата</div>
+                            <i class="filter-show-input"></i>
+                        </div>
+
+                        <div class="filter__line mb7">
+                            <div class="filter__line filter__line_justify-start">
+                                <input class="filter__input filter__input_salary text-italic mr5" type="text" placeholder="100.000">
+                                <span class="mr5 text-dark-dull-gray">-</span>
+                                <input class="filter__input filter__input_salary text-italic" type="text" placeholder="150.000">
+                            </div>
+                            <i class="filter-remove-input"></i>
+                        </div>
+
+                        <div class="filter__line filter__line_justify-start mb20">
+                            <div class="filter__select-currency text-italic mr5">
+                                <select class="text-dull-gray text-italic">
+                                    <option>KZT</option>
+                                    <option>USD</option>
+                                </select>
+                            </div>
+                            <i class="filter-add-input"></i>
+                        </div>
                     </div>
-                    <div class="filter__line cursor-pointer mb5 pl20">
-                        <div class="text-italic fz14 text-dark-dull-gray">Полный рабочий день (5/2)</div>
-                        <i class="filter-remove-input"></i>
+
+                    <div class="filter__section">
+                        <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
+                            <div class="text-italic fz18 mr5">Вид деятельности</div>
+                            <i class="filter-show-input"></i>
+                        </div>
+
+                        <div class="filter__line mb20">
+                            <input class="filter__input text-italic" type="text" placeholder="Программирование">
+                            <i class="filter-remove-input"></i>
+                        </div>
                     </div>
-                    <div class="filter__line cursor-pointer mb7 pl20">
-                        <div class="text-italic fz14 text-dark-dull-gray">Полный рабочий день (6/1)</div>
-                        <i class="filter-remove-input"></i>
+
+                    <div class="filter__section">
+                        <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
+                            <div class="text-italic fz18 mr5">Тип занятости</div>
+                            <i class="filter-show-input"></i>
+                        </div>
+
+                        <div class="filter__line cursor-pointer mb5 pl20">
+                            <div class="text-italic fz14 text-dark-dull-gray">Полный рабочий день (5/2)</div>
+                            <i class="filter-remove-input"></i>
+                        </div>
+
+                        <div class="filter__line cursor-pointer mb7 pl20">
+                            <div class="text-italic fz14 text-dark-dull-gray">Полный рабочий день (6/1)</div>
+                            <i class="filter-remove-input"></i>
+                        </div>
+                        <div class="filter__line mb15 pl20">
+                            <i class="filter-add-input"></i>
+                        </div>
                     </div>
-                    <div class="filter__line mb15 pl20">
-                        <i class="filter-add-input"></i>
-                    </div>
-                    <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                        <div class="text-italic fz18 mr5">Опыт работы</div>
-                        <i class="filter-show-input"></i>
-                    </div>
-                    <div class="filter__line cursor-pointer mb7 pl20">
-                        <div class="text-italic fz14 text-dark-dull-gray">3-5 лет</div>
-                        <i class="filter-remove-input"></i>
-                    </div>
-                    <div class="filter__line pl20">
-                        <i class="filter-add-input"></i>
+
+                    <div class="filter__section">
+                        <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
+                            <div class="text-italic fz18 mr5">Опыт работы</div>
+                            <i class="filter-show-input"></i>
+                        </div>
+                        <div class="filter__line cursor-pointer mb7 pl20">
+                            <div class="text-italic fz14 text-dark-dull-gray">3-5 лет</div>
+                            <i class="filter-remove-input"></i>
+                        </div>
+                        <div class="filter__line pl20">
+                            <i class="filter-add-input"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="results pl40">

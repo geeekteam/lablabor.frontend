@@ -2,7 +2,11 @@
 	padding: 60px 0
 
 .banner
-	padding-left: 430px
+	margin-right: 0
+	margin-left: auto
+	max-width: 760px
+	img
+		width: 100%
 
 .search-vacancies
 	display: flex
@@ -12,10 +16,11 @@
 	padding: 10px 10px 10px 13px
 	border: 1px solid $forest-green
 	width: 240px
+	flex-shrink: 0
 
 .filter__input
 	display: inline-block
-	width: 197px
+	width: 90%
 	border: 1px solid #9f9f9f
 	border-radius: 10px
 	padding: 1px 20px
@@ -66,10 +71,17 @@
 .filter__line
 	display: flex
 	align-items: center
-	justify-content: space-between
+	flex-wrap: wrap
+
+.filter-input__item
+	font-size: 14px
+	font-family: "PT Serif Italic", sans-serif
+	color: $dark-dull-gray
+	margin-right: 10px
 
 .filter-remove-input
 	cursor: pointer
+	margin-left: 5px
 
 .filter-add-input
 	cursor: pointer
@@ -107,9 +119,11 @@
 		position: absolute
 		content: ''
 		bottom: 0
-		left: 255px
+		left: 50%
+		transform: translateX(-50%)
 		border-bottom: 1px solid $dark-dull-gray
-		width: 500px
+		max-width: 500px
+		width: 100%
 
 .search-grid
 	position: relative
@@ -143,6 +157,7 @@
 	width: 125px
 	height: 125px
 	flex-shrink: 0
+	margin-right: 40px
 
 .search-grid__image-wrapper
 	position: absolute
@@ -162,7 +177,7 @@
 .search-grid__item-description
 	flex-shrink: 0
 	flex-grow: 1
-	padding: 15px 20px 15px 40px
+	padding: 15px 0
 
 .search-description
 	display: flex
@@ -179,6 +194,8 @@
 
 .search-grid__item-salary
 	padding: 15px 0
+	margin-left: auto
+	margin-right: 0
 
 .interesting__grid
 	width: 750px
