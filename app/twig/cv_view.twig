@@ -1,0 +1,56 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Резюме соискателя{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+
+    <div class="section section__order-employer-header">
+        <div class="container">
+            <ul class="breadcrumbs pl265 mb10">
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Личный кабинет</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Оплата заказа</a>
+                </li>
+            </ul>
+            <div class="announce announce_backing">
+                <div class="announce__content">
+                    <div class="announce__text text-light fz13 text-uppercase text-white">Тариф такой-то такой-то активен еще 10 дней, не забывайте обновлять подписку</div>
+                    <i class="announce__content-close"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section section__cv-view-content">
+        <div class="container container1140">
+            <div class="summary">
+                <div class="summary__left summary-left">
+                    <div class="summary-left__image">
+                        <div class="round-thumbnail round-thumbnail_150">
+                            <img class="round-thumbnail__image round-thumbnail__image_150" src="images/default-vacancy.png" alt="">
+                        </div>
+                    </div>
+                    <div class="summary-left__line mb10">
+                        <button class="summary-left__button button button_gradient-green fz14">Пригласить на собеседование</button>
+                    </div>
+                    <div class="summary-left__line mb10">
+                        <button class="summary-left__button button button_gradient-blue fz14"><i class="print mr5"></i>Распечатать резюме</button>
+                    </div>
+                    <div class="summary-left__line"><i class="calendar"></i>30.01.1989</div>
+                    <div class="summary-left__line"><i class="place"></i>Казахстан, г. Астана, ул. Первого президента РК, д., 26</div>
+                    <div class="summary-left__line"><i class="sex"></i>Мужской</div>
+                    <div class="summary-left__line"><i class="marital-status"></i>Холост</div>
+                </div>
+                <div class="summary__right"></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,6 +1,6 @@
 {% extends "layouts/app.twig" %}
 
-{% block pageTitle %}Результаты поиска | Вакансии{% endblock %}
+{% block pageTitle %}Результаты поиска | Резюме{% endblock %}
 
 {% set auth = 'true' %}
 
@@ -111,7 +111,7 @@
                     </div>
                     <p class="filter__search-button text-center hidden"><button class="popup__button button button_green fz15 text-light">Поиск</button></p>
                 </div>
-                <div class="results pl40">
+                <div class="results results-cv pl40">
                     <ul class="breadcrumbs mb25">
                         <li class="breadcrubmbs__item">
                             <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
@@ -127,8 +127,8 @@
                     <div class="search-wrapper mb45">
                         <a class="search-grid search-grid__cv search-grid_premium" href="#">
                             <div class="search-grid__item-image">
-                                <div class="search-grid__image-wrapper">
-                                    <img class="search-grid__image" src="images/default-vacancy.png" alt="">
+                                <div class="round-thumbnail round-thumbnail_125">
+                                    <img class="round-thumbnail__image round-thumbnail__image" src="images/default-vacancy.png" alt="">
                                 </div>
                             </div>
                             <div class="search-grid__item-description">
@@ -141,8 +141,8 @@
                         </a>
                         <a class="search-grid search-grid__cv" href="#">
                             <div class="search-grid__item-image">
-                                <div class="search-grid__image-wrapper">
-                                    <img class="search-grid__image" src="images/default-vacancy.png" alt="">
+                                <div class="round-thumbnail round-thumbnail_125">
+                                    <img class="round-thumbnail__image round-thumbnail__image_125" src="images/default-vacancy.png" alt="">
                                 </div>
                             </div>
                             <div class="search-grid__item-description">

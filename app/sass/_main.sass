@@ -49,6 +49,9 @@ button
 	padding: 0 20px
 	box-sizing: content-box
 
+.container1140
+	max-width: 1180px
+
 .container_1280
 	max-width: 1280px
 
@@ -108,6 +111,18 @@ button
 	&:hover
 		box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.5)
 
+.button_gradient-green
+	width: 100%
+	background: linear-gradient(to bottom, #29942e 0%, #1d6620 50%,#29942e 100%)
+	&:hover
+		box-shadow: inset 0 0 10px rgba(#000000, 0.7)
+
+.button_gradient-blue
+	width: 100%
+	background: linear-gradient(to bottom, #556389 0%, #424e72 50%,#556389 100%)
+	&:hover
+		box-shadow: inset 0 0 10px rgba(#000000, 0.7)
+
 .button_empty-green
 	border: 1px solid $forest-green
 	color: $forest-green
@@ -146,14 +161,14 @@ button
 	text-transform: uppercase
 	letter-spacing: 0
 
-.text-underline, .text-underline > p
+.text-underline
 	text-decoration: underline
-	&:hover, &:hover > p
+	&:hover
 		text-decoration: none
 
-.text-without-underline, .text-without-underline > p
+.text-without-underline
 	text-decoration: none
-	&:hover, &:hover > p
+	&:hover
 		text-decoration: underline
 
 .grid
@@ -340,7 +355,6 @@ button
 		border-color: transparent transparent transparent $forest-green
 
 .pagination-items__item
-	//margin-right: 15px
 	width: 30px
 	height: 30px
 	padding: 4px
@@ -348,3 +362,72 @@ button
 		background-color: $forest-green
 		border-radius: 50%
 		color: $white
+
+.announce_backing
+	margin-left: auto
+	margin-right: 18%
+	max-width: 875px
+	width: 100%
+	padding-left: 65px
+	padding-bottom: 9px
+	position: relative
+	&::before
+		position: absolute
+		content: ''
+		top: 9px
+		bottom: 0
+		left: 0
+
+.announce__content
+	display: inline-block
+	padding: 19px 11px 19px 60px
+	position: relative
+	background: $pigeon-blue
+	max-width: 810px
+	width: 100%
+	&::before
+		position: absolute
+		content: ''
+		top: auto
+		bottom: auto
+		left: 28px
+
+.announce__content-close
+	position: absolute
+	top: -5px
+	right: -5px
+	cursor: pointer
+	&:hover
+		-webkit-filter: brightness(110%)
+
+.announce__text
+	padding-top: 4px
+	letter-spacing: 0.4px
+
+.round-thumbnail
+	display: flex
+	align-items: center
+	justify-content: center
+	position: absolute
+	overflow: hidden
+	border: 1px solid $forest-green
+	border-radius: 50%
+	+transition()
+
+.round-thumbnail_125
+	width: 125px
+	height: 125px
+
+.round-thumbnail_150
+	width: 150px
+	height: 150px
+
+.round-thumbnail__image
+	position: relative
+	object-fit: cover
+
+.round-thumbnail__image_125
+	height: 125px
+
+.round-thumbnail__image_150
+	height: 150px

@@ -41,7 +41,6 @@
 	padding-top: 0
 	padding-bottom: 0
 	line-height: 50px
-
 	&:hover
 		text-decoration: none
 
@@ -548,8 +547,7 @@
 	overflow: hidden
 	white-space: nowrap
 	text-overflow: ellipsis
-	&:hover
-		text-decoration: none
+	line-height: 1
 
 .company-vacancies__count
 	overflow: hidden
@@ -559,6 +557,7 @@
 	text-align: right
 	flex-grow: 2
 	flex-shrink: 0
+	line-height: 1
 
 .main-vacancies-bottom
 	display: flex
@@ -581,11 +580,6 @@
 	justify-content: space-between
 	align-items: center
 	line-height: 13px
-	&:hover
-		.company-vacancies__company
-			text-decoration: none
-		.company-vacancies__count
-			text-decoration: underline
 
 .main-vacancies__name
 	width: 330px
@@ -594,6 +588,7 @@
 	overflow: hidden
 	white-space: nowrap
 	text-overflow: ellipsis
+	line-height: 1
 
 .main-vacancies__company
 	flex-grow: 1
@@ -602,8 +597,17 @@
 	overflow: hidden
 	white-space: nowrap
 	text-overflow: ellipsis
+	line-height: 1
 
 .main-vacancies__salary
 	flex-grow: 2
 	flex-shrink: 0
 	text-align: right
+	line-height: 1
+
+
+
+.main-vacancy
+	&:hover
+		.company-vacancies__count, .company-vacancies__company, .main-vacancies__name, .main-vacancies__company, .main-vacancies__salary
+			text-decoration: underline

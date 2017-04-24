@@ -1,0 +1,29 @@
+.section__cv-view-content {
+  background: linear-gradient(to bottom, #fefefe 0%, #e5e5e5 95%, #bdbdbe 100%);
+  padding: 50px 0 195px;
+}
+
+.summary__left {
+  width: 300px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.summary-left__line {
+  width: 100%;
+}
+
+.summary-left__button {
+  padding: 5px 15px;
+  min-height: 31px;
+}
+
+.summary-left__image {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 6px;
+}
