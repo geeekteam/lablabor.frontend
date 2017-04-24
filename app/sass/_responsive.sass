@@ -14,6 +14,9 @@
 
 @media screen and (max-width: 1200px)
 
+	.interesting
+		padding-left: 0
+
 	.header-inner__left
 		width: 100%
 		justify-content: space-between
@@ -53,6 +56,7 @@
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
+		max-height: none
 
 	.filter__section
 		width: 30%
@@ -129,8 +133,73 @@
 
 @media screen and (max-width: 767px)
 
+	.search-vacancies__filter-button
+		display: block
+
+	.hidden-mobile
+		display: none
+
+	.filter
+		width: 90%
+		overflow: auto
+		margin: 10px auto 0
+
+	.search-grid
+		flex-wrap: wrap
+		justify-content: flex-start
+		padding-right: 5px
+
+	.search-grid__item-description
+		max-width: calc(100% - 115px)
+		margin-right: 0
+
+	.search-description__name
+		font-size: 16px
+
+	.search-description__company
+		font-size: 14px
+
+	.search-grid__item-salary
+		font-size: 16px
+		width: 100%
+		margin-left: 90px
+		padding: 0
+		text-align: left
+
+	.search-grid__item-image
+		width: 75px
+		height: 75px
+		margin-right: 15px
+		align-self: center
+
+	.search-grid__image-wrapper
+		width: 75px
+		height: 75px
+
+	.search-grid__image
+		height: 75px
+
+	.interesting__title
+		margin-bottom: 30px
+		font-size: 16px
+		text-align: center
+
+	.interesting-grid
+		width: 100%
+		flex-wrap: wrap
+
+	.interesting-grid__item
+		width: 100%
+		text-align: center
+
 	.filter__section
 		width: 50%
+		
+	.filter__search-button
+		display: block
+
+	.search-vacancies__filter-button
+		display: block
 
 	.auth-slider__first-slide, .auth-slider__second-slide
 		height: 400px
@@ -421,6 +490,10 @@
 	.main-articles-grid__item-small
 		max-width: 100%
 		margin-bottom: 30px
+
+@media screen and (max-width: 1500px)
+	.filter__section
+		width: 100%
 
 @media screen and (max-width: 400px)
 

@@ -1,5 +1,6 @@
 .section__content-search
 	padding: 60px 0
+	background: linear-gradient(to bottom, #d9d9d9 0%, #fafafa 20%, #f0f0f0 90%, #e4e4e4 100%)
 
 .banner
 	margin-right: 0
@@ -11,16 +12,24 @@
 .search-vacancies
 	display: flex
 	justify-content: space-between
+	padding-bottom: 40px
 
 .filter
 	padding: 10px 10px 10px 13px
 	border: 1px solid $forest-green
 	width: 240px
 	flex-shrink: 0
+	background-color: $smoke-white
+	margin-bottom: -15px
+	max-height: 720px
+	height: 100%
+
+.filter__section
+	padding-bottom: 15px
 
 .filter__input
 	display: inline-block
-	width: 90%
+	width: 100%
 	border: 1px solid #9f9f9f
 	border-radius: 10px
 	padding: 1px 20px
@@ -103,6 +112,13 @@
 	border-color: $light-gray transparent transparent transparent
 	cursor: pointer
 
+.filter__search-button
+	width: 100%
+
+.search-vacancies__filter-button
+	width: 100%
+	display: none
+
 .results
 	padding-top: 23px
 	flex-shrink: 0
@@ -115,6 +131,7 @@
 .search-wrapper
 	position: relative
 	padding-bottom: 55px
+	width: 100%
 	&::after
 		position: absolute
 		content: ''
@@ -132,24 +149,10 @@
 	padding: 3px 21px 3px 5px
 	border: 2px solid transparent
 	&:hover
-		.search-grid__image
-			transform: scale(1.2)
+		.search-grid__image-wrapper
+			box-shadow: 0 3px 3px 0 rgba(#000000, 0.5)
 		.search-description__name
 			text-decoration: underline
-
-.search-grid_premium
-	background: #f4f6ea
-	border: 2px solid $pigeon-blue
-	&::after
-		position: absolute
-		content: ''
-		width: 0
-		height: 0
-		top: 0
-		right: 0
-		border-style: solid
-		border-width: 0 35px 35px 0
-		border-color: transparent $pigeon-blue transparent transparent
 
 .search-grid__item-image
 	position: relative
@@ -166,18 +169,19 @@
 	overflow: hidden
 	border: 1px solid $forest-green
 	border-radius: 50%
+	+transition()
 
 .search-grid__image
 	position: relative
 	height: 125px
-	object-fit: cover
+	object-fit: contain
 	width: 100%
-	+transition()
 
 .search-grid__item-description
-	flex-shrink: 0
-	flex-grow: 1
 	padding: 15px 0
+	max-width: calc(100% - 165px)
+	width: 100%
+	margin-right: 15px
 
 .search-description
 	display: flex
@@ -187,6 +191,7 @@
 .search-description__name
 	font-weight: 800
 	letter-spacing: 0.7px
+	+transition()
 
 .search-description__description
 	letter-spacing: 0.4px
@@ -194,15 +199,22 @@
 
 .search-grid__item-salary
 	padding: 15px 0
-	margin-left: auto
-	margin-right: 0
+	max-width: 310px
+	width: 100%
+	text-align: right
+
+.interesting
+	padding-bottom: 45px
 
 .interesting__grid
-	width: 750px
+	width: 100%
+	margin-bottom: -15px
 
 .interesting-grid
 	display: flex
 	justify-content: space-between
+	flex-wrap: wrap
 
 .interesting-grid__item
-	width: 33%
+	width: 240px
+	padding-bottom: 15px

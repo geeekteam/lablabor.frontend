@@ -1,0 +1,27 @@
+.search-grid_premium
+	background: #f4f6ea
+	border: 2px solid $pigeon-blue
+	&::after
+		position: absolute
+		content: ''
+		width: 0
+		height: 0
+		top: 0
+		right: 0
+		border-style: solid
+		border-width: 0 35px 35px 0
+		border-color: transparent $pigeon-blue transparent transparent
+
+.search-grid__cv
+	align-items: center
+
+.search-wrapper
+	margin-bottom: 0
+	padding-bottom: 0
+	&::after
+		content: none
+
+.search-grid__cv
+	margin-bottom: 15px
+	&:last-child
+		margin-bottom: 0

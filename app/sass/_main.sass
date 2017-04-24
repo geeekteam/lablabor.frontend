@@ -310,10 +310,41 @@ button
 	ul
 		background: $white
 
-.ui-widget
+.pagination
+	display: flex
+	justify-content: center
 
-.ui-widget-content
+.pagination__prev
+	margin-right: 15px
+	position: relative
+	padding: 4px
+	&::after
+		position: absolute
+		content: ''
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 10px 10px 10px 0
+		border-color: transparent $forest-green transparent transparent
 
-.ui-autocomplete
+.pagination__next
+	position: relative
+	padding: 4px
+	&::after
+		position: absolute
+		content: ''
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 10px 0 10px 10px
+		border-color: transparent transparent transparent $forest-green
 
-.ui-front
+.pagination-items__item
+	//margin-right: 15px
+	width: 30px
+	height: 30px
+	padding: 4px
+	&:hover
+		background-color: $forest-green
+		border-radius: 50%
+		color: $white
