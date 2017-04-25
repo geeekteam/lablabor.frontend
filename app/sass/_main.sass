@@ -433,3 +433,23 @@ button
 
 .desktop-hidden
 	display: none
+
+.markered-list
+	position: relative
+	list-style-type: none
+	>li
+		position: relative
+		padding-left: 15px
+		&::before
+			position: absolute
+			content: ''
+			top: 7px
+			left: 0
+			width: 5px
+			height: 5px
+			background-color: #000000
+			border: 1px solid $black
+			border-radius: 50%
+
+.unmarkered-list
+	list-style-type: none

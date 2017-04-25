@@ -797,6 +797,10 @@
   padding-left: 35px;
 }
 
+.pl30 {
+  padding-left: 30px;
+}
+
 .pl20 {
   padding-left: 20px;
 }
@@ -1375,6 +1379,30 @@ button {
 
 .desktop-hidden {
   display: none;
+}
+
+.markered-list {
+  position: relative;
+  list-style-type: none;
+}
+.markered-list > li {
+  position: relative;
+  padding-left: 15px;
+}
+.markered-list > li::before {
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.unmarkered-list {
+  list-style-type: none;
 }
 
 .section__header {
@@ -2970,6 +2998,9 @@ button {
 .summary-left-section__line {
   width: 100%;
 }
+.summary-left-section__line > ul {
+  list-style-type: none;
+}
 
 .summary__icon {
   width: 30px;
@@ -2986,7 +3017,7 @@ button {
 .summary__image {
   height: 150px;
   width: 150px;
-  margin-bottom: 6px;
+  margin: 0 auto;
 }
 
 .summary__right {
@@ -3017,7 +3048,6 @@ button {
 
 .summary__name {
   font-family: "Gotham Pro Medium", sans-serif;
-  font-weight: 800;
 }
 
 .summary__speciality {
@@ -3027,7 +3057,6 @@ button {
 
 .summary__salary {
   font-family: "Gotham Pro Medium", sans-serif;
-  font-weight: 800;
 }
 
 .summary__email {
@@ -3081,6 +3110,10 @@ button {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+  -ms-flex-preferred-size: 5px;
+  flex-basis: 5px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .summary-grid__left-item {
@@ -3423,13 +3456,45 @@ footer {
   }
 }
 @media screen and (max-width: 991px) {
-  display: block;
+  .summary {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .summary__left {
+    max-width: 100%;
+  }
+
+  .summary-left-section::after {
+    max-width: 100%;
+  }
+  .summary-left-section:last-child {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  .summary-left-section:last-child::after {
+    content: "";
+  }
+
+  .desktop-hidden {
+    display: block;
+  }
+
   .summary-right-section::after {
     max-width: 100%;
     left: 0;
   }
 
   .summary-right-section__line {
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .summary-right-section__line .pl35 {
+    padding-left: 20px;
+  }
+
+  .summary-left-section__line {
     display: -ms-flexbox;
     display: flex;
   }
@@ -3498,10 +3563,6 @@ footer {
 
   .summary__button {
     margin: 0 auto;
-  }
-
-  .summary__left {
-    display: none;
   }
 
   .section__content-search {
@@ -4098,5 +4159,14 @@ footer {
     padding-top: 20px;
     padding-left: 25px;
     text-align: center;
+  }
+}
+@media screen and (max-width: 991px) {
+  .tab-hidden {
+    display: none;
+  }
+
+  .tab-pl20 {
+    padding-left: 20px;
   }
 }
