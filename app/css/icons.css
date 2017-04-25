@@ -1,9 +1,10 @@
 .fri {
   display: inline-block;
   vertical-align: middle;
+  width: 100%;
 }
 
-.inputs-header__search-button-loupe {
+.fri_search-button-loupe {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -995px;
   background-repeat: no-repeat;
@@ -35,7 +36,7 @@
   width: 15px;
 }
 
-.facebook {
+.fri_facebook {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -625px;
   background-repeat: no-repeat;
@@ -46,7 +47,7 @@
   width: 30px;
 }
 
-.google {
+.fri_google {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -748px;
   background-repeat: no-repeat;
@@ -57,7 +58,7 @@
   width: 30px;
 }
 
-.instagram {
+.fri_instagram {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -818px;
   background-repeat: no-repeat;
@@ -68,7 +69,7 @@
   width: 30px;
 }
 
-.twitter {
+.fri_twitter {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1762px;
   background-repeat: no-repeat;
@@ -79,7 +80,7 @@
   width: 30px;
 }
 
-.vkontakte {
+.fri_vkontakte {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1916px;
   background-repeat: no-repeat;
@@ -90,7 +91,7 @@
   width: 30px;
 }
 
-.vkontakte-green {
+.fri_vkontakte-green {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1881px;
   background-repeat: no-repeat;
@@ -101,7 +102,7 @@
   width: 30px;
 }
 
-.twitter-green {
+.fri_twitter-green {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1727px;
   background-repeat: no-repeat;
@@ -112,7 +113,7 @@
   width: 30px;
 }
 
-.instagram-green {
+.fri_instagram-green {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -783px;
   background-repeat: no-repeat;
@@ -123,7 +124,7 @@
   width: 30px;
 }
 
-.google-green {
+.fri_google-green {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -713px;
   background-repeat: no-repeat;
@@ -134,7 +135,7 @@
   width: 30px;
 }
 
-.facebook-green {
+.fri_facebook-green {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -590px;
   background-repeat: no-repeat;
@@ -145,7 +146,7 @@
   width: 30px;
 }
 
-.logo-footer {
+.fri_logo-footer {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -853px;
   background-repeat: no-repeat;
@@ -156,7 +157,7 @@
   width: 43px;
 }
 
-.logo-new {
+.fri_logo-new {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -904px;
   background-repeat: no-repeat;
@@ -167,7 +168,7 @@
   width: 48px;
 }
 
-.logo-text {
+.fri_logo-text {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -957px;
   background-repeat: no-repeat;
@@ -210,7 +211,7 @@
   opacity: 1;
 }
 
-.resume {
+.fri_resume {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1413px;
   background-repeat: no-repeat;
@@ -221,7 +222,7 @@
   width: 100px;
 }
 
-.target {
+.fri_target {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1571px;
   background-repeat: no-repeat;
@@ -232,7 +233,7 @@
   width: 100px;
 }
 
-.cooperation {
+.fri_cooperation {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -287px;
   background-repeat: no-repeat;
@@ -243,7 +244,7 @@
   width: 100px;
 }
 
-.dream-work {
+.fri_dream-work {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -392px;
   background-repeat: no-repeat;
@@ -254,7 +255,7 @@
   width: 93px;
 }
 
-.header-avatar__avatar {
+.fri_avatar {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1797px;
   background-repeat: no-repeat;
@@ -349,7 +350,7 @@
   width: 19px;
 }
 
-.announce__content-close {
+.fri_announce-content-close {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -70px;
   background-repeat: no-repeat;
@@ -360,7 +361,7 @@
   width: 15px;
 }
 
-.non-cash-credit-card {
+.fri_non-cash-credit-card {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1099px;
   background-repeat: no-repeat;
@@ -371,7 +372,7 @@
   width: 36px;
 }
 
-.non-cash-man {
+.fri_non-cash-man {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1158px;
   background-repeat: no-repeat;
@@ -382,7 +383,7 @@
   width: 57px;
 }
 
-.non-cash-terminal {
+.fri_non-cash-terminal {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1218px;
   background-repeat: no-repeat;
@@ -393,7 +394,7 @@
   width: 64px;
 }
 
-.visa {
+.fri_visa {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1850px;
   background-repeat: no-repeat;
@@ -404,7 +405,7 @@
   width: 72px;
 }
 
-.american-express {
+.fri_american-express {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -25px;
   background-repeat: no-repeat;
@@ -415,7 +416,7 @@
   width: 112px;
 }
 
-.master-card {
+.fri_master-card {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1046px;
   background-repeat: no-repeat;
@@ -426,7 +427,7 @@
   width: 81px;
 }
 
-.filter-remove-input {
+.fri_filter-remove-input {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -695px;
   background-repeat: no-repeat;
@@ -437,7 +438,7 @@
   width: 12px;
 }
 
-.filter-add-input {
+.fri_filter-add-input {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -660px;
   background-repeat: no-repeat;
@@ -448,7 +449,7 @@
   width: 12px;
 }
 
-.print {
+.fri_print {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1332px;
   background-repeat: no-repeat;
@@ -459,7 +460,7 @@
   width: 22px;
 }
 
-.calendar {
+.fri_calendar {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -258px;
   background-repeat: no-repeat;
@@ -470,7 +471,7 @@
   width: 22px;
 }
 
-.place {
+.fri_place {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1301px;
   background-repeat: no-repeat;
@@ -481,7 +482,7 @@
   width: 18px;
 }
 
-.sex {
+.fri_sex {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1518px;
   background-repeat: no-repeat;
@@ -492,7 +493,7 @@
   width: 24px;
 }
 
-.marital-status {
+.fri_marital-status {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1022px;
   background-repeat: no-repeat;
@@ -503,7 +504,7 @@
   width: 25px;
 }
 
-.email {
+.fri_email {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -519px;
   background-repeat: no-repeat;
@@ -514,7 +515,7 @@
   width: 26px;
 }
 
-.phone {
+.fri_phone {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1275px;
   background-repeat: no-repeat;
@@ -525,7 +526,7 @@
   width: 18px;
 }
 
-.education {
+.fri_education {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -497px;
   background-repeat: no-repeat;
@@ -536,7 +537,7 @@
   width: 23px;
 }
 
-.experience {
+.fri_experience {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -566px;
   background-repeat: no-repeat;
@@ -547,7 +548,7 @@
   width: 23px;
 }
 
-.skills {
+.fri_skills {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1549px;
   background-repeat: no-repeat;
@@ -558,7 +559,7 @@
   width: 19px;
 }
 
-.additional {
+.fri_additional {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -569,7 +570,7 @@
   width: 20px;
 }
 
-.probation {
+.fri_probation {
   background-image: url('../images/icons-sc79efeae2f.png');
   background-position: 0 -1357px;
   background-repeat: no-repeat;
