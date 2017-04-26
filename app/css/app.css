@@ -3236,6 +3236,78 @@ button {
   padding: 5px 20px;
 }
 
+.section__employer-view {
+  background: linear-gradient(to bottom, #fefefe 0%, #e5e5e5 95%, #bdbdbe 100%);
+  padding: 50px 0 110px;
+}
+
+.employer-view {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.employer-view__left {
+  width: 210px;
+  margin-right: 100px;
+}
+
+.employer-view__right {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.employer-view-grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+}
+.employer-view-grid::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, 0);
+  height: 0;
+  border-bottom: 1px solid #a2a2a2;
+}
+.employer-view-grid:last-child::after {
+  content: none;
+}
+.employer-view-grid:hover .employer-view-grid__vacancy_underline {
+  border-color: #000;
+}
+.employer-view-grid:hover .employer-view-grid__salary {
+  text-decoration: underline;
+}
+.employer-view-grid:hover .employer-view-grid__data {
+  text-decoration: underline;
+}
+
+.employer-view-grid__vacancy {
+  max-width: 400px;
+  width: 100%;
+}
+
+.employer-view-grid__vacancy_underline {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.employer-view-grid__salary {
+  max-width: 150px;
+  width: 100%;
+}
+
+.employer-view-grid__data {
+  max-width: 240px;
+  width: 100%;
+  text-align: right;
+}
+
 footer {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -3570,6 +3642,16 @@ footer {
   }
 }
 @media screen and (max-width: 991px) {
+  .employer-view {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .employer-view__left {
+    margin: 0 auto 30px;
+    width: 100%;
+  }
+
   .summary {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -3799,6 +3881,26 @@ footer {
   }
 }
 @media screen and (max-width: 767px) {
+  .employer-view-grid {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .employer-view-grid__vacancy {
+    margin-bottom: 5px;
+    max-width: 100%;
+  }
+
+  .employer-view-grid__salary {
+    margin-bottom: 5px;
+    max-width: 100%;
+  }
+
+  .employer-view-grid__data {
+    max-width: 100%;
+    text-align: left;
+  }
+
   .vacancy-view__title {
     font-size: 18px;
   }
@@ -4312,6 +4414,10 @@ footer {
 
   .tab-pl20 {
     padding-left: 20px;
+  }
+
+  .tab-mb20 {
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 767px) {

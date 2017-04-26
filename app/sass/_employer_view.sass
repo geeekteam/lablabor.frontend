@@ -1,0 +1,59 @@
+.section__employer-view
+	background: linear-gradient(to bottom, #fefefe 0%, #e5e5e5 95%, #bdbdbe 100%)
+	padding: 50px 0 110px
+
+.employer-view
+	display: flex
+
+.employer-view__left
+	width: 210px
+	margin-right: 100px
+
+.employer-view__right
+	flex-grow: 1
+
+.employer-view-grid
+	display: flex
+	justify-content: space-between
+	position: relative
+	padding-bottom: 20px
+	margin-bottom: 15px
+	&::after
+		position: absolute
+		content: ''
+		bottom: 0
+		left: 50%
+		width: 90%
+		transform: translate(-50%, 0)
+		height: 0
+		border-bottom: 1px solid #a2a2a2
+	&:last-child
+		&::after
+			content: none
+	&:hover
+		.employer-view-grid__vacancy_underline
+			border-color: #000
+
+		.employer-view-grid__salary
+			text-decoration: underline
+
+		.employer-view-grid__data
+			text-decoration: underline
+
+
+
+.employer-view-grid__vacancy
+	max-width: 400px
+	width: 100%
+
+.employer-view-grid__vacancy_underline
+	border-bottom: 1px solid #c4c4c4
+
+.employer-view-grid__salary
+	max-width: 150px
+	width: 100%
+
+.employer-view-grid__data
+	max-width: 240px
+	width: 100%
+	text-align: right
