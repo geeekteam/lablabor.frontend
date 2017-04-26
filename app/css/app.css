@@ -939,6 +939,10 @@ button {
   max-width: 860px;
 }
 
+.container_800 {
+  max-width: 840px;
+}
+
 .text-white {
   color: #ffffff;
 }
@@ -3306,6 +3310,97 @@ button {
   max-width: 240px;
   width: 100%;
   text-align: right;
+}
+
+.section__vacancy-finder {
+  background: linear-gradient(to bottom, #fefefe 0%, #e5e5e5 95%, #bdbdbe 100%);
+  padding: 50px 0 110px;
+}
+
+.vacancy-finder__title {
+  padding-left: 30px;
+}
+
+.section__cv-finder {
+  background: linear-gradient(to bottom, #fefefe 0%, #e5e5e5 95%, #bdbdbe 100%);
+  padding: 50px 0 110px;
+}
+
+.cv-finder__title {
+  padding-left: 30px;
+}
+
+.cv-finder-grid {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cv-finder-grid__left {
+  max-width: 200px;
+  width: 100%;
+  margin-right: 20px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.cv-finder-grid__right {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.default-select {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+}
+.default-select .jq-selectbox {
+  width: 100%;
+  max-width: 620px;
+  border: 1px solid #6e6e6e;
+  border-radius: 25px;
+  padding: 5px 15px;
+  background-color: #F7F7F7;
+  display: -ms-flexbox;
+  display: flex;
+}
+.default-select .jq-selectbox__trigger {
+  position: absolute;
+  top: 6px;
+  right: 0;
+}
+.default-select .jq-selectbox__trigger-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 7.5px 0 7.5px;
+  border-color: #6e6e6e transparent transparent transparent;
+}
+.default-select .jq-selectbox__dropdown {
+  padding: 5px 15px;
+  border: 1px solid #1c9d22;
+  border-radius: 15px;
+  max-width: 620px;
+  width: 100%;
+  background-color: #F7F7F7;
+  margin-top: -24px;
+  left: 0;
+}
+.default-select .jq-selectbox__dropdown::after {
+  position: absolute;
+  content: "";
+  top: 11px;
+  right: 14px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7.5px 7px 7.5px;
+  border-color: transparent transparent #1c9d22 transparent;
+}
+.default-select .jq-selectbox__dropdown.opened .jq-selectbox {
+  width: 100%;
+  border: none;
 }
 
 footer {

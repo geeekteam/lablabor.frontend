@@ -1,0 +1,68 @@
+.section__cv-finder
+	background: linear-gradient(to bottom, #fefefe 0%, #e5e5e5 95%, #bdbdbe 100%)
+	padding: 50px 0 110px
+
+.cv-finder__title
+	padding-left: 30px
+
+.cv-finder-grid
+	display: flex
+
+.cv-finder-grid__left
+	max-width: 200px
+	width: 100%
+	margin-right: 20px
+	flex-shrink: 0
+
+.cv-finder-grid__right
+	flex-grow: 1
+	flex-shrink: 0
+
+.default-select
+	width: 100%
+	display: flex
+
+	.jq-selectbox
+		width: 100%
+		max-width: 620px
+		border: 1px solid $dull-gray
+		border-radius: 25px
+		padding: 5px 15px
+		background-color: $smoke-white
+		display: flex
+
+	.jq-selectbox__trigger
+		position: absolute
+		top: 6px
+		right: 0
+
+	.jq-selectbox__trigger-arrow
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 7px 7.5px 0 7.5px
+		border-color: $dull-gray transparent transparent transparent
+
+	.jq-selectbox__dropdown
+		padding: 5px 15px
+		border: 1px solid $forest-green
+		border-radius: 15px
+		max-width: 620px
+		width: 100%
+		background-color: $smoke-white
+		margin-top: -24px
+		left: 0
+		&::after
+			position: absolute
+			content: ''
+			top: 11px
+			right: 14px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 7.5px 7px 7.5px
+			border-color: transparent transparent $forest-green transparent
+		&.opened
+			.jq-selectbox
+				width: 100%
+				border: none

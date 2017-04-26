@@ -1,0 +1,48 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Расширенный поиск вакансий{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+
+    <div class="section section__order-employer-header">
+        <div class="container">
+            <ul class="breadcrumbs pl265 mb10">
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Личный кабинет</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Оплата заказа</a>
+                </li>
+            </ul>
+            <div class="announce announce_backing">
+                <div class="announce__content">
+                    <div class="announce__text text-light fz13 text-uppercase text-white">Тариф такой-то такой-то активен еще 10 дней, не забывайте обновлять подписку</div>
+                    <i class="fri fri_announce-content-close"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section__vacancy-finder">
+        <div class="container container_800">
+            <div class="vacancy-finder">
+                <p class="vacancy-finder__title fz18 text-medium text-uppercase">Поиск по вакансиям</p>
+                <div class="vacancy-finder-grid">
+                    <div class="vacancy-finder-grid__left">
+                        <p class="text-italic fz14">Наименование вакансии</p>
+                    </div>
+                    
+                    <form class="vacancy-finder-grid__right vacancy-finder-grid-right">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
