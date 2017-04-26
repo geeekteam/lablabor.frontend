@@ -1,0 +1,155 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Вакансия работодателя{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+
+    <div class="section section__order-employer-header">
+        <div class="container">
+            <ul class="breadcrumbs pl265 mb10">
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Личный кабинет</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Оплата заказа</a>
+                </li>
+            </ul>
+            <div class="announce announce_backing">
+                <div class="announce__content">
+                    <div class="announce__text text-light fz13 text-uppercase text-white">Тариф такой-то такой-то активен еще 10 дней, не забывайте обновлять подписку</div>
+                    <i class="fri fri_announce-content-close"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section__vacancy-view">
+        <div class="container container1140">
+            <div class="vacancy-view">
+
+                <div class="vacancy-view__left vacancy-view-left tab-hidden">
+                    
+                    <div class="vacancy-view__line mb40 thumbnail">
+                        <div class="thumbnail__rectangle thumbnail_200">
+                            <img class="thumbnail__image_200" src="images/vacancy-view.jpg" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="vacancy-view__line">
+                        <button class="vacancy-view__button button button_gradient-green fz14">Откликнуться</button>
+                    </div>
+                    
+                </div>
+
+
+                <div class="vacamcy-view__right vacancy-view-right">
+
+                    <div class="vacancy-view-grid mb30">
+
+                        <div class="vacancy-view-grid__item mr30 mob-mr0 mob-mb30 desktop-hidden">
+                            <div class="vacancy-view__line mb30 mob-mb15">
+                                <div class="vacancy-view__line thumbnail">
+                                    <div class="thumbnail__rectangle thumbnail_200 mob-centered">
+                                        <img class="thumbnail__image_200" src="images/vacancy-view.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vacancy-view__line">
+                                <button class="vacancy-view__button button button_gradient-green mob-centered fz14">Откликнуться</button>
+                            </div>
+                        </div>
+
+                        <div class="vacancy-view-grid__item mob-mb0">
+                            <div class="vacancy-view__line mb10 centered">
+                                <div class="vacancy-view__title">
+                                    <span class="text-medium fz25 mr5 mob-fz18">АО "Самрук Казына"</span>
+                                    <span><i class="fri_checked"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="vacancy-view__line mb85 mob-mb0">
+                                <p class="fz14 mb15">IT, информационные услуги</p>
+                                <p class="fz14">Ещё что-то</p>
+                                <p class="fz14 mb30 mob-mb0">Адрес компании</p>
+                                <p><a class="link-blue text-without-underline fz14" href="#">www.samryk.kz</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vacancy-view__line mb30 mob-mb15">
+                        <span class="fz25 mob-fz18">Вакансия:</span>
+                        <span class="fz25 mob-fz18 text-medium">Инженер-технолог</span>
+                    </div>
+
+                    <div class="vacancy-view__line">
+                        <div class="vacancy-view-grid vacancy-view-grid_colored mob-mb5">
+                            <div class="vacancy-view-grid__left">
+                                <span class="text-italic fz14">Город:</span>
+                            </div>
+
+                            <div class="vacancy-view-grid__right">
+                                <span class="text-italic fz14">Астана</span>
+                            </div>
+                        </div>
+                        <div class="vacancy-view-grid vacancy-view-grid_colored mob-mb5">
+                            <div class="vacancy-view-grid__left">
+                                <span class="text-italic fz14">Уровень Зарплаты:</span>
+                            </div>
+                            <div class="vacancy-view-grid__right">
+                                <span class="text-italic fz14">500 000 KZT</span>
+                            </div>
+                        </div>
+                        <div class="vacancy-view-grid vacancy-view-grid_colored mob-mb5">
+                            <div class="vacancy-view-grid__left">
+                                <span class="text-italic fz14">Образование:</span>
+                            </div>
+                            <div class="vacancy-view-grid__right">
+                                <span class="text-italic fz14">высшее</span>
+                            </div>
+                        </div>
+                        <div class="vacancy-view-grid vacancy-view-grid_colored mob-mb5">
+                            <div class="vacancy-view-grid__left">
+                                <span class="text-italic fz14">Опыт работы:</span>
+                            </div>
+                            <div class="vacancy-view-grid__right">
+                                <span class="text-italic fz14">не важно</span>
+                            </div>
+                        </div>
+                        <div class="vacancy-view-grid vacancy-view-grid_colored mob-mb5">
+                            <div class="vacancy-view-grid__left">
+                                <span class="text-italic fz14">Тип занятости:</span>
+                            </div>
+                            <div class="vacancy-view-grid__right">
+                                <span class="text-italic fz14">полный рабочий день (5/2)</span>
+                            </div>
+                        </div>
+                        <div class="vacancy-view-grid vacancy-view-grid_colored mob-mb5">
+                            <div class="vacancy-view-grid__left">
+                                <span class="text-italic fz14">Специальные знания и навыки:</span>
+                            </div>
+                            <div class="vacancy-view-grid__right">
+                                <span class="text-italic fz14">Acrobat Reader 5,0, AutoCad. Работа с чертежами</span>
+                            </div>
+                        </div>
+                        <div class="vacancy-view-grid vacancy-view-grid_colored mob-mb5">
+                            <div class="vacancy-view-grid__left">
+                                <span class="text-italic fz14">Условия труда / Доп. Сведения</span>
+                            </div>
+                            <div class="vacancy-view-grid__right">
+                                <span class="text-italic fz14">Шикарный вид на город. Чай, кофе с печеньками. Доп. Сведения Детей агашек берем. Если ты сын акима, ты пройдешь без отбора. Мы балаболы 80 уровня, если ты один из нас и разделяешь наши взгляды тогда добро пожаловать  в нашу семью!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

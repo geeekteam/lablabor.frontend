@@ -1,0 +1,50 @@
+.section__vacancy-view
+	background: linear-gradient(to bottom, #fefefe 0%, #e5e5e5 95%, #bdbdbe 100%)
+	padding: 50px 0 110px
+
+.vacancy-view
+	display: flex
+
+.vacancy-view__left
+	max-width: 200px
+	width: 100%
+	margin-right: 70px
+
+.vacamcy-view__right
+	flex-grow: 1
+
+.vacancy-view-left
+	display: flex
+	flex-direction: column
+
+.vacancy-view__button
+	text-transform: uppercase
+	padding: 20px 25px
+	border-radius: 15px
+	font-size: 17px
+	width: 200px
+	display: block
+
+.vacancy-view__title
+	display: flex
+	align-items: flex-start
+
+.vacancy-view-grid
+	display: flex
+	&:nth-child(odd)
+		.vacancy-view-grid__right
+			background-color: #ebebeb
+	&:nth-child(even)
+		.vacancy-view-grid__right
+			background-color: #dfe2e8
+
+.vacancy-view-grid__left
+	max-width: 200px
+	width: 100%
+	margin-right: 15px
+	padding: 5px 0
+
+.vacancy-view-grid__right
+	max-width: 430px
+	width: 100%
+	padding: 5px 20px

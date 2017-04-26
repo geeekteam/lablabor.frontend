@@ -88,6 +88,9 @@ button
 	&:hover
 		text-decoration: none
 
+.link-blue
+	color: #0099ff
+
 .button
 	display: inline-block
 	font-family: "Gotham Pro", sans-serif
@@ -403,33 +406,46 @@ button
 	padding-top: 4px
 	letter-spacing: 0.4px
 
-.round-thumbnail
+.round-thumbnail, .thumbnail__round
 	display: flex
 	align-items: center
 	justify-content: center
-	position: absolute
 	overflow: hidden
 	border: 1px solid $forest-green
 	border-radius: 50%
 	+transition()
 
-.round-thumbnail_125
+.round-thumbnail_125, .thumbnail_125
 	width: 125px
 	height: 125px
 
-.round-thumbnail_150
+.round-thumbnail_150, .thumbnail_150
 	width: 150px
 	height: 150px
 
-.round-thumbnail__image
+.thumbnail_200
+	width: 200px
+	height: 200px
+
+.round-thumbnail__image, .thumbnail__image
 	position: relative
 	object-fit: cover
 
-.round-thumbnail__image_125
+.round-thumbnail__image_125, .thumbnail__image_125
 	height: 125px
 
-.round-thumbnail__image_150
+.round-thumbnail__image_150, .thumbnail__image_150
 	height: 150px
+
+.thumbnail__image_200
+	height: 200px
+
+.thumbnail__rectangle
+	display: flex
+	align-items: center
+	justify-content: center
+	overflow: hidden
+	border: 1px solid $black
 
 .desktop-hidden
 	display: none
@@ -453,3 +469,6 @@ button
 
 .unmarkered-list
 	list-style-type: none
+
+.centered
+	margin: 0 auto

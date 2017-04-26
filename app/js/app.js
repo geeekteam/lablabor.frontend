@@ -287,8 +287,9 @@
             items: 1,
             loop: true,
             dots: 0,
-            autoplay: false,
+            autoplay: true,
             animateOut: 'fadeOut',
+            mouseDrag: false
         });
 
         $('.auth-slider').owlCarousel({
