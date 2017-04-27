@@ -611,3 +611,24 @@ button
 			height: 15px
 			margin-top: -1px
 			margin-left: -1px
+
+ol
+	list-style-type: none
+	counter-reset: li
+	li
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 0
+		&:before
+			counter-increment: li
+			content: counters(li,".") ". "
+	ol
+		padding-top: 25px
+		margin-bottom: 40px
+		&:last-child
+			margin-bottom: 0
+
+		> li
+			margin-bottom: 25px
+			&:last-child
+				margin-bottom: 0
