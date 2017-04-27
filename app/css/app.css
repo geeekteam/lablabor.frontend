@@ -4768,6 +4768,14 @@ footer {
     font-size: 18px;
   }
 
+  .mob-fz16 {
+    font-size: 16px;
+  }
+
+  .mob-fz14 {
+    font-size: 14px;
+  }
+
   .mob-mr0 {
     margin-right: 0;
   }
@@ -4790,6 +4798,18 @@ footer {
 
   .mob-mb30 {
     margin-bottom: 30px;
+  }
+
+  .mob-text-center {
+    text-align: center;
+  }
+
+  .mob-pl0 {
+    padding-left: 0;
+  }
+
+  .mob-pl10 {
+    padding-left: 10px;
   }
 
   .mob-centered {
