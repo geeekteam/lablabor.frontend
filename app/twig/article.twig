@@ -1,0 +1,71 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Статья{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+
+    <div class="section section__order-employer-header">
+        <div class="container container_1280">
+            <ul class="breadcrumbs pl265 mb40">
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Личный кабинет</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Оплата заказа</a>
+                </li>
+            </ul>
+            <div class="main-content">
+
+                <div class="main-content-banner flex-align-center">
+                    <div class="main-content__banner owl-carousel">
+                        <div class="main-content__banner_wrapper"><img src="images/banner-right.jpg" alt=""></div>
+                        <div class="main-content__banner_wrapper"><img src="images/banner-left.jpg" alt=""></div>
+                    </div>
+                </div>
+
+                <div class="main-content__content">
+                    <div class="article">
+                        <p class="article__date text-uppercase text-light fz12 mb15">опубликовано хх числа такого-то месяца, такого-то года хххх года</p>
+                        <h1 class="article__title text-uppercase text-medium fz30 mb25 mob-fz20">Заинтересовывающий заголовок</h1>
+                        <div class="article__photo-wrapper mb10">
+                            <img src="images/article.jpg" alt="" class="article__photo">
+                        </div>
+                        <div class="article__photo-author text-italic fz14 text-dull-gray mb30">Источник фото: бла-бла-бла.орг</div>
+                        <div class="article__body text-italic fz16 text-dull-gray mb40">
+                            <p>Текст статьи далее кусок какого-то реферата. В философии существования нашёл отражение кризис оптимистического либерализма, опирающегося на технический прогресс, но бессильный объяснить неустойчивость, неустроенность человеческой жизни, присущие человеку чувство страха, отчаяния, безысходности.</p>
+                            <p>Философия экзистенциализма — иррациональная реакция на рационализм Просвещения и немецкой классической философии. По утверждениям философов-экзистенциалистов, основной порок рационального мышления состоит в том, что оно исходит из принципа противоположности субъекта и объекта, то есть разделяет мир на две сферы — объективную и субъективную. Всю действительность, в том числе и человека, рациональное мышление рассматривает только как предмет, «сущность», познанием которой можно манипулировать в терминах субъекта-объекта. Подлинная философия, с точки зрения экзистенциализма, должна исходить из единства объекта и субъекта. Это единство воплощено в «экзистенции», то есть некой иррациональной реальности.</p>
+                            <p>Согласно философии экзистенциализма, чтобы осознать себя как «экзистенцию», человек должен оказаться в «пограничной ситуации» — например, перед лицом смерти.</p>
+                            <img src="images/image-in-article.png" alt="" class="article__image-left">
+                            <p>Значительное место в философии экзистенциализма занимает постановка и решение проблемы свободы, которая определяется как «выбор» личностью одной из бесчисленных возможностей. </p>
+                            <p>Предметы и животные не обладают свободой, поскольку сразу обладают сущностью, эссенцией. Человек же постигает свою сущность в течение всей жизни и несёт ответственность за каждое совершённое им действие, не может объяснять свои ошибки «обстоятельствами». Таким образом, человек мыслится экзистенц иалистами как строящий себя «проект». В конечном счёте, идеальная свобода человека — это свобода личности от общества.</p>
+                            <p>На первый взгляд, страх не имеет какого-либо глубокого философского значения, но именно экзистенциалисты, подробно разобравшись в нём, пришли к выводу, что страх — это что-то значительно более глубокое, чем простое переживание, вызванное внешними раздражителями.</p>
+                        </div>
+                        <div class="article__more">
+                            <div class="article__more-title fz14 text-medium text-uppercase mr20 mob-mr0 mob-mb10">
+                                Возможно, вас заинтересует:
+                            </div>
+                            <div class="article__more-items">
+                                <p><a class="text-italic fz16 text-without-underline mb15" href="#">Похожая ссылка раз</a></p>
+                                <p><a class="text-italic fz16 text-without-underline mb15" href="#">Ещё похожая статья</a></p>
+                                <p><a class="text-italic fz16 text-without-underline" href="#">Третья похожая статья</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content-banner flex-align-center">
+                    <div class="main-content__banner owl-carousel">
+                        <div class="main-content__banner_wrapper"><img src="images/banner-left.jpg" alt=""></div>
+                        <div class="main-content__banner_wrapper"><img src="images/banner-right.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
