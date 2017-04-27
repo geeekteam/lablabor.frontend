@@ -475,3 +475,139 @@ button
 
 .centered
 	margin: 0 auto
+
+.round-loupe
+	position: relative
+	width: 30px
+	height: 30px
+	background-color: $forest-green
+	border-radius: 50%
+	display: flex
+	flex-shrink: 0
+	.fri_search-button-loupe-17x18
+		margin: auto
+
+.default-input
+	flex-grow: 1
+	height: 34px
+	font-size: 14px
+	border: 1px solid $dark-dull-gray
+	border-radius: 25px
+	padding: 0 25px
+	background-color: #F7F7F7
+	&:focus
+		border-color: $forest-green
+		box-shadow: inset 0 0 1px rgba(28, 157, 34, 1)
+	+placeholder
+		color: $dull-gray
+
+.default-select
+	width: 100%
+	display: flex
+	cursor: pointer
+
+	.jq-selectbox
+		width: 100%
+		max-width: 620px
+		border: 1px solid $dull-gray
+		border-radius: 25px
+		padding: 5px 15px
+		background-color: $smoke-white
+		display: flex
+
+	.jq-selectbox__trigger
+		position: absolute
+		top: 6px
+		right: 0
+
+	.jq-selectbox__trigger-arrow
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 7px 7.5px 0 7.5px
+		border-color: $dull-gray transparent transparent transparent
+
+	.jq-selectbox__select-text
+		padding-right: 15px
+
+	.jq-selectbox__dropdown
+		padding: 5px 15px
+		border: 1px solid $forest-green
+		border-radius: 15px
+		max-width: 620px
+		width: 100%
+		background-color: $smoke-white
+		margin-top: -24px
+		left: 0
+		&::after
+			position: absolute
+			content: ''
+			top: 11px
+			right: 14px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 7.5px 7px 7.5px
+			border-color: transparent transparent $forest-green transparent
+		&.opened
+			.jq-selectbox
+				width: 100%
+				border: none
+
+.flex-wrap
+	flex-wrap: wrap
+
+.flex-align-center
+	align-self: center
+
+.flex-align-start
+	align-self: flex-start
+
+.radio-buttons
+
+	display: flex
+	align-items: center
+
+	.jq-radio
+		border: 1px solid #6c6c6c
+		background-color: #F7F7F7
+		border-radius: 50%
+		width: 15px
+		height: 15px
+		margin-right: 5px
+		cursor: pointer
+
+
+
+
+.radio_green-dot
+
+	.jq-radio
+		border: 1px solid #6c6c6c
+		border-radius: 50%
+		width: 15px
+		height: 15px
+		margin-right: 5px
+		cursor: pointer
+		vertical-align: middle
+
+	.checked
+		.jq-radio__div
+			background-color: $forest-green
+			border-radius: 50%
+			width: 9px
+			height: 9px
+			margin: 2px auto
+
+.radio_gray-dot
+
+	.checked
+
+		.jq-radio__div
+			border: 3px solid $forest-green
+			background-color: #F7F7F7
+			border-radius: 50%
+			width: 15px
+			height: 15px
+			margin-top: -1px
+			margin-left: -1px
