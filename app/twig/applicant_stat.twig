@@ -1,0 +1,518 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Статистика работодателя{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+
+    <div class="section">
+        <div class="statistic-banner">
+            <div class="container container1140">
+                <div class="statistic-banner__content statistic-banner-content">
+                    <div class="statistic-banner-content__top">
+                        <img src="images/statistic-diagram.png" alt="">
+                    </div>
+                    <div class="statistic-banner-content__middle">
+                        <p class="statistic-banner-content__title text-medium text-uppercase fz36 text-white text-center mb10">Статистика просмотров и откликов вакансий</p>
+                        <p class="statistic-banner-content__subtitle text-italic fz30 text-white text-center">Каждый день на Lab labor</p>
+                    </div>
+                    <div class="statistic-banner-content__bottom">
+                        <div class="statistic-banner-grid">
+                            <div class="statistic-banner-grid__item">
+                                <span class="text-light fz18 text-white text-uppercase mb5">Публикуется</span>
+                                <span class="text-light fz72 text-white text-uppercase mb10">366</span>
+                                <span class="text-light fz18 text-white text-uppercase">Вакансий</span>
+                            </div>
+                            <div class="statistic-banner-grid__item">
+                                <span class="text-light fz18 text-white text-uppercase mb5">Приглашается</span>
+                                <span class="text-light fz72 text-white text-uppercase mb10">215</span>
+                                <span class="text-light fz18 text-white text-uppercase">Человек на собеседование</span>
+                            </div>
+                            <div class="statistic-banner-grid__item">
+                                <span class="text-light fz18 text-white text-uppercase mb5">Откликается</span>
+                                <span class="text-light fz72 text-white text-uppercase mb10">548</span>
+                                <span class="text-light fz18 text-white text-uppercase">Соискателей</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section__applicant-stat">
+        <div class="container container_1140">
+            <ul class="breadcrumbs pl110 mb20">
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Личный кабинет</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Оплата заказа</a>
+                </li>
+            </ul>
+            <div class="statistic">
+                <div class="statistic__left">
+                    <div class="statistic__vacancy-grid statistic-vacancy-grid mb25">
+                        <div class="statistic-vacancy-grid__name mr15">
+                            <span class="text-medium fz14 text-uppercase text-signal-black">Название вакансии</span>
+                        </div>
+                        <div class="statistic-vacancy-grid__salary mr15">
+                            <span class="text-light fz14 text-uppercase text-signal-black">200.000 ТГ.</span>
+                        </div>
+                        <div class="statistic-vacansy-grid__open-close">
+                            <span class="text-italic fz14 text-dark-dull-gray">Скрыть данные</span>
+                        </div>
+                    </div>
+
+                    <table class="statistic-vacancy-table mb40">
+                        <tr class="statistic-vacancy-table__row">
+                            <th class="statistic-vacancy-table__icon">
+                                <i class="fri fri_views"></i>
+                            </th>
+                            <th class="statistic-vacancy-table__title" colspan="1">
+                                <span class="text-light fz14 text-uppercase text-signal-black">Просмотров: 2</span>
+                            </th>
+                            <th class="statistic-vacancy-table__thrash">
+                                <i class="fri fri_thrash"></i>
+                            </th>
+                            <th class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-uppercase text-signal-black">Дата</span>
+                            </th>
+                            <th class="statistic-vacancy-table__message">
+
+                            </th>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message"></td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message"></td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message"></td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message"></td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message"></td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message"></td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message"></td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message"></td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message"></td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message"></td>
+                        </tr>
+                    </table>
+                    <table class="statistic-vacancy-table mb30">
+                        <tr class="statistic-vacancy-table__row">
+                            <th class="statistic-vacancy-table__icon">
+                                <i class="fri fri_views"></i>
+                            </th>
+                            <th class="statistic-vacancy-table__title" colspan="1">
+                                <span class="text-light fz14 text-uppercase text-signal-black">Просмотров: 2</span>
+                            </th>
+                            <th class="statistic-vacancy-table__thrash">
+                                <i class="fri fri_thrash"></i>
+                            </th>
+                            <th class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-uppercase text-signal-black">Дата</span>
+                            </th>
+                            <th class="statistic-vacancy-table__message">
+                            </th>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message">
+                                <i class="fri fri_message"></i>
+                            </td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message">
+                                <i class="fri fri_message hidden"></i>
+                            </td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message">
+                                <i class="fri fri_message hidden"></i>
+                            </td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message">
+                                <i class="fri fri_message"></i>
+                            </td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message">
+                                <i class="fri fri_message hidden"></i>
+                            </td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message">
+                                <i class="fri fri_message hidden"></i>
+                            </td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message">
+                                <i class="fri fri_message"></i>
+                            </td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message">
+                                <i class="fri fri_message hidden"></i>
+                            </td>
+                        </tr>
+                        <tr class="statistic-vacancy-table__row">
+                            <td class="statistic-vacancy-table__image">
+                                <div class="thumbnail thumbnail__round thumbnail_45">
+                                    <img class="thumbnail__image_45" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </td>
+                            <td class="statistic-vacancy-table__name">Имя Фамилия отчество</td>
+                            <td class="statistic-vacancy-table__thrash"></td>
+                            <td class="statistic-vacancy-table__date">
+                                <span class="text-light fz14 text-italic text-uppercase text-signal-black">21.02.2017</span>
+                            </td>
+                            <td class="statistic-vacancy-table__message">
+                                <i class="fri fri_message hidden"></i>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="statistic__vacancy-grid statistic-vacancy-grid mb25">
+                        <div class="statistic-vacancy-grid__name mr15">
+                            <span class="text-medium fz14 text-uppercase text-signal-black">Название вакансии</span>
+                        </div>
+                        <div class="statistic-vacancy-grid__salary mr15">
+                            <span class="text-light fz14 text-uppercase text-signal-black">200.000 ТГ.</span>
+                        </div>
+                        <div class="statistic-vacansy-grid__open-close">
+                            <span class="text-italic fz14 text-dark-dull-gray">Скрыть данные</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="statistic__right">
+                    <div class="statistic__report pl40 pr40 pt20 pb20 mb25">
+                        <div class="statistic__report-title text-light fz14 mb20 text-uppercase">Общая статистика</div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_total mr5">
+                                <span class="text-italic fz14 text-signal-black">Просмотры за неделю</span>
+                            </div>
+                            <div class="statistic__report-triangle">
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_total mr5">
+                                <span class="text-italic fz14 text-signal-black">Откликов за неделю</span>
+                            </div>
+                            <div class="statistic__report-triangle">
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_total mr5">
+                                <span class="text-italic fz14 text-signal-black">Просмотры за месяц</span>
+                            </div>
+                            <div class="statistic__report-triangle">
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_total mr5">
+                                <span class="text-italic fz14 text-signal-black">Откликов за месяц</span>
+                            </div>
+                            <div class="statistic__report-triangle">
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statistic__report pl25 pr25 pt20 pb20">
+                        <div class="statistic__report-title text-light fz14 mb25 pl15 text-uppercase">Тарифы и история покупок</div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_rates-left mr10">
+                                <span class="text-italic fz14 text-signal-black">Откликов за месяц</span>
+                            </div>
+                            <div class="statistic__report-item statistic__report-item_rates-right">
+                                <span class="text-italic fz14 text-signal-black text-uppercase">Expert</span>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_rates-left mr10">
+                                <span class="text-italic fz14 text-signal-black">Дата подключения</span>
+                            </div>
+                            <div class="statistic__report-item statistic__report-item_rates-right">
+                                <span class="text-italic fz14 text-signal-black text-uppercase">23.02.2017</span>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_rates-left mr10">
+                                <span class="text-italic fz14 text-signal-black">Дней осталось</span>
+                            </div>
+                            <div class="statistic__report-item statistic__report-item_rates-right">
+                                <span class="text-italic fz14 text-signal-black text-uppercase">11</span>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_rates-left mr10">
+                                <span class="text-italic fz14 text-signal-black">Вакансий осталось</span>
+                            </div>
+                            <div class="statistic__report-item statistic__report-item_rates-right">
+                                <span class="text-italic fz14 text-signal-black text-uppercase">31</span>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_total mr5">
+                                <span class="text-italic fz14 text-signal-black">История покупок (6 мес.)</span>
+                            </div>
+                            <div class="statistic__report-triangle">
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_rates-left mr10">
+                                <span class="text-italic fz14 text-signal-black">Expert</span>
+                            </div>
+                            <div class="statistic__report-item statistic__report-item_rates-right">
+                                <span class="text-italic fz14 text-signal-black text-uppercase">23.02.2017</span>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_rates-left mr10">
+                                <span class="text-italic fz14 text-signal-black">Expert</span>
+                            </div>
+                            <div class="statistic__report-item statistic__report-item_rates-right">
+                                <span class="text-italic fz14 text-signal-black text-uppercase">23.02.2017</span>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_rates-left mr10">
+                                <span class="text-italic fz14 text-signal-black">Basic</span>
+                            </div>
+                            <div class="statistic__report-item statistic__report-item_rates-right">
+                                <span class="text-italic fz14 text-signal-black text-uppercase">20.11.2016</span>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_rates-left mr10">
+                                <span class="text-italic fz14 text-signal-black">Basic</span>
+                            </div>
+                            <div class="statistic__report-item statistic__report-item_rates-right">
+                                <span class="text-italic fz14 text-signal-black text-uppercase">21.10.2016</span>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid mb10">
+                            <div class="statistic__report-item statistic__report-item_rates-left mr10">
+                                <span class="text-italic fz14 text-signal-black">Basic</span>
+                            </div>
+                            <div class="statistic__report-item statistic__report-item_rates-right">
+                                <span class="text-italic fz14 text-signal-black text-uppercase">22.09.2016</span>
+                            </div>
+                        </div>
+                        <div class="statistic__report-grid">
+                            <div class="statistic__report-item statistic__report-item_rates-left mr10">
+                                <span class="text-italic fz14 text-signal-black">Basic</span>
+                            </div>
+                            <div class="statistic__report-item statistic__report-item_rates-right">
+                                <span class="text-italic fz14 text-signal-black text-uppercase">22.08.2016</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
