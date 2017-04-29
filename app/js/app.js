@@ -215,6 +215,7 @@
             });
 
             plugin.closePopupEl.on('click', function (e) {
+                e.preventDefault();
                 var pop;
                 if (this.hasAttribute('data-close-popup')) {
                     pop = $(this).attr('data-close-popup');
@@ -226,6 +227,7 @@
             });
 
             plugin.changePopupEl.on('click', function (e) {
+                e.preventDefault();
                 var closingPop = $(this).attr('data-closing-popup');
                 var openingPop = $(this).attr('data-opening-popup');
 
@@ -233,6 +235,7 @@
             });
 
             plugin.reachPopups.on('click', function (e) {
+                e.preventDefault();
                 var target = $(e.target);
                 var className = options.reachElementClass.replace('.', '');
                 if (target.hasClass(className)) {

@@ -1,3 +1,5 @@
+@import "mixins/mixins"
+
 html, body
 	font-family: "Gotham Pro", sans-serif
 	margin: 0
@@ -5,7 +7,7 @@ html, body
 
 html
 	&.popup-opened
-		//overflow: hidden
+		overflow: hidden
 a
 	color: inherit
 	text-decoration: none
@@ -103,7 +105,6 @@ button
 	color: $white
 	padding: 2px 5px
 	text-align: center
-	cursor: pointer
 	transition: all 0.3s ease
 
 .button_green
@@ -373,7 +374,7 @@ button
 
 .announce_backing
 	margin-left: auto
-	margin-right: 18%
+	margin-right: auto
 	max-width: 875px
 	width: 100%
 	padding-left: 65px
@@ -440,6 +441,8 @@ button
 .round-thumbnail__image, .thumbnail__image
 	position: relative
 	object-fit: cover
+	height: 100%
+	width: 100%
 
 .thumbnail__image_45
 	height: 45px
@@ -521,14 +524,15 @@ button
 		max-width: 620px
 		border: 1px solid $dull-gray
 		border-radius: 25px
-		padding: 5px 15px
+		padding: 0 15px
 		background-color: $smoke-white
 		display: flex
 
 	.jq-selectbox__trigger
 		position: absolute
-		top: 6px
+		top: 50%
 		right: 0
+		margin-top: -4px
 
 	.jq-selectbox__trigger-arrow
 		width: 0
@@ -539,16 +543,19 @@ button
 
 	.jq-selectbox__select-text
 		padding-right: 15px
+		height: 34px
+		display: flex
+		align-items: center
 
 	.jq-selectbox__dropdown
 		padding: 5px 15px
 		border: 1px solid $forest-green
 		border-radius: 15px
-		max-width: 620px
-		width: 100%
+		//max-width: 620px
+		min-width: calc(100% + 2px)
 		background-color: $smoke-white
-		margin-top: -24px
-		left: 0
+		top: -1px !important
+		left: -1px
 		&::after
 			position: absolute
 			content: ''
@@ -587,8 +594,8 @@ button
 		margin-right: 5px
 		cursor: pointer
 
-
-
+.jq-radio__div
+	+transition()
 
 .radio_green-dot
 
@@ -600,27 +607,34 @@ button
 		margin-right: 5px
 		cursor: pointer
 		vertical-align: middle
+		
+	.jq-radio__div
+		background-color: $forest-green
+		border-radius: 50%
+		width: 9px
+		height: 9px
+		margin: 2px auto
+		opacity: 0
 
 	.checked
 		.jq-radio__div
-			background-color: $forest-green
-			border-radius: 50%
-			width: 9px
-			height: 9px
-			margin: 2px auto
+			opacity: 1
 
 .radio_gray-dot
+	
+	.jq-radio__div
+		border: 3px solid $forest-green
+		background-color: #F7F7F7
+		border-radius: 50%
+		width: 15px
+		height: 15px
+		margin-top: -1px
+		margin-left: -1px
+		opacity: 0
 
 	.checked
-
 		.jq-radio__div
-			border: 3px solid $forest-green
-			background-color: #F7F7F7
-			border-radius: 50%
-			width: 15px
-			height: 15px
-			margin-top: -1px
-			margin-left: -1px
+			opacity: 1
 
 ol
 	list-style-type: none

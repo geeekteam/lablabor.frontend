@@ -188,7 +188,7 @@
 		flex-wrap: wrap
 
 	.order-employer-content-grid__item
-		height: 200px
+		//height: 200px
 		margin: 0 auto 30px
 		&:last-child
 			margin-bottom: 0
@@ -233,7 +233,10 @@
 			display: none
 
 @media screen and (max-width: 767px)
-
+	
+	.cv-finder-grid__right, .default-select .jq-selectbox
+		max-width: none
+		
 	.article__more
 		flex-direction: column
 
@@ -246,6 +249,9 @@
 	.cv-finder-grid__left
 		align-self: flex-start
 		margin-bottom: 10px
+		max-width: none
+		//width: auto
+		margin-right: 0
 
 	.employer-view-grid
 		flex-direction: column
