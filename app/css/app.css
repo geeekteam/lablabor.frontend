@@ -2941,9 +2941,8 @@ ol ol > li:last-child {
   background: #ffffff;
   border-radius: 25px;
   padding: 25px 25px;
-  max-width: 400px;
+  width: 400px;
   box-shadow: 0 10px 10px -10px #000000;
-  min-height: 200px;
 }
 
 .order-employer-content-grid__item-title {
