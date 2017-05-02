@@ -1,26 +1,240 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Резюме кандидата</title>
+{% extends "layouts/pdf.twig" %}
 
-    <!-- Stylesheets -->
-    {% include "stylesheets.twig" %}
-</head>
-<body>
-<div class="site-wrapper">
+{% block pageTitle %}Резюме{% endblock %}
 
 
-    <!-- Block content -->
-    {% block content %}
+{% block content %}
 
+    <div class="section section_print-page">
+        <div class="container-2480">
+            <div class="print-page">
+                <div class="print-page__header">
+                    <div class="print-page__cv-link text-center fz30 mb40">Подробнее с резюме можно ознакомиться по ссыке lablabor.kz/candidate/17777794</div>
+                    <div class="print-page-header mb90">
+                        <div class="print-page-header__logo">
+                            <img src="images/logo-pdf.png" alt="">
+                        </div>
+                        <div class="print-page-header__contacts print-page-header-contacts">
+                            <a class="print-page-header-contacts__website mr45 text-dark-dull-gray fz30" href="#"><i class="fri fri_website-on-pdf mr30"></i>www.llab.kz</a>
+                            <a class="print-page-header-contacts__email mr45 text-dark-dull-gray fz30" href="mailto:info@llab.kz"><i class="fri fri_email-on-pdf mr30"></i>info@llab.kz</a>
+                            <a class="print-page-header-contacts__phone text-dark-dull-gray fz30" href="tel:+77745853565"><i class="fri fri_phone-on-pdf mr30"></i> +7 774 585 35 65</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="print-page__body">
+                    <div class="print-page__title text-center text-uppercase fz36 text-medium mb80">Общие сведения</div>
+                    <div class="print-page__section print-page-general mb65">
+                        <div class="print-page-general__grid print-page-general-grid">
+                            <div class="print-page-general-grid-image mr130">
+                                <img class="print-page-general-grid-image__image" src="images/pdf-person-photo.jpg" alt="">
+                            </div>
+                            <div class="print-page-general-grid__information">
+                                <div class="print-page-general-grid-information mb30">
+                                    <div class="print-page-general-grid-information__left-item text-light text-signal-black fz36 mr55">ФИО</div>
+                                    <div class="print-page-general-grid-information__right-item text-medium text-signal-black fz36">Ордабаева Нэлли Эрнстовна</div>
+                                </div>
+                                <div class="print-page-general-grid-information mb30">
+                                    <div class="print-page-general-grid-information__left-item text-light text-signal-black fz36 mr55">Дата рождения</div>
+                                    <div class="print-page-general-grid-information__right-item text-medium text-signal-black fz36">26.07.1994</div>
+                                </div>
+                                <div class="print-page-general-grid-information mb30">
+                                    <div class="print-page-general-grid-information__left-item text-light text-signal-black fz36 mr55">Пол</div>
+                                    <div class="print-page-general-grid-information__right-item text-medium text-signal-black fz36">Женский</div>
+                                </div>
+                                <div class="print-page-general-grid-information mb30">
+                                    <div class="print-page-general-grid-information__left-item text-light text-signal-black fz36 mr55">Город</div>
+                                    <div class="print-page-general-grid-information__right-item text-medium text-signal-black fz36">Алматы</div>
+                                </div>
+                                <div class="print-page-general-grid-information mb30">
+                                    <div class="print-page-general-grid-information__left-item text-light text-signal-black fz36 mr55">Адрес проживания</div>
+                                    <div class="print-page-general-grid-information__right-item text-medium text-signal-black fz36">микр. 12, д.1*, кв. *</div>
+                                </div>
+                                <div class="print-page-general-grid-information mb30">
+                                    <div class="print-page-general-grid-information__left-item text-light text-signal-black fz36 mr55">Телефон</div>
+                                    <div class="print-page-general-grid-information__right-item text-medium text-signal-black fz36">+7(757)2474342, +7(727)302ХХХХ, +7(727)302ХХХХ</div>
+                                </div>
+                                <div class="print-page-general-grid-information mb30">
+                                    <div class="print-page-general-grid-information__left-item text-light text-signal-black fz36 mr55">Email</div>
+                                    <div class="print-page-general-grid-information__right-item text-medium text-signal-black fz36">
+                                        <a href="mailto:">nelliordabayeva@gmail.com</a></div>
+                                </div>
+                                <div class="print-page-general-grid-information mb30">
+                                    <div class="print-page-general-grid-information__left-item text-light text-signal-black fz36 mr55">Семейное положение</div>
+                                    <div class="print-page-general-grid-information__right-item text-medium text-signal-black fz36">Не замужем</div>
+                                </div>
+                                <div class="print-page-general-grid-information mb30">
+                                    <div class="print-page-general-grid-information__left-item text-light text-signal-black fz36 mr55">Желаемый уровень зарплаты</div>
+                                    <div class="print-page-general-grid-information__right-item text-medium text-signal-black fz36">250000 KZT</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="print-page__title text-center text-uppercase fz36 text-medium">Образование</div>
+                    <div class="print-page__section print-page-education pl50 pr50 mb65">
+                        <p class="fz36 text-signal-black mb40">Начальное</p>
+                        <ul class="print-page__list pl75 fz36 text-signal-black">
+                            <li>
+                                <p>Казахстан, Алматы</p>
+                                <p>Школа №89</p>
+                                <p>1994-2005</p>
+                            </li>
+                        </ul>
+                        <p class="print-page-education__type fz36 text-signal-black mb40">Высшее</p>
+                        <ul class="print-page__list pl75 fz36 text-signal-black">
+                            <li>
+                                <p>Казахстан, Алматы</p>
+                                <p>КазНТУ: 2005 - 2009</p>
+                                <p><strong>Факультет: </strong> Строительства</p>
+                                <p><strong>Специальность: </strong>Инженер-строитель</p>
+                                <p><strong>Дополнительные сведения: </strong>Бакалавр, красный диплом. Участник олимпиад. Победитель конкурса "Озеленитель года"</p>
+                            </li>
+                            <li>
+                                <p>Казахстан, Алматы</p>
+                                <p>КазНТУ: 2005 - 2009</p>
+                                <p><strong>Факультет: </strong> Строительства</p>
+                                <p><strong>Специальность: </strong>Инженер-строитель</p>
+                                <p><strong>Дополнительные сведения: </strong>Бакалавр, красный диплом. Участник олимпиад. Победитель конкурса "Озеленитель года"</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="print-page__title text-center text-uppercase fz36 text-medium mb80">Навыки</div>
+                    <div class="print-page__section print-page-skills pl50 pr50 mb65">
+                        <div class="print-page-skills__item">
+                            <p class="fz36 text-signal-black mb40">Языки</p>
+                            <ul class="print-page__list print-page__list_skills pl75 fz36 text-signal-black">
+                                <li>
+                                    Русский - родной
+                                </li>
+                                <li>
+                                    Английский - свободно владею
+                                </li>
+                            </ul>
+                            <p class="fz36 text-signal-black mb40">Владение ПК</p>
+                            <ul class="print-page__list print-page__list_skills pl75 fz36 text-signal-black">
+                                <li>
+                                    Уверенный пользователь
+                                </li>
+                            </ul>
+                            <p class="fz36 text-signal-black mb40">Водительские права</p>
+                            <ul class="print-page__list print-page__list_skills pl75 fz36 text-signal-black">
+                                <li>
+                                    A1,A; B1,B
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="print-page-skills__item">
+                            <p class="fz36 text-signal-black mb40">Знание спец программ</p>
+                            <ul class="print-page__list print-page__list_skills pl75 fz36 text-signal-black">
+                                <li>
+                                    1С - не владею
+                                </li>
+                                <li>
+                                    Microsoft Word - свободно владею
+                                </li>
+                                <li>
+                                    Adobe photoshop
+                                </li>
+                                <li>
+                                    Adobe illustrator
+                                </li>
+                                <li>
+                                    Corel Draw
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="print-page__title text-center text-uppercase fz36 text-medium mb80">Опыт работы</div>
+                    <div class="print-page__section print-page-summary pl75 pr50 mb65">
+                        <ul class="unmarkered-list text-signal-black">
+                            <li class="summary-grid">
+                                <div class="summary-grid__left-item grid">
+                                    <div class="summary-grid__marker"></div>
+                                    <div class="fz30">
+                                        <p>Январь 2013 - </p>
+                                        <p>Февраль 2015</p>
+                                    </div>
+                                </div>
+                                <div class="summary-grid__right-item">
+                                    <p class="fz32">АО “КазТрава”.</p>
+                                    <p class="fz24">Проектирование, дизайн</p>
+                                    <p class="fz32">Младший инженер</p>
+                                    <p class="fz24">Выносил мусор, изучал фитодизайн, спал.</p>
+                                    <p class="fz24 text-dull-gray">Полюбил дизайн, дополнительно работал на мусоровозе</p>
+                                </div>
+                            </li>
+                            <li class="summary-grid">
+                                <div class="summary-grid__left-item grid">
+                                    <div class="summary-grid__marker"></div>
+                                    <div class="fz30">
+                                        <p>Январь 2013 - </p>
+                                        <p>Февраль 2015</p>
+                                    </div>
+                                </div>
+                                <div class="summary-grid__right-item">
+                                    <p class="fz32">АО “Казкоммерцбанк”.</p>
+                                    <p class="fz24">Банк</p>
+                                    <p class="fz32">Менеджер по инженерии</p>
+                                    <p class="fz24">Выносил мусор, изучал фитодизайн, спал.</p>
+                                    <p class="fz24 text-dull-gray">Полюбил дизайн, дополнительно работал на мусоровозе</p>
+                                </div>
+                            </li>
+                            <li class="summary-grid">
+                                <div class="summary-grid__left-item grid">
+                                    <div class="summary-grid__marker"></div>
+                                    <div class="fz30">
+                                        <p>Январь 2013 - </p>
+                                        <p>Февраль 2015</p>
+                                    </div>
+                                </div>
+                                <div class="summary-grid__right-item">
+                                    <p class="fz32">АО “Казкоммерцбанксовкомпотреб”.</p>
+                                    <p class="fz24">Банк</p>
+                                    <p class="fz32">Менеджер по инженерии</p>
+                                    <p class="fz24">Выносил мусор, изучал фитодизайн, спал.</p>
+                                    <p class="fz24 text-dull-gray">Полюбил дизайн, дополнительно работал на мусоровозе</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="print-page__title text-center text-uppercase fz36 text-medium mb80">Стажировка / курсы</div>
+                    <div class="print-page__section print-page-summary pl75 pr50 mb65">
+                        <ul class="unmarkered-list text-signal-black">
+                            <li class="summary-grid">
+                                <div class="summary-grid__left-item grid">
+                                    <div class="summary-grid__marker"></div>
+                                    <div class="fz30">
+                                        <p>Россия, Москва, 2009</p>
+                                    </div>
+                                </div>
+                                <div class="summary-grid__right-item">
+                                    <p class="fz32">“Международный тренинг по водному плаванию”</p>
+                                    <p class="fz24">тренинг по водному плаванию и не только по водному
+                                        имеется сертификат</p>
+                                </div>
+                            </li>
+                            <li class="summary-grid">
+                                <div class="summary-grid__left-item grid">
+                                    <div class="summary-grid__marker"></div>
+                                    <div class="fz30">
+                                        <p>Россия, Архангельск. 2014</p>
+                                    </div>
+                                </div>
+                                <div class="summary-grid__right-item">
+                                    <p class="fz32">“Центр строительных мастеров”</p>
+                                    <p class="fz24">тренинг по водному плаванию и не только по водному
+                                        имеется сертификат</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="print-page__title text-center text-uppercase fz36 text-medium mb80">Дополнительные сведения</div>
+                    <div class="print-page__section print-page-summary pl75 pr50 mb65">
+                        <p class="fz36 text-signal-black">Рисую, танцую, прошел курсы по танго, мастер спорта по плаванию в Зимбабве,</p>
+                        <p class="fz36 text-signal-black">Создание, обрисовка графических продуктов, логотипов, пресс-стены, баннеров</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-    {% endblock %}
-    <!-- Block content end -->
-
-</div>
-</body>
-</html>
+{% endblock %}

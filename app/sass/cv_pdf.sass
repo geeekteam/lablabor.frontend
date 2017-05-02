@@ -1,2 +1,123 @@
-.container_2480
-	width: 2480px
+@media print
+	.print-page__header
+		page-break-after: always
+
+.print-page__header
+	page-break-after: always
+
+.container-2480
+	max-width: 2480px
+
+.print-page
+	width: 1940px
+	margin: 0 auto
+	max-height: 2000px
+
+.section_print-page
+	padding: 110px 0
+
+.print-page-header
+	display: flex
+
+.print-page-header__logo
+	width: 570px
+	margin-right: 390px
+
+.print-page-header-contacts
+	display: flex
+	align-items: center
+
+.print-page__section
+	padding-bottom: 80px
+	position: relative
+	&::after
+		position: absolute
+		content: ''
+		width: 100%
+		bottom: 0
+		left: 0
+		border-bottom: 1px solid #000000
+
+.print-page__title
+	color: #404041
+
+.print-page-general-grid
+	display: flex
+
+.print-page-general-grid-image
+	width: 500px
+	height: 500px
+	overflow: hidden
+
+.print-page-general-grid-image__image
+	height: 500px
+	object-fit: cover
+
+.print-page-general-grid__information
+	flex-grow: 1
+
+.print-page-general-grid-information
+	display: flex
+
+.print-page-general-grid-information__left-item
+	width: 500px
+	flex-shrink: 0
+
+.print-page-general-grid-information__right-item
+	flex-grow: 1
+
+.print-page__education
+	padding: 0 50px 80px
+	position: relative
+	&::after
+		position: absolute
+		content: ''
+		width: 100%
+		bottom: 0
+		left: 0
+		border-bottom: 1px solid #000000
+
+.print-page__list
+	margin-bottom: 45px
+	&:last-child
+		margin-bottom: 0
+
+	li
+		margin-bottom: 35px
+		&:last-child
+			margin-bottom: 0
+
+.print-page__list_skills
+	li
+		color: #666666
+		margin-bottom: 5px
+
+		&:last-child
+			margin-bottom: 0
+
+.print-page-skills
+	display: flex
+
+.print-page-skills__item
+	width: 45%
+	margin-right: 80px
+	&:last-child
+		margin-right: 0
+
+.print-page__section
+	.summary-grid__left-item
+		width: 430px
+		margin-right: 25px
+
+	.summary-grid
+		margin-bottom: 55px
+
+		&:last-child
+			margin-bottom: 0
+
+	.summary-grid__marker
+		width: 10px
+		height: 10px
+		flex-basis: 10px
+		margin-right: 20px
+		background-color: #616162
