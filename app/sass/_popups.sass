@@ -154,3 +154,61 @@
 .popup__button
 	height: 50px
 	width: 265px
+
+.views-for-week
+	position: absolute
+	width: 305px
+	background-color: #f7f7f7
+	border: 1px solid $dark-dull-gray
+	opacity: 0
+	visibility: hidden
+	padding: 15px 15px 15px 30px
+	border-radius: 10px
+	z-index: 1
+	top: 30px
+	cursor: pointer
+
+	&::after, &::before
+		content: ''
+		display: block
+		position: absolute
+		left: 125px
+		width: 0
+		height: 0
+		border-style: solid
+
+	&::before
+		top: -12px
+		border-color: transparent transparent $dark-dull-gray transparent
+		border-width: 0 5.5px 11px 5.5px
+
+	&::after
+		top: -10px
+		border-color: transparent transparent #f7f7f7 transparent
+		border-width: 0 5.5px 11px 5.5px
+
+	&.opened
+		visibility: visible
+		opacity: 1
+
+
+.views-for-week__grid
+	margin-bottom: 10px
+	&:hover
+		.views-for-week-grid__name
+			text-decoration: none
+		.views-for-week-grid__count
+			text-decoration: none
+	&:last-child
+		margin-bottom: 0
+
+.views-for-week-grid
+	display: flex
+
+.views-for-week-grid__name
+	max-width: 220px
+	width: 100%
+	margin-right: 15px
+
+.views-for-week-grid__count
+	flex-grow: 1

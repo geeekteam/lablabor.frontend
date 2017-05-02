@@ -335,7 +335,7 @@
                         $(this).closest('.filter__section').find('.filter__inputs').append(
                             '<span class="filter-input__item">' + ui.item.label +
                             '<input type="checkbox" checked="checked" class="hidden" name="vacancy[' + ui.item.label + ']" id="vacancy" value="1" />' +
-                            '<i class="filter-remove-input"></i>' +
+                            '<i class="fri_filter-remove-input"></i>' +
                             '</span>'
                         );
                         $(this).val('');
@@ -343,7 +343,7 @@
                     }
                 });
             });
-            $(document).on('click', '.filter-input__item .filter-remove-input', function (e) {
+            $(document).on('click', '.filter-input__item .fri_filter-remove-input', function (e) {
                 e.preventDefault();
                 $(this).closest('.filter-input__item').remove();
             });

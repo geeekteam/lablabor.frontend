@@ -25,7 +25,7 @@
 	margin: 0 auto 50px
 
 .statistic-banner-content__bottom
-	padding: 0 125px
+	padding: 0 110px
 
 .statistic-banner-grid
 	display: flex
@@ -38,10 +38,14 @@
 	flex-direction: column
 	align-items: center
 	flex-shrink: 0
+	margin-right: 190px
+	&:last-child
+		margin-right: 0
 
 .statistic__left
-	max-width: 750px
 	margin-right: 30px
+	flex-shrink: 0
+	width: 750px
 
 .statistic__vacancy-grid
 	background-color: #ebebeb
@@ -51,24 +55,40 @@
 	display: flex
 
 .statistic-vacancy-grid__name
-	width: 300px
+	max-width: 300px
+	width: 100%
 	flex-shrink: 0
 
 .statistic-vacancy-grid__salary
-	width: 185px
+	max-width: 185px
+	width: 100%
 	flex-shrink: 0
 
 .statistic-vacansy-grid__open-close
 	flex-grow: 1
+	max-width: 100%
 	flex-shrink: 0
 
+.statistic-vacancy-tables
+	position: relative
+	visibility: hidden
+	display: none
+	opacity: 0
+	&.opened
+		visibility: visible
+		display: inline-block
+		opacity: 1
+
 .statistic-vacancy-table
+	overflow-x: auto
+	border: 1px solid $forest-green
+
+.statistic-vacancy-table__table
 	display: block
 	border-collapse: collapse
 	border-spacing: 0
-	width: 100%
+	width: 748px
 	background: #ebebeb
-	border: 1px solid $forest-green
 	height: 390px
 	overflow-y: auto
 
@@ -115,9 +135,11 @@
 .statistic__report-grid
 	display: flex
 	align-items: center
+	position: relative
 
 .statistic__report-item
 	flex-shrink: 0
+	cursor: pointer
 
 .statistic__report-item_total
 	min-width: 145px
@@ -128,6 +150,7 @@
 	border-style: solid
 	border-width: 5px 5px 0 5px
 	border-color: #a0a0a0 transparent transparent transparent
+	cursor: pointer
 
 .statistic__report-item_rates-left
 	width: 230px
