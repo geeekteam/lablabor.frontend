@@ -1,14 +1,14 @@
 {% extends "layouts/app.twig" %}
 
-{% block pageTitle %}Работодатель | Страница заказа{% endblock %}
+{% block pageTitle %}Страница заказа | Работодатель{% endblock %}
 
 {% set auth = 'true' %}
 
 {% block content %}
 
-<div class="section section__order-employer-header">
+<div class="section section__subheader pt60 pb15 tab-pt15">
     <div class="container">
-        <ul class="breadcrumbs pl265 mb10">
+        <ul class="breadcrumbs breadcrumbs_list mb10">
             <li class="breadcrubmbs__item">
                 <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
             </li>
@@ -28,39 +28,39 @@
     </div>
 </div>
 
-<div class="section section__order-employer-content">
+<div class="section section__body-with-subheader pt90 pb195 tab-pt15 tab-pb15">
     <div class="container container_860">
         <div class="order-employer-content-grid">
-            <div class="order-employer-content-grid__item">
-                <div class="order-employer-content-grid__item-title mb15">Безналичный расчет</div>
+            <a class="order-employer-content-grid__item mr55 tab-mr0 tab-mb20 js-open-popup" href="#" data-open-popup="order-form">
+                <div class="order-employer-content-grid__item-title mob-fz16 mb15">Безналичный расчет</div>
                 <div class="order-employer-content-inner-grid mb15">
-                    <div class="order-employer-content-inner-grid__item mr25">
+                    <div class="order-employer-content-inner-grid__item">
                         <i class="fri fri_non-cash-man"></i>
                     </div>
-                    <div class="order-employer-content-inner-grid__item mr25">
+                    <div class="order-employer-content-inner-grid__item">
                         <i class="fri fri_non-cash-terminal"></i>
                     </div>
                     <div class="order-employer-content-inner-grid__item">
                         <i class="fri fri_non-cash-credit-card"></i>
                     </div>
                 </div>
-                <p class="text-light fz16 text-uppercase text-pigeon-blue text-center">Генерация счета на оплату</p>
-                <p class="text-light fz20 text-uppercase text-pigeon-blue text-center">на сайте lablador.kz</p>
-            </div>
-            <div class="order-employer-content-grid__item">
-                <div class="order-employer-content-grid__item-title mb15">Банковской картой</div>
-                <div class="order-employer-content-inner-grid mb15">
-                    <div class="order-employer-content-inner-grid__item mr25">
+                <p class="text-light fz16 text-uppercase text-pigeon-blue text-center mob-fz14">Генерация счета на оплату</p>
+                <p class="text-light fz20 text-uppercase text-pigeon-blue text-center mob-fz14">на сайте lablador.kz</p>
+            </a>
+            <a class="order-employer-content-grid__item" href="#">
+                <div class="order-employer-content-grid__item-title mob-fz16 mb15">Банковской картой</div>
+                <div class="order-employer-content-inner-grid">
+                    <div class="order-employer-content-inner-grid__item">
                         <i class="fri fri_visa"></i>
                     </div>
-                    <div class="order-employer-content-inner-grid__item mr25">
+                    <div class="order-employer-content-inner-grid__item">
                         <i class="fri fri_american-express"></i>
                     </div>
                     <div class="order-employer-content-inner-grid__item">
                         <i class="fri fri_master-card"></i>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>

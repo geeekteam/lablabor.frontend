@@ -212,3 +212,146 @@
 
 .views-for-week-grid__count
 	flex-grow: 1
+
+.order-form
+	position: relative
+	max-width: 555px
+	border: 7px solid $pigeon-blue
+	border-radius: 25px
+	margin: auto
+	width: 90%
+	background-color: $white
+	padding: 20px 40px
+
+.order-form-grid
+	display: flex
+	justify-content: space-between
+
+.order-form-grid__name
+	max-width: 145px
+	width: 100%
+	margin-right: 10px
+
+.order-form-grid__param
+	flex-grow: 1
+	text-align: right
+
+.order-form__button
+	height: 30px
+	width: 170px
+
+.order-form__close
+	top: -15px
+	right: -30px
+	border: 1px solid $pigeon-blue
+
+.response
+	max-width: 560px
+	width: 90%
+	padding: 60px 45px
+	border: 1px solid $forest-green
+	position: relative
+	margin: auto
+	background-color: $smoke-white
+
+.response__text
+	color: #000000
+
+.response__close
+	border: 1px solid $forest-green
+	background-color: $smoke-white
+	top: -10px
+	right: -30px
+	&::after
+		position: absolute
+		content: ''
+		top: 11px
+		right: 0
+		left: 4px
+		width: 70%
+		border-bottom: 5px solid $forest-green
+		transform: rotate(45deg)
+	&::before
+		position: absolute
+		content: ''
+		top: 11px
+		right: 0
+		left: 4px
+		width: 70%
+		border-bottom: 5px solid $forest-green
+		transform: rotate(-45deg)
+
+.to-invite
+	top: 83px
+	left: 288px
+	position: absolute
+	width: 500px
+	padding: 30px
+	background-color: $smoke-white
+	z-index: 100
+	border: 1px solid $dark-dull-gray
+	border-radius: 5px
+	opacity: 0
+	visibility: hidden
+	&::after, &::before
+		content: ''
+		display: block
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: -10px
+		width: 0
+		height: 0
+		border-style: solid
+	&.opened
+		visibility: visible
+		opacity: 1
+		display: block
+
+	&::before
+		border-color: transparent $dark-dull-gray transparent transparent
+		border-width: 5.5px 11px 5.5px 0
+		left: -12px
+
+	&::after
+		border-color: transparent $smoke-white transparent transparent
+		border-width: 5px 10px 5px 0
+		left: -9px
+
+.to-invite__textarea
+	width: 100%
+	height: 80px
+	resize: none
+	padding: 10px 15px
+	font-size: 12px
+	font-family: "PT Serif Italic"
+	border-radius: 15px
+	outline: none
+
+.to-invite-grid__button
+	width: 130px
+	height: 30px
+	display: flex
+	align-items: center
+	justify-content: center
+
+.to-invite-grid
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.to-invite__checkbox
+	cursor: pointer
+
+	.jq-checkbox
+		display: flex
+		width: 10px
+		height: 10px
+		border: 1px solid $forest-green
+
+
+	.jq-checkbox.checked .jq-checkbox__div
+		+sprite(to-invite-checked)
+		opacity: 1
+		margin-left: 1px
+		margin-top: 1px

@@ -59,13 +59,37 @@
 
 	.main-content__content
 		width: 100%
-		max-width: 100%
+		max-width: none
 
 	.main-vacancies-top__item
 		&::after
 			content: none
 
 @media screen and (max-width: 991px)
+
+	.to-invite
+		max-width: 500px
+		width: 90%
+		margin: auto
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		&:before, &:after
+			content: none
+
+	.order-employer-content-grid
+		flex-direction: column
+		align-items: center
+
+	.announce__text
+		padding-top: 0
+
+	.section__vacancy-view
+		padding: 30px 0
+
+	.breadcrumbs
+		margin-left: 0
+		transform: translateX(0)
 
 	.statistic__vacancy-grid
 		padding-left: 10px
@@ -87,11 +111,12 @@
 		width: 100%
 
 	.cv-finder-grid__currency
+		max-width: 320px
 		width: 100%
 
 	.cv-finder-grid__salary-input
-		max-width: 100%
 		width: 100%
+		flex-shrink: 1
 
 	.employer-view
 		flex-direction: column
@@ -104,11 +129,11 @@
 		flex-direction: column
 
 	.summary__left
-		max-width: 100%
+		max-width: none
 
 	.summary-left-section
 		&::after
-			max-width: 100%
+			max-width: none
 		&:last-child
 			padding-bottom: 30px
 			margin-bottom: 30px
@@ -120,7 +145,7 @@
 
 	.summary-right-section
 		&::after
-			max-width: 100%
+			max-width: none
 			left: 0
 
 	.summary-right-section__line
@@ -144,13 +169,13 @@
 
 	.summary__speciality
 		font-size: 14px
-		max-width: 100%
+		max-width: none
 		width: 100%
 		margin-bottom: 5px
 
 	.summary__salary
 		font-size: 14px
-		max-width: 100%
+		max-width: none
 		width: 100%
 
 	.summary__phones
@@ -161,7 +186,7 @@
 		font-size: 13px
 
 	.summary__email
-		max-width: 100%
+		max-width: none
 		width: 100%
 		font-size: 14px
 		margin-bottom: 10px
@@ -221,18 +246,6 @@
 
 	.announce__content
 		max-width: none
-
-	.breadcrumbs
-		padding-left: 0
-
-	.order-employer-content-grid
-		flex-wrap: wrap
-
-	.order-employer-content-grid__item
-		//height: 200px
-		margin: 0 auto 30px
-		&:last-child
-			margin-bottom: 0
 
 	.section__order-employer-content
 		padding: 30px 25px
@@ -324,14 +337,14 @@
 
 	.employer-view-grid__vacancy
 		margin-bottom: 5px
-		max-width: 100%
+		max-width: none
 
 	.employer-view-grid__salary
 		margin-bottom: 5px
-		max-width: 100%
+		max-width: none
 
 	.employer-view-grid__data
-		max-width: 100%
+		max-width: none
 		text-align: left
 
 	.vacancy-view__title
@@ -351,11 +364,11 @@
 	.vacancy-view-grid__left
 		padding: 5px
 		margin-right: 0
-		max-width: 100%
+		max-width: none
 
 	.vacancy-view-grid__right
 		padding: 5px
-		max-width: 100%
+		max-width: none
 
 	.main-features
 		display: none
@@ -460,7 +473,7 @@
 
 					.auth-slider__first-slide-top-content
 						padding: 15px 0 15px 35px
-						max-width: 100%
+						max-width: none
 						> p
 							&.fz36
 								font-size: 26px
@@ -478,7 +491,7 @@
 							border-left: 86px solid transparent
 
 					.auth-slider__first-slide-bottom-content
-						max-width: 100%
+						max-width: none
 						padding: 15px 35px 15px 0
 						> p
 							&.fz36
@@ -535,7 +548,7 @@
 
 	.main-content__content
 		.grid__item
-			max-width: 100%
+			max-width: none
 
 	.dashboard__title
 		font-size: 26px
@@ -662,6 +675,14 @@
 		border-radius: 25px
 		padding: 0 10px
 
+	.default-select
+		.jq-selectbox__dropdown
+			display: none
+
+		select
+			display: block
+			z-index: 100
+
 	.mobile-search-form__select, .inputs-header__select
 		flex-grow: 10
 		margin-right: 10px
@@ -685,6 +706,16 @@
 		border-radius: 25px
 
 @media screen and (max-width: 600px)
+
+	.order-form-grid
+		flex-direction: column
+
+	.order-form-grid__name
+		margin-right: 0
+		margin-bottom: 5px
+
+	.order-form-grid__param
+		text-align: left
 
 	.dashboard__buttons
 		flex-direction: column
@@ -717,12 +748,12 @@
 		font-size: 12px
 
 	.main-articles-grid__item-large
-		max-width: 100%
+		max-width: none
 		margin-bottom: 30px
 		padding-bottom: 0
 
 	.main-articles-grid__item-small
-		max-width: 100%
+		max-width: none
 		margin-bottom: 30px
 
 //@media screen and (max-width: 1500px)
@@ -731,6 +762,15 @@
 
 @media screen and (max-width: 500px)
 
+	.order-employer-content-inner-grid
+		flex-direction: column
+		align-items: center
+
+	.order-employer-content-inner-grid__item
+		margin-right: 0
+		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0
 
 @media screen and (max-width: 400px)
 
@@ -756,6 +796,12 @@
 	.tab-flex-column
 		flex-direction: column
 
+	.tab-flex-align-start
+		align-items: flex-start
+
+	.tab-pl0
+		padding-left: 0
+
 	.tab-pl20
 		padding-left: 20px
 
@@ -764,6 +810,12 @@
 
 	.tab-mb30
 		margin-bottom: 30px
+
+	.tab-pt15
+		padding-top: 15px
+
+	.tab-pb15
+		padding-bottom: 15px
 
 @media screen and (max-width: 767px)
 

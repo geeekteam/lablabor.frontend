@@ -1,41 +1,19 @@
 {% extends "layouts/app.twig" %}
 
-{% block pageTitle %}Профиль работодателя{% endblock %}
+{% block pageTitle %}Профиль работодателя | Просмотр{% endblock %}
 
 {% set auth = 'true' %}
 
 {% block content %}
 
-    <div class="section section__order-employer-header">
-        <div class="container">
-            <ul class="breadcrumbs pl265 mb10">
-                <li class="breadcrubmbs__item">
-                    <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
-                </li>
-                <li class="breadcrubmbs__item">
-                    <a class="text-italic fz16 text-without-underline" href="#">Личный кабинет</a>
-                </li>
-                <li class="breadcrubmbs__item">
-                    <a class="text-italic fz16 text-without-underline" href="#">Оплата заказа</a>
-                </li>
-            </ul>
-            <div class="announce announce_backing">
-                <div class="announce__content">
-                    <div class="announce__text text-light fz13 text-uppercase text-white">Тариф такой-то такой-то активен еще 10 дней, не забывайте обновлять подписку</div>
-                    <i class="fri fri_announce-content-close"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section section__employer-view">
+    <div class="section section__body-without-subheader pt75 pb110 tab-pt15 tab-pb15">
         <div class="container container1140">
             <div class="employer-view">
                 <div class="employer-view__left">
                     <div class="employer-view__line tab-mb20 desktop-hidden">
                         <p class="text-uppercase fz18 text-medium text-center">АО “АлматыИнженерПром”</p>
                     </div>
-                    <div class="employer-view__line mb15">
+                    <div class="employer-view__line mb10">
                         <div class="thumbnail">
                             <div class="thumbnail__rectangle thumbnail_200 centered">
                                 <img class="thumbnail__image_200" src="images/vacancy-view.jpg" alt="">
@@ -55,7 +33,6 @@
                         <p class="text-italic text-center fz16">Сфера такая-то такая-то</p>
                     </div>
                 </div>
-
                 <div class="employer-view__right">
                     <div class="employer-view__line mb40 tab-mb20 tab-hidden">
                         <p class="text-uppercase fz18 text-medium">АО “АлматыИнженерПром”</p>
@@ -94,7 +71,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
