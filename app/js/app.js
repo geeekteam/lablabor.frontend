@@ -387,7 +387,10 @@
         }
         app.popups();
 
-        $('js.op')
+        $(document).on('click', '.js-open-login', function (e) {
+            e.preventDefault();
+            $('.js-login').toggleClass('visible');
+        })
 
     });
 
