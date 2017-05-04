@@ -316,20 +316,57 @@
             autoCompleteInput.each(function () {
                 var url = $(this).attr("data-source");
 
-                $(this).autocomplete({
-                    source: function (request, response) {
-                        $.ajax({
-                            url: url,
-                            dataType: "json",
-                            data: {
-                                term: request.label
-                            },
-                            success: function (data) {
-                                response(data);
-                                console.log(data);
+                var $this = $(this);
+
+                $.ajax({
+                    url: url,
+                    dataType: "json",
+                    success: function (data) {
+                        $this.autocomplete({
+                            source: data,
+                            /*source: function (request, response) {
+                                $.ajax({
+                                    url: url,
+                                    dataType: "json",
+                                    data: {
+                                        term: request.label
+                                    },
+                                    success: function (data) {
+                                        response(data);
+                                        console.log(data);
+                                    }
+                                });
+                            },*/
+                            minLength: 1,
+                            select: function (event, ui) {
+                                $(this).closest('.filter__section').find('.filter__inputs').append(
+                                    '<span class="filter-input__item">' + ui.item.label +
+                                    '<input type="checkbox" checked="checked" class="hidden" name="vacancy[' + ui.item.label + ']" id="vacancy" value="1" />' +
+                                    '<i class="fri_filter-remove-input"></i>' +
+                                    '</span>'
+                                );
+                                $(this).val('');
+                                return false;
                             }
                         });
-                    },
+                    }
+                });
+
+                /*$(this).autocomplete({
+                    source: autocomplete_data,
+                    /!*source: function (request, response) {
+                     $.ajax({
+                     url: url,
+                     dataType: "json",
+                     data: {
+                     term: request.label
+                     },
+                     success: function (data) {
+                     response(data);
+                     console.log(data);
+                     }
+                     });
+                     },*!/
                     minLength: 1,
                     select: function (event, ui) {
                         $(this).closest('.filter__section').find('.filter__inputs').append(
@@ -341,7 +378,7 @@
                         $(this).val('');
                         return false;
                     }
-                });
+                });*/
             });
             $(document).on('click', '.filter-input__item .fri_filter-remove-input', function (e) {
                 e.preventDefault();
