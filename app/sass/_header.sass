@@ -160,11 +160,12 @@
 .header-login__dropdown
 	position: absolute
 	top: 90px
+	margin-top: 100px
 	margin-left: -90px
 	visibility: hidden
 	opacity: 0
-	+transition(opacity 0.3s ease)
-	&.opened
+	+transition(all 0.3s ease)
+	&.visible
 		margin-top: 0
 		visibility: visible
 		opacity: 1
