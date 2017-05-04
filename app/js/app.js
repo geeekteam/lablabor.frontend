@@ -251,8 +251,8 @@ var YOURAPPNAME = (function () {
                 if (
                     !target.hasClass('js-popup')
                     && !target.closest('.js-popup').length > 0
-                    && !target.hasClass('js-open-popup')
-                    && !target.closest('.js-open-popup').length > 0
+                    // && !target.hasClass('js-open-popup')
+                    // && !target.closest('.js-open-popup').length > 0
                 ) {
                     plugin.closePopup($('.js-popup.opened').attr('data-popup'));
                 }
