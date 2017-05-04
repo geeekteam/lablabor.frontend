@@ -183,10 +183,13 @@
         };
 
         plugin.openPopup = function (popupName) {
-            plugin.reachPopups.filter('[data-popup="' + popupName + '"]').addClass('opened');
-            plugin.bodyEl.css('overflow-y', 'scroll');
-            // plugin.topPanelEl.css('padding-right', scrollSettings.width);
-            plugin.htmlEl.addClass('popup-opened');
+            var popup = plugin.reachPopups.filter('[data-popup="' + popupName + '"]');
+            popup.addClass('opened');
+            if (!popup.hasClass('js-small-popup')) {
+                plugin.bodyEl.css('overflow-y', 'scroll');
+                // plugin.topPanelEl.css('padding-right', scrollSettings.width);
+                plugin.htmlEl.addClass('popup-opened');
+            }
         };
 
         plugin.closePopup = function (popupName) {
@@ -325,18 +328,18 @@
                         $this.autocomplete({
                             source: data,
                             /*source: function (request, response) {
-                                $.ajax({
-                                    url: url,
-                                    dataType: "json",
-                                    data: {
-                                        term: request.label
-                                    },
-                                    success: function (data) {
-                                        response(data);
-                                        console.log(data);
-                                    }
-                                });
-                            },*/
+                             $.ajax({
+                             url: url,
+                             dataType: "json",
+                             data: {
+                             term: request.label
+                             },
+                             success: function (data) {
+                             response(data);
+                             console.log(data);
+                             }
+                             });
+                             },*/
                             minLength: 1,
                             select: function (event, ui) {
                                 $(this).closest('.filter__section').find('.filter__inputs').append(
@@ -353,32 +356,32 @@
                 });
 
                 /*$(this).autocomplete({
-                    source: autocomplete_data,
-                    /!*source: function (request, response) {
-                     $.ajax({
-                     url: url,
-                     dataType: "json",
-                     data: {
-                     term: request.label
-                     },
-                     success: function (data) {
-                     response(data);
-                     console.log(data);
-                     }
-                     });
-                     },*!/
-                    minLength: 1,
-                    select: function (event, ui) {
-                        $(this).closest('.filter__section').find('.filter__inputs').append(
-                            '<span class="filter-input__item">' + ui.item.label +
-                            '<input type="checkbox" checked="checked" class="hidden" name="vacancy[' + ui.item.label + ']" id="vacancy" value="1" />' +
-                            '<i class="fri_filter-remove-input"></i>' +
-                            '</span>'
-                        );
-                        $(this).val('');
-                        return false;
-                    }
-                });*/
+                 source: autocomplete_data,
+                 /!*source: function (request, response) {
+                 $.ajax({
+                 url: url,
+                 dataType: "json",
+                 data: {
+                 term: request.label
+                 },
+                 success: function (data) {
+                 response(data);
+                 console.log(data);
+                 }
+                 });
+                 },*!/
+                 minLength: 1,
+                 select: function (event, ui) {
+                 $(this).closest('.filter__section').find('.filter__inputs').append(
+                 '<span class="filter-input__item">' + ui.item.label +
+                 '<input type="checkbox" checked="checked" class="hidden" name="vacancy[' + ui.item.label + ']" id="vacancy" value="1" />' +
+                 '<i class="fri_filter-remove-input"></i>' +
+                 '</span>'
+                 );
+                 $(this).val('');
+                 return false;
+                 }
+                 });*/
             });
             $(document).on('click', '.filter-input__item .fri_filter-remove-input', function (e) {
                 e.preventDefault();
