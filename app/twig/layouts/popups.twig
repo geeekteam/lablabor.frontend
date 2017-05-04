@@ -4,8 +4,10 @@
             {% if auth == 'false' %}
                 <span class="header-login__button-login button button_green js-change-popup" data-closing-popup="mobile-menu" data-opening-popup="login-bar">Войти</span>
             {% else %}
-                <span class="header-avatar">
-                    <i class="fri_avatar"></i>
+                <span class="header-avatar"">
+                    <div class="header-avatar__wrapper">
+                        <img src="images/default-avatar.jpg" class="header-avatar__image">
+                    </div>
                     <div class="header-avatar__count">5</div>
                 </span>
             {% endif %}
@@ -125,8 +127,8 @@
 
 <div class="popup-wrapper js-popup" data-popup="search-vacancies">
     <div class="filter">
-        <div class="close-popup popup__close js-close-popup" ></div>
-        <div class="filter__section">
+        <div class="close-popup popup__close js-close-popup"></div>
+        <div class="filter__section mb15">
             <div class="filter__line mb15">
                 <div class="text-italic fz18">Вакансии</div>
             </div>
@@ -135,102 +137,97 @@
             </div>
             <div class="filter__inputs"></div>
         </div>
-        <div class="filter__section">
+        <div class="filter__section mb15">
             <div class="filter__line mb15">
                 <div class="text-italic fz18">Город</div>
             </div>
             <div class="filter__line">
-                <input id="cities" class="js-autocomplete-input filter__input text-italic" data-source="json/cities.json">
+                <input class="js-autocomplete-input filter__input text-italic" data-source="json/cities.json">
             </div>
             <div class="filter__inputs"></div>
         </div>
-        
-        <div class="filter__section">
-            <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                <div class="text-italic fz18 mr5">Образование</div>
-                <i class="fri fri_filter-show-input"></i>
+        <div class="filter__section mb15">
+            <div class="filter__line mb15">
+                <div class="text-italic fz18">Образование</div>
             </div>
-
-            <div class="filter__line cursor-pointer mb7 pl20">
-                <div class="text-italic fz14 text-dark-dull-gray">Высшее</div>
-                <i class="fri fri_filter-remove-input"></i>
+            <div class="filter__line">
+                <select class="js-select-education select select__search text-italic">
+                    <option disabled selected>Выберите образование</option>
+                    <option>Высшее</option>
+                    <option>Среднее</option>
+                    <option>Нет</option>
+                </select>
             </div>
-
-            <div class="filter__line pl20">
-                <i class="fri fri_filter-add-input"></i>
-            </div>
+            <div class="filter__inputs"></div>
         </div>
 
-
-        <div class="filter__section">
-            <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
+        <div class="filter__section mb15">
+            <div class="filter__line filter__line_justify-start filter__line_align-baseline mb15">
                 <div class="text-italic fz18 mr5">Зарплата</div>
                 <i class="fri fri_filter-show-input"></i>
             </div>
 
-            <div class="filter__line mb7">
-                <div class="filter__line filter__line_justify-start">
+
+            <div class="filter__section mb15">
+                <div class="filter__line filter__line_justify-start mb7">
                     <input class="filter__input filter__input_salary text-italic mr5" type="text" placeholder="100.000">
                     <span class="mr5 text-dark-dull-gray">-</span>
                     <input class="filter__input filter__input_salary text-italic" type="text" placeholder="150.000">
                 </div>
-                <i class="fri fri_filter-remove-input"></i>
-            </div>
-
-            <div class="filter__line filter__line_justify-start">
-                <div class="filter__select-currency text-italic mr5">
-                    <select class="text-dull-gray text-italic">
+                <div class="filter__line filter__line_currency filter__line_justify-start">
+                    <select class="filter__select-currency text-dull-gray text-italic select select__search">
                         <option>KZT</option>
                         <option>USD</option>
                     </select>
+                    <i class="fri fri_filter-add-input js-add-filter-select-currency"></i>
                 </div>
-                <i class="fri fri_filter-add-input"></i>
             </div>
         </div>
 
-        <div class="filter__section">
-            <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                <div class="text-italic fz18 mr5">Вид деятельности</div>
-                <i class="fri fri_filter-show-input"></i>
+        <div class="filter__section mb15">
+            <div class="filter__line mb15">
+                <div class="text-italic fz18">Вид деятельности</div>
             </div>
-
             <div class="filter__line">
-                <input class="filter__input text-italic" type="text" placeholder="Программирование">
+                <input class="js-autocomplete-input filter__input text-italic" data-source="json/activities.json">
             </div>
+            <div class="filter__inputs"></div>
         </div>
 
-        <div class="filter__section">
-            <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                <div class="text-italic fz18 mr5">Тип занятости</div>
-                <i class="fri fri_filter-show-input"></i>
+        <div class="filter__section mb15">
+            <div class="filter__line mb15">
+                <div class="text-italic fz18">Тип занятости</div>
             </div>
-
-            <div class="filter__line cursor-pointer mb5 pl20">
-                <div class="text-italic fz14 text-dark-dull-gray">Полный рабочий день (5/2)</div>
-                <i class="fri fri_filter-remove-input"></i>
+            <div class="filter__line">
+                <select class="js-select-education select select__search text-italic">
+                    <option disabled selected>Выберите тип занятости</option>
+                    <option>Полный рабочий день (5/2)</option>
+                    <option>Полный рабочий день (6/1)</option>
+                    <option>Частичная занятость</option>
+                    <option>Временная работа</option>
+                    <option>Волонтёрство</option>
+                    <option>Стажировка</option>
+                </select>
             </div>
-
-            <div class="filter__line cursor-pointer mb5 pl20">
-                <div class="text-italic fz14 text-dark-dull-gray">Полный рабочий день (6/1)</div>
-                <i class="fri fri_filter-remove-input"></i>
-            </div>
-            <div class="filter__line pl20">
-                <i class="fri fri_filter-add-input"></i>
-            </div>
+            <div class="filter__inputs"></div>
         </div>
 
-        <div class="filter__section">
-            <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                <div class="text-italic fz18 mr5">Опыт работы</div>
-                <i class="fri fri_filter-show-input"></i>
+        <div class="filter__section mb15">
+            <div class="filter__line mb15">
+                <div class="text-italic fz18">Опыт работы</div>
             </div>
-            <div class="filter__line cursor-pointer mb7 pl20">
-                <div class="text-italic fz14 text-dark-dull-gray">3-5 лет</div>
-                <i class="fri fri_filter-remove-input"></i>
+            <div class="filter__line">
+                <select class="js-select-education select select__search text-italic">
+                    <option disabled selected>Выберите опыт работы</option>
+                    <option>Не имеет значение</option>
+                    <option>До 1 года</option>
+                    <option>1-3 года</option>
+                    <option>3-5 лет</option>
+                    <option>5-10 лет</option>
+                    <option>Более 10 лет</option>
+                </select>
             </div>
-            <div class="filter__line pl20">
-                <i class="fri fri_filter-add-input"></i>
-            </div>
+            <div class="filter__inputs"></div>
         </div>
         <p class="filter__search-button text-center hidden"><button class="popup__button button button_green fz15 text-light">Поиск</button></p>
     </div>

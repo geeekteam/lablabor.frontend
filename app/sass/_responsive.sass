@@ -48,12 +48,6 @@
 		margin-right: 0
 		margin-bottom: 15px
 
-	.header-login__dropdown
-		top: 140px
-
-	.user-menu__dropdown
-		top: 143px
-
 	.main-content-banner
 		display: none
 
@@ -66,6 +60,9 @@
 			content: none
 
 @media screen and (max-width: 991px)
+
+	.user-menu__dropdown
+		display: none
 
 	.to-invite
 		max-width: 500px
@@ -440,8 +437,10 @@
 		text-align: center
 
 	.filter__section
-		width: 50%
-		
+		width: 47%
+		.filter__section
+			width: 100%
+
 	.filter__search-button
 		display: block
 
@@ -756,21 +755,25 @@
 		max-width: none
 		margin-bottom: 30px
 
-//@media screen and (max-width: 1500px)
-//	.filter__section
-//		width: 100%
-
 @media screen and (max-width: 500px)
 
 	.order-employer-content-inner-grid
-		flex-direction: column
 		align-items: center
+		justify-content: space-between
+		width: 100%
+		flex-wrap: wrap
 
 	.order-employer-content-inner-grid__item
+		width: 30%
+		text-align: center
 		margin-right: 0
-		margin-bottom: 15px
-		&:last-child
-			margin-bottom: 0
+
+	.order-employer-content-grid__item_bank-card
+
+		.order-employer-content-inner-grid__item
+			width: 50%
+			&:last-child
+				margin: 10px auto 0
 
 @media screen and (max-width: 400px)
 

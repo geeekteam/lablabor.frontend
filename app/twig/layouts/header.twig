@@ -42,8 +42,8 @@
                 </div>
                 <div class="header-login">
                     {% if auth == 'false' %}
-                        <span class="header-login__button-login button button_green js-open-login">Войти</span>
-                        <div class="header-login__dropdown js-login">
+                        <span class="header-login__button-login button button_green js-open-popup" data-open-popup="login-bar">Войти</span>
+                        <div class="header-login__dropdown js-popup js-small-popup" data-popup="login-bar">
                             <form class="header-login__form header-login-form">
                                 <div class="mb10">
                                     <input placeholder="Email или тел. номер"
@@ -63,10 +63,12 @@
                         </div>
                     {% else %}
                         <span class="header-avatar js-open-popup" data-open-popup="user-menu">
-                            <i class="fri_avatar"></i>
+                            <div class="header-avatar__wrapper">
+                                <img src="images/default-avatar.jpg" class="header-avatar__image">
+                            </div>
                             <div class="header-avatar__count">5</div>
                         </span>
-                        <div class="user-menu__dropdown js-popup" data-popup="user-menu">
+                        <div class="user-menu__dropdown js-popup js-small-popup" data-popup="user-menu">
                             <ul class="user-menu">
                                 <li class="user-menu__item"><a class="fz14 text-italic" href="#">Личный кабинет</a></li>
                                 <li class="user-menu__item"><a class="fz14 text-italic" href="#">Настройки</a></li>

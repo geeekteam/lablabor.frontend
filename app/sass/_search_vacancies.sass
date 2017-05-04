@@ -15,7 +15,7 @@
 	padding-bottom: 40px
 
 .filter
-	padding: 10px 10px 10px 13px
+	padding: 20px 10px
 	border: 1px solid $forest-green
 	width: 240px
 	flex-shrink: 0
@@ -23,9 +23,6 @@
 	margin-bottom: -15px
 	max-height: 720px
 	height: 100%
-
-.filter__section
-	padding-bottom: 15px
 
 .filter__input
 	display: inline-block
@@ -41,52 +38,42 @@
 	padding: 1px 7px
 
 .filter__select-currency
-	.jq-selectbox
-		border: 1px solid #9f9f9f
-		border-radius: 10px
-		width: 70px
-		cursor: pointer
-		padding: 1px 10px 1px 7px
-
+	margin-right: 10px
 	.jq-selectbox__select
-		padding-right: 25px
-
-	.jq-selectbox__trigger
-		position: absolute
-		top: 10px
-		right: 0
-		width: 10px
-		height: 100%
-
-	.jq-selectbox__trigger-arrow
-		float: right
-		width: 0
-		height: 0
-		border-style: solid
-		border-width: 5px 5px 0 5px
-		border-color: $light-gray transparent transparent transparent
-		cursor: pointer
+		width: auto
+		min-width: 100%
 
 	.jq-selectbox__dropdown
-		background: $white
-		border: 1px solid $dark-dull-gray
-		padding: 1px 10px 1px 7px
+		margin-top: -24px
+		padding-top: 2px
+		width: auto
+		min-width: 100%
 
-	.jq-selectbox li
-		cursor: pointer
-		&:hover
-			color: $forest-green
+	.jq-selectbox__trigger
+		margin-left: 5px
+
+	li
+		margin-bottom: 5px
 
 .filter__line
 	display: flex
 	align-items: center
 	flex-wrap: wrap
 
+.filter__line_currency
+	display: inline-flex
+	flex-wrap: nowrap
+	.fri_filter-add-input
+		width: 20px
+
 .filter-input__item
+	display: inline-block
 	font-size: 14px
 	font-family: "PT Serif Italic", sans-serif
 	color: $dark-dull-gray
 	margin-right: 10px
+	flex-wrap: nowrap
+	margin-top: 5px
 
 .fri_filter-remove-input
 	cursor: pointer
@@ -150,8 +137,10 @@
 	border: 2px solid transparent
 	&:hover
 		.round-thumbnail
-			box-shadow: 0 3px 3px 0 rgba(#000000, 0.5)
+			box-shadow: 0 0 10px 0 rgba(#000000, 0.5)
 		.search-description__name
+			text-decoration: underline
+		.search-grid__item-salary
 			text-decoration: underline
 
 .search-grid__item-image

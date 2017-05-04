@@ -1,3 +1,6 @@
+.header
+	position: relative
+
 .section__header
 	padding: 10px 0 0
 
@@ -6,6 +9,7 @@
 	align-items: center
 	justify-content: space-between
 	flex-wrap: wrap
+	position: relative
 
 .header-inner__left
 	display: flex
@@ -27,20 +31,22 @@
 	list-style-type: none
 	line-height: 1
 	display: flex
-	justify-content: space-between
 
 .main-menu__item
 	position: relative
-	letter-spacing: 0px
+	letter-spacing: 0
+	margin-right: 15px
+	padding-right: 20px
 	&::after
 		position: absolute
 		content: "/"
 		top: 0
-		right: -25px
+		right: 0
 	&:last-child
 		margin-right: 0
+		padding-right: 0
 		&::after
-			display: none
+			content: none
 
 .logo
 	flex-grow: 1
@@ -159,13 +165,13 @@
 
 .header-login__dropdown
 	position: absolute
-	top: 90px
+	top: calc(100% + 15px)
 	margin-top: 100px
 	margin-left: -90px
 	visibility: hidden
 	opacity: 0
 	+transition(all 0.3s ease)
-	&.visible
+	&.opened
 		margin-top: 0
 		visibility: visible
 		opacity: 1
@@ -242,6 +248,17 @@
 		border-color: transparent transparent $dark-dull-gray transparent
 		opacity: 0
 
+.header-avatar__wrapper
+	width: 48px
+	height: 48px
+	border-radius: 50%
+	border: 2px solid $forest-green
+	object-fit: cover
+	overflow: hidden
+
+.header-avatar__image
+	height: 48px
+
 .header-avatar__count
 	box-sizing: border-box
 	position: absolute
@@ -266,18 +283,17 @@
 
 .user-menu__dropdown
 	position: absolute
-	top: 78px
-	margin-left: -90px
+	top: calc(100% + 20px)
+	right: 5px
 	visibility: hidden
 	opacity: 0
-	display: none
+	margin-top: -20px
 	z-index: 101
-	+transition(opacity 0.3s ease)
+	+transition(all 0.3s ease)
 	&.opened
 		margin-top: 0
 		visibility: visible
 		opacity: 1
-		display: block
 
 .user-menu__item
 	position: relative

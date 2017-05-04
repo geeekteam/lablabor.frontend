@@ -1,4 +1,4 @@
-(function () {
+var YOURAPPNAME = (function () {
 
     function YOURAPPNAME(doc) {
         var _self = this;
@@ -265,136 +265,129 @@
         return plugin;
     };
 
-    var app = new YOURAPPNAME(document);
-
-    app.appLoad('loading', function () {
-        console.log('App is loading... Paste your app code here.');
-        // App is loading... Paste your app code here. 4example u can run preloader event here and stop it in action appLoad dom or full
-
-        (function ($) {
-            $(function () {
-                $('input, select').styler();
-            });
-        })(jQuery);
-
-    });
-
-    app.appLoad('dom', function () {
-        console.log('DOM is loaded! Paste your app code here (Pure JS code).');
-        // DOM is loaded! Paste your app code here (Pure JS code).
-        // Do not use jQuery here cause external libs do not loads here...
-
-        app.initSwitcher(); // data-switcher="{target='anything'}" , data-switcher-target="anything"
-    });
-
-    app.appLoad('full', function (e) {
-
-        $('.main-content__banner').owlCarousel({
-            items: 1,
-            loop: true,
-            dots: 0,
-            autoplay: true,
-            animateOut: 'fadeOut',
-            mouseDrag: false
-        });
-
-        $('.auth-slider').owlCarousel({
-            items: 1,
-            loop: true,
-            dots: 1,
-            nav: true,
-            responsive: {
-                0: {
-                    nav: false
-                },
-                768: {
-                    nav: true
-                }
+    YOURAPPNAME.prototype.checkSelect = function (select) {
+        if (select.hasClass('js-select-education')) {
+            var str = select.find('option:selected').text();
+            if (str !== '') {
+                select.closest('.filter__section').find('.filter__inputs').append(
+                    '<span class="filter-input__item">' + str +
+                    '<input type="checkbox" checked="checked" class="hidden" name="education[' + str + ']" id="education" value="1" />' +
+                    '<i class="fri_filter-remove-input"></i>' +
+                    '</span>'
+                );
             }
-        });
-
-        var autoCompleteInput = $('.js-autocomplete-input');
-
-        if (autoCompleteInput.length > 0) {
-            autoCompleteInput.each(function () {
-                var url = $(this).attr("data-source");
-
-                var $this = $(this);
-
-                $.ajax({
-                    url: url,
-                    dataType: "json",
-                    success: function (data) {
-                        $this.autocomplete({
-                            source: data,
-                            /*source: function (request, response) {
-                             $.ajax({
-                             url: url,
-                             dataType: "json",
-                             data: {
-                             term: request.label
-                             },
-                             success: function (data) {
-                             response(data);
-                             console.log(data);
-                             }
-                             });
-                             },*/
-                            minLength: 1,
-                            select: function (event, ui) {
-                                $(this).closest('.filter__section').find('.filter__inputs').append(
-                                    '<span class="filter-input__item">' + ui.item.label +
-                                    '<input type="checkbox" checked="checked" class="hidden" name="vacancy[' + ui.item.label + ']" id="vacancy" value="1" />' +
-                                    '<i class="fri_filter-remove-input"></i>' +
-                                    '</span>'
-                                );
-                                $(this).val('');
-                                return false;
-                            }
-                        });
-                    }
-                });
-
-                /*$(this).autocomplete({
-                 source: autocomplete_data,
-                 /!*source: function (request, response) {
-                 $.ajax({
-                 url: url,
-                 dataType: "json",
-                 data: {
-                 term: request.label
-                 },
-                 success: function (data) {
-                 response(data);
-                 console.log(data);
-                 }
-                 });
-                 },*!/
-                 minLength: 1,
-                 select: function (event, ui) {
-                 $(this).closest('.filter__section').find('.filter__inputs').append(
-                 '<span class="filter-input__item">' + ui.item.label +
-                 '<input type="checkbox" checked="checked" class="hidden" name="vacancy[' + ui.item.label + ']" id="vacancy" value="1" />' +
-                 '<i class="fri_filter-remove-input"></i>' +
-                 '</span>'
-                 );
-                 $(this).val('');
-                 return false;
-                 }
-                 });*/
-            });
-            $(document).on('click', '.filter-input__item .fri_filter-remove-input', function (e) {
-                e.preventDefault();
-                $(this).closest('.filter-input__item').remove();
-            });
         }
-        app.popups();
+    }
 
-        $(document).on('click', '.js-open-login', function (e) {
-            e.preventDefault();
-            $('.js-login').toggleClass('visible');
-        })
-
-    });
+    return YOURAPPNAME;
 
 })();
+
+var app = new YOURAPPNAME(document);
+
+app.appLoad('loading', function () {
+    console.log('App is loading... Paste your app code here.');
+    // App is loading... Paste your app code here. 4example u can run preloader event here and stop it in action appLoad dom or full
+
+    (function ($) {
+        $(function () {
+            $('input, select').styler();
+        });
+    })(jQuery);
+
+
+});
+
+app.appLoad('dom', function () {
+    console.log('DOM is loaded! Paste your app code here (Pure JS code).');
+    // DOM is loaded! Paste your app code here (Pure JS code).
+    // Do not use jQuery here cause external libs do not loads here...
+
+    app.initSwitcher(); // data-switcher="{target='anything'}" , data-switcher-target="anything"
+});
+
+app.appLoad('full', function (e) {
+
+    $('.main-content__banner').owlCarousel({
+        items: 1,
+        loop: true,
+        dots: 0,
+        autoplay: true,
+        animateOut: 'fadeOut',
+        mouseDrag: false
+    });
+
+    $('.auth-slider').owlCarousel({
+        items: 1,
+        loop: true,
+        dots: 1,
+        nav: true,
+        responsive: {
+            0: {
+                nav: false
+            },
+            768: {
+                nav: true
+            }
+        }
+    });
+
+    var autoCompleteInput = $('.js-autocomplete-input');
+
+    if (autoCompleteInput.length > 0) {
+        autoCompleteInput.each(function () {
+            var url = $(this).attr("data-source");
+
+            var $this = $(this);
+
+            $.ajax({
+                url: url,
+                dataType: "json",
+                success: function (data) {
+                    $this.autocomplete({
+                        source: data,
+                        minLength: 1,
+                        select: function (event, ui) {
+                            $(this).closest('.filter__section').find('.filter__inputs').append(
+                                '<span class="filter-input__item">' + ui.item.label +
+                                '<input type="checkbox" checked="checked" class="hidden" name="[' + ui.item.label + ']" value="1" />' +
+                                '<i class="fri_filter-remove-input"></i>' +
+                                '</span>'
+                            );
+                            $(this).val('');
+                            return false;
+                        }
+                    });
+                }
+            });
+
+        });
+        $(document).on('click', '.filter-input__item .fri_filter-remove-input', function (e) {
+            e.preventDefault();
+            $(this).closest('.filter-input__item').remove();
+        });
+    }
+
+    $(document).on('click', '.js-add-filter-select-currency', function (e) {
+        e.preventDefault();
+        $(this).closest('.filter__section').after(
+            '<div class="filter__section mb15">'+
+                '<div class="filter__line filter__line_justify-start mb7">'+
+                    '<input class="filter__input filter__input_salary text-italic mr5" type="text" placeholder="100.000">'+
+                    '<span class="mr5 text-dark-dull-gray">-</span>'+
+                    '<input class="filter__input filter__input_salary text-italic" type="text" placeholder="150.000">'+
+                '</div>'+
+                '<div class="filter__line filter__line_currency filter__line_justify-start">'+
+                    '<select class="filter__select-currency text-dull-gray text-italic select select__search">'+
+                        '<option>KZT</option>'+
+                        '<option>USD</option>'+
+                    '</select>'+
+                    '<i class="fri fri_filter-add-input js-add-filter-select-currency"></i>'+
+                '</div>'+
+            '</div>'
+        );
+        $('.filter select:not(.jq-selectbox)').styler();
+    });
+    app.popups();
+
+});
