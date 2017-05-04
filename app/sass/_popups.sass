@@ -167,6 +167,8 @@
 	z-index: 1
 	top: 30px
 	cursor: pointer
+	+transition(all 0.3s ease)
+	margin-top: 30px
 
 	&::after, &::before
 		content: ''
@@ -190,6 +192,7 @@
 	&.opened
 		visibility: visible
 		opacity: 1
+		margin-top: 0
 
 
 .views-for-week__grid

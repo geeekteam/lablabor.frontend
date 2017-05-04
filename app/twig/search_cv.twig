@@ -6,7 +6,7 @@
 
 {% block content %}
 
-    <div class="section section__content-search">
+    <div class="section section__body-without-subheader pt60 pb50 tab-pt15 tab-pb15">
         <div class="container container_1280">
             <div class="banner pb20">
                 <img src="images/banner-top-760x90.jpg" alt="">
@@ -14,7 +14,7 @@
             <div class="search-vacancies">
                 <p class="search-vacancies__filter-button text-center"><button class="popup__button button button_green fz15 text-light js-open-popup" data-open-popup="search-vacancies">Фильтр</button></p>
                 <div class="filter hidden-mobile">
-                    <div class="filter__section">
+                    <div class="filter__section mb15">
                         <div class="filter__line mb15">
                             <div class="text-italic fz18">Вакансии</div>
                         </div>
@@ -23,96 +23,92 @@
                         </div>
                         <div class="filter__inputs"></div>
                     </div>
-                    <div class="filter__section">
+                    <div class="filter__section mb15">
                         <div class="filter__line mb15">
                             <div class="text-italic fz18">Город</div>
                         </div>
                         <div class="filter__line">
-                            <input id="cities" class="js-autocomplete-input filter__input text-italic" data-source="json/cities.json">
+                            <input class="js-autocomplete-input filter__input text-italic" data-source="json/cities.json">
+                        </div>
+                        <div class="filter__inputs"></div>
+                    </div>
+                    <div class="filter__section mb15">
+                        <div class="filter__line mb15">
+                            <div class="text-italic fz18">Образование</div>
+                        </div>
+                        <div class="filter__line">
+                            <select class="js-select-education select select__search text-italic">
+                                <option disabled selected>Выберите образование</option>
+                                <option>Высшее</option>
+                                <option>Среднее</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                        <div class="filter__inputs"></div>
+                    </div>
+
+                    <div class="filter__section mb15">
+                        <div class="filter__line filter__line_justify-start filter__line_align-baseline mb15">
+                            <div class="text-italic fz18 mr5">Зарплата</div>
+                            <i class="fri fri_filter-show-input"></i>
+                        </div>
+                    </div>
+
+                    <div class="filter__section mb15">
+                        <div class="filter__line filter__line_justify-start mb7">
+                            <input class="filter__input filter__input_salary text-italic mr5" type="text" placeholder="100.000">
+                            <span class="mr5 text-dark-dull-gray">-</span>
+                            <input class="filter__input filter__input_salary text-italic" type="text" placeholder="150.000">
+                        </div>
+                        <div class="filter__line filter__line_currency filter__line_justify-start">
+                            <select class="filter__select-currency text-dull-gray text-italic select select__search">
+                                <option>KZT</option>
+                                <option>USD</option>
+                            </select>
+                            <i class="fri fri_filter-add-input js-add-filter-select-currency"></i>
+                        </div>
+                    </div>
+
+                    <div class="filter__section mb15">
+                        <div class="filter__line mb15">
+                            <div class="text-italic fz18">Тип занятости</div>
+                        </div>
+                        <div class="filter__line">
+                            <select class="js-select-education select select__search text-italic">
+                                <option disabled selected>Выберите тип занятости</option>
+                                <option>Полный рабочий день (5/2)</option>
+                                <option>Полный рабочий день (6/1)</option>
+                                <option>Частичная занятость</option>
+                                <option>Временная работа</option>
+                                <option>Волонтёрство</option>
+                                <option>Стажировка</option>
+                            </select>
                         </div>
                         <div class="filter__inputs"></div>
                     </div>
 
                     <div class="filter__section">
-                        <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                            <div class="text-italic fz18 mr5">Образование</div>
-                            <i class="filter-show-input"></i>
+                        <div class="filter__line mb15">
+                            <div class="text-italic fz18">Опыт работы</div>
                         </div>
-
-                        <div class="filter__line cursor-pointer mb7 pl20">
-                            <div class="text-italic fz14 text-dark-dull-gray">Высшее</div>
-                            <i class="filter-remove-input"></i>
+                        <div class="filter__line">
+                            <select class="js-select-education select select__search text-italic">
+                                <option disabled selected>Выберите опыт работы</option>
+                                <option>Не имеет значение</option>
+                                <option>До 1 года</option>
+                                <option>1-3 года</option>
+                                <option>3-5 лет</option>
+                                <option>5-10 лет</option>
+                                <option>Более 10 лет</option>
+                            </select>
                         </div>
-
-                        <div class="filter__line pl20">
-                            <i class="filter-add-input"></i>
-                        </div>
+                        <div class="filter__inputs"></div>
                     </div>
 
-
-                    <div class="filter__section">
-                        <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                            <div class="text-italic fz18 mr5">Зарплата</div>
-                            <i class="filter-show-input"></i>
-                        </div>
-
-                        <div class="filter__line mb7">
-                            <div class="filter__line filter__line_justify-start">
-                                <input class="filter__input filter__input_salary text-italic mr5" type="text" placeholder="100.000">
-                                <span class="mr5 text-dark-dull-gray">-</span>
-                                <input class="filter__input filter__input_salary text-italic" type="text" placeholder="150.000">
-                            </div>
-                            <i class="filter-remove-input"></i>
-                        </div>
-
-                        <div class="filter__line filter__line_justify-start">
-                            <div class="filter__select-currency text-italic mr5">
-                                <select class="text-dull-gray text-italic">
-                                    <option>KZT</option>
-                                    <option>USD</option>
-                                </select>
-                            </div>
-                            <i class="filter-add-input"></i>
-                        </div>
-                    </div>
-
-                    <div class="filter__section">
-                        <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                            <div class="text-italic fz18 mr5">Тип занятости</div>
-                            <i class="filter-show-input"></i>
-                        </div>
-
-                        <div class="filter__line cursor-pointer mb5 pl20">
-                            <div class="text-italic fz14 text-dark-dull-gray">Полный рабочий день (5/2)</div>
-                            <i class="filter-remove-input"></i>
-                        </div>
-
-                        <div class="filter__line cursor-pointer mb5 pl20">
-                            <div class="text-italic fz14 text-dark-dull-gray">Полный рабочий день (6/1)</div>
-                            <i class="filter-remove-input"></i>
-                        </div>
-                        <div class="filter__line pl20">
-                            <i class="filter-add-input"></i>
-                        </div>
-                    </div>
-
-                    <div class="filter__section">
-                        <div class="filter__line filter__line_justify-start filter__line_align-baseline cursor-pointer mb15">
-                            <div class="text-italic fz18 mr5">Опыт работы</div>
-                            <i class="filter-show-input"></i>
-                        </div>
-                        <div class="filter__line cursor-pointer mb7 pl20">
-                            <div class="text-italic fz14 text-dark-dull-gray">3-5 лет</div>
-                            <i class="filter-remove-input"></i>
-                        </div>
-                        <div class="filter__line pl20">
-                            <i class="filter-add-input"></i>
-                        </div>
-                    </div>
                     <p class="filter__search-button text-center hidden"><button class="popup__button button button_green fz15 text-light">Поиск</button></p>
                 </div>
                 <div class="results results-cv pl40">
-                    <ul class="breadcrumbs mb25">
+                    <ul class="breadcrumbs breadcrumbs_non-margin mb25">
                         <li class="breadcrubmbs__item">
                             <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
                         </li>
@@ -129,6 +125,118 @@
                             <div class="search-grid__item-image">
                                 <div class="round-thumbnail round-thumbnail_125">
                                     <img class="round-thumbnail__image round-thumbnail__image" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </div>
+                            <div class="search-grid__item-description">
+                                <div class="search-description">
+                                    <div class="search-description__name text-medium fz18 text-uppercase text-signal-black mb5">Инженер-технолог</div>
+                                    <div class="search-description__company text-light fz16 text-uppercase text-signal-black mb7">Арманов Арман Арманович</div>
+                                </div>
+                            </div>
+                            <div class="search-grid__item-salary text-light fz18 text-uppercase lts1">100 000 KZT</div>
+                        </a>
+                        <a class="search-grid search-grid__cv search-grid_premium" href="#">
+                            <div class="search-grid__item-image">
+                                <div class="round-thumbnail round-thumbnail_125">
+                                    <img class="round-thumbnail__image round-thumbnail__image" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </div>
+                            <div class="search-grid__item-description">
+                                <div class="search-description">
+                                    <div class="search-description__name text-medium fz18 text-uppercase text-signal-black mb5">Инженер-технолог</div>
+                                    <div class="search-description__company text-light fz16 text-uppercase text-signal-black mb7">Арманов Арман Арманович</div>
+                                </div>
+                            </div>
+                            <div class="search-grid__item-salary text-light fz18 text-uppercase lts1">100 000 KZT</div>
+                        </a>
+                        <a class="search-grid search-grid__cv search-grid_premium" href="#">
+                            <div class="search-grid__item-image">
+                                <div class="round-thumbnail round-thumbnail_125">
+                                    <img class="round-thumbnail__image round-thumbnail__image" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </div>
+                            <div class="search-grid__item-description">
+                                <div class="search-description">
+                                    <div class="search-description__name text-medium fz18 text-uppercase text-signal-black mb5">Инженер-технолог</div>
+                                    <div class="search-description__company text-light fz16 text-uppercase text-signal-black mb7">Арманов Арман Арманович</div>
+                                </div>
+                            </div>
+                            <div class="search-grid__item-salary text-light fz18 text-uppercase lts1">100 000 KZT</div>
+                        </a>
+                        <a class="search-grid search-grid__cv" href="#">
+                            <div class="search-grid__item-image">
+                                <div class="round-thumbnail round-thumbnail_125">
+                                    <img class="round-thumbnail__image round-thumbnail__image_125" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </div>
+                            <div class="search-grid__item-description">
+                                <div class="search-description">
+                                    <div class="search-description__name text-medium fz18 text-uppercase text-signal-black mb5">Инженер-технолог</div>
+                                    <div class="search-description__company text-light fz16 text-uppercase text-signal-black mb7">Арманов Арман Арманович</div>
+                                </div>
+                            </div>
+                            <div class="search-grid__item-salary text-light fz18 text-uppercase lts1">100 000 KZT</div>
+                        </a>
+                        <a class="search-grid search-grid__cv" href="#">
+                            <div class="search-grid__item-image">
+                                <div class="round-thumbnail round-thumbnail_125">
+                                    <img class="round-thumbnail__image round-thumbnail__image_125" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </div>
+                            <div class="search-grid__item-description">
+                                <div class="search-description">
+                                    <div class="search-description__name text-medium fz18 text-uppercase text-signal-black mb5">Инженер-технолог</div>
+                                    <div class="search-description__company text-light fz16 text-uppercase text-signal-black mb7">Арманов Арман Арманович</div>
+                                </div>
+                            </div>
+                            <div class="search-grid__item-salary text-light fz18 text-uppercase lts1">100 000 KZT</div>
+                        </a>
+                        <a class="search-grid search-grid__cv" href="#">
+                            <div class="search-grid__item-image">
+                                <div class="round-thumbnail round-thumbnail_125">
+                                    <img class="round-thumbnail__image round-thumbnail__image_125" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </div>
+                            <div class="search-grid__item-description">
+                                <div class="search-description">
+                                    <div class="search-description__name text-medium fz18 text-uppercase text-signal-black mb5">Инженер-технолог</div>
+                                    <div class="search-description__company text-light fz16 text-uppercase text-signal-black mb7">Арманов Арман Арманович</div>
+                                </div>
+                            </div>
+                            <div class="search-grid__item-salary text-light fz18 text-uppercase lts1">100 000 KZT</div>
+                        </a>
+                        <a class="search-grid search-grid__cv" href="#">
+                            <div class="search-grid__item-image">
+                                <div class="round-thumbnail round-thumbnail_125">
+                                    <img class="round-thumbnail__image round-thumbnail__image_125" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </div>
+                            <div class="search-grid__item-description">
+                                <div class="search-description">
+                                    <div class="search-description__name text-medium fz18 text-uppercase text-signal-black mb5">Инженер-технолог</div>
+                                    <div class="search-description__company text-light fz16 text-uppercase text-signal-black mb7">Арманов Арман Арманович</div>
+                                </div>
+                            </div>
+                            <div class="search-grid__item-salary text-light fz18 text-uppercase lts1">100 000 KZT</div>
+                        </a>
+                        <a class="search-grid search-grid__cv" href="#">
+                            <div class="search-grid__item-image">
+                                <div class="round-thumbnail round-thumbnail_125">
+                                    <img class="round-thumbnail__image round-thumbnail__image_125" src="images/default-vacancy.png" alt="">
+                                </div>
+                            </div>
+                            <div class="search-grid__item-description">
+                                <div class="search-description">
+                                    <div class="search-description__name text-medium fz18 text-uppercase text-signal-black mb5">Инженер-технолог</div>
+                                    <div class="search-description__company text-light fz16 text-uppercase text-signal-black mb7">Арманов Арман Арманович</div>
+                                </div>
+                            </div>
+                            <div class="search-grid__item-salary text-light fz18 text-uppercase lts1">100 000 KZT</div>
+                        </a>
+                        <a class="search-grid search-grid__cv" href="#">
+                            <div class="search-grid__item-image">
+                                <div class="round-thumbnail round-thumbnail_125">
+                                    <img class="round-thumbnail__image round-thumbnail__image_125" src="images/default-vacancy.png" alt="">
                                 </div>
                             </div>
                             <div class="search-grid__item-description">

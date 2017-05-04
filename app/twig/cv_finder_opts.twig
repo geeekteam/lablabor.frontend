@@ -1,6 +1,6 @@
 {% extends "layouts/app.twig" %}
 
-{% block pageTitle %}Расширенный поиск вакансий{% endblock %}
+{% block pageTitle %}Расширенный поиск резюме{% endblock %}
 
 {% set auth = 'true' %}
 
@@ -9,36 +9,55 @@
     <div class="section section__body-without-subheader pt50 pb110 tab-pt15 tab-pb15">
         <div class="container container_800">
             <div class="cv-finder">
-                <p class="cv-finder__title fz18 text-medium text-uppercase mb40">Поиск по вакансиям</p>
+                <p class="cv-finder__title fz18 text-medium text-uppercase mb40">Поиск резюме</p>
                 <form>
-                    <div class="cv-finder-grid mb30">
-                        <div class="cv-finder-grid__left flex-align-center text-italic fz14 mr20">
-                            Название вакансии
-                        </div>
-                        <div class="cv-finder-grid__right">
-                            <div class="default-select mr10">
-                                <select class="">
-                                    <option class="text-dull-gray" disabled selected>Выберите из списка</option>
-                                    <option>Дизайнер</option>
-                                    <option>Бариста</option>
-                                    <option>Продавец вейпов</option>
-                                    <option>Дегустатор маффинов</option>
-                                </select>
-                            </div>
-                            <div class="round-loupe"><i class="fri_search-button-loupe-17x18"></i></div>
-                        </div>
-                    </div>
                     <div class="cv-finder-grid mb30">
                         <div class="cv-finder-grid__left flex-align-center text-italic fz14 mr20">
                             Город
                         </div>
                         <div class="cv-finder-grid__right">
                             <div class="default-select">
-                                <select class="">
+                                <select>
                                     <option class="text-dull-gray" disabled selected>Выберите город</option>
                                     <option>Алматы</option>
                                     <option>Астана</option>
                                 </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cv-finder-grid mb30">
+                        <div class="cv-finder-grid__left flex-align-start text-italic fz14 mr20">
+                            Опыт работы
+                        </div>
+                        <div class="cv-finder-grid__right flex-wrap">
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp1">
+                                <label class="text-italic fz14" for="exp1">Не важно</label>
+                            </div>
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp2">
+                                <label class="text-italic fz14" for="exp2">без опыта</label>
+                            </div>
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp3">
+                                <label class="text-italic fz14" for="exp3">до 1 года</label>
+                            </div>
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp4">
+                                <label class="text-italic fz14" for="exp4">от 1 года до 3 лет</label>
+                            </div>
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp5">
+                                <label class="text-italic fz14" for="exp5">От 3 до 5 лет</label>
+                            </div>
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp6">
+                                <label class="text-italic fz14" for="exp6">От 5 до 10 лет</label>
+                            </div>
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp7">
+                                <label class="text-italic fz14" for="exp7">Свыше 10 лет</label>
                             </div>
                         </div>
                     </div>
@@ -70,97 +89,89 @@
                         </div>
                     </div>
                     <div class="cv-finder-grid mb30">
+                        <div class="cv-finder-grid__left flex-align-start text-italic fz14 mr20">
+                            Возраст
+                        </div>
+                        <div class="cv-finder-grid__right flex-wrap">
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp1">
+                                <label class="text-italic fz14" for="exp1">До 25 лет</label>
+                            </div>
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp2">
+                                <label class="text-italic fz14" for="exp2">от 25 до 35 лет</label>
+                            </div>
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp3">
+                                <label class="text-italic fz14" for="exp3">от 35 до 45 лет</label>
+                            </div>
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp4">
+                                <label class="text-italic fz14" for="exp4">от 45 до 60 лет</label>
+                            </div>
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp5">
+                                <label class="text-italic fz14" for="exp5">старше 60 лет</label>
+                            </div>
+                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
+                                <input class="radio" type="radio" name="experience" id="exp6">
+                                <label class="text-italic fz14" for="exp6">Не важно</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cv-finder-grid mb30">
                         <div class="cv-finder-grid__left flex-align-center text-italic fz14 mr20">
-                            Вид деятельности компании
+                            Тип занятости
                         </div>
                         <div class="cv-finder-grid__right">
                             <div class="default-select">
                                 <select>
                                     <option class="text-dull-gray" disabled selected>Выберите из списка</option>
-                                    <option>Горная добыча</option>
-                                    <option>Разработка ПО</option>
+                                    <option>Полный рабочий день (5/2)</option>
+                                    <option>Полный рабочий день (6/1)</option>
+                                    <option>Частичная занятость</option>
+                                    <option>Временная работа</option>
+                                    <option>Волонтёрство</option>
+                                    <option>Стажировка</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="cv-finder-grid mb30">
                         <div class="cv-finder-grid__left flex-align-start text-italic fz14 mr20">
-                            Тип занятости
+                            Пол
                         </div>
                         <div class="cv-finder-grid__right flex-wrap">
                             <div class="cv-finder__line radio-buttons radio_green-dot mb20">
-                                <input class="radio" type="radio" name="workdays" id="workday1">
-                                <label class="text-italic fz14" for="workday1">Полный рабочий день (5/2)</label>
+                                <input class="radio" type="radio" name="experience" id="exp1">
+                                <label class="text-italic fz14" for="exp1">Мужской</label>
                             </div>
                             <div class="cv-finder__line radio-buttons radio_green-dot mb20">
-                                <input class="radio" type="radio" name="workdays" id="workday2">
-                                <label class="text-italic fz14" for="workday2">Полный рабочий день (6/1)</label>
+                                <input class="radio" type="radio" name="experience" id="exp2">
+                                <label class="text-italic fz14" for="exp2">Женский</label>
                             </div>
                             <div class="cv-finder__line radio-buttons radio_green-dot mb20">
-                                <input class="radio" type="radio" name="workdays" id="workday3">
-                                <label class="text-italic fz14" for="workday3">Частичная занятость (график устанавливается работодателем)</label>
-                            </div>
-                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
-                                <input class="radio" type="radio" name="workdays" id="workday4">
-                                <label class="text-italic fz14" for="workday4">Сменная работа (график устанавливается работодателем)</label>
-                            </div>
-                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
-                                <input class="radio" type="radio" name="workdays" id="workday5">
-                                <label class="text-italic fz14" for="workday5">Вахтовый метод</label>
-                            </div>
-                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
-                                <input class="radio" type="radio" name="workdays" id="workday6">
-                                <label class="text-italic fz14" for="workday6">Дистанционная работа</label>
-                            </div>
-                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
-                                <input class="radio" type="radio" name="workdays" id="workday7">
-                                <label class="text-italic fz14" for="workday7">Надомная работа</label>
-                            </div>
-                            <div class="cv-finder__line radio-buttons radio_green-dot mb20">
-                                <input class="radio" type="radio" name="workdays" id="workday8">
-                                <label class="text-italic fz14" for="workday8">Временная работа</label>
-                            </div>
-                            <div class="cv-finder__line radio-buttons radio_green-dot">
-                                <input class="radio" type="radio" name="workdays" id="workday9">
-                                <label class="text-italic fz14" for="workday9">Стажировка</label>
+                                <input class="radio" type="radio" name="experience" id="exp3">
+                                <label class="text-italic fz14" for="exp3">Не важно</label>
                             </div>
                         </div>
                     </div>
                     <div class="cv-finder-grid mb30">
-                        <div class="cv-finder-grid__left flex-align-start text-italic fz14 mr20">
-                            Требуемый опыт работы
+                        <div class="cv-finder-grid__left flex-align-center text-italic fz14 mr20">
+                            Образование
                         </div>
-                        <div class="cv-finder-grid__right flex-wrap">
-                            <div class="cv-finder__line radio-buttons radio_gray-dot mb20">
-                                <input class="radio" type="radio" name="experience" id="exp1">
-                                <label class="text-italic fz14" for="exp1">Не важно</label>
-                            </div>
-                            <div class="cv-finder__line radio-buttons radio_gray-dot mb20">
-                                <input class="radio" type="radio" name="experience" id="exp2">
-                                <label class="text-italic fz14" for="exp2">Без опыта</label>
-                            </div>
-                            <div class="cv-finder__line radio-buttons radio_gray-dot mb20">
-                                <input class="radio" type="radio" name="experience" id="exp3">
-                                <label class="text-italic fz14" for="exp3">До 1 года</label>
-                            </div>
-                            <div class="cv-finder__line radio-buttons radio_gray-dot mb20">
-                                <input class="radio" type="radio" name="experience" id="exp4">
-                                <label class="text-italic fz14" for="exp4">1-3 года</label>
-                            </div>
-                            <div class="cv-finder__line radio-buttons radio_gray-dot mb20">
-                                <input class="radio" type="radio" name="experience" id="exp5">
-                                <label class="text-italic fz14" for="exp5">3-5 лет</label>
-                            </div>
-                            <div class="cv-finder__line radio-buttons radio_gray-dot mb20">
-                                <input class="radio" type="radio" name="experience" id="exp6">
-                                <label class="text-italic fz14" for="exp6">5-10 лет</label>
-                            </div>
-                            <div class="cv-finder__line radio-buttons radio_gray-dot">
-                                <input class="radio" type="radio" name="experience" id="exp7">
-                                <label class="text-italic fz14" for="exp7">Более 10 лет</label>
+                        <div class="cv-finder-grid__right">
+                            <div class="default-select">
+                                <select>
+                                    <option class="text-dull-gray" disabled selected>Выберите из списка</option>
+                                    <option>Высшее</option>
+                                    <option>Среднее</option>
+                                    <option>Нет</option>
+                                </select>
                             </div>
                         </div>
                     </div>
+                    <p class="text-center fz14"><span class="cv-finder__button button button_green">Поиск</span></p>
                 </form>
             </div>
         </div>
