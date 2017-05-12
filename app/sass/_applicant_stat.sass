@@ -8,7 +8,13 @@
 .statistic-banner
 	width: 100%
 	height: 550px
+
+.statistic-banner_applicant
 	background: url("../images/statistic-banner-applicant.jpg") no-repeat
+	background-size: cover
+
+.statistic-banner_employer
+	background: url("../images/statistic-banner-employer.jpg") no-repeat
 	background-size: cover
 
 .statistic-banner__content
@@ -45,7 +51,8 @@
 .statistic__left
 	margin-right: 30px
 	flex-shrink: 0
-	width: 750px
+	max-width: 750px
+	width: 100%
 
 .statistic__vacancy-grid
 	background-color: #ebebeb
@@ -80,8 +87,11 @@
 		opacity: 1
 
 .statistic-vacancy-table
-	overflow-x: auto
+	overflow: auto
 	border: 1px solid $forest-green
+	width: 100%
+	display: block
+	max-width: 100%
 
 .statistic-vacancy-table__table
 	display: block
@@ -115,6 +125,7 @@
 .statistic-vacancy-table__message
 	width: 100px
 	padding: 0 20px
+	text-align: center
 
 .statistic-vacancy-table__image
 	padding: 10px 5px 0 45px
@@ -144,13 +155,25 @@
 .statistic__report-item_total
 	min-width: 145px
 
-.statistic__report-triangle
-	width: 0
-	height: 0
-	border-style: solid
-	border-width: 5px 5px 0 5px
-	border-color: #a0a0a0 transparent transparent transparent
+.statistic__report-history
+	position: relative
+	padding-right: 15px
 	cursor: pointer
+	&::after
+		position: absolute
+		content: ''
+		top: 50%
+		transform: translateY(-50%)
+		right: 0
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 5px 5px 0 5px
+		border-color: #a0a0a0 transparent transparent transparent
+		cursor: pointer
+
+.statistic__report-history-list
+	display: none
 
 .statistic__report-item_rates-left
 	width: 230px
@@ -158,3 +181,58 @@
 .statistic__report-item_rates-right
 	width: 80px
 	text-align: right
+
+.statistic-table
+	display: flex
+	flex-direction: column
+	max-width: 750px
+	background-color: #f4f4f4
+	position: relative
+	border: 1px solid $forest-green
+
+.statistic-table__header
+	display: flex
+	width: 100%
+	flex-grow: 1
+
+.statistic-table-header__icon
+	max-width: 60px
+	margin-right: 5px
+	padding-left: 34px
+
+.statistic-table-header__title
+	width: 340px
+
+
+.statistic-table-header__trash
+	width: 70px
+	margin: 0 auto
+	text-align: center
+
+.statistic-table-header__date
+	width: 165px
+	text-align: center
+	background: #e1e1e1
+
+.statistic-table-header__message
+	flex-grow: 1
+
+.statistic-vacancy__sent-message
+	display: block
+
+.js-open-statistic-tables
+	cursor: pointer
+
+.statistic-tables
+	display: none
+
+.statistic__right-banner
+	background-color: #5b6a91
+	padding: 35px 40px 20px
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.statistic__button
+	width: 100%
+	padding: 20px 0

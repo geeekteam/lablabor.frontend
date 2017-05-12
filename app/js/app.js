@@ -322,6 +322,7 @@ app.appLoad('full', function (e) {
         loop: true,
         dots: 1,
         nav: true,
+        autoplay: 5,
         responsive: {
             0: {
                 nav: false
@@ -389,5 +390,30 @@ app.appLoad('full', function (e) {
         $('.filter select:not(.jq-selectbox)').styler();
     });
     app.popups();
+    
+    $(".js-open-statistic-tables").click(function () {
+
+        var tables = $(this).closest(".statistic__vacancy-grid").next(".statistic-tables");
+
+        if (tables.hasClass("js-hidden")){
+            tables.removeClass("js-hidden").slideDown(400);
+            $(this).text("Скрыть данные")
+        } else {
+            tables.addClass("js-hidden").slideUp(400);
+            $(this).text("Показать данные")
+        }
+
+    })
+
+    $(".js-history-open").click(function () {
+        var historyList = $(this).closest(".statistic__report-grid").next(".statistic__report-history-list");
+
+        if (historyList.hasClass("js-hidden")){
+            historyList.removeClass("js-hidden").slideDown(250);
+        } else {
+            historyList.addClass("js-hidden").slideUp(250);
+        }
+    })
+
 
 });

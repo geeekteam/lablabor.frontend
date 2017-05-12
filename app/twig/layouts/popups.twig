@@ -68,8 +68,14 @@
         </div>
         <form class="popup__body">
             <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Номер телефона (+7707*******)/E-mail"></p>
-            <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Выберите контрольный вопрос из списка"></p>
-            <p class="mb30"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Ответ на контрольный вопрос"></p>
+            <p class="mb15">
+                <select class="select">
+                    <option disabled selected>Выберите контрольный вопрос из списка</option>
+                    <option>Девичья фамилия матери</option>
+                    <option>Кличка вашего первого домашнего животного</option>
+                    <option>Первый пляж, который вы посетили</option>
+                </select>
+            </p>            <p class="mb30"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Ответ на контрольный вопрос"></p>
             <p class="text-center"><button class="popup__button button button_green fz15 text-light">Восстановить</button></p>
         </form>
     </div>
@@ -86,7 +92,8 @@
             <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="password" placeholder="Пароль от 8 до 20 (строчные буквы латинского алфавита и цифры)"></p>
             <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="password" placeholder="Повторите пароль"></p>
             <p class="mb15">
-                <select class="select" type="text" placeholder="Выберите контрольный вопрос из списка">
+                <select class="select">
+                    <option disabled selected>Выберите контрольный вопрос из списка</option>
                     <option>Девичья фамилия матери</option>
                     <option>Кличка вашего первого домашнего животного</option>
                     <option>Первый пляж, который вы посетили</option>
@@ -111,7 +118,8 @@
             <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="password" placeholder="Пароль от 8 до 20 (строчные буквы латинского алфавита и цифры)"></p>
             <p class="mb15"><input class="input input__gray-border input__active-green-border text-italic fz14 text-dark-dull-gray" type="password" placeholder="Повторите пароль"></p>
             <p class="mb15">
-                <select class="select" type="text" placeholder="Выберите контрольный вопрос из списка">
+                <select class="select" type="text">
+                    <option disabled selected>Выберите контрольный вопрос из списка</option>
                     <option>Девичья фамилия матери</option>
                     <option>Кличка вашего первого домашнего животного</option>
                     <option>Первый пляж, который вы посетили</option>
@@ -268,5 +276,44 @@
     <div class="response">
         <div class="close-popup popup__close response__close js-close-popup"></div>
         <div class="response__text fz18 text-center">Данные виды оплаты сейчас <span class="text-red">не работают!</span></div>
+    </div>
+</div>
+
+
+<div class="popup-wrapper js-popup" data-popup="to-invite-statistic">
+    <form class="to-invite to-invite_statistic">
+        <div>
+            <div class="mb10">
+                <textarea class="to-invite__textarea" placeholder="Напишите пригласительное письмо"></textarea>
+            </div>
+            <div class="to-invite__grid to-invite-grid">
+                <span class="to-invite-grid__button button button_green fz12 mr10">Отправить</span>
+                <div class="to-invite-grid__checkbox">
+                    <div class="to-invite__checkbox">
+                        <input type="checkbox" class="" id="to-invite__checkbox">
+                        <label class="text-italic fz12 text-underline" for="to-invite__checkbox">Вставить автоматический текст приглашения</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="company-preview">
+    <div class="company-preview">
+        <div class="close-popup popup__close js-close-popup"></div>
+
+        <p class="text-center fz12 text-light text-uppercase mb10">Название компании</p>
+        <div class="company-preview-grid">
+            <div class="company-preview-grid__left-item mr10">
+                <div class="thumbnail thumbnail__round thumbnail_65">
+                    <img class="thumbnail__image_65" src="images/default-logo.png" alt="">
+                </div>
+            </div>
+            <div class="company-preview-grid__right-item">
+                <p class="text-italic fz12 mb5">Здесь будет текст самого письма. Напишу пока какой-то еще текст, чтобы заполнить пространство. Бла-бла-бла. Еще какая-то строчка, чтобы их было хотя бы три.</p>
+                <p class="text-italic fz12 text-dark-dull-gray">Отправлено 18.01.2017</p>
+            </div>
+        </div>
     </div>
 </div>

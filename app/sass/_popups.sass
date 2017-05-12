@@ -291,7 +291,7 @@
 	width: 500px
 	padding: 30px
 	background-color: $smoke-white
-	z-index: 100
+	z-index: 120
 	border: 1px solid $dark-dull-gray
 	border-radius: 5px
 	opacity: 0
@@ -309,7 +309,6 @@
 	&.opened
 		visibility: visible
 		opacity: 1
-		display: block
 
 	&::before
 		border-color: transparent $dark-dull-gray transparent transparent
@@ -320,6 +319,18 @@
 		border-color: transparent $smoke-white transparent transparent
 		border-width: 5px 10px 5px 0
 		left: -9px
+
+.popup-wrapper
+	&.opened
+		.to-invite_statistic
+			top: 0
+			left: 0
+			position: relative
+			margin: auto
+			opacity: 1
+			visibility: visible
+			&::after, &::before
+				content: none
 
 .to-invite__textarea
 	width: 100%
@@ -358,3 +369,15 @@
 		opacity: 1
 		margin-left: 1px
 		margin-top: 1px
+
+.company-preview
+	max-width: 500px
+	width: 90%
+	border-radius: 10px
+	border: 1px solid $dark-dull-gray
+	background-color: #FFFFFF
+	padding: 35px 45px
+	margin: auto
+
+.company-preview-grid
+	display: flex
