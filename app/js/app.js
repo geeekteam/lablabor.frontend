@@ -195,11 +195,11 @@ var YOURAPPNAME = (function () {
 
         plugin.closePopup = function (popupName) {
             plugin.reachPopups.filter('[data-popup="' + popupName + '"]').removeClass('opened');
-            setTimeout(function () {
+            // setTimeout(function () {
                 plugin.bodyEl.removeAttr('style');
                 plugin.htmlEl.removeClass('popup-opened');
                 plugin.topPanelEl.removeAttr('style');
-            }, 500);
+            // }, 500);
         };
 
         plugin.changePopup = function (closingPopup, openingPopup) {
