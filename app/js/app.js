@@ -383,11 +383,15 @@ app.appLoad('full', function (e) {
                         '<option>KZT</option>'+
                         '<option>USD</option>'+
                     '</select>'+
-                    '<i class="fri fri_filter-add-input js-add-filter-select-currency"></i>'+
+                    '<i class="fri_filter-remove-input"></i>'+
                 '</div>'+
             '</div>'
         );
         $('.filter select:not(.jq-selectbox)').styler();
+        $(document).on('click', '.filter__line_currency .fri_filter-remove-input', function (e) {
+            e.preventDefault();
+            $(this).closest('.filter__section').remove();
+        });
     });
     app.popups();
     
