@@ -5232,6 +5232,10 @@ footer {
   }
 }
 @media screen and (max-width: 767px) {
+  .main-guest-content-area {
+    background-position: 70% top;
+  }
+
   .statistic__report-item_rates-left {
     max-width: 230px;
     width: 100%;

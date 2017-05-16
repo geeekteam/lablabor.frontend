@@ -183,6 +183,7 @@ var YOURAPPNAME = (function () {
         };
 
         plugin.openPopup = function (popupName) {
+            plugin.closePopup($('.js-popup.opened').attr('data-popup'));
             var popup = plugin.reachPopups.filter('[data-popup="' + popupName + '"]');
             popup.addClass('opened');
             if (!popup.hasClass('js-small-popup')) {
@@ -214,7 +215,11 @@ var YOURAPPNAME = (function () {
             plugin.openPopupEl.on('click', function (e) {
                 e.preventDefault();
                 var pop = $(this).attr('data-open-popup');
-                plugin.openPopup(pop);
+                var popup = plugin.reachPopups.filter('[data-popup="' + pop + '"]');
+                if(popup.hasClass('opened'))
+                    plugin.closePopup(pop);
+                else
+                    plugin.openPopup(pop);
             });
 
             plugin.closePopupEl.on('click', function (e) {
@@ -394,7 +399,7 @@ app.appLoad('full', function (e) {
         });
     });
     app.popups();
-    
+
     $(".js-open-statistic-tables").click(function () {
 
         var tables = $(this).closest(".statistic__vacancy-grid").next(".statistic-tables");
