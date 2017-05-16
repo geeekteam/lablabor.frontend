@@ -3232,8 +3232,7 @@ ol ol > li:last-child {
   flex-shrink: 0;
   background-color: #F7F7F7;
   margin-bottom: -15px;
-  max-height: 720px;
-  height: 100%;
+  align-self: flex-start;
 }
 
 .filter__input {
