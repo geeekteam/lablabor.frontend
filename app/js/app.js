@@ -243,11 +243,11 @@ var YOURAPPNAME = (function () {
             });
 
             plugin.reachPopups.on('click', function (e) {
-                e.preventDefault();
                 var target = $(e.target);
                 var className = options.reachElementClass.replace('.', '');
                 if (target.hasClass(className)) {
                     plugin.closePopup($(e.target).attr('data-popup'));
+                    e.preventDefault();
                 }
             });
 
