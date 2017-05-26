@@ -4184,6 +4184,35 @@ ol ol > li:last-child {
   padding: 20px 0;
 }
 
+.tab-bar {
+  list-style: none;
+  display: flex;
+}
+
+.tab-bar__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  background-color: transparent;
+  min-height: 55px;
+  padding: 0 12px;
+  color: #616161;
+  border: 1px solid #1c9d22;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-right: 15px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.tab-bar__item:hover {
+  background-color: #1c9d22;
+  color: #ffffff;
+}
+
 @media print {
   .print-page__header {
     page-break-after: always;

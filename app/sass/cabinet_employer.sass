@@ -1,0 +1,22 @@
+.tab-bar
+	list-style: none
+	display: flex
+
+.tab-bar__item
+	display: flex
+	align-items: center
+	justify-content: center
+	min-width: 170px
+	background-color: transparent
+	min-height: 55px
+	padding: 0 12px
+	color: $dark-dull-gray
+	border: 1px solid $forest-green
+	border-top-left-radius: 15px
+	border-top-right-radius: 15px
+	margin-right: 15px
+	+transition(all 0.3s ease)
+	cursor: pointer
+	&:hover
+		background-color: $forest-green
+		color: $white
