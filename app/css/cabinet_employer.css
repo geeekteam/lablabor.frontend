@@ -1,24 +1,28 @@
 /*
-Error: Undefined variable: "$dark-dull-gray".
-        on line 13 of D:/dev/lablabor.frontend/app/sass/cabinet_employer.sass
+Error: Undefined mixin 'transition'.
+        on line 18 of D:/dev/lablabor.frontend/app/sass/cabinet_employer.sass, in `transition'
+        from line 18 of D:/dev/lablabor.frontend/app/sass/cabinet_employer.sass
 
-8: 	justify-content: center
-9: 	min-width: 170px
-10: 	background-color: transparent
-11: 	min-height: 55px
-12: 	padding: 0 12px
-13: 	color: $dark-dull-gray
-14: 	border: 1px solid $forest-green
+13: 	color: #616161
+14: 	border: 1px solid #1C9D22
 15: 	border-top-left-radius: 15px
 16: 	border-top-right-radius: 15px
 17: 	margin-right: 15px
 18: 	+transition(all 0.3s ease)
+19: 	cursor: pointer
+20: 	&:hover
+21: 		background-color: #1C9D22
+22: 		color: #ffffff
+23: 
 
 Backtrace:
-D:/dev/lablabor.frontend/app/sass/cabinet_employer.sass:13
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/variable.rb:49:in `_perform'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/node.rb:58:in `perform'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
+D:/dev/lablabor.frontend/app/sass/cabinet_employer.sass:18:in `transition'
+D:/dev/lablabor.frontend/app/sass/cabinet_employer.sass:18
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `with_mixin'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
@@ -69,4 +73,4 @@ C:/Ruby23-x64/bin/compass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$dark-dull-gray\".\A         on line 13 of D:/dev/lablabor.frontend/app/sass/cabinet_employer.sass\A \A 8: 	justify-content: center\A 9: 	min-width: 170px\A 10: 	background-color: transparent\A 11: 	min-height: 55px\A 12: 	padding: 0 12px\A 13: 	color: $dark-dull-gray\A 14: 	border: 1px solid $forest-green\A 15: 	border-top-left-radius: 15px\A 16: 	border-top-right-radius: 15px\A 17: 	margin-right: 15px\A 18: 	+transition(all 0.3s ease)"; }
+  content: "Error: Undefined mixin 'transition'.\A         on line 18 of D:/dev/lablabor.frontend/app/sass/cabinet_employer.sass, in `transition'\A         from line 18 of D:/dev/lablabor.frontend/app/sass/cabinet_employer.sass\A \A 13: 	color: #616161\A 14: 	border: 1px solid #1C9D22\A 15: 	border-top-left-radius: 15px\A 16: 	border-top-right-radius: 15px\A 17: 	margin-right: 15px\A 18: 	+transition(all 0.3s ease)\A 19: 	cursor: pointer\A 20: 	&:hover\A 21: 		background-color: #1C9D22\A 22: 		color: #ffffff\A 23: "; }

@@ -1,0 +1,85 @@
+.tab-bar
+	list-style: none
+	display: flex
+
+.tab-bar__item
+	display: flex
+	align-items: center
+	justify-content: center
+	min-width: 170px
+	background-color: transparent
+	min-height: 55px
+	padding: 0 12px
+	color: $dark-dull-gray
+	border: 1px solid $forest-green
+	border-top-left-radius: 15px
+	border-top-right-radius: 15px
+	margin-right: 15px
+	+transition(all 0.3s ease)
+	cursor: pointer
+	&:hover
+		background-color: $forest-green
+		color: $white
+
+.cabinet-employer
+	display: flex
+
+.cabinet-employer__image-controls
+	position: relative
+	height: 100%
+	width: 100%
+	padding: 20px 10px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: flex-start
+	background-color: rgba(#5b6a91, 0.7)
+	+transition(all 0.3s ease)
+
+.cabinet-employer__image-wrapper
+	cursor: pointer
+	border: 1px solid $dark-dull-gray
+	overflow: hidden
+	&:hover
+		.cabinet-employer__image-controls
+			margin-top: -85px
+
+.cabinet-employer-grid
+	display: flex
+	align-items: center
+
+.cabinet-employer__left
+	padding-left: 10px
+	margin-right: 60px
+
+.cabinet-employer__right
+	padding-top: 25px
+	flex-grow: 1
+
+.cabinet-employer-grid__left
+	display: flex
+	align-items: flex-start
+	width: 170px
+	margin-right: 10px
+	flex-shrink: 0
+
+.cabinet-employer-grid__left_pl25
+	padding-left: 25px
+
+
+.cabinet-employer-grid__right
+	display: flex
+	flex-grow: 1
+
+.cabinet-employer__select-small
+	width: 100px
+	.jq-selectbox__select
+		padding: 0 10px
+
+	.jq-selectbox__dropdown
+		padding: 5px 5px 0 10px
+		&::after
+			right: 10px
+
+.cabinet-employer__input
+	flex-grow: 1
