@@ -3,6 +3,8 @@
 	display: flex
 
 .tab-bar__item
+	font-family: "Gotham Pro Medium", sans-serif
+	//letter-spacing: -1.2px
 	display: flex
 	align-items: center
 	justify-content: center
@@ -15,16 +17,23 @@
 	border-top-left-radius: 15px
 	border-top-right-radius: 15px
 	margin-right: 15px
+	font-size: 14px
 	+transition(all 0.3s ease)
 	cursor: pointer
+	text-transform: uppercase
 	&:hover
 		background-color: $forest-green
 		color: $white
+	&.active
+		background-color: $forest-green
+		color: $white
 
-.cabinet-employer
-	display: flex
+.js-cabinet-employer-main
+	display: none
+	&.active
+		display: block
 
-.cabinet-employer__image-controls
+.cabinet-employer-main__image-controls
 	position: relative
 	height: 100%
 	width: 100%
@@ -36,42 +45,41 @@
 	background-color: rgba(#5b6a91, 0.7)
 	+transition(all 0.3s ease)
 
-.cabinet-employer__image-wrapper
+.cabinet-employer-main__image-wrapper
 	cursor: pointer
 	border: 1px solid $dark-dull-gray
 	overflow: hidden
 	&:hover
-		.cabinet-employer__image-controls
+		.cabinet-employer-main__image-controls
 			margin-top: -85px
 
-.cabinet-employer-grid
+.cabinet-employer-main-grid
 	display: flex
 	align-items: center
 
-.cabinet-employer__left
+.cabinet-employer-main__left
 	padding-left: 10px
 	margin-right: 60px
 
-.cabinet-employer__right
+.cabinet-employer-main__right
 	padding-top: 25px
 	flex-grow: 1
 
-.cabinet-employer-grid__left
+.cabinet-employer-main-grid__left
 	display: flex
 	align-items: flex-start
 	width: 170px
 	margin-right: 10px
 	flex-shrink: 0
 
-.cabinet-employer-grid__left_pl25
+.cabinet-employer-main-grid__left_pl25
 	padding-left: 25px
 
-
-.cabinet-employer-grid__right
+.cabinet-employer-main-grid__right
 	display: flex
 	flex-grow: 1
 
-.cabinet-employer__select-small
+.cabinet-employer-main__select-small
 	width: 100px
 	.jq-selectbox__select
 		padding: 0 10px
@@ -81,5 +89,93 @@
 		&::after
 			right: 10px
 
-.cabinet-employer__input
+.cabinet-employer-main__input
 	flex-grow: 1
+
+.vacancy-list__item
+	display: flex
+	padding-bottom: 20px
+	margin-bottom: 20px
+
+.js-cabinet-employer-vacancy
+	display: none
+	&.active
+		display: block
+
+.checkbox-switcher-wrapper
+	width: 290px
+	margin-right: 10px
+	display: flex
+
+.checkbox-switcher__label
+	text-transform: uppercase
+	font-family: "Gotham Pro Medium", sans-serif
+	font-size: 14px
+	color: #272727
+	position: relative
+	padding-bottom: 20px
+	&::before
+		position: absolute
+		content: ''
+		border-bottom: 1px solid #616161
+		width: 135px
+		bottom: 0
+		left: 0
+
+.vacancy-list
+	padding: 0 45px
+
+.vacancy-list__salary
+	font-family: "Gotham Pro Light", sans-serif
+	font-size: 14px
+	color: #272727
+	margin-right: 20px
+	text-transform: uppercase
+
+.fri_edit
+	margin-right: 5px
+
+.fri_remove
+	margin-right: 45px
+
+.vacancy-list__statistic
+	position: relative
+	font-family: "PT Serif Italic", sans-serif
+	font-size: 14px
+	margin-right: 5px
+	color: #616161
+
+.vacancy-list__statistic-count
+	background-color: $forest-green
+	border-radius: 50%
+	padding: 2px
+	color: $white
+
+.cabinet-employer-vacancy
+	margin-top: 30px
+	padding: 30px 35px 30px 20px
+	background-color: #fff
+	border: 1px solid #b2b2b2
+	border-radius: 25px
+
+.cabinet-employer-vacancy-grid
+	display: flex
+	align-items: center
+	margin-bottom: 10px
+	&:last-child
+		margin-bottom: 0
+
+.cabinet-employer-vacancy-grid__left
+	width: 150px
+	margin-right: 25px
+
+.cabinet-employer-vacancy-grid__right
+	display: flex
+	flex-grow: 1
+	align-items: center
+
+.cabinet-employer-vacancy__salary-input
+	max-width: 740px
+	width: 100%
+	margin-right: 20px
+	flex-shrink: 0

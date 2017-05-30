@@ -308,7 +308,7 @@ app.appLoad('dom', function () {
     // DOM is loaded! Paste your app code here (Pure JS code).
     // Do not use jQuery here cause external libs do not loads here...
 
-    app.initSwitcher(); // data-switcher="{target='anything'}" , data-switcher-target="anything"
+    // app.initSwitcher(); // data-switcher="{target='anything'}" , data-switcher-target="anything"
 });
 
 app.appLoad('full', function (e) {
@@ -422,6 +422,20 @@ app.appLoad('full', function (e) {
         } else {
             historyList.addClass("js-hidden").slideUp(250);
         }
+    })
+
+    $('.js-open-cabinet-employer-main').click(function () {
+        $('.js-cabinet-employer-main').addClass('active');
+        $('.js-cabinet-employer-vacancy').removeClass('active');
+        $('.js-open-cabinet-employer-vacancy').removeClass('active');
+        $(this).addClass('active');
+    })
+
+    $('.js-open-cabinet-employer-vacancy').click(function () {
+        $('.js-cabinet-employer-main').removeClass('active');
+        $('.js-cabinet-employer-vacancy').addClass('active');
+        $('.js-open-cabinet-employer-main').removeClass('active');
+        $(this).addClass('active');
     })
 
 
