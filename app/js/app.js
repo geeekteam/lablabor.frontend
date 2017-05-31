@@ -425,18 +425,51 @@ app.appLoad('full', function (e) {
     })
 
     $('.js-open-cabinet-employer-main').click(function () {
-        $('.js-cabinet-employer-main').addClass('active');
         $('.js-cabinet-employer-vacancy').removeClass('active');
+        $('.js-cabinet-employer-payment').removeClass('active');
+        $('.js-cabinet-employer-practice').removeClass('active');
         $('.js-open-cabinet-employer-vacancy').removeClass('active');
+        $('.js-open-cabinet-employer-payment').removeClass('active');
+        $('.js-open-cabinet-employer-practice').removeClass('active');
+
+        $('.js-cabinet-employer-main').addClass('active');
         $(this).addClass('active');
     })
 
     $('.js-open-cabinet-employer-vacancy').click(function () {
         $('.js-cabinet-employer-main').removeClass('active');
-        $('.js-cabinet-employer-vacancy').addClass('active');
+        $('.js-cabinet-employer-payment').removeClass('active');
+        $('.js-cabinet-employer-practice').removeClass('active');
         $('.js-open-cabinet-employer-main').removeClass('active');
+        $('.js-open-cabinet-employer-payment').removeClass('active');
+        $('.js-open-cabinet-employer-practice').removeClass('active');
+
+        $('.js-cabinet-employer-vacancy').addClass('active');
         $(this).addClass('active');
     })
 
+    $('.js-open-cabinet-employer-payment').click(function () {
+        $('.js-cabinet-employer-main').removeClass('active');
+        $('.js-cabinet-employer-vacancy').removeClass('active');
+        $('.js-cabinet-employer-practice').removeClass('active');
+        $('.js-open-cabinet-employer-main').removeClass('active');
+        $('.js-open-cabinet-employer-vacancy').removeClass('active');
+        $('.js-open-cabinet-employer-practice').removeClass('active');
+
+        $('.js-cabinet-employer-payment').addClass('active');
+        $(this).addClass('active');
+    })
+
+    $('.js-open-cabinet-employer-practice').click(function () {
+        $('.js-cabinet-employer-main').removeClass('active');
+        $('.js-cabinet-employer-vacancy').removeClass('active');
+        $('.js-cabinet-employer-payment').removeClass('active');
+        $('.js-open-cabinet-employer-main').removeClass('active');
+        $('.js-open-cabinet-employer-vacancy').removeClass('active');
+        $('.js-open-cabinet-employer-payment').removeClass('active');
+
+        $('.js-cabinet-employer-practice').addClass('active');
+        $(this).addClass('active');
+    })
 
 });

@@ -18,7 +18,9 @@
             </ul>
             <div class="announce announce_backing">
                 <div class="announce__content">
-                    <div class="announce__text text-light fz13 text-uppercase text-white">Чтобы начать поиск кадров вам необходимо заполнить профиль вашей компании</div>
+                    <div class="announce__text text-light fz13 text-uppercase text-white">Чтобы начать поиск кадров вам
+                        необходимо заполнить профиль вашей компании
+                    </div>
                     <i class="fri fri_announce-content-close"></i>
                 </div>
             </div>
@@ -27,7 +29,8 @@
             <ul class="tab-bar">
                 <li class="tab-bar__item js-open-cabinet-employer-main">Общие сведения</li>
                 <li class="tab-bar__item js-open-cabinet-employer-vacancy">Вакансии</li>
-                <li class="tab-bar__item" data-switcher="">Оплата</li>
+                <li class="tab-bar__item js-open-cabinet-employer-payment">Оплата</li>
+                <li class="tab-bar__item js-open-cabinet-employer-practice tab-tab__item_small tab-bar__item_blue"><i class="fri fri_practice"></i></li>
             </ul>
         </div>
     </div>
@@ -46,27 +49,34 @@
                 </div>
                 <div class="cabinet-employer-main__right">
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left"><span class="text-italic fz14 text-dark-dull-gray mr5">Название</span><i class="fri fri_required"></i></div>
+                        <div class="cabinet-employer-main-grid__left"><span
+                                    class="text-italic fz14 text-dark-dull-gray mr5">Название</span><i
+                                    class="fri fri_required"></i></div>
                         <div class="cabinet-employer-main-grid__right">
-                            <select class="select cabinet-employer-main__select-small select_hover-green mr10">
+                            <select class="select select_mt0 cabinet-employer-main__select-small select_hover-green mr10">
                                 <option disabled selected>Пр-во</option>
                                 <option>Пункт 1</option>
                                 <option>Пункт 2</option>
                                 <option>Пункт 3</option>
                             </select>
-                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Наименование компании/ИП">
+                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="Наименование компании/ИП">
                         </div>
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left"><p class="text-italic fz14 text-dark-dull-gray">Реквизиты</p></div>
+                        <div class="cabinet-employer-main-grid__left"><p class="text-italic fz14 text-dark-dull-gray">
+                                Реквизиты</p></div>
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p class="text-italic fz14 text-dark-dull-gray">БИН/ИИН</p></div>
-                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Двенадцатизначный код">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">БИН/ИИН</p></div>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Двенадцатизначный код">
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p class="text-italic fz14 text-dark-dull-gray">Город</p></div>
-                        <select class="select select_hover-green">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">Город</p></div>
+                        <select class="select select_mt0">
                             <option disabled selected>Выберите ваш город из списка</option>
                             <option>Пункт 1</option>
                             <option>Пункт 2</option>
@@ -74,44 +84,63 @@
                         </select>
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p class="text-italic fz14 text-dark-dull-gray">Адрес регистрации</p></div>
-                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: ул. Абая, д. 50, кв. 11">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">Адрес регистрации</p></div>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: ул. Абая, д. 50, кв. 11">
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p class="text-italic fz14 text-dark-dull-gray">Расчетный счет</p></div>
-                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Двенадцатизначный код">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">Расчетный счет</p></div>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Двенадцатизначный код">
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p class="text-italic fz14 text-dark-dull-gray">Наименование банка</p></div>
-                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Выберите из списка">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">Наименование банка</p></div>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Выберите из списка">
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p class="text-italic fz14 text-dark-dull-gray">БИК банка</p></div>
-                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">БИК банка</p></div>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text">
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left"><span class="text-italic fz14 text-dark-dull-gray mr5">Ответственное лицо</span><i class="fri fri_required"></i></div>
+                        <div class="cabinet-employer-main-grid__left"><span
+                                    class="text-italic fz14 text-dark-dull-gray mr5">Ответственное лицо</span><i
+                                    class="fri fri_required"></i></div>
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p class="text-italic fz14 text-dark-dull-gray">ФИО</p></div>
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">ФИО</p></div>
                         <div class="cabinet-employer-main-grid__right">
-                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Иванов Иван Иванович">
+                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="Иванов Иван Иванович">
                         </div>
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p class="text-italic fz14 text-dark-dull-gray">Телефон</p></div>
-                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="гор телефон (+7(код города)ХХХ-ХХ-ХХ) моб телефон (+77ХХХХХХХХХ)">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">Телефон</p></div>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text"
+                               placeholder="гор телефон (+7(код города)ХХХ-ХХ-ХХ) моб телефон (+77ХХХХХХХХХ)">
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p class="text-italic fz14 text-dark-dull-gray">Email</p></div>
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">Email</p></div>
                         <div class="cabinet-employer-main-grid__right">
-                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="ivanov@mail.ru">
+                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="ivanov@mail.ru">
                         </div>
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left"><span class="text-italic fz14 text-dark-dull-gray mr5">Вид деятельности</span><i class="fri fri_required"></i></div>
+                        <div class="cabinet-employer-main-grid__left"><span
+                                    class="text-italic fz14 text-dark-dull-gray mr5">Вид деятельности</span><i
+                                    class="fri fri_required"></i></div>
                         <div class="cabinet-employer-main-grid__right">
-                            <select class="select select_hover-green">
+                            <select class="select select_mt0 select_hover-green">
                                 <option disabled selected>Выберите из списка</option>
                                 <option>Пункт 1</option>
                                 <option>Пункт 2</option>
@@ -120,9 +149,11 @@
                         </div>
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
-                        <div class="cabinet-employer-main-grid__left"><p class="text-italic fz14 text-dark-dull-gray">Веб-сайт</p></div>
+                        <div class="cabinet-employer-main-grid__left"><p class="text-italic fz14 text-dark-dull-gray">
+                                Веб-сайт</p></div>
                         <div class="cabinet-employer-main-grid__right">
-                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="moyafirma.kz">
+                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="moyafirma.kz">
                         </div>
                     </div>
                 </div>
@@ -130,7 +161,7 @@
         </div>
     </div>
 
-    <div class="section section__body-with-subheader pt40 pb55 js-cabinet-employer-vacancy active">
+    <div class="section section__body-with-subheader pt40 pb55 js-cabinet-employer-vacancy">
         <div class="container container_1140">
             <div class="vacancy-list">
                 <div class="vacancy-list__item">
@@ -146,6 +177,7 @@
                     <i class="fri fri_edit"></i>
                     <i class="fri fri_remove"></i>
                     <div class="vacancy-list__statistic">Статистика вакансии</div>
+                    <div class="vacancy-list__statistic-count">5</div>
                 </div>
                 <div class="vacancy-list__item">
                     <div class="checkbox-switcher-wrapper">
@@ -170,7 +202,7 @@
                             <span class="text-italic fz14 text-signal-black">Вакансия</span>
                         </div>
                         <div class="cabinet-employer-vacancy-grid__right">
-                            <select class="select select_hover-green">
+                            <select class="select  select_hover-green">
                                 <option disabled selected>Выберите из списка</option>
                                 <option>Пункт 1</option>
                                 <option>Пункт 2</option>
@@ -183,7 +215,8 @@
                             <span class="text-italic fz14 text-signal-black">Уровень зарплаты</span>
                         </div>
                         <div class="cabinet-employer-vacancy-grid__right">
-                            <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray cabinet-employer-vacancy__salary-input" type="text" placeholder="Введите число">
+                            <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray cabinet-employer-vacancy__salary-input"
+                                   type="text" placeholder="Введите число">
                             <span class="text-italic fz14 text-signal-black mr5">валюта</span>
                             <select class="select select_hover-green select_currency">
                                 <option disabled selected>KZT</option>
@@ -193,10 +226,143 @@
                             </select>
                         </div>
                     </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left">
+                            <span class="text-italic fz14 text-signal-black">Опыт работы</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="Укажите опыт работы">
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left">
+                            <span class="text-italic fz14 text-signal-black">Город</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <select class="select select_hover-green">
+                                <option disabled selected>Выберите из списка</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Пункт 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left">
+                            <span class="text-italic fz14 text-signal-black">Образование</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="Высшее/Средне-специальное/Среднее">
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left">
+                            <span class="text-italic fz14 text-signal-black">Тип занятости</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <select class="select select_hover-green">
+                                <option disabled selected>Выберите из списка</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Пункт 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left flex-align-start">
+                            <span class="text-italic fz14 text-signal-black">Специальные знания и навыки</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <textarea class="textarea"
+                                      placeholder="Опишите требования к кандидату на должность"></textarea>
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left flex-align-start">
+                            <span class="text-italic fz14 text-signal-black">Условия труда/<br>Доп. сведения</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <textarea class="textarea"
+                                      placeholder="Опишите условия, на которых будет работать сотрудник"></textarea>
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid flex-space-between">
+                        <div class="checkbox-switcher-wrapper">
+                            <label>
+                                <div class="checkbox-switcher checkbox-switcher_span-switcher">
+                                    <input class="mr10" type="checkbox" checked>
+                                    <span class="fz12 text-light text-uppercase text-green">Вакансия активна</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="grid cabinet-employer-vacancy-grid__statistic">
+                            <span class="cabinet-employer-vacancy-grid__statistic-text mr10">Статистика вакансии</span>
+                            <span class="cabinet-employer-vacancy-grid__statistic-count">5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt17 mb17">
+                <span class="button button_green button_save-changes">Сохранить изменения</span>
+            </p>
+            <div class="grid flex-centered mb40">
+                <div class="add-vacancy">
+                    <span class="add-vacancy__icon mr20"></span>
+                    <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Добавить вакансию</span>
+                </div>
+            </div>
+            <div class="pagination text-center">
+                <a href="#" class="pagination__prev"></a>
+
+                <a href="#" class="pagination-items__item fz18 text-medium">1</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">2</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">3</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">4</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">5</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">6</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">7</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">8</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">9</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">10</a>
+
+                <a href="#" class="pagination__next"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section__body-with-subheader pt40 pb55 js-cabinet-employer-payment active">
+        <div class="container container_1140">
+            <div class="cabinet-employer-payment">
+                <div class="grid">
+                    <div class="cabinet-employer-payment-types">
+                        <div class="cabinet-employer-payment-type active mb10">
+                            <i class="fri fri_non-cash-gray"></i>
+                        </div>
+                        <div class="cabinet-employer-payment-type">
+                            <i class="fri fri_credit-card-gray"></i>
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-payment-types-descr grid_column active">
+                        <p class="text-center text-uppercase fz16 text-dark-dull-gray text-medium mb15">Безналичный расчет</p>
+                        <div class="grid centered mb15">
+                            <i class="fri fri_non-cash-man-gray mr30"></i>
+                            <i class="fri fri_non-cash-terminal-gray mr30"></i>
+                            <i class="fri fri_non-cash-credit-card-gray"></i>
+                        </div>
+                        <p class="text-center text-uppercase fz16 text-dark-dull-gray text-medium">Генерация счета на оплату на сайте lablabor.kz</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="section section__body-with-subheader pt40 pb55 js-cabinet-employer-practice">
+        <div class="container container_1140">
+            <div class="cabinet-employer-practice">
 
+            </div>
+        </div>
+    </div>
 {% endblock %}

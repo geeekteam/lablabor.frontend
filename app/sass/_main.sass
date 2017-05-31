@@ -125,6 +125,12 @@ button
 		box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.5)
 		color: $white
 
+.button_save-changes
+	padding: 0 50px
+	min-height: 40px
+	display: inline-flex
+	align-items: center
+
 .button_blue
 	background: $pigeon-blue
 	&:hover
@@ -202,6 +208,9 @@ button
 
 .grid
 	display: flex
+
+.grid_column
+	flex-direction: column
 
 .grid_4-items
 	justify-content: space-between
@@ -368,31 +377,64 @@ button
 		padding-left: 10px
 
 	.jq-selectbox__dropdown
-		margin-top: -27px
-		padding: 5px 5px 0 10px
+		margin-top: -23px
+		padding: 1px 5px 0 10px
+		border-radius: 12px
+		&::after
+			top: 6px
 
+.select_mt0
+	.jq-selectbox__dropdown
+		margin-top: 0
+
+.autocomplete-input
+	display: inline-block
+	width: 100%
+	border: 1px solid #9f9f9f
+	border-radius: 10px
+	padding: 1px 20px
+	font-size: 14px
+	color: $dark-dull-gray
 
 
 .ui-menu
-	background: $white
-	max-width: 215px
-	margin-top: -2px
-	border: 1px solid $black
+	width: 220px
+	background: #ffffff
+	border: 1px solid #9f9f9f
 	list-style-type: none
-	padding: 5px 20px
 	cursor: pointer
 	z-index: 101
+	border-radius: 10px
+	border-top: none
 
 .ui-menu-item
-	background: $white
-	margin-bottom: 5px
+	padding: 5px 10px
+	border-bottom: 1px solid #9f9f9f
 	&:hover
-		text-decoration: underline
+		background-color: $forest-green
+		border-color: $forest-green
+		color: #FFFFFF
 	&:last-child
-		margin-bottom: 0
-
+		border-bottom-right-radius: 10px
+		border-bottom-left-radius: 10px
+		border-style: none
+	&:first-child
+		border-top-right-radius: 10px
+		border-top-left-radius: 10px
 	ul
 		background: $white
+
+.textarea
+	width: 100%
+	height: 80px
+	resize: none
+	padding: 10px 15px
+	font-size: 14px
+	font-family: "PT Serif Italic"
+	border-radius: 15px
+	outline: none
+	&:focus, &:active, &:hover
+		border-color: $forest-green
 
 .pagination
 	display: flex
@@ -657,6 +699,13 @@ button
 .flex-align-start
 	align-self: flex-start
 
+.flex-centered
+	align-items: center
+	justify-content: center
+
+.flex-space-between
+	justify-content: space-between
+
 .radio-buttons
 
 	display: flex
@@ -736,3 +785,52 @@ ol
 
 .checkbox-switcher
 	cursor: pointer
+
+.add-vacancy
+	position: relative
+	display: inline-flex
+	align-items: center
+	margin: 0 auto
+	cursor: pointer
+	&:hover
+		.add-vacancy__icon
+			border-color: rgba($forest-green, 0.8)
+			&::after
+				background-color: rgba($forest-green, 0.8)
+			&::before
+				background-color: rgba($forest-green, 0.8)
+		.add-vacancy__text
+			color: rgba($forest-green, 0.8)
+
+.add-vacancy__icon
+	position: relative
+	width: 30px
+	height: 30px
+	border-radius: 50%
+	border: 1px solid $forest-green
+	+transition(all 0.3s ease)
+	&::after
+		position: absolute
+		content: ''
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 18px
+		height: 4px
+		border-radius: 1px
+		background-color: $forest-green
+		+transition(all 0.3s ease)
+	&::before
+		position: absolute
+		content: ''
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 4px
+		height: 18px
+		border-radius: 1px
+		background-color: $forest-green
+		+transition(all 0.3s ease)
+
+.add-vacancy__text
+	+transition(all 0.3s ease)

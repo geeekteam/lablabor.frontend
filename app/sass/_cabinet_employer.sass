@@ -4,7 +4,6 @@
 
 .tab-bar__item
 	font-family: "Gotham Pro Medium", sans-serif
-	//letter-spacing: -1.2px
 	display: flex
 	align-items: center
 	justify-content: center
@@ -28,10 +27,25 @@
 		background-color: $forest-green
 		color: $white
 
-.js-cabinet-employer-main
+.tab-tab__item_small
+	min-width: 65px
+
+.tab-bar__item_blue
+	border-color: #5b6a91
+	&:hover
+		background-color: #5b6a91
+
+.js-cabinet-employer-main, .js-cabinet-employer-vacancy, .js-cabinet-employer-payment, .js-cabinet-employer-practice
+	opacity: 0
+	visibility: hidden
 	display: none
+	transform: translateX(-100%)
+	+transition(trasform 0.3s ease)
 	&.active
 		display: block
+		opacity: 1
+		visibility: visible
+		transform: translateX(0)
 
 .cabinet-employer-main__image-controls
 	position: relative
@@ -128,12 +142,13 @@
 .vacancy-list__salary
 	font-family: "Gotham Pro Light", sans-serif
 	font-size: 14px
+	width: 150px
 	color: #272727
-	margin-right: 20px
+	margin-right: 10px
 	text-transform: uppercase
 
 .fri_edit
-	margin-right: 5px
+	margin-right: 10px
 
 .fri_remove
 	margin-right: 45px
@@ -142,8 +157,20 @@
 	position: relative
 	font-family: "PT Serif Italic", sans-serif
 	font-size: 14px
-	margin-right: 5px
+	margin-right: 10px
 	color: #616161
+
+.vacancy-list__statistic-count
+	width: 21px
+	height: 21px
+	background-color: $forest-green
+	opacity: 0.5
+	border-radius: 50%
+	flex-shrink: 0
+	font-size: 12px
+	display: flex
+	align-items: center
+	justify-content: center
 
 .vacancy-list__statistic-count
 	background-color: $forest-green
@@ -152,16 +179,52 @@
 	color: $white
 
 .cabinet-employer-vacancy
+	position: relative
 	margin-top: 30px
 	padding: 30px 35px 30px 20px
-	background-color: #fff
+	background: linear-gradient(to bottom, #f6f6f6, #dadada)
 	border: 1px solid #b2b2b2
-	border-radius: 25px
+	border-radius: 15px
+	.jq-selectbox__select, .input, .textarea
+		background-color: transparent
+
+.cabinet-employer-vacancy_close-button
+	position: absolute
+	top: -7px
+	right: -7px
+	cursor: pointer
+	width: 20px
+	height: 20px
+	background-color: #838383
+	border: 1px solid #838383
+	border-radius: 50%
+	transform: rotate(45deg)
+	+transition(all 0.3s ease)
+	&:hover
+		background-color: #ffffff
+		&::after, &::before
+			background-color: #838383
+	&::after, &::before
+		position: absolute
+		content: ''
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background-color: #ededed
+		+transition(all 0.3s ease)
+	&::after
+		width: 12px
+		height: 2px
+	&::before
+		width: 2px
+		height: 12px
 
 .cabinet-employer-vacancy-grid
 	display: flex
 	align-items: center
 	margin-bottom: 10px
+	&:nth-last-child(2)
+		margin-bottom: 60px
 	&:last-child
 		margin-bottom: 0
 
@@ -179,3 +242,61 @@
 	width: 100%
 	margin-right: 20px
 	flex-shrink: 0
+
+.cabinet-employer-vacancy-grid__statistic
+	cursor: pointer
+	&:hover
+		.cabinet-employer-vacancy-grid__statistic-text
+			border-color: #000000
+		.cabinet-employer-vacancy-grid__statistic-count
+			background-color: #fff
+			color: $forest-green
+
+.cabinet-employer-vacancy-grid__statistic-text
+	font-size: 14px
+	font-family: "Gotham Pro Light", sans-serif
+	color: #000
+	text-transform: uppercase
+	padding-bottom: 2px
+	border-bottom: 1px solid #b7b7b7
+	align-self: center
+	+transition(all 0.2s ease)
+
+.cabinet-employer-vacancy-grid__statistic-count
+	width: 28px
+	height: 28px
+	flex-shrink: 0
+	color: #FFFFFF
+	background-color: $forest-green
+	border: 1px solid $forest-green
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	align-self: center
+	+transition(all 0.2s ease)
+	
+.cabinet-employer-payment-types
+	max-width: 65px
+	flex-shrink: 0
+
+.cabinet-employer-payment-type
+	width: 65px
+	height: 75px
+	display: flex
+	align-items: center
+	justify-content: center
+	background-color: #cdcdcd
+	flex-shrink: 0
+	cursor: pointer
+	border-bottom-left-radius: 10px
+	border-top-left-radius: 10px
+	&.active
+		background-color: #ebebeb
+		
+.cabinet-employer-payment-types-descr
+	flex-grow: 1
+	display: flex
+	background-color: #ebebeb
+	align-items: center
+	justify-content: center
