@@ -34,18 +34,12 @@
 	border-color: #5b6a91
 	&:hover
 		background-color: #5b6a91
-
-.js-cabinet-employer-main, .js-cabinet-employer-vacancy, .js-cabinet-employer-payment, .js-cabinet-employer-practice
-	opacity: 0
-	visibility: hidden
-	display: none
-	transform: translateX(-100%)
-	+transition(trasform 0.3s ease)
 	&.active
-		display: block
-		opacity: 1
-		visibility: visible
-		transform: translateX(0)
+		background-color: #5b6a91
+		color: $white
+
+.cabinet-employer-main
+	display: flex
 
 .cabinet-employer-main__image-controls
 	position: relative
@@ -59,7 +53,11 @@
 	background-color: rgba(#5b6a91, 0.7)
 	+transition(all 0.3s ease)
 
+.cabinet-employer-main-logo
+	position: relative
+
 .cabinet-employer-main__image-wrapper
+	position: relative
 	cursor: pointer
 	border: 1px solid $dark-dull-gray
 	overflow: hidden
@@ -70,6 +68,7 @@
 .cabinet-employer-main-grid
 	display: flex
 	align-items: center
+	position: relative
 
 .cabinet-employer-main__left
 	padding-left: 10px
@@ -111,15 +110,105 @@
 	padding-bottom: 20px
 	margin-bottom: 20px
 
-.js-cabinet-employer-vacancy
-	display: none
-	&.active
-		display: block
-
 .checkbox-switcher-wrapper
 	width: 290px
 	margin-right: 10px
 	display: flex
+	position: relative
+	
+.cabinet-employer-hint
+	position: absolute
+	top: 200%
+	right: 25%
+	background-color: $pigeon-blue
+	max-width: 320px
+	width: 100%
+	padding: 15px 25px
+	border-radius: 10px
+	&::after
+		position: absolute
+		content: ''
+		left: 50%
+		transform: translateX(-50%)
+		top: -11px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 6.5px 11px 6.5px
+		border-color: transparent transparent $pigeon-blue transparent
+
+.cabinet-employer-activate-hint
+	position: absolute
+	display: flex
+	align-items: center
+	width: 435px
+	padding: 30px 25px
+	top: 50%
+	right: -51%
+	transform: translate(51%, -50%)
+	background-color: #FFFFFF
+	border: 1px solid #848484
+	border-radius: 15px
+	&::after
+		position: absolute
+		content: ''
+		width: 0
+		height: 0
+		left: -12px
+		top: 50%
+		transform: translateY(-50%)
+		border-style: solid
+		border-width: 7px 15px 7px 0
+		border-color: transparent #FFFFFF transparent transparent
+	&::before
+		position: absolute
+		content: ""
+		left: -15px
+		top: 50%
+		transform: translateY(-50%)
+		border-style: solid
+		border-width: 7px 15px 7px 0
+		border-color: transparent #848484 transparent transparent
+
+.hint-small
+	opacity: 0
+	visibility: hidden
+	top: -200px
+	position: absolute
+	display: flex
+	background-color: #FFFFFF
+	border: 1px solid #848484
+	border-radius: 15px
+	width: 285px
+	padding: 20px
+	left: 60%
+	transform: translateX(-60%)
+	align-items: flex-start
+	z-index: 10000
+	transition: all 0.3s ease
+	&::after, &::before
+		position: absolute
+		content: ''
+		left: 50%
+		transform: translateX(-50%)
+		width: 0
+		height: 0
+		border-style: solid
+	&::after
+		bottom: -10px
+		border-width: 11px 5px 0 5px
+		border-color: #FFFFFF transparent transparent transparent
+	&::before
+		bottom: -12px
+		border-width: 11px 5px 0 5px
+		border-color: #848484 transparent transparent transparent
+	&.active
+		top: -130px
+		opacity: 1
+		visibility: visible
+
+.fri_exclamation-green
+	flex-shrink: 0
 
 .checkbox-switcher__label
 	text-transform: uppercase
@@ -149,9 +238,13 @@
 
 .fri_edit
 	margin-right: 10px
+	flex-shrink: 0
+	cursor: pointer
 
 .fri_remove
 	margin-right: 45px
+	flex-shrink: 0
+	cursor: pointer
 
 .vacancy-list__statistic
 	position: relative
@@ -231,6 +324,7 @@
 .cabinet-employer-vacancy-grid__left
 	width: 150px
 	margin-right: 25px
+	flex-shrink: 0
 
 .cabinet-employer-vacancy-grid__right
 	display: flex
@@ -241,13 +335,11 @@
 	max-width: 740px
 	width: 100%
 	margin-right: 20px
-	flex-shrink: 0
+	flex-shrink: 1
 
 .cabinet-employer-vacancy-grid__statistic
 	cursor: pointer
 	&:hover
-		.cabinet-employer-vacancy-grid__statistic-text
-			border-color: #000000
 		.cabinet-employer-vacancy-grid__statistic-count
 			background-color: #fff
 			color: $forest-green
@@ -293,10 +385,75 @@
 	border-top-left-radius: 10px
 	&.active
 		background-color: #ebebeb
-		
+
 .cabinet-employer-payment-types-descr
 	flex-grow: 1
 	display: flex
 	background-color: #ebebeb
 	align-items: center
 	justify-content: center
+	position: relative
+	overflow: hidden
+	li
+		visibility: hidden
+		opacity: 0
+		position: absolute
+		width: 100%
+		top: 50%
+		transform: translateY(-50%) perspective(400px) rotate3d(1, 0, 0, 180deg)
+		transition: all 0.3s ease
+		&.active
+			visibility: visible
+			opacity: 1
+			left: 0
+			transform: translateY(-50%) perspective(400px) rotate3d(1, 0, 0, 0deg)
+
+
+.subscriber-package
+	display: flex
+	align-items: center
+	margin-bottom: 15px
+	&:last-child
+		margin-bottom: 0
+
+.subscriber-package__descr
+	max-width: 850px
+	width: 100%
+
+.subscriber-package__box
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	width: 260px
+	border: 1px solid $pigeon-blue
+	padding: 30px 40px
+
+.subscriber-package__price
+	position: relative
+	min-height: 50px
+	min-width: 100px
+	background-color: $forest-green
+	color: $white
+	display: flex
+	align-items: center
+	justify-content: center
+	&::after, &::before
+		position: absolute
+		content: ''
+		top: 50%
+		transform: translateY(-50%)
+		width: 15px
+		height: 30px
+		background-color: $forest-green
+	&::after
+		left: -15px
+		border-bottom-left-radius: 30px
+		border-top-left-radius: 30px
+	&::before
+		right: -15px
+		border-bottom-right-radius: 30px
+		border-top-right-radius: 30px
+
+.subscriber-package__buy
+	width: 100%

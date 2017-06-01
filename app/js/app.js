@@ -84,13 +84,13 @@ var YOURAPPNAME = (function () {
                 var switcher = switchers[i],
                     switcherOptions = _self.options(switcher.dataset.switcher),
                     switcherElems = switcher.children,
-                    switcherTargets = _self.doc.querySelector('[data-switcher-target="' + switcherOptions.target + '"]').children;
+                    switcherTargets = _self.doc.querySelector('[data-switcher-target="' + switcherOptions.target + '"]').children,
+                    switchersActive = [];
 
                 for (var y = 0; y < switcherElems.length; y++) {
                     var switcherElem = switcherElems[y],
                         parentNode = switcher.children,
                         switcherTarget = switcherTargets[y];
-
                     if (switcherElem.classList.contains('active')) {
                         for (var z = 0; z < parentNode.length; z++) {
                             parentNode[z].classList.remove('active');
@@ -98,7 +98,7 @@ var YOURAPPNAME = (function () {
                         }
                         switcherElem.classList.add('active');
                         switcherTarget.classList.add('active');
-                    }
+                    } else switchersActive.push(0);
 
                     switcherElem.children[0].addEventListener('click', function (elem, target, parent, targets) {
                         return function (e) {
@@ -114,6 +114,11 @@ var YOURAPPNAME = (function () {
                         };
 
                     }(switcherElem, switcherTarget, parentNode, switcherTargets));
+                }
+
+                if(switchersActive.length == switcherElems.length) {
+                    switcherElems[0].classList.add('active');
+                    switcherTargets[0].classList.add('active');
                 }
             }
         }
@@ -291,9 +296,6 @@ var YOURAPPNAME = (function () {
 var app = new YOURAPPNAME(document);
 
 app.appLoad('loading', function () {
-    console.log('App is loading... Paste your app code here.');
-    // App is loading... Paste your app code here. 4example u can run preloader event here and stop it in action appLoad dom or full
-
     (function ($) {
         $(function () {
             $('input, select').styler();
@@ -304,11 +306,9 @@ app.appLoad('loading', function () {
 });
 
 app.appLoad('dom', function () {
-    console.log('DOM is loaded! Paste your app code here (Pure JS code).');
-    // DOM is loaded! Paste your app code here (Pure JS code).
-    // Do not use jQuery here cause external libs do not loads here...
+    app.initSwitcher(); // data-switcher="{target: 'anything'}" , data-switcher-target="anything"
+    $('.js-destroy-form-styler').styler('destroy');
 
-    // app.initSwitcher(); // data-switcher="{target='anything'}" , data-switcher-target="anything"
 });
 
 app.appLoad('full', function (e) {
@@ -424,52 +424,32 @@ app.appLoad('full', function (e) {
         }
     })
 
-    $('.js-open-cabinet-employer-main').click(function () {
-        $('.js-cabinet-employer-vacancy').removeClass('active');
-        $('.js-cabinet-employer-payment').removeClass('active');
-        $('.js-cabinet-employer-practice').removeClass('active');
-        $('.js-open-cabinet-employer-vacancy').removeClass('active');
-        $('.js-open-cabinet-employer-payment').removeClass('active');
-        $('.js-open-cabinet-employer-practice').removeClass('active');
+    var wrapper = $( ".file-upload" ),
+        inp = wrapper.find( "input" ),
+        lbl = wrapper.find( ".js-file-upload__label" );
+    var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
 
-        $('.js-cabinet-employer-main').addClass('active');
-        $(this).addClass('active');
+    inp.change(function(){
+        var file_name;
+        if( file_api && inp[ 0 ].files[ 0 ] )
+            file_name = inp[ 0 ].files[ 0 ].name;
+        else
+            file_name = inp.val().replace( "C:\\fakepath\\", '' );
+
+        if( ! file_name.length )
+            return;
+
+        if( lbl.is( ":visible" ) ){
+            lbl.text( file_name );
+        }
+    }).change();
+
+    $('.js-open-hint-small').focus(function () {
+        $('.js-hint-small').addClass('active');
     })
 
-    $('.js-open-cabinet-employer-vacancy').click(function () {
-        $('.js-cabinet-employer-main').removeClass('active');
-        $('.js-cabinet-employer-payment').removeClass('active');
-        $('.js-cabinet-employer-practice').removeClass('active');
-        $('.js-open-cabinet-employer-main').removeClass('active');
-        $('.js-open-cabinet-employer-payment').removeClass('active');
-        $('.js-open-cabinet-employer-practice').removeClass('active');
-
-        $('.js-cabinet-employer-vacancy').addClass('active');
-        $(this).addClass('active');
-    })
-
-    $('.js-open-cabinet-employer-payment').click(function () {
-        $('.js-cabinet-employer-main').removeClass('active');
-        $('.js-cabinet-employer-vacancy').removeClass('active');
-        $('.js-cabinet-employer-practice').removeClass('active');
-        $('.js-open-cabinet-employer-main').removeClass('active');
-        $('.js-open-cabinet-employer-vacancy').removeClass('active');
-        $('.js-open-cabinet-employer-practice').removeClass('active');
-
-        $('.js-cabinet-employer-payment').addClass('active');
-        $(this).addClass('active');
-    })
-
-    $('.js-open-cabinet-employer-practice').click(function () {
-        $('.js-cabinet-employer-main').removeClass('active');
-        $('.js-cabinet-employer-vacancy').removeClass('active');
-        $('.js-cabinet-employer-payment').removeClass('active');
-        $('.js-open-cabinet-employer-main').removeClass('active');
-        $('.js-open-cabinet-employer-vacancy').removeClass('active');
-        $('.js-open-cabinet-employer-payment').removeClass('active');
-
-        $('.js-cabinet-employer-practice').addClass('active');
-        $(this).addClass('active');
+    $('.js-open-hint-small').focusout(function () {
+        $('.js-hint-small').removeClass('active');
     })
 
 });

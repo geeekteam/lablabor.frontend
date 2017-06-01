@@ -171,7 +171,7 @@ $(document).ready(function(){
 	if(c_img != '') {
 		$('#wrap_scrin img').attr('src', c_img);
 		$('#wrap_scrin').css({'background-image': 'url('+c_img+')'})
-		console.log(c_img)
+		// console.log(c_img)
 	}
 
 	$('#the_img_field input').bind('keypress', function(e) {
@@ -199,7 +199,7 @@ $(document).ready(function(){
 	} else {
 		$('#wrap_scrin').css('opacity', '0');
 		$('#wrap_verstka').css('opacity', '1');
-		console.log('hi')
+		// console.log('hi')
 	}
 
  $('#chose_img').on('click', function(){

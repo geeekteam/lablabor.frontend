@@ -1,0 +1,195 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Личный кабинет работодателя | Практика{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+
+    <div class="section section__subheader pt60 tab-pt15">
+        <div class="container mb5">
+            <ul class="breadcrumbs breadcrumbs_list mb10">
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Личный кабинет</a>
+                </li>
+            </ul>
+            <div class="announce announce_backing">
+                <div class="announce__content">
+                    <div class="announce__text text-light fz13 text-uppercase text-white">Чтобы начать поиск кадров вам
+                        необходимо заполнить профиль вашей компании
+                    </div>
+                    <i class="fri fri_announce-content-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container container_1140">
+            <ul class="tab-bar">
+                <li class="tab-bar__item">Общие сведения</li>
+                <li class="tab-bar__item">Вакансии</li>
+                <li class="tab-bar__item">Оплата</li>
+                <li class="tab-bar__item tab-tab__item_small tab-bar__item_blue active"><i class="fri fri_practice"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section section__body-with-subheader pt40 pb55">
+        <div class="container container_1140">
+            <div class="vacancy-list">
+                <div class="vacancy-list__item">
+                    <div class="checkbox-switcher-wrapper">
+                        <label>
+                            <div class="checkbox-switcher">
+                                <input class="mr25" type="checkbox">
+                                <span class="checkbox-switcher__label">Название вакансии</span>
+                            </div>
+                        </label>
+                    </div>
+                    <i class="fri fri_edit"></i>
+                    <i class="fri fri_remove js-open-popup" data-open-popup="delete-vacancy"></i>
+                    <div class="vacancy-list__statistic">Статистика вакансии</div>
+                    <div class="vacancy-list__statistic-count">5</div>
+                </div>
+                <div class="vacancy-list__item">
+                    <div class="checkbox-switcher-wrapper">
+                        <label>
+                            <div class="checkbox-switcher">
+                                <input class="mr25" type="checkbox">
+                                <span class="checkbox-switcher__label">Другая вакансия</span>
+                            </div>
+                        </label>
+                    </div>
+                    <i class="fri fri_edit"></i>
+                    <i class="fri fri_remove js-open-popup" data-open-popup="delete-vacancy"></i>
+                    <div class="vacancy-list__statistic">Статистика вакансии</div>
+                </div>
+            </div>
+            <div class="cabinet-employer-vacancy">
+                <div class="cabinet-employer-vacancy_close-button"></div>
+                <div class="cabinet-employer-vacancy__grid">
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left">
+                            <span class="text-italic fz14 text-signal-black">Вакансия</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <select class="select  select_hover-green">
+                                <option disabled selected>Выберите из списка</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Пункт 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left">
+                            <span class="text-italic fz14 text-signal-black">Период прохождения</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="Не имеет значения">
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left">
+                            <span class="text-italic fz14 text-signal-black">Город</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <select class="select select_hover-green">
+                                <option disabled selected>Пример: Алматы</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Пункт 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left">
+                            <span class="text-italic fz14 text-signal-black">Учебное заведение</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="Например: КазГУ">
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left">
+                            <span class="text-italic fz14 text-signal-black">Специальность</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="Например: журналистика">
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left">
+                            <span class="text-italic fz14 text-signal-black">Тип занятости</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="Например: 3 часа в день">
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left flex-align-start">
+                            <span class="text-italic fz14 text-signal-black">Специальные знания и навыки</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <textarea class="textarea"
+                                      placeholder="Опишите требования к кандидату на должность"></textarea>
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid">
+                        <div class="cabinet-employer-vacancy-grid__left flex-align-start">
+                            <span class="text-italic fz14 text-signal-black">Условия труда/<br>Доп. сведения</span>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid__right">
+                            <textarea class="textarea"
+                                      placeholder="Опишите условия, на которых будет работать сотрудник"></textarea>
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-vacancy-grid flex-space-between">
+                        <div class="checkbox-switcher-wrapper">
+                            <label>
+                                <div class="checkbox-switcher checkbox-switcher_span-switcher">
+                                    <input class="mr10" type="checkbox" checked>
+                                    <span class="fz12 text-light text-uppercase text-green">Вакансия активна</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="grid cabinet-employer-vacancy-grid__statistic">
+                            <span class="cabinet-employer-vacancy-grid__statistic-text mr10">Статистика вакансии</span>
+                            <span class="cabinet-employer-vacancy-grid__statistic-count">5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt17 mb17">
+                <span class="button button_green button_save-changes">Сохранить изменения</span>
+            </p>
+            <div class="grid flex-centered mb40">
+                <div class="add-vacancy">
+                    <span class="add-vacancy__icon mr20"></span>
+                    <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Добавить вакансию</span>
+                </div>
+            </div>
+            <div class="pagination text-center">
+                <a href="#" class="pagination__prev"></a>
+
+                <a href="#" class="pagination-items__item fz18 text-medium">1</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">2</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">3</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">4</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">5</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">6</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">7</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">8</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">9</a>
+                <a href="#" class="pagination-items__item fz18 text-medium">10</a>
+
+                <a href="#" class="pagination__next"></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
