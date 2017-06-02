@@ -1,0 +1,237 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Личный кабинет соискателя | Общие сведения{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+
+    <div class="section section__subheader pt60 tab-pt15">
+        <div class="container mb5">
+            <ul class="breadcrumbs breadcrumbs_list mb10">
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Личный кабинет</a>
+                </li>
+            </ul>
+            <div class="announce announce_backing">
+                <div class="announce__content">
+                    <div class="announce__text text-light fz13 text-uppercase text-white">Чтобы начать поиск кадров вам
+                        необходимо заполнить профиль вашей компании
+                    </div>
+                    <i class="fri fri_announce-content-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container container_1140">
+            <ul class="tab-bar">
+                <li class="tab-bar__item active">Общие сведения</li>
+                <li class="tab-bar__item">Образование</li>
+                <li class="tab-bar__item">Опыт работы</li>
+                <li class="tab-bar__item">Доп/спец навыки</li>
+                <li class="tab-bar__item">Портфолио</li>
+                <li class="tab-bar__item">
+                    Вакансии
+                    <span class="tab-bar__item-count">5</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section section__body-with-subheader pt75 pb55">
+        <div class="container container_1140">
+            <form class="cabinet-employer-main">
+                <div class="cabinet-employer-main__left">
+                    <div class="cabinet-employer-main-logo">
+                        <div class="cabinet-employer-main__image-wrapper thumbnail thumbnail_200">
+                            <img class="thumbnail__image thumbnail__image_200" src="images/default-avatar-man.jpg">
+                            <div class="cabinet-employer-main__image-controls">
+                                <p class="fz14 text-white text-italic text-underline mb5 js-open-popup cursor-pointer"
+                                   data-open-popup="upload-logo">Загрузить фото</p>
+                                <p class="fz14 text-white text-italic text-underline cursor-pointer">Удалить фото</p>
+                            </div>
+                        </div>
+                        <div class="upload-popup js-popup js-small-popup" data-popup="upload-logo">
+                            <div class="close-button-gray js-close-popup"></div>
+                            <div class="grid grid_column">
+                                <label class="grid file-upload mb10">
+                                    <div class="file-upload__label-wrapper mr10">
+                                        <span class="file-upload__label js-file-upload__label">Загрузите фотографию с компьютера</span>
+                                    </div>
+                                    <span class="file-upload__overview-button button button_empty-green">Обзор</span>
+                                    <input class="js-destroy-form-styler" type="file">
+                                </label>
+                                <div class="grid flex-centered">
+                                    <span class="file-upload__upload-button button button_green mr30">Загрузить</span>
+                                    <i class="fri fri_exclamation-green mr10"></i>
+                                    <span class="text-italic fz12 text-dark-dull-gray">Вы можете загрузить изображение не более 200х200 пикселей и не более 100 кб</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cabinet-employer-main__right">
+                    <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
+                            <span class="text-italic fz14 text-dark-dull-gray mr5">ФИО</span>
+                            <i class="fri fri_required"></i>
+                        </div>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: Иванов Иван Иванович">
+                    </div>
+                    <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
+                            <span class="text-italic fz14 text-dark-dull-gray mr5">Дата рождения</span>
+                        </div>
+                        <div class="cabinet-employer-main-grid__right">
+                            <select class="select cabinet-employer-main__day select_hover-green mr10">
+                                <option disabled selected>день</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                            </select>
+                            <span class="text-italic fz14 text-dark-dull-gray mr10 flex-align-center">ДД</span>
+                            <select class="select cabinet-employer-main__month select_hover-green mr10">
+                                <option disabled selected>месяц</option>
+                                <option>Январь</option>
+                                <option>Февраль</option>
+                                <option>Март</option>
+                                <option>Апрель</option>
+                                <option>Май</option>
+                                <option>Июнь</option>
+                                <option>Июль</option>
+                                <option>Август</option>
+                                <option>Сентябрь</option>
+                                <option>Октябрь</option>
+                                <option>Ноябрь</option>
+                                <option>Декабрь</option>
+                            </select>
+                            <span class="text-italic fz14 text-dark-dull-gray mr10 flex-align-center">ММ</span>
+                            <select class="cabinet-employer-main__year select select_hover-green mr10">
+                                <option disabled selected>год</option>
+                                <option>1990</option>
+                                <option>1991</option>
+                                <option>1992</option>
+                                <option>1993</option>
+                                <option>1994</option>
+                                <option>1995</option>
+                                <option>1996</option>
+                                <option>1997</option>
+                                <option>1998</option>
+                                <option>1999</option>
+                            </select>
+                            <span class="text-italic fz14 text-dark-dull-gray flex-align-center">ГГГГ</span>
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
+                            <span class="text-italic fz14 text-dark-dull-gray mr5">Пол</span>
+                        </div>
+                        <div class="cabinet-employer-main-grid__right">
+                            <label class="radio-buttons radio_green-dot mr20">
+                                <input class="radio" type="radio" name="sex" id="men">
+                                <span class="text-italic fz14">Мужской</span>
+                            </label>
+                            <label class="cv-finder__line radio-buttons radio_green-dot">
+                                <input class="radio" type="radio" name="sex" id="woman">
+                                <span class="text-italic fz14">Женский</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">Город</p></div>
+                        <select class="select">
+                            <option disabled selected>Выберите ваш город из списка</option>
+                            <option>Пункт 1</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                        </select>
+                    </div>
+                    <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">Адрес проживания</p></div>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: ул. Абая, д. 50, кв. 11">
+                    </div>
+                    <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
+                            <p class="text-italic fz14 text-dark-dull-gray">Телефон</p>
+                            <i class="fri fri_required"></i>
+                        </div>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray mr20"
+                               type="text" placeholder="+7(код города)ххххххх">
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="+7(7хх)ххххххх">
+                    </div>
+                    <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
+                            <p class="text-italic fz14 text-dark-dull-gray">Email</p>
+                            <i class="fri fri_required"></i>
+                        </div>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: ivanov@mail.ru">
+                    </div>
+                    <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">Семейное положение</p></div>
+                        <select class="select">
+                            <option disabled selected>Выберите из списка</option>
+                            <option>Пункт 1</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                        </select>
+                    </div>
+                    <div class="cabinet-employer-main-grid mb55">
+                        <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
+                                    class="text-italic fz14 text-dark-dull-gray">Дети</p></div>
+                        <span class="pl20 text-italic fz14 text-dark-dull-gray mr15 flex-shrink-0">Количество детей</span>
+                        <select class="select select__children-count mr20">
+                            <option disabled selected>Выберите из списка</option>
+                            <option>Пункт 1</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                        </select>
+                        <span class="text-italic fz14 text-dark-dull-gray mr15">Возраст</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Год рождения">
+                    </div>
+                    <p class="text-center mt17 mb17">
+                        <button class="button button_green button_save-changes">Сохранить изменения</button>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

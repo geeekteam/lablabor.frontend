@@ -1,0 +1,159 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Личный кабинет соискателя | Доп/спец навыки{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+
+    <div class="section section__subheader pt60 tab-pt15">
+        <div class="container mb5">
+            <ul class="breadcrumbs breadcrumbs_list mb10">
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Личный кабинет</a>
+                </li>
+            </ul>
+            <div class="announce announce_backing">
+                <div class="announce__content">
+                    <div class="announce__text text-light fz13 text-uppercase text-white">Чтобы ваш профиль посмотрело больше работодателей, вам следует его заполнить</div>
+                    <i class="fri fri_announce-content-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container container_1140">
+            <ul class="tab-bar">
+                <li class="tab-bar__item">Общие сведения</li>
+                <li class="tab-bar__item">Образование</li>
+                <li class="tab-bar__item">Опыт работы</li>
+                <li class="tab-bar__item active">Доп/спец навыки</li>
+                <li class="tab-bar__item">Портфолио</li>
+                <li class="tab-bar__item">
+                    Вакансии
+                    <span class="tab-bar__item-count">5</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section section__body-with-subheader pt75 pb55">
+        <div class="container container_1140">
+            <form class="cabinet-applicant-skills">
+                <p class="pl70 mb25"><span class="cabinet-education-box-title">Языки</span></p>
+                <div class="cabinet-education-box mb15">
+                    <div class="close-button-gray"></div>
+                    <div class="grid mb15">
+                        <span class="cabinet-input-title flex-align-center mr10">Язык</span>
+                        <select class="select">
+                            <option disabled selected>Выберите из списка</option>
+                            <option>Пункт 1</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                        </select>
+                    </div>
+                    <div class="grid">
+                        <span class="cabinet-input-title flex-align-center mr10">Уровень владения</span>
+                        <select class="select">
+                            <option disabled selected>Выберите из списка</option>
+                            <option>Пункт 1</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="add-vacancy flex-centered mb30">
+                    <span class="add-vacancy__icon mr20"></span>
+                    <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Ещё один язык?</span>
+                </div>
+
+                <p class="pl70 mb25"><span class="text-medium fz14 text-uppercase text-dark-dull-gray">Уровень владения ПК</span></p>
+                <div class="grid mb35">
+                    <select class="select mr15">
+                        <option disabled selected>Выберите из списка</option>
+                        <option>Пункт 1</option>
+                        <option>Пункт 2</option>
+                        <option>Пункт 3</option>
+                    </select>
+                    <div class="close-button-gray close-button-gray_relative flex-align-center"></div>
+                </div>
+
+                <p class="pl70 mb25"><span class="text-medium fz14 text-uppercase text-dark-dull-gray">Знание спец программ</span></p>
+                <div class="cabinet-education-box mb15">
+                    <div class="close-button-gray"></div>
+                    <div class="grid mb15">
+                        <span class="cabinet-input-title flex-align-center mr10">Программа</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: 1С Бухгалтерия">
+                    </div>
+                    <div class="grid">
+                        <span class="cabinet-input-title flex-align-center mr10">Уровень владения</span>
+                        <select class="select">
+                            <option disabled selected>Выберите из списка</option>
+                            <option>Пункт 1</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="add-vacancy flex-centered mb30">
+                    <span class="add-vacancy__icon mr20"></span>
+                    <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Ещё одна программа?</span>
+                </div>
+
+                <p class="pl70 mb25"><span class="text-medium fz14 text-uppercase text-dark-dull-gray">Водительские права</span></p>
+                <div class="grid mb15">
+                    <select class="select mr15">
+                        <option disabled selected>Выберите из списка</option>
+                        <option>Пункт 1</option>
+                        <option>Пункт 2</option>
+                        <option>Пункт 3</option>
+                    </select>
+                </div>
+                <div class="add-vacancy mb30">
+                    <span class="add-vacancy__icon mr20"></span>
+                </div>
+
+                <p class="pl70 mb25"><span class="text-medium fz14 text-uppercase text-dark-dull-gray">Стажировка/курсы</span></p>
+                <div class="cabinet-education-box mb15">
+                    <div class="close-button-gray"></div>
+                    <div class="grid mb15">
+                        <span class="cabinet-input-title flex-align-center mr10">Страна</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: Казахстан">
+                    </div>
+                    <div class="grid mb15">
+                        <span class="cabinet-input-title flex-align-center mr10">Город</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: Алматы">
+                    </div>
+                    <div class="grid mb15">
+                        <span class="cabinet-input-title flex-align-center mr10">Год получения</span>
+                        <select class="select">
+                            <option disabled selected>Выберите из списка</option>
+                            <option>Пункт 1</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                        </select>
+                    </div>
+                    <div class="grid mb15">
+                        <span class="cabinet-input-title flex-align-center mr10">Наименование курса/сертификата</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: МСФО">
+                    </div>
+                </div>
+                <div class="add-vacancy flex-centered mb50">
+                    <span class="add-vacancy__icon mr20"></span>
+                    <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Ещё одна Стажировка?</span>
+                </div>
+                <p class="text-center mt17 mb17">
+                    <button class="button button_green button_save-changes">Сохранить изменения</button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}

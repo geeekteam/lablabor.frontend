@@ -3,11 +3,16 @@
 	display: flex
 
 .tab-bar__item
+	position: relative
 	font-family: "Gotham Pro Medium", sans-serif
+	text-align: center
 	display: flex
 	align-items: center
 	justify-content: center
-	min-width: 170px
+	flex-grow: 1
+	flex-shrink: 0
+	flex-basis: 0
+	width: 100%
 	background-color: transparent
 	min-height: 55px
 	padding: 0 12px
@@ -26,6 +31,8 @@
 	&.active
 		background-color: $forest-green
 		color: $white
+	&:last-child
+		margin-right: 0
 
 .tab-tab__item_small
 	min-width: 65px
@@ -58,7 +65,6 @@
 
 .cabinet-employer-main__image-wrapper
 	position: relative
-	cursor: pointer
 	border: 1px solid $dark-dull-gray
 	overflow: hidden
 	&:hover
@@ -281,10 +287,10 @@
 	.jq-selectbox__select, .input, .textarea
 		background-color: transparent
 
-.cabinet-employer-vacancy_close-button
+.cabinet-employer-vacancy_close-button, .close-button-gray
 	position: absolute
 	top: -7px
-	right: -7px
+	right: -5px
 	cursor: pointer
 	width: 20px
 	height: 20px
@@ -311,6 +317,11 @@
 	&::before
 		width: 2px
 		height: 12px
+
+.close-button-gray_relative
+	position: relative
+	top: 0
+	right: 0
 
 .cabinet-employer-vacancy-grid
 	display: flex
@@ -457,3 +468,107 @@
 
 .subscriber-package__buy
 	width: 100%
+
+
+// applicant / соискатель
+
+.tab-bar__item-count
+	position: absolute
+	top: -15px
+	right: -15px
+	width: 30px
+	height: 30px
+	background-color: $forest-green
+	border-radius: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	color: $white
+	font-size: 18px
+	font-family: "Gotham Pro Medium", sans-serif
+
+.cabinet-employer-main__day, .cabinet-employer-main__month
+	min-width: 135px
+	flex-shrink: 0
+	flex-basis: 0
+	.jq-selectbox__select
+		padding-left: 20px
+		display: flex
+		justify-content: space-between
+	.jq-selectbox__dropdown
+		padding-left: 20px
+		&::after
+			right: 10px
+
+.cabinet-employer-main__year
+	.jq-selectbox__select
+		padding-left: 20px
+		display: flex
+		justify-content: space-between
+	.jq-selectbox__dropdown
+		padding-left: 20px
+		&::after
+			right: 10px
+
+.select__children-count
+	min-width: 260px
+	flex-shrink: 0
+	flex-basis: 0
+	.jq-selectbox__select
+		padding-left: 20px
+		display: flex
+		justify-content: space-between
+	.jq-selectbox__dropdown
+		padding-left: 20px
+		&::after
+			right: 10px
+
+.cabinet-input-title
+	width: 160px
+	font-family: "PT Serif Italic"
+	font-size: 14px
+	color: $dark-dull-gray
+	flex-shrink: 0
+
+.cabinet-education-box, .cabinet-box
+	position: relative
+	display: flex
+	flex-direction: column
+	padding: 30px 30px 25px 30px
+	background: linear-gradient(to bottom, #f9f9f9, #f5f5f5)
+	border: 1px solid #b0b0b0
+	border-radius: 25px
+
+.cabinet-box_portfolio
+	width: 960px
+	padding: 30px 90px
+	margin: 0 auto
+
+.cabinet-education-box-title
+	position: relative
+	font-family: "Gotham Pro Medium", sans-serif
+	font-size: 14px
+	text-transform: uppercase
+	color: #616161
+	padding-right: 20px
+	&::after
+		position: absolute
+		content: ''
+		width: 0
+		height: 0
+		top: 50%
+		transform: translateY(-50%)
+		right: 0
+		border-style: solid
+		border-width: 7px 7.5px 0 7.5px
+		border-color: #9f9f9f transparent transparent transparent
+		
+.portfolio_thumbnail
+	position: relative
+	> .close-button-gray
+		display: none
+	&:hover
+		> .close-button-gray
+			display: block
+			top: 5px
+			right: 8px

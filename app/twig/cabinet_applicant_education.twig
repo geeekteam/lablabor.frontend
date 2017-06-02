@@ -1,0 +1,190 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Личный кабинет соискателя | Образование{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+
+    <div class="section section__subheader pt60 tab-pt15">
+        <div class="container mb5">
+            <ul class="breadcrumbs breadcrumbs_list mb10">
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Личный кабинет</a>
+                </li>
+            </ul>
+            <div class="announce announce_backing">
+                <div class="announce__content">
+                    <div class="announce__text text-light fz13 text-uppercase text-white">Чтобы ваш профиль посмотрело больше работодателей, вам следует его заполнить</div>
+                    <i class="fri fri_announce-content-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container container_1140">
+            <ul class="tab-bar">
+                <li class="tab-bar__item">Общие сведения</li>
+                <li class="tab-bar__item active">Образование</li>
+                <li class="tab-bar__item">Опыт работы</li>
+                <li class="tab-bar__item">Доп/спец навыки</li>
+                <li class="tab-bar__item">Портфолио</li>
+                <li class="tab-bar__item">
+                    Вакансии
+                    <span class="tab-bar__item-count">5</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section section__body-with-subheader pt75 pb55">
+        <div class="container container_1140">
+            <form class="cabinet-applicant-education">
+                <p class="pl70 mb25"><span class="cabinet-education-box-title">Начальное/школьное</span></p>
+                <div class="cabinet-education-box mb50">
+                    <div class="close-button-gray"></div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Страна</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: Казахстан">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Город</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: Алматы">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Школа номер</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: гимназия №113">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Год начала</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: 1994">
+                    </div>
+                    <div class="grid">
+                        <span class="cabinet-input-title flex-align-center mr10">Год окончания</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: 2006">
+                    </div>
+                </div>
+
+                <p class="pl70 mb25"><span class="cabinet-education-box-title">Среднее/средне специальное</span></p>
+                <div class="cabinet-education-box mb15">
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Страна</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: Казахстан">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Город</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: Алматы">
+                    </div>
+
+                    <div class="grid mb15">
+                        <span class="cabinet-input-title flex-align-center mr10">Учебное заведение</span>
+                        <select class="select select__children-count mr10">
+                            <option disabled selected>Колледж</option>
+                            <option>Пункт 1</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                        </select>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: при КБТУ">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Год начала</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: 1994">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Год окончания</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: 2006">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Специальность</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: Журналистика">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title mr10">Доп. сведения</span>
+                        <textarea class="textarea" placeholder="Дополните информацию, если это необходимо"></textarea>
+                    </div>
+                </div>
+                <div class="add-vacancy flex-centered mb30">
+                    <span class="add-vacancy__icon mr20"></span>
+                    <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Ещё одно образование?</span>
+                </div>
+
+                <p class="pl70 mb25"><span class="cabinet-education-box-title">Высшее</span></p>
+                <div class="cabinet-education-box mb15">
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Страна</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: Казахстан">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Город</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: Алматы">
+                    </div>
+
+                    <div class="grid mb15">
+                        <span class="cabinet-input-title flex-align-center mr10">Учебное заведение</span>
+                        <select class="select select__children-count mr10">
+                            <option disabled selected>Колледж</option>
+                            <option>Пункт 1</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                        </select>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: при КБТУ">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Год начала</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: 1994">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Год окончания</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: 2006">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Факультет</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: Информационные технологии">
+                    </div>
+                    <div class="grid mb30">
+                        <span class="cabinet-input-title flex-align-center mr10">Специальность</span>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                               type="text" placeholder="Например: Вычислительная техника и программное обеспечение">
+                    </div>
+                    <div class="grid">
+                        <span class="cabinet-input-title mr10">Доп. сведения</span>
+                        <textarea class="textarea" placeholder="Дополните информацию, если это необходимо"></textarea>
+                    </div>
+                </div>
+                <div class="add-vacancy flex-centered mb30">
+                    <span class="add-vacancy__icon mr20"></span>
+                    <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Ещё одно образование?</span>
+                </div>
+
+                <p class="pl70 mb10"><span class="cabinet-education-box-title">Дополнительное</span></p>
+                <div class="add-vacancy mb60">
+                    <span class="add-vacancy__icon mr20"></span>
+                    <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Добавить образование?</span>
+                </div>
+                <p class="text-center mt17 mb17">
+                    <button class="button button_green button_save-changes">Сохранить изменения</button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}

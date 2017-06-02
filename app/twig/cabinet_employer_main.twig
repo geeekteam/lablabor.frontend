@@ -1,6 +1,6 @@
 {% extends "layouts/app.twig" %}
 
-{% block pageTitle %}Личный кабинет работодателя | Общин сведения{% endblock %}
+{% block pageTitle %}Личный кабинет работодателя | Общи сведения{% endblock %}
 
 {% set auth = 'true' %}
 
@@ -42,12 +42,12 @@
                         <div class="cabinet-employer-main__image-wrapper thumbnail thumbnail_200">
                             <img class="thumbnail__image thumbnail__image_200" src="images/vacancy-view.jpg">
                             <div class="cabinet-employer-main__image-controls">
-                                <p class="fz14 text-white text-italic text-underline mb5 js-open-popup" data-open-popup="upload-logo">Загрузить фото</p>
-                                <p class="fz14 text-white text-italic text-underline">Удалить фото</p>
+                                <p class="fz14 text-white text-italic text-underline mb5 js-open-popup cursor-pointer" data-open-popup="upload-logo">Загрузить фото</p>
+                                <p class="fz14 text-white text-italic text-underline cursor-pointer">Удалить фото</p>
                             </div>
                         </div>
                         <div class="upload-popup js-popup js-small-popup" data-popup="upload-logo">
-                            <div class="cabinet-employer-vacancy_close-button js-close-popup"></div>
+                            <div class="close-button-gray js-close-popup"></div>
                             <div class="grid grid_column">
                                 <label class="grid file-upload mb10">
                                     <div class="file-upload__label-wrapper mr10">
@@ -145,9 +145,10 @@
                     <div class="cabinet-employer-main-grid mb25">
                         <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
                                     class="text-italic fz14 text-dark-dull-gray">Телефон</p></div>
+                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray mr20"
+                               type="text" placeholder="+7(код города)ххххххх">
                         <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                               type="text"
-                               placeholder="гор телефон (+7(код города)ХХХ-ХХ-ХХ) моб телефон (+77ХХХХХХХХХ)">
+                               type="text" placeholder="+7(7хх)ххххххх">
                     </div>
                     <div class="cabinet-employer-main-grid mb25">
                         <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
@@ -178,6 +179,9 @@
                                    type="text" placeholder="moyafirma.kz">
                         </div>
                     </div>
+                    <p class="text-center mt17 mb17">
+                        <button class="button button_green button_save-changes">Сохранить изменения</button>
+                    </p>
                 </div>
             </form>
         </div>
