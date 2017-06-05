@@ -474,6 +474,23 @@ app.appLoad('full', function (e) {
         }
     );
 
+    function addBlock() {
+        var myBlockClass = $(document).find('.js-current-block'),
+            myButtonClass = $(document).find('.js-add-new-block');
+        for (var i = 0; i < myBlockClass.length; i++){
+             var myBlockAttr = myBlockClass[i].getAttribute('block'),
+                 myButtonAttr = myButtonClass[i].getAttribute('block-add');
+             if (myBlockAttr[i] === myButtonAttr[i]) {
+                 console.log(myBlockClass[i].classList.add(myBlockAttr[i]));
+             }
+        };
+
+
+
+    };
+
+    addBlock();
+
     $('.js-add-employer-vacancy').click(function () {
         var newBlock = $(document).find('.js-employer-vacancy:eq(0)').clone().appendTo(".js-vacancy-form-wrapper"),
             lastBlock = $(document).find('.js-employer-vacancy').last();

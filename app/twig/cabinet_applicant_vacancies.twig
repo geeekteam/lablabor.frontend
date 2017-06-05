@@ -41,60 +41,109 @@
     <div class="section section__body-with-subheader pt75 pb55">
         <div class="container container_1140">
             <form class="cabinet-applicant-portfolio">
-                <div class="cabinet-box mb15">
-                    <div class="close-button-gray"></div>
-                    <div class="grid mb15">
-                        <div class="cabinet-employer-vacancy-grid__left">
-                            <span class="text-italic fz14 text-signal-black">Вакансия</span>
+                <div class="js-current-block-wrapper">
+                    <div class="cabinet-box mb15 js-current-block" block="cabinet_applicant_vacancies">
+                        <div class="close-button-gray"></div>
+                        <div class="grid mb15">
+                            <div class="cabinet-employer-vacancy-grid__left">
+                                <span class="text-italic fz14 text-signal-black">Вакансия</span>
+                            </div>
+                            <div class="cabinet-employer-vacancy-grid__right">
+                                <select class="select  select_hover-green">
+                                    <option disabled selected>Выберите из списка</option>
+                                    <option>Пункт 1</option>
+                                    <option>Пункт 2</option>
+                                    <option>Пункт 3</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="cabinet-employer-vacancy-grid__right">
-                            <select class="select  select_hover-green">
-                                <option disabled selected>Выберите из списка</option>
-                                <option>Пункт 1</option>
-                                <option>Пункт 2</option>
-                                <option>Пункт 3</option>
-                            </select>
+                        <div class="grid mb25">
+                            <div class="cabinet-employer-vacancy-grid__left">
+                                <span class="text-italic fz14 text-signal-black">Уровень зарплаты</span>
+                            </div>
+                            <div class="cabinet-employer-vacancy-grid__right">
+                                <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray cabinet-employer-vacancy__salary-input"
+                                       type="text" placeholder="Введите число">
+                                <span class="text-italic fz14 text-signal-black mr5">валюта</span>
+                                <select class="select select_hover-green select_currency">
+                                    <option disabled selected>KZT</option>
+                                    <option>Пункт 1</option>
+                                    <option>Пункт 2</option>
+                                    <option>Пункт 3</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="grid mb25">
-                        <div class="cabinet-employer-vacancy-grid__left">
-                            <span class="text-italic fz14 text-signal-black">Уровень зарплаты</span>
-                        </div>
-                        <div class="cabinet-employer-vacancy-grid__right">
-                            <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray cabinet-employer-vacancy__salary-input"
-                                   type="text" placeholder="Введите число">
-                            <span class="text-italic fz14 text-signal-black mr5">валюта</span>
-                            <select class="select select_hover-green select_currency">
-                                <option disabled selected>KZT</option>
-                                <option>Пункт 1</option>
-                                <option>Пункт 2</option>
-                                <option>Пункт 3</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="cabinet-employer-vacancy-grid flex-space-between">
-                        <div class="checkbox-switcher-wrapper">
-                            <label>
-                                <div class="checkbox-switcher checkbox-switcher_span-switcher">
-                                    <input class="mr10" type="checkbox" checked>
-                                    <span class="checkbox-switcher_span fz12 text-light text-uppercase text-green">Вакансия активна</span>
-                                </div>
-                            </label>
-                            {#<div class="cabinet-employer-hint">
-                                <p class="text-white fz12 text-italic">Чтобы активировать или деактивировать вакансию, кликните по ползунку.</p>
-                            </div>#}
-                            {#<div class="cabinet-employer-activate-hint">
-                                <i class="fri fri_exclamation-green mr10"></i>
-                                <p class="fz12 text-italic">Превышено количество вакансий, доступных для активации. Чтобы ее активировать, Вам нужно деактивировать другую вакансию или выбрать другой абонентский пакет. </p>
-                            </div>#}
-                        </div>
-                        <div class="grid cabinet-employer-vacancy-grid__statistic">
-                            <span class="cabinet-employer-vacancy-grid__statistic-text mr10">Статистика вакансии</span>
-                            <span class="cabinet-employer-vacancy-grid__statistic-count">5</span>
+                        <div class="cabinet-employer-vacancy-grid flex-space-between">
+                            <div class="checkbox-switcher-wrapper">
+                                <label>
+                                    <div class="checkbox-switcher checkbox-switcher_span-switcher">
+                                        <input class="mr10" type="checkbox" checked>
+                                        <span class="checkbox-switcher_span fz12 text-light text-uppercase text-green">Вакансия активна</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="grid cabinet-employer-vacancy-grid__statistic">
+                                <span class="cabinet-employer-vacancy-grid__statistic-text mr10">Статистика вакансии</span>
+                                <span class="cabinet-employer-vacancy-grid__statistic-count">5</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="add-vacancy flex-centered mb30">
+                <div class="add-vacancy flex-centered mb30 js-add-new-block" block-add="cabinet_applicant_vacancies">
+                    <span class="add-vacancy__icon mr20"></span>
+                    <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Нужен ещё один альбом?</span>
+                </div>
+
+
+                <div class="js-current-block-wrapper">
+                    <div class="cabinet-box mb15 js-current-block" block="cabinet_applicant_vacancies-2">
+                        <div class="close-button-gray"></div>
+                        <div class="grid mb15">
+                            <div class="cabinet-employer-vacancy-grid__left">
+                                <span class="text-italic fz14 text-signal-black">Вакансия 2</span>
+                            </div>
+                            <div class="cabinet-employer-vacancy-grid__right">
+                                <select class="select  select_hover-green">
+                                    <option disabled selected>Выберите из списка</option>
+                                    <option>Пункт 1</option>
+                                    <option>Пункт 2</option>
+                                    <option>Пункт 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="grid mb25">
+                            <div class="cabinet-employer-vacancy-grid__left">
+                                <span class="text-italic fz14 text-signal-black">Уровень зарплаты 2</span>
+                            </div>
+                            <div class="cabinet-employer-vacancy-grid__right">
+                                <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray cabinet-employer-vacancy__salary-input"
+                                       type="text" placeholder="Введите число">
+                                <span class="text-italic fz14 text-signal-black mr5">валюта</span>
+                                <select class="select select_hover-green select_currency">
+                                    <option disabled selected>KZT</option>
+                                    <option>Пункт 1</option>
+                                    <option>Пункт 2</option>
+                                    <option>Пункт 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cabinet-employer-vacancy-grid flex-space-between">
+                            <div class="checkbox-switcher-wrapper">
+                                <label>
+                                    <div class="checkbox-switcher checkbox-switcher_span-switcher" >
+                                        <input class="mr10" type="checkbox" checked>
+                                        <span class="checkbox-switcher_span fz12 text-light text-uppercase text-green">Вакансия активна</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="grid cabinet-employer-vacancy-grid__statistic">
+                                <span class="cabinet-employer-vacancy-grid__statistic-text mr10">Статистика вакансии</span>
+                                <span class="cabinet-employer-vacancy-grid__statistic-count">5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-vacancy flex-centered mb30 js-add-new-block" block-add="cabinet_applicant_vacancies">
                     <span class="add-vacancy__icon mr20"></span>
                     <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Нужен ещё один альбом?</span>
                 </div>
