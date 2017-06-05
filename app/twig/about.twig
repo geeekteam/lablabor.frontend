@@ -1,0 +1,39 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}О нас{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+
+    <div class="section section__body-without-subheader pt50 pb50 tab-pb15 tab-pt15">
+        <div class="container container_1280">
+            <ul class="breadcrumbs breadcrumbs_non-margin pl240 mb40">
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">Главная</a>
+                </li>
+                <li class="breadcrubmbs__item">
+                    <a class="text-italic fz16 text-without-underline" href="#">О нас</a>
+                </li>
+            </ul>
+            <div class="main-content">
+                <div class="main-content__content">
+                    <div class="article">
+                        <h1 class="article__title text-uppercase text-medium fz30 mb25 mob-fz20">О нас</h1>
+                        <div class="article__photo-wrapper mb10">
+                            <img src="images/about.jpg" alt="" class="article__photo">
+                        </div>
+                        <div class=" mb40">
+                            <p class="text-italic fz16 text-dull-gray mb30">Проект <a class="text-green link-standard text-without-underline" href="/">llab.kz</a> был запущен в 2017 году. На данный момент он является одним из самых значимых и многообещающих онлайн-ресурсов, специализирующихся на поиске работы и найме персонала, на территории Казахстана. Бизнес-модель основывается на продаже доступа к базе резюме и информации, в ней заключающейся. Анализ новых проектов и историй успешной реализации идей позволяет команде llab.kz понимать текущие тренды и развиваться. Проект совмещает в себе качество, комфорт и нацелен на результативность. Удобный интерфейс, мощный хост, быстрая техподдержка, качественная система защиты личных данных — это лишь малая часть его достоинств.</p>
+                            <p class="text-italic fz16 text-dull-gray mb30">Администрация сервиса — перспективная и грамотная команда специалистов, основная цель которой — помочь соискателям найти достойную работу, а HR-менеджерам и рекрутерам — качественно и в срок закрывать вакансии.</p>
+                            <p class="text-italic fz16 text-dull-gray mb30">Каждый день на сайте размещаются новые вакансии и резюме от людей со всей страны. Все они проходят тщательную проверку модераторами, которые следят за тем, чтобы в базе не появлялось неинформативных резюме, дублирующих друг друга вакансий и объявлений сомнительно плана.</p>
+                            <p class="text-italic fz16 text-dull-gray mb30">Проект <a class="text-green link-standard text-without-underline" href="/">llab.kz</a> — источник информации для тех, кто держит руку на пульсе новых возможностей. К услугам сайта прибегают опытные пользователи сети интернет. Ядро аудитории проекта — предприниматели, менеджеры, высококвалифицированные специалисты разного профиля и многие другие представители ворк-индустрии.</p>
+                            <p class="text-right text-medium text-uppercase fz20 text-dull-gray"><strong>© Lab labor.kz</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
