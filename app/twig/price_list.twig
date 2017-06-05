@@ -1,0 +1,124 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Прайс-лист{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+
+   <div class="section section__body-without-subheader pt50 pb50 tab-pb15 tab-pt15">
+       <div class="container container_900">
+           <div class="price-list">
+               <p class="text-uppercase fz32 text-dark-dull-gray mb40 text-center mob-fz20 mob-mb15"><strong>Тарифные планы</strong></p>
+
+               <ul class="unmarkered-list price-list-rates mb50" data-switcher="{target: 'rates'}">
+                   <li class="price-list-rates__name">Физических лиц</li>
+                   <li class="price-list-rates__name">Индивидуальных предпринимателей</li>
+                   <li class="price-list-rates__name">Юридических лиц</li>
+               </ul>
+
+               <ul class="rates unmarkered-list mb30" data-switcher-target="rates">
+                   <li class="grid grid_column active">
+                       <div class="price-list-rates__descr">
+                           <div class="grid flex-space-between mob-flex-column mb30 mob-mb15">
+                               <p class="pl40 mob-pl0 mob-mb15 text-uppercase fz24 mob-fz18">Абонентский пакет <span class="text-green"><strong>«One»</strong></span></p>
+                               <p class="text-uppercase fz20 mob-fz16"><span class="text-burgundy"><strong>1 000</strong></span> Тенге</p>
+                           </div>
+                           <p class="text-italic fz18 mob-fz14">Включает в себя размещение одной вакансии сроком 10 (десять) календарных дней с момента поступления оплаты на счёт
+                               <a class="link-standard text-without-underline" href="/">Lab Labor.kz</a> без доступа к Базе резюме соискателей.</p>
+                       </div>
+                       <div class="price-list-rates__descr">
+                           <div class="grid flex-space-between mob-flex-column mb30 mob-mb15">
+                               <p class="pl40 mob-pl0 mob-mb15 text-uppercase fz24 mob-fz18">Абонентский пакет <span class="text-pigeon-blue"><strong>«Standard»</strong></span></p>
+                               <p class="text-uppercase fz20 mob-fz16"><span class="text-burgundy"><strong>5 000</strong></span> Тенге</p>
+                           </div>
+                           <p class="text-italic fz18 mob-fz14">Включает в себя размещение до 5 вакансий сроком 14 (четырнадцать) календарных дней с момента поступления оплаты на счёт <a class="link-standard text-without-underline" href="/">Lab Labor.kz</a> и полный доступ к Базе резюме на тот же срок.</p>
+                       </div>
+                       <div class="price-list-rates__descr">
+                           <div class="grid flex-space-between mob-flex-column mb30 mob-mb15">
+                               <p class="pl40 mob-pl0 mob-mb15 text-uppercase fz24 mob-fz18">Абонентский пакет <span class="text-burgundy"><strong>«Expert»</strong></span></p>
+                               <p class="text-uppercase fz20 mob-fz16"><span class="text-burgundy"><strong>10 000</strong></span> Тенге</p>
+                           </div>
+                           <p class="text-italic fz18 mob-fz14">Включает в себя размещение до 10 вакансий сроком 14 (четырнадцать) календарных дней с момента поступления оплаты на счёт <a class="link-standard text-without-underline" href="/">Lab Labor.kz</a> и полный доступ к Базе резюме на тот же срок.</p>
+                       </div>
+                   </li>
+
+                   <li class="grid grid_column">
+                       <div class="price-list-rates__descr">
+                           <div class="grid flex-space-between mob-flex-column mb30 mob-mb15">
+                               <p class="pl40 mob-pl0 mob-mb15 text-uppercase fz24 mob-fz18">Абонентский пакет <span class="text-green"><strong>«One»</strong></span></p>
+                               <p class="text-uppercase fz20 mob-fz16"><span class="text-burgundy"><strong>1 000</strong></span> Тенге</p>
+                           </div>
+                           <p class="text-italic fz18 mob-fz14">Включает в себя размещение одной вакансии сроком 10 (десять) календарных дней с момента поступления оплаты на счёт <a class="link-standard text-without-underline" href="/">Lab Labor.kz</a> без доступа к Базе резюме соискателей.</p>
+                       </div>
+                       <div class="price-list-rates__descr">
+                           <div class="grid flex-space-between mob-flex-column mb30 mob-mb15">
+                               <p class="pl40 mob-pl0 mob-mb15 text-uppercase fz24 mob-fz18">Абонентский пакет <span class="text-olive"><strong>«Basic»</strong></span></p>
+                               <p class="text-uppercase fz20 mob-fz16"><span class="text-burgundy"><strong>5 000</strong></span> Тенге</p>
+                           </div>
+                           <p class="text-italic fz18 mob-fz14">Включает в себя размещение до 5 вакансий сроком 10 (десять) календарных дней с момента поступления оплаты на счёт <a class="link-standard text-without-underline" href="/">Lab Labor.kz</a> без доступа к Базе резюме соискателей.</p>
+                       </div>
+
+                       <div class="price-list-rates__descr">
+                           <div class="grid flex-space-between mob-flex-column mb30 mob-mb15">
+                               <p class="pl40 mob-pl0 mob-mb15 text-uppercase fz24 mob-fz18">Абонентский пакет <span class="text-pigeon-blue"><strong>«Standard»</strong></span></p>
+                               <p class="text-uppercase fz20 mob-fz16"><span class="text-burgundy"><strong>10 000</strong></span> Тенге</p>
+                           </div>
+                           <p class="text-italic fz18 mob-fz14">Включает в себя размещение до 10 вакансий сроком 10 (десять) календарных дней с момента поступления оплаты на счёт <a class="link-standard text-without-underline" href="/">Lab Labor.kz</a> без доступа к Базе резюме соискателей.</p>
+                       </div>
+
+                       <div class="price-list-rates__descr">
+                           <div class="grid flex-space-between mob-flex-column mb30 mob-mb15">
+                               <p class="pl40 mob-pl0 mob-mb15 text-uppercase fz24 mob-fz18">Абонентский пакет <span class="text-burgundy"><strong>«Expert»</strong></span></p>
+                               <p class="text-uppercase fz20 mob-fz16"><span class="text-burgundy"><strong>25 000</strong></span> Тенге</p>
+                           </div>
+                           <p class="text-italic fz18 mob-fz14">Включает в себя размещение до 25 вакансий сроком 10 (десять) календарных дней с момента поступления оплаты на счёт <a class="link-standard text-without-underline" href="/">Lab Labor.kz</a> без доступа к Базе резюме соискателей.</p>
+                       </div>
+                   </li>
+
+                   <li class="grid grid_column">
+                       <div class="price-list-rates__descr">
+                           <div class="grid flex-space-between mob-flex-column mb30 mob-mb15">
+                               <p class="pl40 mob-pl0 mob-mb15 text-uppercase fz24 mob-fz18">Абонентский пакет <span class="text-green"><strong>«One»</strong></span></p>
+                               <p class="text-uppercase fz20 mob-fz16"><span class="text-burgundy"><strong>1 500</strong></span> Тенге</p>
+                           </div>
+                           <p class="text-italic fz18 mob-fz14">Включает в себя размещение одной вакансии сроком 10 (десять) календарных дней с момента поступления оплаты на счёт <a class="link-standard text-without-underline" href="/">Lab Labor.kz</a> без доступа к Базе резюме соискателей.</p>
+                       </div>
+                       <div class="price-list-rates__descr">
+                           <div class="grid flex-space-between mob-flex-column mb30 mob-mb15">
+                               <p class="pl40 mob-pl0 mob-mb15 text-uppercase fz24 mob-fz18">Абонентский пакет <span class="text-olive"><strong>«Basic»</strong></span></p>
+                               <p class="text-uppercase fz20 mob-fz16"><span class="text-burgundy"><strong>30 000</strong></span> Тенге</p>
+                           </div>
+                           <p class="text-italic fz18 mob-fz14">Включает в себя размещение до 20 вакансий сроком 10 (десять) календарных дней с момента поступления оплаты на счёт <a class="link-standard text-without-underline" href="/">Lab Labor.kz</a> без доступа к Базе резюме соискателей.</p>
+                       </div>
+
+                       <div class="price-list-rates__descr">
+                           <div class="grid flex-space-between mob-flex-column mb30 mob-mb15">
+                               <p class="pl40 mob-pl0 mob-mb15 text-uppercase fz24 mob-fz18">Абонентский пакет <span class="text-pigeon-blue"><strong>«Standard»</strong></span></p>
+                               <p class="text-uppercase fz20 mob-fz16"><span class="text-burgundy"><strong>60 000</strong></span> Тенге</p>
+                           </div>
+                           <p class="text-italic fz18 mob-fz14">Включает в себя размещение до 40 вакансий сроком 10 (десять) календарных дней с момента поступления оплаты на счёт <a class="link-standard text-without-underline" href="/">Lab Labor.kz</a> без доступа к Базе резюме соискателей.</p>
+                       </div>
+
+                       <div class="price-list-rates__descr">
+                           <div class="grid flex-space-between mob-flex-column mb30 mob-mb15">
+                               <p class="pl40 mob-pl0 mob-mb15 text-uppercase fz24 mob-fz18">Абонентский пакет <span class="text-burgundy"><strong>«Expert»</strong></span></p>
+                               <p class="text-uppercase fz20 mob-fz16"><span class="text-burgundy"><strong>100 000</strong></span> Тенге</p>
+                           </div>
+                           <p class="text-italic fz18 mob-fz14">Включает в себя размещение до 80 вакансий сроком 10 (десять) календарных дней с момента поступления оплаты на счёт <a class="link-standard text-without-underline" href="/">Lab Labor.kz</a> без доступа к Базе резюме соискателей.</p>
+                       </div>
+                       <div class="price-list-rates__descr">
+                           <div class="grid flex-space-between mob-flex-column mb30 mob-mb15">
+                               <p class="pl40 mob-pl0 mob-mb15 text-uppercase fz24 mob-fz18">Абонентский пакет <span class="text-burgundy"><strong>«premium»</strong></span></p>
+                               <p class="text-uppercase fz20 mob-fz16"><span class="text-burgundy"><strong>120 000</strong></span> Тенге</p>
+                           </div>
+                           <p class="text-italic fz18 mob-fz14">Включает в себя размещение неограниченного количества вакансий сроком на 60 (шестьдесят) календарных дней с момента поступления оплаты на счёт <a class="link-standard text-without-underline" href="/">Lab Labor.kz</a> без доступа к Базе резюме соискателей.</p>
+                       </div>
+                   </li>
+               </ul>
+               <p class="text-italic fz18 mob-fz14">*Подробности о способах оплаты Абонентских пакетов можно увидеть во вкладке «Оплата», расположенной в Личном кабинете, после регистрации. Или обратиться в нашу службу поддержки.</p>
+           </div>
+       </div>
+   </div>
+
+{% endblock %}

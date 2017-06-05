@@ -67,111 +67,120 @@
                 </div>
             </div>
             <form action="">
-                <div class="cabinet-employer-vacancy">
-                <div class="close-button-gray"></div>
-                    <div class="cabinet-employer-vacancy__grid">
-                        <div class="cabinet-employer-vacancy-grid">
-                            <div class="cabinet-employer-vacancy-grid__left">
-                                <span class="text-italic fz14 text-signal-black">Вакансия</span>
-                            </div>
-                            <div class="cabinet-employer-vacancy-grid__right">
-                                <select class="select  select_hover-green">
-                                    <option disabled selected>Выберите из списка</option>
-                                    <option>Пункт 1</option>
-                                    <option>Пункт 2</option>
-                                    <option>Пункт 3</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="cabinet-employer-vacancy-grid">
-                            <div class="cabinet-employer-vacancy-grid__left">
-                                <span class="text-italic fz14 text-signal-black">Период прохождения</span>
-                            </div>
-                            <div class="cabinet-employer-vacancy-grid__right">
-                                <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                       type="text" placeholder="Не имеет значения">
-                            </div>
-                        </div>
-                        <div class="cabinet-employer-vacancy-grid">
-                            <div class="cabinet-employer-vacancy-grid__left">
-                                <span class="text-italic fz14 text-signal-black">Город</span>
-                            </div>
-                            <div class="cabinet-employer-vacancy-grid__right">
-                                <select class="select select_hover-green">
-                                    <option disabled selected>Пример: Алматы</option>
-                                    <option>Пункт 1</option>
-                                    <option>Пункт 2</option>
-                                    <option>Пункт 3</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="cabinet-employer-vacancy-grid">
-                            <div class="cabinet-employer-vacancy-grid__left">
-                                <span class="text-italic fz14 text-signal-black">Учебное заведение</span>
-                            </div>
-                            <div class="cabinet-employer-vacancy-grid__right">
-                                <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                       type="text" placeholder="Например: КазГУ">
-                            </div>
-                        </div>
-                        <div class="cabinet-employer-vacancy-grid">
-                            <div class="cabinet-employer-vacancy-grid__left">
-                                <span class="text-italic fz14 text-signal-black">Специальность</span>
-                            </div>
-                            <div class="cabinet-employer-vacancy-grid__right">
-                                <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                       type="text" placeholder="Например: журналистика">
-                            </div>
-                        </div>
-                        <div class="cabinet-employer-vacancy-grid">
-                            <div class="cabinet-employer-vacancy-grid__left">
-                                <span class="text-italic fz14 text-signal-black">Тип занятости</span>
-                            </div>
-                            <div class="cabinet-employer-vacancy-grid__right">
-                                <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                       type="text" placeholder="Например: 3 часа в день">
-                            </div>
-                        </div>
-                        <div class="cabinet-employer-vacancy-grid">
-                            <div class="cabinet-employer-vacancy-grid__left flex-align-start">
-                                <span class="text-italic fz14 text-signal-black">Специальные знания и навыки</span>
-                            </div>
-                            <div class="cabinet-employer-vacancy-grid__right">
-                                <textarea class="textarea"
-                                          placeholder="Опишите требования к кандидату на должность"></textarea>
-                            </div>
-                        </div>
-                        <div class="cabinet-employer-vacancy-grid">
-                            <div class="cabinet-employer-vacancy-grid__left flex-align-start">
-                                <span class="text-italic fz14 text-signal-black">Условия труда/<br>Доп. сведения</span>
-                            </div>
-                            <div class="cabinet-employer-vacancy-grid__right">
-                                <textarea class="textarea"
-                                          placeholder="Опишите условия, на которых будет работать сотрудник"></textarea>
-                            </div>
-                        </div>
-                        <div class="cabinet-employer-vacancy-grid flex-space-between">
-                            <div class="checkbox-switcher-wrapper">
-                                <label>
-                                    <div class="checkbox-switcher checkbox-switcher_span-switcher">
-                                        <input class="mr10" type="checkbox" checked>
-                                        <span class="fz12 text-light text-uppercase text-green">Вакансия активна</span>
+                <div class="js-vacancy-form-wrapper">
+                    <div class="cabinet-employer-vacancy js-employer-vacancy">
+                        <div class="close-button-gray"></div>
+                            <div class="cabinet-employer-vacancy__grid">
+                                <div class="cabinet-employer-vacancy-grid">
+                                    <div class="cabinet-employer-vacancy-grid__left">
+                                        <span class="text-italic fz14 text-signal-black">Вакансия</span>
                                     </div>
-                                </label>
-                            </div>
-                            <div class="grid cabinet-employer-vacancy-grid__statistic">
-                                <span class="cabinet-employer-vacancy-grid__statistic-text mr10">Статистика вакансии</span>
-                                <span class="cabinet-employer-vacancy-grid__statistic-count">5</span>
+                                    <div class="cabinet-employer-vacancy-grid__right">
+                                        <select class="select  select_hover-green">
+                                            <option disabled selected>Выберите из списка</option>
+                                            <option>Пункт 1</option>
+                                            <option>Пункт 2</option>
+                                            <option>Пункт 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="cabinet-employer-vacancy-grid">
+                                    <div class="cabinet-employer-vacancy-grid__left">
+                                        <span class="text-italic fz14 text-signal-black">Период прохождения</span>
+                                    </div>
+                                    <div class="cabinet-employer-vacancy-grid__right">
+                                        <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                               type="text" placeholder="Не имеет значения">
+                                    </div>
+                                </div>
+                                <div class="cabinet-employer-vacancy-grid">
+                                    <div class="cabinet-employer-vacancy-grid__left">
+                                        <span class="text-italic fz14 text-signal-black">Город</span>
+                                    </div>
+                                    <div class="cabinet-employer-vacancy-grid__right">
+                                        <select class="select select_hover-green">
+                                            <option disabled selected>Пример: Алматы</option>
+                                            <option>Пункт 1</option>
+                                            <option>Пункт 2</option>
+                                            <option>Пункт 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="cabinet-employer-vacancy-grid">
+                                    <div class="cabinet-employer-vacancy-grid__left">
+                                        <span class="text-italic fz14 text-signal-black">Учебное заведение</span>
+                                    </div>
+                                    <div class="cabinet-employer-vacancy-grid__right">
+                                        <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                               type="text" placeholder="Например: КазГУ">
+                                    </div>
+                                </div>
+                                <div class="cabinet-employer-vacancy-grid">
+                                    <div class="cabinet-employer-vacancy-grid__left">
+                                        <span class="text-italic fz14 text-signal-black">Специальность</span>
+                                    </div>
+                                    <div class="cabinet-employer-vacancy-grid__right">
+                                        <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                               type="text" placeholder="Например: журналистика">
+                                    </div>
+                                </div>
+                                <div class="cabinet-employer-vacancy-grid">
+                                    <div class="cabinet-employer-vacancy-grid__left">
+                                        <span class="text-italic fz14 text-signal-black">Тип занятости</span>
+                                    </div>
+                                    <div class="cabinet-employer-vacancy-grid__right">
+                                        <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                               type="text" placeholder="Например: 3 часа в день">
+                                    </div>
+                                </div>
+                                <div class="cabinet-employer-vacancy-grid">
+                                    <div class="cabinet-employer-vacancy-grid__left flex-align-start">
+                                        <span class="text-italic fz14 text-signal-black">Специальные знания и навыки</span>
+                                    </div>
+                                    <div class="cabinet-employer-vacancy-grid__right">
+                                        <textarea class="textarea"
+                                                  placeholder="Опишите требования к кандидату на должность"></textarea>
+                                    </div>
+                                </div>
+                                <div class="cabinet-employer-vacancy-grid">
+                                    <div class="cabinet-employer-vacancy-grid__left flex-align-start">
+                                        <span class="text-italic fz14 text-signal-black">Условия труда/<br>Доп. сведения</span>
+                                    </div>
+                                    <div class="cabinet-employer-vacancy-grid__right">
+                                        <textarea class="textarea"
+                                                  placeholder="Опишите условия, на которых будет работать сотрудник"></textarea>
+                                    </div>
+                                </div>
+                                <div class="cabinet-employer-vacancy-grid flex-space-between">
+                                    <div class="checkbox-switcher-wrapper">
+                                        <label>
+                                            <div class="checkbox-switcher checkbox-switcher_span-switcher">
+                                                <input class="mr10" type="checkbox" checked>
+                                                <span class="fz12 text-light text-uppercase text-green js-open-hint">Вакансия активна</span>
+                                            </div>
+                                        </label>
+                                        <div class="cabinet-employer-hint js-hint">
+                                            <p class="text-white fz12 text-italic">Чтобы активировать или деактивировать вакансию, кликните по ползунку.</p>
+                                        </div>
+                                        <div class="cabinet-employer-activate-hint">
+                                            <i class="fri fri_exclamation-green mr10"></i>
+                                            <p class="fz12 text-italic">Превышено количество вакансий, доступных для активации. Чтобы ее активировать, Вам нужно деактивировать другую вакансию или выбрать другой абонентский пакет. </p>
+                                        </div>
+                                    </div>
+                                    <div class="grid cabinet-employer-vacancy-grid__statistic">
+                                        <span class="cabinet-employer-vacancy-grid__statistic-text mr10">Статистика вакансии</span>
+                                        <span class="cabinet-employer-vacancy-grid__statistic-count">5</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <p class="text-center mt17 mb17">
+                        <span class="button button_green button_save-changes">Сохранить изменения</span>
+                    </p>
                 </div>
-                <p class="text-center mt17 mb17">
-                    <span class="button button_green button_save-changes">Сохранить изменения</span>
-                </p>
             </form>
             <div class="grid flex-centered mb40">
-                <div class="add-vacancy">
+                <div class="add-vacancy js-add-employer-vacancy">
                     <span class="add-vacancy__icon mr20"></span>
                     <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Добавить вакансию</span>
                 </div>
@@ -192,6 +201,6 @@
 
                 <a href="#" class="pagination__next"></a>
             </div>
-        </form>
+        </div>
     </div>
 {% endblock %}

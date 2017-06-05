@@ -90,7 +90,10 @@ var YOURAPPNAME = (function () {
                 for (var y = 0; y < switcherElems.length; y++) {
                     var switcherElem = switcherElems[y],
                         parentNode = switcher.children,
+                        switcherTrigger = (switcherElem.children.length) ? switcherElem.children[0] : switcherElem,
                         switcherTarget = switcherTargets[y];
+
+
                     if (switcherElem.classList.contains('active')) {
                         for (var z = 0; z < parentNode.length; z++) {
                             parentNode[z].classList.remove('active');
@@ -100,8 +103,9 @@ var YOURAPPNAME = (function () {
                         switcherTarget.classList.add('active');
                     } else switchersActive.push(0);
 
-                    switcherElem.children[0].addEventListener('click', function (elem, target, parent, targets) {
+                    switcherTrigger.addEventListener('click', function (elem, target, parent, targets) {
                         return function (e) {
+
                             e.preventDefault();
                             if (!elem.classList.contains('active')) {
                                 for (var z = 0; z < parentNode.length; z++) {
@@ -307,6 +311,7 @@ app.appLoad('loading', function () {
 
 app.appLoad('dom', function () {
     app.initSwitcher(); // data-switcher="{target: 'anything'}" , data-switcher-target="anything"
+
     $('.js-destroy-form-styler').styler('destroy');
 
 });
@@ -446,10 +451,91 @@ app.appLoad('full', function (e) {
 
     $('.js-open-hint-small').focus(function () {
         $('.js-hint-small').addClass('active');
-    })
+    });
 
     $('.js-open-hint-small').focusout(function () {
         $('.js-hint-small').removeClass('active');
-    })
+    });
+
+    function hideHint () {
+        $('.js-hint').removeClass('active');
+    };
+
+    function showHint () {
+        $('.js-hint').addClass('active');
+    };
+
+    $('.js-open-hint').hover(
+        function () {
+            setTimeout(showHint, 500);
+        },
+        function () {
+            setTimeout(hideHint, 1000);
+        }
+    );
+
+    $('.js-add-employer-vacancy').click(function () {
+        var newBlock = $(document).find('.js-employer-vacancy:eq(0)').clone().appendTo(".js-vacancy-form-wrapper"),
+            lastBlock = $(document).find('.js-employer-vacancy').last();
+        lastBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown').remove();
+        lastBlock.find('.jq-selectbox > .select').unwrap();
+        lastBlock.find('.select').styler();
+    });
+
+    $('.js-add-vocational-education').click(function () {
+        var newBlock = $(document).find('.js-vocational-education:eq(0)').clone().appendTo(".js-vocational-education-wrapper"),
+            lastBlock = $(document).find('.js-vocational-education').last();
+        lastBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown').remove();
+        lastBlock.find('.jq-selectbox > .select').unwrap();
+        lastBlock.find('.select').styler();
+    });
+
+    $('.js-add-higher-education').click(function () {
+        var newBlock = $(document).find('.js-higher-education:eq(0)').clone().appendTo(".js-higher-education-wrapper"),
+            lastBlock = $(document).find('.js-higher-education').last();
+        lastBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown').remove();
+        lastBlock.find('.jq-selectbox > .select').unwrap();
+        lastBlock.find('.select').styler();
+    });
+
+    $('.js-add-additional-education').click(function () {
+        var newBlock = $(document).find('.js-higher-education:eq(0)').clone().appendTo(".js-additional-education-wrapper"),
+            lastBlock = $(document).find('.js-higher-education').last();
+        lastBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown').remove();
+        lastBlock.find('.jq-selectbox > .select').unwrap();
+        lastBlock.find('.select').styler();
+    });
+
+    $('.js-add-cabinet-applicant-experience').click(function () {
+        var newBlock = $(document).find('.js-cabinet-applicant-experience:eq(0)').clone().appendTo(".js-cabinet-applicant-experience-wrapper"),
+            lastBlock = $(document).find('.js-cabinet-applicant-experience').last();
+        lastBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown').remove();
+        lastBlock.find('.jq-selectbox > .select').unwrap();
+        lastBlock.find('.select').styler();
+    });
+
+    $('.js-add-cabinet-applicant-portfolio').click(function () {
+        var newBlock = $(document).find('.js-cabinet-applicant-portfolio:eq(0)').clone().appendTo(".js-cabinet-applicant-portfolio-wrapper"),
+            lastBlock = $(document).find('.js-cabinet-applicant-portfolio').last();
+        lastBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown').remove();
+        lastBlock.find('.jq-selectbox > .select').unwrap();
+        lastBlock.find('.select').styler();
+    });
+
+    $('.js-add-applicant-language').click(function () {
+        var newBlock = $(document).find('.js-applicant-language:eq(0)').clone().appendTo(".js-applicant-language-wrapper"),
+            lastBlock = $(document).find('.js-applicant-language').last();
+        lastBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown').remove();
+        lastBlock.find('.jq-selectbox > .select').unwrap();
+        lastBlock.find('.select').styler();
+    });
+
+    $('.js-add-computer-skills').click(function () {
+        var newBlock = $(document).find('.js-computer-skills:eq(0)').clone().appendTo(".js-computer-skills-wrapper"),
+            lastBlock = $(document).find('.js-computer-skills').last();
+        lastBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown').remove();
+        lastBlock.find('.jq-selectbox > .select').unwrap();
+        lastBlock.find('.select').styler();
+    });
 
 });

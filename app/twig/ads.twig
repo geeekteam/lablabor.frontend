@@ -1,0 +1,131 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Реклама у нас{% endblock %}
+
+{% set auth = 'true' %}
+
+{% block content %}
+
+    <div class="section section_ads mob-pb15 mob-pt15">
+        <div class="container">
+            <p class="fz36 text-uppercase text-center text-white mb65 mob-fz20 mob-mb15">О рекламе на lab labor</p>
+            <p class="text-italic fz30 text-center text-white mob-fz16">Размещая рекламу на нашем сайте, вы можете сами</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="ads-banner-footer">
+            <div class="container">
+                <ul class="unmarkered-list grid mob-flex-column" data-switcher="{target: 'ads-menu'}">
+                    <li class="ads-menu-item">Варианты размещения рекламы</li>
+                    <li class="ads-menu-item">Требования к рекламе</li>
+                    <li class="ads-menu-item">Контакты рекламной службы</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section section__body-without-subheader pt60 pb80 mob-pb30 mob-pt30">
+        <div class="container container_1160">
+            <ul class="ads unmarkered-list" data-switcher-target="ads-menu">
+                <li class="ads-item">
+                    <div class="grid mob-flex-column mb45">
+                        <div class="ads-left-item mr60 mob-mb15 mob-mr0">
+                            <p class="text-light fz18 text-uppercase text-dark-dull-gray mb45">главная в режиме “гость”</p>
+                            <ul class="mb45 pl40 li-dots">
+                                <li class="text-italic fz18 text-dark-dull-gray">Анимированный слайдер 240х400 справа</li>
+                                <li class="text-italic fz18 text-dark-dull-gray">Анимированный слайдер 240х400 слева</li>
+                            </ul>
+                            <p class="text-italic fz18 text-dark-dull-gray">*Стоимость размещения уточняйте по телефонам рекламной службы</p>
+                        </div>
+                        <div class="ads-right-item">
+                            <div class="ads-right-item__image-wrapper">
+                                <img class="ads-right-item__image" src="images/ads-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid mob-flex-column mb45">
+                        <div class="ads-left-item mr60 mob-mb15 mob-mr0">
+                            <p class="text-light fz18 text-uppercase text-dark-dull-gray mb45">главная для пользователя</p>
+                            <ul class="mb45 pl40 li-dots">
+                                <li class="text-italic fz18 text-dark-dull-gray">Анимированный слайдер 240х400 справа</li>
+                                <li class="text-italic fz18 text-dark-dull-gray">Анимированный слайдер 240х400 слева</li>
+                            </ul>
+                            <p class="text-italic fz18 text-dark-dull-gray">*Стоимость размещения уточняйте по телефонам рекламной службы</p>
+                        </div>
+                        <div class="ads-right-item">
+                            <div class="ads-right-item__image-wrapper">
+                                <img class="ads-right-item__image" src="images/ads-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid mob-flex-column">
+                        <div class="ads-left-item mr60 mob-mb15 mob-mr0">
+                            <p class="text-light fz18 text-uppercase text-dark-dull-gray mb45">главная для пользователя</p>
+                            <ul class="mb45 pl40 li-dots">
+                                <li class="text-italic fz18 text-dark-dull-gray">Анимированный слайдер 240х400 справа</li>
+                                <li class="text-italic fz18 text-dark-dull-gray">Анимированный слайдер 240х400 слева</li>
+                            </ul>
+                            <p class="text-italic fz18 text-dark-dull-gray">*Стоимость размещения уточняйте по телефонам рекламной службы</p>
+                        </div>
+                        <div class="ads-right-item">
+                            <div class="ads-right-item__image-wrapper">
+                                <img class="ads-right-item__image" src="images/ads-3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ads-item">
+                    <div class="grid mob-flex-column">
+                        <div class="ads-left-item ads-left-item_w440 mr20 mob-mr0 mob-mb15">
+                            <p class="fz18 text-dark-dull-gray mb30">На сайте Lablabor.kz существует 2 варианта размещения рекламных объявлений:</p>
+                            <p class="fz16 text-dark-dull-gray">На главной странице расположены для гостей и для зарегистрированных пользователей</p>
+                            <p class="fz16 text-dark-dull-gray">2 (два) одинаковых слайдера, доступных для просмотра всем посетителям сайта.</p>
+                            <p class="fz16 text-dark-dull-gray mb30">В каждом слайдере 5 (пять) сменяющихся рекламных объявлений. Каждая картинка показывается в течение 3-х секунд.</p>
+                            <p class="fz16 text-signal-black text-italic mb30"><strong>Технические требования к размещаемой картинке:</strong></p>
+                            <p class="fz16 text-dark-dull-gray">- размер 192х320 пикселей,</p>
+                            <p class="fz16 text-dark-dull-gray">- максимальный вес 1 МБ,</p>
+                            <p class="fz16 text-dark-dull-gray mb30">- допустимые форматы JPG, PNG, JPEG или GIF.</p>
+                            <p class="fz16 text-dark-dull-gray">На странице поиска резюме и вакансий (верхняя часть) расположен банер, доступный для просмотра зарегистрированным пользователям и посетителям, воспользовавшимся строкой поиска.</p>
+                            <p class="fz16 text-signal-black text-italic mb30"><strong>Технические требования к размещаемой картинке:</strong></p>
+                            <p class="fz16 text-dark-dull-gray">- размер 760x90 пикселей,</p>
+                            <p class="fz16 text-dark-dull-gray">- максимальный вес 1 МБ,</p>
+                            <p class="fz16 text-dark-dull-gray mb30">- допустимые форматы JPG, PNG, JPEG или GIF.</p>
+                            <p class="fz16 text-signal-black text-italic mb30">*Минимальный срок размещения 1 (один) месяц</p>
+                            <p class="fz16 text-dark-dull-gray">Для уточнения цены на размещение рекламы свяжитесь с нашими консультантом по телефону <strong>+7(727) 3273625</strong>..</p>
+                        </div>
+                        <div class="ads-right-item">
+                            <p class="fz16 mb25 pl70 mob-hidden">Для уточнения цены на размещение рекламы свяжитесь <br>с нашими консультантом потелефону <strong>+7(727) 3273625</strong></p>
+                            <div class="ads-right-item__image-wrapper mb85 mob-mb30">
+                                <img class="ads-right-item__image" src="images/ads-2.png" alt="">
+                            </div>
+                            <div class="ads-right-item__image-wrapper mb35">
+                                <img class="ads-right-item__image" src="images/ads-3.png" alt="">
+                            </div>
+                            <p class="fz16 text-italic pl100 mob-pl0">*Минимальный срок размещения 1 (один) месяц</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="ads-item">
+                    <p class="fz18 text-light text-uppercase text-center mb75">по вопросам размещения рекламы обращаться</p>
+                    <div class="ads-items">
+                        <div class="ads-items__contacts mb30">
+                            <i class="fri fri_place-gray mr20"></i>
+                            <p class="text-italic fz22">050039, г. Алматы <br>ул. Жандосова, 4А</p>
+                        </div>
+                        <div class="ads-items__contacts mb30">
+                            <i class="fri fri_phone-gray mr20"></i>
+                            <p class="text-italic fz22">
+                                Тел.: <a class="text-without-underline" href="tel:+77272584135">+7 (727) 258 41 35</a><br>
+                                Моб: <a class="text-without-underline" href="tel:+77012598701">+7 (701) 259 87 01</a>
+                            </p>
+                        </div>
+                        <div class="ads-items__contacts">
+                            <i class="fri fri_email-gray mr20"></i>
+                            <p class="text-italic fz22">e-mail: <a class="text-without-underline" href="mailto:hr@llab.kz">hr@llab.kz</a></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
