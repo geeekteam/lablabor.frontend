@@ -1229,6 +1229,10 @@ button {
   display: flex;
 }
 
+.grid-inline {
+  display: inline-flex;
+}
+
 .grid_column {
   flex-direction: column;
 }
@@ -1950,6 +1954,9 @@ ol ol > li:last-child {
 }
 .add-vacancy:hover .add-vacancy__text {
   color: rgba(28, 157, 34, 0.8);
+}
+.add-vacancy.grid-inline {
+  display: inline-flex;
 }
 
 .add-vacancy__icon {
@@ -4406,6 +4413,7 @@ ol ol > li:last-child {
 }
 
 .cabinet-employer-hint {
+  z-index: 1000;
   position: absolute;
   top: 200%;
   right: 25%;

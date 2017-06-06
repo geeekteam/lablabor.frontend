@@ -42,7 +42,7 @@
                     <div class="checkbox-switcher-wrapper">
                         <label>
                             <div class="checkbox-switcher">
-                                <input class="mr25" type="checkbox">
+                                <input class="mr25 my-checkbox" type="checkbox">
                                 <span class="checkbox-switcher__label">Название вакансии</span>
                             </div>
                         </label>
@@ -56,7 +56,7 @@
                     <div class="checkbox-switcher-wrapper">
                         <label>
                             <div class="checkbox-switcher">
-                                <input class="mr25" type="checkbox">
+                                <input class="mr25 my-checkbox" type="checkbox">
                                 <span class="checkbox-switcher__label">Другая вакансия</span>
                             </div>
                         </label>
@@ -66,7 +66,7 @@
                     <div class="vacancy-list__statistic">Статистика вакансии</div>
                 </div>
             </div>
-            <form action="">
+            <form class="cabinet-form" action="">
                 <div class="js-current-block-wrapper mb25">
                     <div class="cabinet-employer-vacancy js-current-block" block="practice">
                         <div class="close-button-gray"></div>
@@ -155,7 +155,7 @@
                                     <div class="checkbox-switcher-wrapper">
                                         <label>
                                             <div class="checkbox-switcher checkbox-switcher_span-switcher">
-                                                <input class="mr10" type="checkbox" checked>
+                                                <input class="mr10 my-checkbox" type="checkbox" checked>
                                                 <span class="fz12 text-light text-uppercase text-green js-open-hint">Вакансия активна</span>
                                             </div>
                                         </label>
@@ -175,9 +175,11 @@
                             </div>
                         </div>
                 </div>
-                <div class="add-vacancy grid flex-centered js-add-new-block" block-add="practice">
-                    <span class="add-vacancy__icon mr20"></span>
-                    <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Добавить вакансию</span>
+                <div class="grid flex-centered">
+                    <div class="add-vacancy js-add-new-block" block-add="practice">
+                        <span class="add-vacancy__icon mr20"></span>
+                        <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Добавить вакансию</span>
+                    </div>
                 </div>
                 <p class="text-center mt17 mb17">
                     <span class="button button_green button_save-changes">Сохранить изменения</span>

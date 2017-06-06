@@ -481,15 +481,16 @@ app.appLoad('full', function (e) {
             myButtonClass.click(function () {
                 for (var i = 0; i < currentBlockClass.length; i++) {
                     if (currentBlockClass[i].getAttribute('block') === myButtonClass[myButtonClass.index($(this))].getAttribute('block-add')) {
-                        var newBlock = $(document).find('.js-current-block:eq(' + i + ')').clone().appendTo($(this).prev('.js-current-block-wrapper'));
-                        newBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown').remove();
+                        var newBlock = $(document).find('.js-current-block:eq(' + i + ')').clone().appendTo($(this).parent().prev('.js-current-block-wrapper'));
+                        newBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown, .jq-checkbox__div').remove();
                         newBlock.find('.jq-selectbox > .select').unwrap();
+                        newBlock.find('.jq-checkbox > .my-checkbox').unwrap();
                         newBlock.find('.select').styler();
+                        newBlock.find('.my-checkbox').styler();
                     }
                 }
             });
         }
-
         addBlock();
     }
 );
