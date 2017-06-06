@@ -42,8 +42,8 @@
         <div class="container container_1140">
             <form class="cabinet-applicant-skills">
                 <p class="pl70 mb25"><span class="cabinet-education-box-title">Языки</span></p>
-                <div class="js-applicant-language-wrapper">
-                    <div class="cabinet-education-box mb15 js-applicant-language">
+                <div class="js-current-block-wrapper">
+                    <div class="cabinet-education-box mb15 js-current-block" block="language">
                         <div class="close-button-gray"></div>
                         <div class="grid mb15">
                             <span class="cabinet-input-title flex-align-center mr10">Язык</span>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="add-vacancy flex-centered mb30 js-add-applicant-language">
+                <div class="add-vacancy flex-centered mb30 js-add-new-block" block-add="language">
                     <span class="add-vacancy__icon mr20"></span>
                     <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Ещё один язык?</span>
                 </div>
@@ -82,8 +82,8 @@
                 </div>
 
                 <p class="pl70 mb25"><span class="text-medium fz14 text-uppercase text-dark-dull-gray">Знание спец программ</span></p>
-                <div class="js-computer-skills-wrapper">
-                    <div class="cabinet-education-box mb15 js-computer-skills">
+                <div class="js-current-block-wrapper">
+                    <div class="cabinet-education-box mb15 js-current-block" block="computer-skills">
                         <div class="close-button-gray"></div>
                         <div class="grid mb15">
                             <span class="cabinet-input-title flex-align-center mr10">Программа</span>
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="add-vacancy flex-centered mb30 js-add-computer-skills">
+                <div class="add-vacancy flex-centered mb30 js-add-new-block" block-add="computer-skills">
                     <span class="add-vacancy__icon mr20"></span>
                     <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Ещё одна программа?</span>
                 </div>
@@ -120,34 +120,36 @@
                 </div>
 
                 <p class="pl70 mb25"><span class="text-medium fz14 text-uppercase text-dark-dull-gray">Стажировка/курсы</span></p>
-                <div class="cabinet-education-box mb15">
-                    <div class="close-button-gray"></div>
-                    <div class="grid mb15">
-                        <span class="cabinet-input-title flex-align-center mr10">Страна</span>
-                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                               type="text" placeholder="Например: Казахстан">
-                    </div>
-                    <div class="grid mb15">
-                        <span class="cabinet-input-title flex-align-center mr10">Город</span>
-                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                               type="text" placeholder="Например: Алматы">
-                    </div>
-                    <div class="grid mb15">
-                        <span class="cabinet-input-title flex-align-center mr10">Год получения</span>
-                        <select class="select">
-                            <option disabled selected>Выберите из списка</option>
-                            <option>Пункт 1</option>
-                            <option>Пункт 2</option>
-                            <option>Пункт 3</option>
-                        </select>
-                    </div>
-                    <div class="grid mb15">
-                        <span class="cabinet-input-title flex-align-center mr10">Наименование курса/сертификата</span>
-                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                               type="text" placeholder="Например: МСФО">
+                <div class="js-current-block-wrapper">
+                    <div class="cabinet-education-box mb15 js-current-block" block="internship">
+                        <div class="close-button-gray"></div>
+                        <div class="grid mb15">
+                            <span class="cabinet-input-title flex-align-center mr10">Страна</span>
+                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="Например: Казахстан">
+                        </div>
+                        <div class="grid mb15">
+                            <span class="cabinet-input-title flex-align-center mr10">Город</span>
+                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="Например: Алматы">
+                        </div>
+                        <div class="grid mb15">
+                            <span class="cabinet-input-title flex-align-center mr10">Год получения</span>
+                            <select class="select">
+                                <option disabled selected>Выберите из списка</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Пункт 3</option>
+                            </select>
+                        </div>
+                        <div class="grid mb15">
+                            <span class="cabinet-input-title flex-align-center mr10">Наименование курса/сертификата</span>
+                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                   type="text" placeholder="Например: МСФО">
+                        </div>
                     </div>
                 </div>
-                <div class="add-vacancy flex-centered mb50">
+                <div class="add-vacancy flex-centered mb50 js-add-new-block" block-add="internship">
                     <span class="add-vacancy__icon mr20"></span>
                     <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Ещё одна Стажировка?</span>
                 </div>
