@@ -27,7 +27,11 @@
     {% include "stylesheets.twig" %}
 </head>
 <body>
-    <div class="site-wrapper">
+    {% if mobile == 'false' %}
+        <div class="site-wrapper-mobile-false">
+    {% else %}
+        <div class="site-wrapper">
+    {% endif %}
         <!-- Header block -->
         {% include "header.twig" %}
         <!-- Header block end -->

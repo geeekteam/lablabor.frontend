@@ -997,6 +997,13 @@ button {
   min-width: 320px;
 }
 
+.site-wrapper-mobile-false {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 1540px;
+}
+
 .section__subheader {
   background: linear-gradient(to bottom, #cecece 0%, #f5f5f5 20%, #f8f8f8 90%, #e5e5e5 100%);
 }
@@ -4302,7 +4309,7 @@ ol ol > li:last-child {
 }
 
 .tab-tab__item_small {
-  min-width: 65px;
+  max-width: 65px;
 }
 
 .tab-bar__item_blue {
@@ -4314,6 +4321,10 @@ ol ol > li:last-child {
 .tab-bar__item_blue.active {
   background-color: #5b6a91;
   color: #ffffff;
+}
+
+.tab-bar_employer {
+  max-width: 55%;
 }
 
 .cabinet-employer-main {
@@ -4456,6 +4467,8 @@ ol ol > li:last-child {
   background-color: #FFFFFF;
   border: 1px solid #848484;
   border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
 }
 .cabinet-employer-activate-hint::after {
   position: absolute;
@@ -4478,6 +4491,10 @@ ol ol > li:last-child {
   border-style: solid;
   border-width: 7px 15px 7px 0;
   border-color: transparent #848484 transparent transparent;
+}
+.cabinet-employer-activate-hint.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .hint-small {
@@ -4736,9 +4753,6 @@ ol ol > li:last-child {
 .cabinet-employer-payment-type {
   width: 65px;
   height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #cdcdcd;
   flex-shrink: 0;
   cursor: pointer;
@@ -4747,6 +4761,13 @@ ol ol > li:last-child {
 }
 .cabinet-employer-payment-type.active {
   background-color: #ebebeb;
+}
+.cabinet-employer-payment-type .cabinet-employer-payment-type__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .cabinet-employer-payment-types-descr {
@@ -4846,6 +4867,7 @@ ol ol > li:last-child {
   color: #ffffff;
   font-size: 18px;
   font-family: "Gotham Pro Medium", sans-serif;
+  border: 2px solid #ffffff;
 }
 
 .cabinet-employer-main__day, .cabinet-employer-main__month {
@@ -5074,7 +5096,7 @@ ol ol > li:last-child {
 
 .ads-right-item__image-wrapper {
   height: 250px;
-  width: 690px;
+  width: 700px;
   flex-shrink: 0;
   flex-basis: 0;
   position: relative;
@@ -5131,7 +5153,8 @@ ol ol > li:last-child {
 }
 
 .stub {
-  width: 320px;
+  max-width: 310px;
+  width: 100%;
   border: 3px solid #ffffff;
   display: flex;
   flex-direction: column;
@@ -6406,6 +6429,59 @@ footer {
     right: 15px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .laptop-hidden {
+    display: none;
+  }
+
+  .laptop-mb20 {
+    margin-bottom: 20px;
+  }
+
+  .laptop-pl0 {
+    padding-left: 0;
+  }
+
+  .laptop-mr0 {
+    margin-right: 0;
+  }
+
+  .ads-left-item_w440 {
+    max-width: none;
+  }
+
+  .laptop-flex-column {
+    flex-direction: column;
+  }
+
+  .ads-right-item__image-wrapper {
+    height: 100%;
+  }
+
+  .ads-right-item__image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .ads-menu-item {
+    text-align: center;
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .ads-menu-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .ads-banner-footer {
+    padding: 10px 0;
+  }
+
+  .section_ads {
+    min-height: 300px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .statistic-banner-content__bottom {
     padding: 0;
@@ -6458,6 +6534,11 @@ footer {
   .main-content__content {
     width: 100%;
     max-width: none;
+  }
+
+  .main-content__content_about {
+    max-width: 800px;
+    padding: 0;
   }
 
   .main-vacancies-top__item::after {
@@ -6754,32 +6835,8 @@ footer {
 }
 @media screen and (max-width: 767px) {
   .ads-right-item__image-wrapper {
-    height: 100%;
+    max-width: 700px;
     width: 100%;
-  }
-
-  .ads-right-item__image {
-    height: 100%;
-    width: 100%;
-    position: relative;
-  }
-
-  .ads-menu-item {
-    text-align: center;
-    flex-direction: column;
-    margin-right: 0;
-    margin-bottom: 15px;
-  }
-  .ads-menu-item:last-child {
-    margin-bottom: 0;
-  }
-
-  .ads-banner-footer {
-    padding: 10px 0;
-  }
-
-  .section_ads {
-    min-height: 300px;
   }
 
   .mob-flex-column {

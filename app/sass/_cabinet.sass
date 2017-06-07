@@ -35,7 +35,7 @@
 		margin-right: 0
 
 .tab-tab__item_small
-	min-width: 65px
+	max-width: 65px
 
 .tab-bar__item_blue
 	border-color: #5b6a91
@@ -44,6 +44,9 @@
 	&.active
 		background-color: #5b6a91
 		color: $white
+
+.tab-bar_employer
+	max-width: 55%
 
 .cabinet-employer-main
 	display: flex
@@ -163,6 +166,8 @@
 	background-color: #FFFFFF
 	border: 1px solid #848484
 	border-radius: 15px
+	opacity: 0
+	visibility: hidden
 	&::after
 		position: absolute
 		content: ''
@@ -183,6 +188,9 @@
 		border-style: solid
 		border-width: 7px 15px 7px 0
 		border-color: transparent #848484 transparent transparent
+	&.active
+		opacity: 1
+		visibility: visible
 
 .hint-small
 	opacity: 0
@@ -394,9 +402,7 @@
 .cabinet-employer-payment-type
 	width: 65px
 	height: 75px
-	display: flex
-	align-items: center
-	justify-content: center
+
 	background-color: #cdcdcd
 	flex-shrink: 0
 	cursor: pointer
@@ -404,6 +410,14 @@
 	border-top-left-radius: 10px
 	&.active
 		background-color: #ebebeb
+
+	.cabinet-employer-payment-type__wrapper
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 100%
+		width: 100%
+
 
 .cabinet-employer-payment-types-descr
 	flex-grow: 1
@@ -494,6 +508,7 @@
 	color: $white
 	font-size: 18px
 	font-family: "Gotham Pro Medium", sans-serif
+	border: 2px solid $white
 
 .cabinet-employer-main__day, .cabinet-employer-main__month
 	min-width: 135px

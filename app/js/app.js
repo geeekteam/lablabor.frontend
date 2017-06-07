@@ -481,16 +481,44 @@ app.appLoad('full', function (e) {
             myButtonClass.click(function () {
                 for (var i = 0; i < currentBlockClass.length; i++) {
                     if (currentBlockClass[i].getAttribute('block') === myButtonClass[myButtonClass.index($(this))].getAttribute('block-add')) {
-                        var newBlock = $(document).find('.js-current-block:eq(' + i + ')').clone().appendTo($(this).parent().prev('.js-current-block-wrapper'));
-                        newBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown, .jq-checkbox__div').remove();
-                        newBlock.find('.jq-selectbox > .select').unwrap();
-                        newBlock.find('.jq-checkbox > .my-checkbox').unwrap();
-                        newBlock.find('.select').styler();
-                        newBlock.find('.my-checkbox').styler();
+                        if (currentBlockClass[i].classList.contains('hidden')) {
+                            currentBlockClass.removeClass('hidden')
+                        } else {
+                            var newBlock = $(this).parent().prev('.js-current-block-wrapper').children('.js-current-block:eq(0)').clone().appendTo($(this).parent().prev('.js-current-block-wrapper'));
+                            newBlock.addClass('js-clone');
+                            newBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown, .jq-checkbox__div').remove();
+                            newBlock.find('.jq-selectbox > .select').unwrap();
+                            newBlock.find('.jq-checkbox > .my-checkbox').unwrap();
+                            newBlock.find('.select').styler();
+                            newBlock.find('.my-checkbox').styler();
+                        }
                     }
                 }
+
+                var clonBox = $(document).find('.js-clone'),
+                    closeButton = clonBox.children('.js-close-box');
+
+                closeButton.click(function () {
+                    $(this).closest('.js-clone').remove();
+                });
             });
         }
         addBlock();
+
+        function closeBox() {
+            var box = $('.js-current-block'),
+                closeButton = box.children('.js-close-box');
+
+            closeButton.click(function () {
+
+                if ($(this).closest('.js-current-block')[0].classList.contains('js-clone')){
+
+                } else
+                    $(this).closest('.js-current-block').addClass('hidden');
+
+            })
+        }
+        closeBox();
+
     }
 );

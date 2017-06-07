@@ -3,6 +3,7 @@
 {% block pageTitle %}Личный кабинет работодателя | Практика{% endblock %}
 
 {% set auth = 'true' %}
+{% set mobile = 'false' %}
 
 {% block content %}
 
@@ -26,7 +27,7 @@
             </div>
         </div>
         <div class="container container_1140">
-            <ul class="tab-bar">
+            <ul class="tab-bar tab-bar_employer">
                 <li class="tab-bar__item">Общие сведения</li>
                 <li class="tab-bar__item">Вакансии</li>
                 <li class="tab-bar__item">Оплата</li>
@@ -69,7 +70,7 @@
             <form class="cabinet-form" action="">
                 <div class="js-current-block-wrapper mb25">
                     <div class="cabinet-employer-vacancy js-current-block" block="practice">
-                        <div class="close-button-gray"></div>
+                        <div class="close-button-gray js-close-box"></div>
                             <div class="cabinet-employer-vacancy__grid">
                                 <div class="cabinet-employer-vacancy-grid">
                                     <div class="cabinet-employer-vacancy-grid__left">
@@ -162,7 +163,7 @@
                                         <div class="cabinet-employer-hint js-hint">
                                             <p class="text-white fz12 text-italic">Чтобы активировать или деактивировать вакансию, кликните по ползунку.</p>
                                         </div>
-                                        <div class="cabinet-employer-activate-hint">
+                                        <div class="cabinet-employer-activate-hint active">
                                             <i class="fri fri_exclamation-green mr10"></i>
                                             <p class="fz12 text-italic">Превышено количество вакансий, доступных для активации. Чтобы ее активировать, Вам нужно деактивировать другую вакансию или выбрать другой абонентский пакет. </p>
                                         </div>

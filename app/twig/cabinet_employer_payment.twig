@@ -3,6 +3,7 @@
 {% block pageTitle %}Личный кабинет работодателя | Оплата{% endblock %}
 
 {% set auth = 'true' %}
+{% set mobile = 'false' %}
 
 {% block content %}
 
@@ -26,7 +27,7 @@
             </div>
         </div>
         <div class="container container_1140">
-            <ul class="tab-bar">
+            <ul class="tab-bar tab-bar_employer">
                 <li class="tab-bar__item">Общие сведения</li>
                 <li class="tab-bar__item">Вакансии</li>
                 <li class="tab-bar__item active">Оплата</li>
@@ -42,10 +43,14 @@
 
                     <ul class="cabinet-employer-payment-types unmarkered-list" data-switcher="{target: 'payment-types'}">
                         <li class="cabinet-employer-payment-type mb10">
-                            <i class="fri fri_non-cash-gray"></i>
+                            <div class="cabinet-employer-payment-type__wrapper">
+                                <i class="fri fri_non-cash-gray"></i>
+                            </div>
                         </li>
                         <li class="cabinet-employer-payment-type">
-                            <i class="fri fri_credit-card-gray"></i>
+                            <div class="cabinet-employer-payment-type__wrapper">
+                                <i class="fri fri_credit-card-gray"></i>
+                            </div>
                         </li>
                     </ul>
 

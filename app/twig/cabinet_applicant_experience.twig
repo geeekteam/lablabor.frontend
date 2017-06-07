@@ -3,6 +3,7 @@
 {% block pageTitle %}Личный кабинет соискателя | Опыт работы{% endblock %}
 
 {% set auth = 'true' %}
+{% set mobile = 'false' %}
 
 {% block content %}
 
@@ -45,7 +46,7 @@
             <form class="cabinet-applicant-experience">
                 <div class="js-current-block-wrapper">
                     <div class="cabinet-box mb15 js-current-block" block="experience">
-                        <div class="close-button-gray"></div>
+                        <div class="close-button-gray js-close-box"></div>
                         <div class="grid mb15">
                             <span class="cabinet-input-title flex-align-center mr10">Название компании</span>
                             <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"

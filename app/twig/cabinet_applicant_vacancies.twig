@@ -3,6 +3,7 @@
 {% block pageTitle %}Личный кабинет соискателя | Вакансии{% endblock %}
 
 {% set auth = 'true' %}
+{% set mobile = 'false' %}
 
 {% block content %}
 
@@ -43,7 +44,7 @@
             <form class="cabinet-applicant-portfolio">
                 <div class="js-current-block-wrapper">
                     <div class="cabinet-box mb15 js-current-block" block="cabinet_applicant_vacancies">
-                        <div class="close-button-gray"></div>
+                        <div class="close-button-gray js-close-box"></div>
                         <div class="grid mb15">
                             <div class="cabinet-employer-vacancy-grid__left">
                                 <span class="text-italic fz14 text-signal-black">Вакансия</span>
@@ -77,7 +78,7 @@
                             <div class="checkbox-switcher-wrapper">
                                 <label>
                                     <div class="checkbox-switcher checkbox-switcher_span-switcher">
-                                        <input class="mr10" type="checkbox" checked>
+                                        <input class="mr10 my-checkbox" type="checkbox" checked>
                                         <span class="checkbox-switcher_span fz12 text-light text-uppercase text-green">Вакансия активна</span>
                                     </div>
                                 </label>

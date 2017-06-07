@@ -3,6 +3,7 @@
 {% block pageTitle %}Личный кабинет соискателя | Доп/спец навыки{% endblock %}
 
 {% set auth = 'true' %}
+{% set mobile = 'false' %}
 
 {% block content %}
 
@@ -44,7 +45,7 @@
                 <p class="pl70 mb25"><span class="cabinet-education-box-title">Языки</span></p>
                 <div class="js-current-block-wrapper">
                     <div class="cabinet-education-box mb15 js-current-block" block="language">
-                        <div class="close-button-gray"></div>
+                        <div class="close-button-gray js-close-box"></div>
                         <div class="grid mb15">
                             <span class="cabinet-input-title flex-align-center mr10">Язык</span>
                             <select class="select">
@@ -80,13 +81,13 @@
                         <option>Пункт 2</option>
                         <option>Пункт 3</option>
                     </select>
-                    <div class="close-button-gray close-button-gray_relative flex-align-center"></div>
+                    <div class="close-button-gray js-close-box close-button-gray js-close-box_relative flex-align-center"></div>
                 </div>
 
                 <p class="pl70 mb25"><span class="text-medium fz14 text-uppercase text-dark-dull-gray">Знание спец программ</span></p>
                 <div class="js-current-block-wrapper">
                     <div class="cabinet-education-box mb15 js-current-block" block="computer-skills">
-                        <div class="close-button-gray"></div>
+                        <div class="close-button-gray js-close-box"></div>
                         <div class="grid mb15">
                             <span class="cabinet-input-title flex-align-center mr10">Программа</span>
                             <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
@@ -111,22 +112,25 @@
                 </div>
 
                 <p class="pl70 mb25"><span class="text-medium fz14 text-uppercase text-dark-dull-gray">Водительские права</span></p>
-                <div class="grid mb15">
-                    <select class="select mr15">
-                        <option disabled selected>Выберите из списка</option>
-                        <option>Пункт 1</option>
-                        <option>Пункт 2</option>
-                        <option>Пункт 3</option>
-                    </select>
+                <div class="js-current-block-wrapper">
+                    <div class="grid mb15 js-current-block" block="driver-license">
+                        <select class="select mr15">
+                            <option disabled selected>Выберите из списка</option>
+                            <option>Пункт 1</option>
+                            <option>Пункт 2</option>
+                            <option>Пункт 3</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="add-vacancy mb30">
-                    <span class="add-vacancy__icon mr20"></span>
+                <div class="grid-inline flex-space-between">
+                    <div class="add-vacancy mb30 js-add-new-block" block-add="driver-license">
+                        <span class="add-vacancy__icon mr20"></span>
+                    </div>
                 </div>
-
                 <p class="pl70 mb25"><span class="text-medium fz14 text-uppercase text-dark-dull-gray">Стажировка/курсы</span></p>
                 <div class="js-current-block-wrapper">
                     <div class="cabinet-education-box mb15 js-current-block" block="internship">
-                        <div class="close-button-gray"></div>
+                        <div class="close-button-gray js-close-box"></div>
                         <div class="grid mb15">
                             <span class="cabinet-input-title flex-align-center mr10">Страна</span>
                             <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
