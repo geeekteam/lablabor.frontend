@@ -503,6 +503,7 @@ app.appLoad('full', function (e) {
                 });
             });
         }
+
         addBlock();
 
         function closeBox() {
@@ -510,14 +511,13 @@ app.appLoad('full', function (e) {
                 closeButton = box.children('.js-close-box');
 
             closeButton.click(function () {
-
-                if ($(this).closest('.js-current-block')[0].classList.contains('js-clone')){
-
-                } else
+                console.log($('.js-current-block'))
+                if (!$(this).closest('.js-current-block').hasClass('js-clone'))
                     $(this).closest('.js-current-block').addClass('hidden');
 
             })
         }
+
         closeBox();
 
     }
