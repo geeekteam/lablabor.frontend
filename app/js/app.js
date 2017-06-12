@@ -302,7 +302,7 @@ var app = new YOURAPPNAME(document);
 app.appLoad('loading', function () {
     (function ($) {
         $(function () {
-            $('input, select').styler();
+            $('input, select').not('.js-destroy-form-styler').styler();
         });
     })(jQuery);
 
@@ -312,7 +312,7 @@ app.appLoad('loading', function () {
 app.appLoad('dom', function () {
     app.initSwitcher(); // data-switcher="{target: 'anything'}" , data-switcher-target="anything"
 
-    $('.js-destroy-form-styler').styler('destroy');
+    // $('.js-destroy-form-styler').styler('destroy');
 
 });
 
