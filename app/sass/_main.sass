@@ -47,7 +47,7 @@ button
 	display: flex
 	flex-direction: column
 	height: 100%
-	min-width: 1540px
+	min-width: 1020px
 
 .section__subheader
 	background: linear-gradient(to bottom, #cecece 0%, #f5f5f5 20%, #f8f8f8 90%, #e5e5e5 100%)
@@ -829,10 +829,18 @@ ol
 	cursor: pointer
 
 .checkbox-switcher
-	span
-		color: $pigeon-blue
-	.checked + span
-		color: $forest-green
+	//.checkbox-switcher_span-active
+	//	display: none
+	//.checkbox-switcher_span-inactive
+	//	display: inline-block
+
+	.checked
+		&.checkbox-switcher_span-active
+			display: inline-block
+	.checked
+		&.checkbox-switcher_span-inactive
+			display: none
+
 .add-vacancy
 	position: relative
 	display: flex
@@ -886,9 +894,13 @@ ol
 
 .green-checkbox
 	.jq-checkbox
-		display: flex
-		align-items: center
-		justify-content: center
 		width: 13px
 		height: 13px
 		border: 1px solid $dark-dull-gray
+		display: flex !important
+		align-items: center
+		justify-content: center
+
+	.checked
+		.jq-checkbox__div
+			padding: 1px 0 0 1px

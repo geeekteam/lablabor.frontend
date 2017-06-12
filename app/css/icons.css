@@ -1,0 +1,915 @@
+.fri {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.fri_search-button-loupe {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1272px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 22px;
+  width: 21px;
+}
+
+.fri_search-button-loupe-17x18 {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1299px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 18px;
+  width: 17px;
+}
+
+.inputs-header__select .jq-selectbox__trigger .jq-selectbox__trigger-arrow:after {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -102px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 7px;
+  width: 15px;
+}
+.inputs-header__select .jq-selectbox__trigger .jq-selectbox__trigger-arrow:before {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -90px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 7px;
+  width: 15px;
+}
+
+.fri_facebook {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -881px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+.fri_google {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1004px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+.fri_instagram {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1074px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+.fri_twitter {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2756px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+.fri_vkontakte {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2928px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+.fri_vkontakte-green {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2893px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+.fri_twitter-green {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2721px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+.fri_instagram-green {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1039px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+.fri_google-green {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -969px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+.fri_facebook-green {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -846px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+.fri_logo-footer {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1130px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 46px;
+  width: 43px;
+}
+
+.fri_logo-new {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1181px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 48px;
+  width: 48px;
+}
+
+.fri_logo-text {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1234px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 33px;
+  width: 170px;
+}
+
+.jq-checkbox {
+  font-size: 0;
+  line-height: 0;
+}
+
+.checkbox .jq-checkbox__div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  position: relative;
+}
+.checkbox .jq-checkbox__div:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  display: block;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.checkbox input:checked + .jq-checkbox__div:after {
+  opacity: 1;
+}
+
+.fri_resume {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2229px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100px;
+  width: 100px;
+}
+
+.fri_target {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2533px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100px;
+  width: 100px;
+}
+
+.fri_cooperation {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -353px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100px;
+  width: 100px;
+}
+
+.fri_dream-work {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -501px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100px;
+  width: 93px;
+}
+
+.fri_avatar {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2791px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 48px;
+  width: 48px;
+}
+
+.auth-slider .owl-prev, .auth-slider .owl-next {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -210px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 78px;
+  width: 44px;
+}
+.auth-slider .owl-prev {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -210px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 78px;
+  width: 44px;
+}
+.auth-slider .owl-next {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -210px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 78px;
+  width: 44px;
+}
+
+.announce_backing::before {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -149px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 56px;
+  width: 79px;
+}
+.announce_backing::after {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -149px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 56px;
+  width: 79px;
+}
+
+.auth-slider__second-slide-announce-backing::after {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -149px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 56px;
+  width: 79px;
+}
+.auth-slider__second-slide-announce-backing::before {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -149px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 56px;
+  width: 79px;
+}
+
+.announce__content::before {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -798px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 19px;
+  width: 19px;
+}
+
+.fri_exclamation-green {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -774px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 19px;
+  width: 19px;
+}
+
+.fri_announce-content-close {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -70px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+  width: 15px;
+}
+
+.fri_non-cash-credit-card {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1513px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 54px;
+  width: 36px;
+}
+
+.fri_non-cash-man {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1676px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 55px;
+  width: 57px;
+}
+
+.fri_non-cash-terminal {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1793px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 52px;
+  width: 64px;
+}
+
+.fri_non-cash-credit-card-gray {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1454px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 54px;
+  width: 36px;
+}
+
+.fri_non-cash-man-gray {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1616px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 55px;
+  width: 57px;
+}
+
+.fri_non-cash-terminal-gray {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1736px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 52px;
+  width: 64px;
+}
+
+.fri_visa {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2862px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 26px;
+  width: 79px;
+}
+
+.fri_american-express {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -25px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 40px;
+  width: 112px;
+}
+
+.fri_master-card {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1346px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 48px;
+  width: 81px;
+}
+
+.fri_filter-remove-input {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -951px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 13px;
+  width: 12px;
+}
+
+.fri_filter-add-input {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -916px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 12px;
+  width: 12px;
+}
+
+.fri_print {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2112px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  width: 22px;
+}
+
+.fri_calendar {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -293px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 24px;
+  width: 22px;
+}
+
+.fri_place {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2025px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 26px;
+  width: 18px;
+}
+
+.fri_place-gray {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1978px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 42px;
+  width: 42px;
+}
+
+.fri_sex {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2334px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 26px;
+  width: 24px;
+}
+
+.fri_marital-status {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1322px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 19px;
+  width: 25px;
+}
+
+.fri_email {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -751px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 18px;
+  width: 26px;
+}
+
+.fri_email-gray {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -649px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 41px;
+  width: 41px;
+}
+
+.fri_phone {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1952px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 21px;
+  width: 18px;
+}
+
+.fri_phone-gray {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1850px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 41px;
+  width: 41px;
+}
+
+.fri_education {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -627px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 17px;
+  width: 23px;
+}
+
+.fri_experience {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -822px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 19px;
+  width: 23px;
+}
+
+.fri_skills {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2365px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 17px;
+  width: 19px;
+}
+
+.fri_additional {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+}
+
+.fri_probation {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2137px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 23px;
+  width: 23px;
+}
+
+.fri_checked {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -336px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 12px;
+  width: 12px;
+}
+
+.fri_thrash {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2689px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  width: 11px;
+}
+
+.fri_views {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2844px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 13px;
+  width: 21px;
+}
+
+.fri_message {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1399px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 50px;
+  width: 50px;
+}
+
+.fri_website-on-pdf {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -3019px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 51px;
+  width: 51px;
+}
+
+.fri_email-on-pdf {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -695px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 51px;
+  width: 50px;
+}
+
+.fri_phone-on-pdf {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1896px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 51px;
+  width: 51px;
+}
+
+.fri_back-to {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -114px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+
+.fri_statistic {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2387px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 101px;
+  width: 143px;
+}
+
+.fri_invitations {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1109px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  width: 22px;
+}
+
+.fri_required {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2214px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 10px;
+  width: 9px;
+}
+
+.fri_edit {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -606px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  width: 17px;
+}
+
+.fri_remove {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2193px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  width: 11px;
+}
+
+.checkbox-switcher .jq-checkbox {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2493px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+  width: 30px;
+}
+.checkbox-switcher .checked {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2513px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+  width: 30px;
+}
+
+.fri_practice {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2084px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 23px;
+  width: 40px;
+}
+
+.tab-bar__item_blue:hover .fri_practice {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2056px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 23px;
+  width: 40px;
+}
+.tab-bar__item_blue.active .fri_practice {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2056px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 23px;
+  width: 40px;
+}
+
+.fri_credit-card-gray {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -458px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 38px;
+  width: 43px;
+}
+
+.fri_non-cash-gray {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -1572px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 39px;
+  width: 45px;
+}
+
+.green-checkbox .checked .jq-checkbox__div {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -322px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 9px;
+  width: 9px;
+}
+
+.fri_warning {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2963px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 51px;
+  width: 55px;
+}
+
+/*# sourceMappingURL=icons.css.map */

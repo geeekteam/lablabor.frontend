@@ -475,50 +475,64 @@ app.appLoad('full', function (e) {
         );
 
         function addBlock() {
-            var myButtonClass = $(document).find('.js-add-new-block'),
-                currentBlockClass = $(document).find('.js-current-block');
+            var myButtonClass = $(document).find('.js-add-new-block');
 
             myButtonClass.click(function () {
-                for (var i = 0; i < currentBlockClass.length; i++) {
-                    if (currentBlockClass[i].getAttribute('block') === myButtonClass[myButtonClass.index($(this))].getAttribute('block-add')) {
-                        if (currentBlockClass[i].classList.contains('hidden')) {
-                            currentBlockClass.removeClass('hidden')
+                $(this).each(function () {
+                    var myButton = $(this),
+                        myBlock = $(this).parent().prev('.js-current-block-wrapper').children('.js-current-block');
+                    if (myButton.attr('data-block-add') === myBlock.attr('data-block')) {
+                        if (myBlock.hasClass('hidden')) {
+                            myBlock.removeClass('hidden')
                         } else {
-                            var newBlock = $(this).parent().prev('.js-current-block-wrapper').children('.js-current-block:eq(0)').clone().appendTo($(this).parent().prev('.js-current-block-wrapper'));
-                            newBlock.addClass('js-clone');
-                            newBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown, .jq-checkbox__div').remove();
-                            newBlock.find('.jq-selectbox > .select').unwrap();
-                            newBlock.find('.jq-checkbox > .my-checkbox').unwrap();
-                            newBlock.find('.select').styler();
-                            newBlock.find('.my-checkbox').styler();
+                            var cloneBlock = myBlock.first().clone().appendTo(myBlock.parent('.js-current-block-wrapper'));
+                            cloneBlock.addClass('js-clone');
+                            cloneBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown, .jq-checkbox__div').remove();
+                            cloneBlock.find('.jq-selectbox > .select').unwrap();
+                            cloneBlock.find('.jq-checkbox > .my-checkbox').unwrap();
+                            cloneBlock.find('.select').styler();
+                            cloneBlock.find('.my-checkbox').styler();
                         }
                     }
-                }
+                })
 
-                var clonBox = $(document).find('.js-clone'),
-                    closeButton = clonBox.children('.js-close-box');
-
-                closeButton.click(function () {
-                    $(this).closest('.js-clone').remove();
-                });
+                $('.js-close-box').click(function () {
+                    var myCloseButton = $(this),
+                        myBlock = myCloseButton.parent('.js-clone');
+                    myBlock.remove();
+                })
             });
         }
 
         addBlock();
 
-        function closeBox() {
-            var box = $('.js-current-block'),
-                closeButton = box.children('.js-close-box');
+        $('.js-close-box').click(function () {
+            var myCloseButton = $(this),
+                myBlock = myCloseButton.parent('.js-current-block');
+            myBlock.addClass('hidden');
+        })
 
-            closeButton.click(function () {
-                console.log($('.js-current-block'))
-                if (!$(this).closest('.js-current-block').hasClass('js-clone'))
-                    $(this).closest('.js-current-block').addClass('hidden');
+        $('.js-show-block').click(function () {
+            var myShowButton = $(this),
+                myBlock = myShowButton.parent().next('.js-current-block-wrapper').children('.js-current-block');
+            if (myBlock.hasClass('hidden'))
+                myBlock.removeClass('hidden');
+        })
 
+        function checkboxSwitcher() {
+            var $this = $('.js-checkbox-switcher');
+            if ($this.children().hasClass('checked'))
+                $this.find('span').text('Вакансия активна').css('color', '#1C9D22')
+            else
+                $this.find('span').text('Вакансия неактивна').css('color', '#5B6A91')
+
+            $this.click(function () {
+                if ($(this).children().hasClass('checked'))
+                    $(this).find('span').text('Вакансия неактивна').css('color', '#5B6A91')
+                else
+                    $(this).find('span').text('Вакансия активна').css('color', '#1C9D22')
             })
         }
-
-        closeBox();
-
+        checkboxSwitcher();
     }
 );
