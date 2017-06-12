@@ -31,7 +31,9 @@
                 <li class="tab-bar__item">Общие сведения</li>
                 <li class="tab-bar__item">Вакансии</li>
                 <li class="tab-bar__item">Оплата</li>
-                <li class="tab-bar__item tab-tab__item_small tab-bar__item_blue"><div class="tab-bar__item-wrapper"><i class="fri fri_practice"></i></div></li>
+                <li class="tab-bar__item tab-tab__item_small tab-bar__item_blue">
+                    <div class="tab-bar__item-wrapper"><i class="fri fri_practice"></i></div>
+                </li>
             </ul>
         </div>
     </div>
@@ -122,13 +124,17 @@
                             <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
                                         class="text-italic fz14 text-dark-dull-gray">Расчетный счет</p></div>
                             <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                   type="text" placeholder="Двенадцатизначный код">
+                                   type="text" placeholder="Введите данные">
                         </div>
                         <div class="cabinet-employer-main-grid mb25">
                             <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
                                         class="text-italic fz14 text-dark-dull-gray">Наименование банка</p></div>
-                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                   type="text" placeholder="Выберите из списка">
+                            <select class="select">
+                                <option disabled selected>Выберите из списка</option>
+                                <option>Пункт 1</option>
+                                <option>Пункт 2</option>
+                                <option>Пункт 3</option>
+                            </select>
                         </div>
                         <div class="cabinet-employer-main-grid mb25">
                             <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25"><p
@@ -166,9 +172,10 @@
                             </div>
                         </div>
                         <div class="cabinet-employer-main-grid mb25">
-                            <div class="cabinet-employer-main-grid__left"><span
-                                        class="text-italic fz14 text-dark-dull-gray mr5">Вид деятельности</span><i
-                                        class="fri fri_required"></i></div>
+                            <div class="cabinet-employer-main-grid__left">
+                                <span class="text-italic fz14 text-dark-dull-gray mr5">Вид деятельности</span>
+                                <i class="fri fri_required"></i>
+                            </div>
                             <div class="cabinet-employer-main-grid__right">
                                 <select class="select select_hover-green">
                                     <option disabled selected>Выберите из списка</option>
@@ -179,9 +186,9 @@
                             </div>
                         </div>
                         <div class="cabinet-employer-main-grid mb25">
-                            <div class="cabinet-employer-main-grid__left"><p
-                                        class="text-italic fz14 text-dark-dull-gray">
-                                    Веб-сайт</p></div>
+                            <div class="cabinet-employer-main-grid__left">
+                                <p class="text-italic fz14 text-dark-dull-gray">Веб-сайт</p>
+                            </div>
                             <div class="cabinet-employer-main-grid__right">
                                 <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
                                        type="text" placeholder="moyafirma.kz">
@@ -204,7 +211,7 @@
                                 </div>
                             </label>
                         </div>
-                        <div class="vacancy-list__salary">200.000-250.000 тг</div>
+                        <div class="vacancy-list__salary">200.000 тг</div>
                         <i class="fri fri_edit"></i>
                         <i class="fri fri_remove js-open-popup" data-open-popup="delete-vacancy"></i>
                         <div class="vacancy-list__statistic">Статистика вакансии</div>
@@ -219,7 +226,7 @@
                                 </div>
                             </label>
                         </div>
-                        <div class="vacancy-list__salary">210.000-260.000 тг</div>
+                        <div class="vacancy-list__salary">200.000 тг</div>
                         <i class="fri fri_edit"></i>
                         <i class="fri fri_remove js-open-popup" data-open-popup="delete-vacancy"></i>
                         <div class="vacancy-list__statistic">Статистика вакансии</div>
@@ -286,8 +293,12 @@
                                         <span class="text-italic fz14 text-signal-black">Образование</span>
                                     </div>
                                     <div class="cabinet-employer-vacancy-grid__right">
-                                        <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                               type="text" placeholder="Высшее/Средне-специальное/Среднее">
+                                        <select class="select select_hover-green">
+                                            <option disabled selected>Выберите из списка</option>
+                                            <option>Пункт 1</option>
+                                            <option>Пункт 2</option>
+                                            <option>Пункт 3</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid">
