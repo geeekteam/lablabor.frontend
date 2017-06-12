@@ -912,6 +912,27 @@
   width: 55px;
 }
 
+.custom-checkbox-switcher .custom-checkbox__div {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2493px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+  width: 30px;
+}
+.custom-checkbox-switcher input[type=checkbox]:checked + .custom-checkbox__div {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2513px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+  width: 30px;
+}
+
 @font-face {
   font-family: "PT Serif Italic";
   src: url("../fonts/subset-PTSerif-Italic.eot");
@@ -4432,8 +4453,12 @@ ol ol > li:last-child {
   flex-wrap: wrap;
 }
 
-.vacamcy-list__vacancy {
+.vacancy-list__vacancy {
   width: 100%;
+  display: block;
+}
+.vacancy-list__vacancy .hidden {
+  display: none;
 }
 
 .checkbox-switcher-wrapper {
@@ -4564,12 +4589,14 @@ ol ol > li:last-child {
 }
 
 .checkbox-switcher__label {
+  cursor: pointer;
   text-transform: uppercase;
   font-family: "Gotham Pro Medium", sans-serif;
   font-size: 14px;
   color: #272727;
   position: relative;
   padding-bottom: 20px;
+  width: 230px;
 }
 .checkbox-switcher__label::before {
   position: absolute;
@@ -5022,6 +5049,16 @@ ol ol > li:last-child {
   display: block;
   top: 5px;
   right: 8px;
+}
+
+.custom-checkbox-switcher .js-destroy-form-styler {
+  display: none;
+}
+.custom-checkbox-switcher .custom-checkbox__div {
+  cursor: pointer;
+}
+.custom-checkbox-switcher input[type=checkbox]:checked ~ .vacancy-list__vacancy-hidden {
+  display: block;
 }
 
 .price-list-rates {
@@ -6143,6 +6180,10 @@ footer {
 
 .fz10 {
   font-size: 10px;
+}
+
+.mt3 {
+  margin-top: 3px;
 }
 
 .mt7 {

@@ -129,7 +129,7 @@
                                 <p class="text-italic fz14 text-dark-dull-gray">Расчетный счет</p>
                             </div>
                             <div class="cabinet-employer-main-grid__right">
-                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Двенадцатизначный код">
+                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Введите данные">
                             </div>
                         </div>
                         <div class="cabinet-employer-main-grid mb25">
@@ -137,7 +137,12 @@
                                 <p class="text-italic fz14 text-dark-dull-gray">Наименование банка</p>
                             </div>
                             <div class="cabinet-employer-main-grid__right">
-                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Выберите из списка">
+                                <select class="select select_hover-green">
+                                    <option disabled selected>Выберите из списка</option>
+                                    <option>Пункт 1</option>
+                                    <option>Пункт 2</option>
+                                    <option>Пункт 3</option>
+                                </select>
                             </div>
                         </div>
                         <div class="cabinet-employer-main-grid mb25">
@@ -145,7 +150,7 @@
                                 <p class="text-italic fz14 text-dark-dull-gray">БИК банка</p>
                             </div>
                             <div class="cabinet-employer-main-grid__right">
-                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text">
+                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" placeholder="Введите данные" type="text">
                             </div>
                         </div>
                         <div class="cabinet-employer-main-grid mb25">
@@ -212,20 +217,158 @@
             <li class="cabinet-tab">
                 <div class="vacancy-list">
                     <div class="vacancy-list__item">
-                        <div class="checkbox-switcher-wrapper">
-                            <label>
-                                <div class="checkbox-switcher">
-                                    <input class="mr25 my-checkbox-switcher " type="checkbox">
-                                    <span class="checkbox-switcher__label">Название вакансии</span>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="vacancy-list__salary">200.000-250.000 тг</div>
+                        <label class="custom-checkbox-switcher jq-checkbox-switcher mr25">
+                            <input class="js-destroy-form-styler" type="checkbox">
+                            <i class="custom-checkbox__div"></i>
+                        </label>
+                        <span class="checkbox-switcher__label jq-vacancy-trigger mr10">Название вакансии</span>
+                        <div class="vacancy-list__salary">200.000 тг</div>
                         <i class="fri fri_edit"></i>
                         <i class="fri fri_remove js-open-popup" data-open-popup="delete-vacancy"></i>
                         <div class="vacancy-list__statistic">Статистика вакансии</div>
                         <div class="vacancy-list__statistic-count">5</div>
-                        <form class="vacamcy-list__vacancy" action="#">
+                        <form class="vacancy-list__vacancy hidden jq-vacancy" action="#">
+                            <div class="js-current-block-wrapper mb25">
+                                <div class="cabinet-employer-vacancy js-current-block" data-block="vacancy">
+                                    <div class="close-button-gray js-close-vacancy"></div>
+                                    <div class="cabinet-employer-vacancy__grid">
+                                        <div class="cabinet-employer-vacancy-grid">
+                                            <div class="cabinet-employer-vacancy-grid__left">
+                                                <span class="text-italic fz14 text-signal-black">Вакансия</span>
+                                            </div>
+                                            <div class="cabinet-employer-vacancy-grid__right">
+                                                <select class="select select_hover-green">
+                                                    <option disabled selected>Выберите из списка</option>
+                                                    <option>Пункт 1</option>
+                                                    <option>Пункт 2</option>
+                                                    <option>Пункт 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="cabinet-employer-vacancy-grid">
+                                            <div class="cabinet-employer-vacancy-grid__left">
+                                                <span class="text-italic fz14 text-signal-black">Уровень зарплаты</span>
+                                            </div>
+                                            <div class="cabinet-employer-vacancy-grid__right">
+                                                <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray cabinet-employer-vacancy__salary-input"
+                                                       type="text" placeholder="Введите число">
+                                                <span class="text-italic fz14 text-signal-black mr5">валюта</span>
+                                                <select class="select select_hover-green select_currency">
+                                                    <option disabled selected>KZT</option>
+                                                    <option>Пункт 1</option>
+                                                    <option>Пункт 2</option>
+                                                    <option>Пункт 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="cabinet-employer-vacancy-grid">
+                                            <div class="cabinet-employer-vacancy-grid__left">
+                                                <span class="text-italic fz14 text-signal-black">Опыт работы</span>
+                                            </div>
+                                            <div class="cabinet-employer-vacancy-grid__right">
+                                                <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
+                                                       type="text" placeholder="Укажите опыт работы">
+                                            </div>
+                                        </div>
+                                        <div class="cabinet-employer-vacancy-grid">
+                                            <div class="cabinet-employer-vacancy-grid__left">
+                                                <span class="text-italic fz14 text-signal-black">Город</span>
+                                            </div>
+                                            <div class="cabinet-employer-vacancy-grid__right">
+                                                <select class="select select_hover-green">
+                                                    <option disabled selected>Выберите из списка</option>
+                                                    <option>Пункт 1</option>
+                                                    <option>Пункт 2</option>
+                                                    <option>Пункт 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="cabinet-employer-vacancy-grid">
+                                            <div class="cabinet-employer-vacancy-grid__left">
+                                                <span class="text-italic fz14 text-signal-black">Образование</span>
+                                            </div>
+                                            <div class="cabinet-employer-vacancy-grid__right">
+                                                <select class="select select_hover-green">
+                                                    <option disabled selected>Выберите из списка</option>
+                                                    <option>Пункт 1</option>
+                                                    <option>Пункт 2</option>
+                                                    <option>Пункт 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="cabinet-employer-vacancy-grid">
+                                            <div class="cabinet-employer-vacancy-grid__left">
+                                                <span class="text-italic fz14 text-signal-black">Тип занятости</span>
+                                            </div>
+                                            <div class="cabinet-employer-vacancy-grid__right">
+                                                <select class="select select_hover-green">
+                                                    <option disabled selected>Выберите из списка</option>
+                                                    <option>Пункт 1</option>
+                                                    <option>Пункт 2</option>
+                                                    <option>Пункт 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="cabinet-employer-vacancy-grid">
+                                            <div class="cabinet-employer-vacancy-grid__left flex-align-start">
+                                                <span class="text-italic fz14 text-signal-black">Специальные знания и навыки</span>
+                                            </div>
+                                            <div class="cabinet-employer-vacancy-grid__right">
+                                    <textarea class="textarea"
+                                              placeholder="Опишите требования к кандидату на должность"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="cabinet-employer-vacancy-grid">
+                                            <div class="cabinet-employer-vacancy-grid__left flex-align-start">
+                                                <span class="text-italic fz14 text-signal-black">Условия труда/<br>Доп. сведения</span>
+                                            </div>
+                                            <div class="cabinet-employer-vacancy-grid__right">
+                                    <textarea class="textarea"
+                                              placeholder="Опишите условия, на которых будет работать сотрудник"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="cabinet-employer-vacancy-grid flex-space-between">
+                                            <div class="checkbox-switcher-wrapper">
+                                                <label class="custom-checkbox-switcher jq-checkbox-switcher mr25">
+                                                    <input class="js-destroy-form-styler" type="checkbox">
+                                                    <i class="custom-checkbox__div"></i>
+                                                    <span class="fz12 text-light text-uppercase js-open-hint">Вакансия активна</span>
+                                                </label>
+                                                <div class="cabinet-employer-hint js-hint">
+                                                    <p class="text-white fz12 text-italic">Чтобы активировать или деактивировать
+                                                        вакансию, кликните по ползунку.</p>
+                                                </div>
+                                                <div class="cabinet-employer-activate-hint active">
+                                                    <i class="fri fri_exclamation-green mr10"></i>
+                                                    <p class="fz12 text-italic">Превышено количество вакансий, доступных для
+                                                        активации. Чтобы ее активировать, Вам нужно деактивировать другую
+                                                        вакансию или выбрать другой абонентский пакет. </p>
+                                                </div>
+                                            </div>
+                                            <div class="grid cabinet-employer-vacancy-grid__statistic">
+                                                <span class="cabinet-employer-vacancy-grid__statistic-text mr10">Статистика вакансии</span>
+                                                <span class="cabinet-employer-vacancy-grid__statistic-count">5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center mt17 mb17">
+                                <span class="button button_green button_save-changes">Сохранить изменения</span>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="vacancy-list__item">
+                        <label class="custom-checkbox-switcher jq-checkbox-switcher mr25">
+                            <input class="js-destroy-form-styler" type="checkbox">
+                            <i class="custom-checkbox__div"></i>
+                        </label>
+                        <span class="checkbox-switcher__label jq-vacancy-trigger mr10">Другая вакансия</span>
+                        <div class="vacancy-list__salary">210.000 тг</div>
+                        <i class="fri fri_edit"></i>
+                        <i class="fri fri_remove js-open-popup" data-open-popup="delete-vacancy"></i>
+                        <div class="vacancy-list__statistic">Статистика вакансии</div>
+                        <form class="vacancy-list__vacancy hidden jq-vacancy" action="#">
                             <div class="js-current-block-wrapper mb25">
                                 <div class="cabinet-employer-vacancy js-current-block" data-block="vacancy">
                                     <div class="close-button-gray js-close-box"></div>
@@ -286,8 +429,12 @@
                                                 <span class="text-italic fz14 text-signal-black">Образование</span>
                                             </div>
                                             <div class="cabinet-employer-vacancy-grid__right">
-                                                <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                                       type="text" placeholder="Высшее/Средне-специальное/Среднее">
+                                                <select class="select select_hover-green">
+                                                    <option disabled selected>Выберите из списка</option>
+                                                    <option>Пункт 1</option>
+                                                    <option>Пункт 2</option>
+                                                    <option>Пункт 3</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="cabinet-employer-vacancy-grid">
@@ -348,30 +495,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid flex-centered">
-                                <div class="add-vacancy js-add-new-block" data-block-add="vacancy">
-                                    <span class="add-vacancy__icon mr20"></span>
-                                    <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Добавить вакансию</span>
-                                </div>
-                            </div>
                             <p class="text-center mt17 mb17">
                                 <span class="button button_green button_save-changes">Сохранить изменения</span>
                             </p>
                         </form>
                     </div>
-                    <div class="vacancy-list__item">
-                        <div class="checkbox-switcher-wrapper">
-                            <label>
-                                <div class="checkbox-switcher">
-                                    <input class="mr25 my-checkbox" type="checkbox">
-                                    <span class="checkbox-switcher__label">Другая вакансия</span>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="vacancy-list__salary">210.000-260.000 тг</div>
-                        <i class="fri fri_edit"></i>
-                        <i class="fri fri_remove js-open-popup" data-open-popup="delete-vacancy"></i>
-                        <div class="vacancy-list__statistic">Статистика вакансии</div>
+                </div>
+
+                <div class="grid flex-centered mb30">
+                    <div class="add-vacancy js-add-new-block" data-block-add="vacancy">
+                        <span class="add-vacancy__icon mr20"></span>
+                        <span class="add-vacancy__text text-medium fz14 text-green text-uppercase">Добавить вакансию</span>
                     </div>
                 </div>
 

@@ -130,8 +130,11 @@
 	margin-bottom: 20px
 	flex-wrap: wrap
 
-.vacamcy-list__vacancy
+.vacancy-list__vacancy
 	width: 100%
+	display: block
+	.hidden
+		display: none
 
 .checkbox-switcher-wrapper
 	width: 290px
@@ -247,12 +250,14 @@
 	flex-shrink: 0
 
 .checkbox-switcher__label
+	cursor: pointer
 	text-transform: uppercase
 	font-family: "Gotham Pro Medium", sans-serif
 	font-size: 14px
 	color: #272727
 	position: relative
 	padding-bottom: 20px
+	width: 230px
 	&::before
 		position: absolute
 		content: ''
@@ -637,4 +642,11 @@
 			top: 5px
 			right: 8px
 
-.cabinet-form
+.custom-checkbox-switcher
+	.js-destroy-form-styler
+		display: none
+	.custom-checkbox__div
+		cursor: pointer
+	input[type=checkbox]:checked
+		& ~ .vacancy-list__vacancy-hidden
+			display: block

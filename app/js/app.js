@@ -520,19 +520,28 @@ app.appLoad('full', function (e) {
         })
 
         function checkboxSwitcher() {
-            var $this = $('.js-checkbox-switcher');
-            if ($this.children().hasClass('checked'))
+            var $this = $('.custom-checkbox-switcher');
+            if ($this.children('input').is(':checked'))
                 $this.find('span').text('Вакансия активна').css('color', '#1C9D22')
             else
-                $this.find('span').text('Вакансия неактивна').css('color', '#5B6A91')
+                $this.find('span').text('Вакансия не активна').css('color', '#5B6A91')
 
             $this.click(function () {
-                if ($(this).children().hasClass('checked'))
-                    $(this).find('span').text('Вакансия неактивна').css('color', '#5B6A91')
-                else
+                if ($this.children('input').is(':checked'))
                     $(this).find('span').text('Вакансия активна').css('color', '#1C9D22')
+                else
+                    $(this).find('span').text('Вакансия не активна').css('color', '#5B6A91')
             })
         }
         checkboxSwitcher();
+
+        $('.jq-vacancy-trigger').click(function () {
+            var myVacancy = $(this).siblings('.jq-vacancy');
+            console.log(myVacancy);
+            if (myVacancy.hasClass('hidden'))
+                myVacancy.removeClass('hidden')
+            else
+                myVacancy.addClass('hidden')
+        })
     }
 );

@@ -288,3 +288,10 @@
 
 .fri_warning
 	+sprite(warning)
+
+.custom-checkbox-switcher
+	.custom-checkbox__div
+		+sprite(switcher-off)
+	input[type=checkbox]:checked
+		& + .custom-checkbox__div
+			+sprite(switcher-on)
