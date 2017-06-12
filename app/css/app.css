@@ -4429,6 +4429,11 @@ ol ol > li:last-child {
   display: flex;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.vacamcy-list__vacancy {
+  width: 100%;
 }
 
 .checkbox-switcher-wrapper {
@@ -4819,11 +4824,15 @@ ol ol > li:last-child {
   opacity: 0;
   visibility: hidden;
   position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
 }
 .cabinet-tab.active {
   position: relative;
   opacity: 1;
   visibility: visible;
+  display: block;
 }
 
 .subscriber-package {
