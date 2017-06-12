@@ -4319,6 +4319,14 @@ ol ol > li:last-child {
   max-width: 65px;
 }
 
+.tab-bar__item-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
 .tab-bar__item_blue {
   border-color: #5b6a91;
 }
@@ -4791,7 +4799,7 @@ ol ol > li:last-child {
   position: relative;
   overflow: hidden;
 }
-.cabinet-employer-payment-types-descr li {
+.cabinet-employer-payment-types-descr .cabinet-employer-payment-types__tab {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -4800,11 +4808,22 @@ ol ol > li:last-child {
   transform: translateY(-50%) perspective(400px) rotate3d(1, 0, 0, 180deg);
   transition: all 0.3s ease;
 }
-.cabinet-employer-payment-types-descr li.active {
+.cabinet-employer-payment-types-descr .cabinet-employer-payment-types__tab.active {
   visibility: visible;
   opacity: 1;
   left: 0;
   transform: translateY(-50%) perspective(400px) rotate3d(1, 0, 0, 0deg);
+}
+
+.cabinet-tab {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.cabinet-tab.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
 }
 
 .subscriber-package {
