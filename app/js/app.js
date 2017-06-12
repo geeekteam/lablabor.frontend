@@ -105,11 +105,11 @@ var YOURAPPNAME = (function () {
 
                     switcherTrigger.addEventListener('click', function (elem, target, parent, targets) {
                         return function (e) {
-
                             e.preventDefault();
+
                             if (!elem.classList.contains('active')) {
-                                for (var z = 0; z < parentNode.length; z++) {
-                                    parent[z].classList.remove('active');
+                                for (var z = 0; z < elem.parentNode.children.length; z++) {
+                                    elem.parentNode.children[z].classList.remove('active');
                                     targets[z].classList.remove('active');
                                 }
                                 elem.classList.add('active');
