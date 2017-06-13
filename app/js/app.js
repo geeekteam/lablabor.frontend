@@ -524,11 +524,9 @@ var YOURAPPNAME = (function () {
                         '<input class="jq-year-birth-child input cabinet-employer-main__input cabinet-employer-main_children-count input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Год рождения">'
                     )
                 }
-                console.log(parseInt(wrapperChilds)-parseInt(countChildrens));
             } else if (parseInt(wrapperChilds)>parseInt(countChildrens)) {
                 for (var i = 0; i < (parseInt(wrapperChilds)-parseInt(countChildrens)); i++) {
                     wrapper.children(".jq-year-birth-child").last().remove();
-                    console.log('hi')
                 }
             }
             if (parseInt(countChildrens) < 1)
