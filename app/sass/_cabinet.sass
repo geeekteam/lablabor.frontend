@@ -123,6 +123,24 @@
 
 .cabinet-employer-main__input
 	flex-grow: 1
+	color: $dark-dull-gray
+	&::-webkit-input-placeholder
+		color: $dark-dull-gray
+
+	&::-moz-placeholder
+		color: $dark-dull-gray
+		opacity: 1
+	&:-moz-placeholder
+		color: $dark-dull-gray
+		opacity: 1
+	&:-ms-input-placeholder
+		color: $dark-dull-gray
+		opacity: 1
+
+.cabinet-employer-main_children-count
+	margin-bottom: 10px
+	&:last-child
+		margin-bottom: 0
 
 .vacancy-list__item
 	display: flex
@@ -154,7 +172,7 @@
 	border-radius: 10px
 	opacity: 0
 	visibility: hidden
-	transition: all 0.3s ease
+	transition: all 0.5s ease
 	&::after
 		position: absolute
 		content: ''
@@ -250,7 +268,6 @@
 	flex-shrink: 0
 
 .checkbox-switcher__label
-	cursor: pointer
 	text-transform: uppercase
 	font-family: "Gotham Pro Medium", sans-serif
 	font-size: 14px
@@ -278,12 +295,10 @@
 	text-transform: uppercase
 
 .fri_edit
-	margin-right: 10px
 	flex-shrink: 0
 	cursor: pointer
 
 .fri_remove
-	margin-right: 45px
 	flex-shrink: 0
 	cursor: pointer
 

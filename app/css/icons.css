@@ -933,4 +933,26 @@
   width: 30px;
 }
 
+.static-checkbox-switcher-on {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2513px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+  width: 30px;
+}
+
+.static-checkbox-switcher-off {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2493px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+  width: 30px;
+}
+
 /*# sourceMappingURL=icons.css.map */

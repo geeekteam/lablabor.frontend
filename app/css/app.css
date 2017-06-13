@@ -933,6 +933,28 @@
   width: 30px;
 }
 
+.static-checkbox-switcher-on {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2513px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+  width: 30px;
+}
+
+.static-checkbox-switcher-off {
+  background-image: url('../images/icons-saec4728150.png');
+  background-position: 0 -2493px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+  width: 30px;
+}
+
 @font-face {
   font-family: "PT Serif Italic";
   src: url("../fonts/subset-PTSerif-Italic.eot");
@@ -1408,7 +1430,6 @@ button {
   border-radius: 15px;
   width: 100%;
   background-color: #ffffff;
-  margin-top: -30px;
   z-index: 100;
 }
 .select .jq-selectbox__dropdown::after {
@@ -1757,19 +1778,19 @@ button {
   box-shadow: inset 0 0 1px #1c9d22;
 }
 .default-input:-ms-input-placeholder {
-  color: #6e6e6e;
+  color: #616161;
 }
 .default-input:-moz-placeholder {
-  color: #6e6e6e;
+  color: #616161;
 }
 .default-input::-moz-placeholder {
-  color: #6e6e6e;
+  color: #616161;
 }
 .default-input::-webkit-input-placeholder {
-  color: #6e6e6e;
+  color: #616161;
 }
 .default-input::placeholder {
-  color: #6e6e6e;
+  color: #616161;
 }
 
 .default-input_h20 {
@@ -4444,6 +4465,29 @@ ol ol > li:last-child {
 
 .cabinet-employer-main__input {
   flex-grow: 1;
+  color: #616161;
+}
+.cabinet-employer-main__input::-webkit-input-placeholder {
+  color: #616161;
+}
+.cabinet-employer-main__input::-moz-placeholder {
+  color: #616161;
+  opacity: 1;
+}
+.cabinet-employer-main__input:-moz-placeholder {
+  color: #616161;
+  opacity: 1;
+}
+.cabinet-employer-main__input:-ms-input-placeholder {
+  color: #616161;
+  opacity: 1;
+}
+
+.cabinet-employer-main_children-count {
+  margin-bottom: 10px;
+}
+.cabinet-employer-main_children-count:last-child {
+  margin-bottom: 0;
 }
 
 .vacancy-list__item {
@@ -4480,7 +4524,7 @@ ol ol > li:last-child {
   border-radius: 10px;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .cabinet-employer-hint::after {
   position: absolute;
@@ -4589,7 +4633,6 @@ ol ol > li:last-child {
 }
 
 .checkbox-switcher__label {
-  cursor: pointer;
   text-transform: uppercase;
   font-family: "Gotham Pro Medium", sans-serif;
   font-size: 14px;
@@ -4621,13 +4664,11 @@ ol ol > li:last-child {
 }
 
 .fri_edit {
-  margin-right: 10px;
   flex-shrink: 0;
   cursor: pointer;
 }
 
 .fri_remove {
-  margin-right: 45px;
   flex-shrink: 0;
   cursor: pointer;
 }
@@ -6106,6 +6147,10 @@ footer {
   padding: 0 10px;
 }
 
+.lnh0 {
+  line-height: 0;
+}
+
 .lts1 {
   letter-spacing: 1px;
 }
@@ -6328,6 +6373,10 @@ footer {
 
 .pt0 {
   padding-top: 0;
+}
+
+.pt5 {
+  padding-top: 5px;
 }
 
 .pt10 {

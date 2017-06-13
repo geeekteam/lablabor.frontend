@@ -291,58 +291,166 @@ var YOURAPPNAME = (function () {
                 );
             }
         }
+    };
+
+    YOURAPPNAME.prototype.vacancySmallHints = function () {
+        var $this = $('.js-open-hint-small');
+        $this.focus(function () {
+            $(this).siblings('.js-hint-small').addClass('active');
+        });
+
+        $this.focusout(function () {
+            $(this).siblings('.js-hint-small').removeClass('active');
+        });
+    };
+
+    YOURAPPNAME.prototype.addBlock = function () {
+
+        var myButtonClass = $(document).find('.js-add-new-block');
+        myButtonClass.click(function () {
+            $(this).each(function () {
+                var myButton = $(this),
+                    myBlock = $(this).parent().prev('.js-current-block-wrapper').children('.js-current-block');
+                if (myButton.attr('data-block-add') === myBlock.attr('data-block')) {
+                    if (myBlock.hasClass('hidden')) {
+                        myBlock.removeClass('hidden')
+                    } else {
+                        var cloneBlock = myBlock.first().clone().appendTo(myBlock.parent('.js-current-block-wrapper'));
+                        cloneBlock.addClass('js-clone');
+                        cloneBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown, .jq-checkbox__div').remove();
+                        cloneBlock.find('.jq-selectbox > .select').unwrap();
+                        cloneBlock.find('.jq-checkbox > .my-checkbox').unwrap();
+                        cloneBlock.find('.select').styler();
+                        cloneBlock.find('.my-checkbox').styler();
+                    }
+                }
+            });
+
+            $('.js-close-box').click(function () {
+                var myCloseButton = $(this),
+                    myBlock = myCloseButton.parent('.js-clone');
+                myBlock.remove();
+            })
+        });
+    };
+
+    YOURAPPNAME.prototype.closeBlock = function () {
+        var $this = $('.js-close-box');
+        $this.click(function () {
+            var myCloseButton = $(this),
+                myBlock = myCloseButton.closest('.js-current-block');
+            myBlock.addClass('hidden');
+        })
     }
 
-    return YOURAPPNAME;
-
-})();
-
-var app = new YOURAPPNAME(document);
-
-app.appLoad('loading', function () {
-    (function ($) {
-        $(function () {
-            $('input, select').not('.js-destroy-form-styler').styler();
+    YOURAPPNAME.prototype.filterCloneCurrency = function () {
+        $(document).on('click', '.js-add-filter-select-currency', function (e) {
+            e.preventDefault();
+            $(this).closest('.filter__section').after(
+                '<div class="filter__section mb15">' +
+                '<div class="filter__line filter__line_justify-start mb7">' +
+                '<input class="filter__input filter__input_salary text-italic mr5" type="text" placeholder="100.000">' +
+                '<span class="mr5 text-dark-dull-gray">-</span>' +
+                '<input class="filter__input filter__input_salary text-italic" type="text" placeholder="150.000">' +
+                '</div>' +
+                '<div class="filter__line filter__line_currency filter__line_justify-start">' +
+                '<select class="filter__select-currency text-dull-gray text-italic select select__search">' +
+                '<option>KZT</option>' +
+                '<option>USD</option>' +
+                '</select>' +
+                '<i class="fri_filter-remove-input"></i>' +
+                '</div>' +
+                '</div>'
+            );
+            $('.filter select:not(.jq-selectbox)').styler();
+            $(document).on('click', '.filter__line_currency .fri_filter-remove-input', function (e) {
+                e.preventDefault();
+                $(this).closest('.filter__section').remove();
+            });
         });
-    })(jQuery);
+    };
 
-
-});
-
-app.appLoad('dom', function () {
-    app.initSwitcher(); // data-switcher="{target: 'anything'}" , data-switcher-target="anything"
-
-    // $('.js-destroy-form-styler').styler('destroy');
-
-});
-
-app.appLoad('full', function (e) {
-
-        $('.main-content__banner').owlCarousel({
-            items: 1,
-            loop: true,
-            dots: 0,
-            autoplay: true,
-            animateOut: 'fadeOut',
-            mouseDrag: false
-        });
-
-        $('.auth-slider').owlCarousel({
-            items: 1,
-            loop: true,
-            dots: 1,
-            nav: true,
-            autoplay: 5,
-            responsive: {
-                0: {
-                    nav: false
-                },
-                768: {
-                    nav: true
-                }
+    YOURAPPNAME.prototype.openStatisticTables = function () {
+        var $this = $(".js-open-statistic-tables");
+        $this.click(function () {
+            var tables = $(this).closest(".statistic__vacancy-grid").next(".statistic-tables");
+            if (tables.hasClass("js-hidden")) {
+                tables.removeClass("js-hidden").slideDown(400);
+                $(this).text("Скрыть данные")
+            } else {
+                tables.addClass("js-hidden").slideUp(400);
+                $(this).text("Показать данные")
             }
-        });
 
+        })
+    };
+
+    YOURAPPNAME.prototype.openHistory = function () {
+        var $this = $(".js-history-open");
+        $this.click(function () {
+            var historyList = $(this).closest(".statistic__report-grid").next(".statistic__report-history-list");
+
+            if (historyList.hasClass("js-hidden")) {
+                historyList.removeClass("js-hidden").slideDown(250);
+            } else {
+                historyList.addClass("js-hidden").slideUp(250);
+            }
+        })
+    }
+
+    YOURAPPNAME.prototype.fileUpload = function () {
+        var wrapper = $(".file-upload"),
+            inp = wrapper.find("input"),
+            lbl = wrapper.find(".js-file-upload__label");
+        var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
+
+        inp.change(function () {
+            var file_name;
+            if (file_api && inp[0].files[0])
+                file_name = inp[0].files[0].name;
+            else
+                file_name = inp.val().replace("C:\\fakepath\\", '');
+
+            if (!file_name.length)
+                return;
+
+            if (lbl.is(":visible")) {
+                lbl.text(file_name);
+            }
+        }).change();
+    };
+
+    YOURAPPNAME.prototype.showBlock = function () {
+        var $this = $('.js-show-block');
+        $this.click(function () {
+            var myShowButton = $(this),
+                myBlock = myShowButton.parent().next('.js-current-block-wrapper').children('.js-current-block');
+            if (myBlock.hasClass('hidden'))
+                myBlock.removeClass('hidden');
+        })
+    };
+
+    YOURAPPNAME.prototype.checkboxSwitcher = function () {
+        var $this = $('.custom-checkbox-switcher');
+        $this.each(function () {
+            $(this).click(function () {
+                if ($(this).children('input').is(':checked'))
+                    $(this).find('span').text('Вакансия активна').css('color', '#1C9D22')
+                else
+                    $(this).find('span').text('Вакансия не активна').css('color', '#5B6A91')
+            })
+        })
+    };
+
+    YOURAPPNAME.prototype.checkboxSwitcherCheck = function () {
+        var $this = $('.custom-checkbox-switcher');
+        if ($this.children('input').is(':checked'))
+            $this.find('span').text('Вакансия активна').css('color', '#1C9D22')
+        else
+            $this.find('span').text('Вакансия не активна').css('color', '#5B6A91')
+    };
+
+    YOURAPPNAME.prototype.autoComplete = function () {
         var autoCompleteInput = $('.js-autocomplete-input');
 
         if (autoCompleteInput.length > 0) {
@@ -378,170 +486,133 @@ app.appLoad('full', function (e) {
                 $(this).closest('.filter-input__item').remove();
             });
         }
+    };
 
-        $(document).on('click', '.js-add-filter-select-currency', function (e) {
-            e.preventDefault();
-            $(this).closest('.filter__section').after(
-                '<div class="filter__section mb15">' +
-                '<div class="filter__line filter__line_justify-start mb7">' +
-                '<input class="filter__input filter__input_salary text-italic mr5" type="text" placeholder="100.000">' +
-                '<span class="mr5 text-dark-dull-gray">-</span>' +
-                '<input class="filter__input filter__input_salary text-italic" type="text" placeholder="150.000">' +
-                '</div>' +
-                '<div class="filter__line filter__line_currency filter__line_justify-start">' +
-                '<select class="filter__select-currency text-dull-gray text-italic select select__search">' +
-                '<option>KZT</option>' +
-                '<option>USD</option>' +
-                '</select>' +
-                '<i class="fri_filter-remove-input"></i>' +
-                '</div>' +
-                '</div>'
-            );
-            $('.filter select:not(.jq-selectbox)').styler();
-            $(document).on('click', '.filter__line_currency .fri_filter-remove-input', function (e) {
-                e.preventDefault();
-                $(this).closest('.filter__section').remove();
-            });
-        });
-        app.popups();
-
-        $(".js-open-statistic-tables").click(function () {
-
-            var tables = $(this).closest(".statistic__vacancy-grid").next(".statistic-tables");
-
-            if (tables.hasClass("js-hidden")) {
-                tables.removeClass("js-hidden").slideDown(400);
-                $(this).text("Скрыть данные")
-            } else {
-                tables.addClass("js-hidden").slideUp(400);
-                $(this).text("Показать данные")
-            }
-
-        })
-
-        $(".js-history-open").click(function () {
-            var historyList = $(this).closest(".statistic__report-grid").next(".statistic__report-history-list");
-
-            if (historyList.hasClass("js-hidden")) {
-                historyList.removeClass("js-hidden").slideDown(250);
-            } else {
-                historyList.addClass("js-hidden").slideUp(250);
-            }
-        })
-
-        var wrapper = $(".file-upload"),
-            inp = wrapper.find("input"),
-            lbl = wrapper.find(".js-file-upload__label");
-        var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
-
-        inp.change(function () {
-            var file_name;
-            if (file_api && inp[0].files[0])
-                file_name = inp[0].files[0].name;
-            else
-                file_name = inp.val().replace("C:\\fakepath\\", '');
-
-            if (!file_name.length)
-                return;
-
-            if (lbl.is(":visible")) {
-                lbl.text(file_name);
-            }
-        }).change();
-
-        $('.js-open-hint-small').focus(function () {
-            $('.js-hint-small').addClass('active');
-        });
-
-        $('.js-open-hint-small').focusout(function () {
-            $('.js-hint-small').removeClass('active');
-        });
-
-        function hideHint() {
-            $('.js-hint').removeClass('active');
-        };
-
-        function showHint() {
-            $('.js-hint').addClass('active');
-        };
-
-        $('.js-open-hint').hover(
-            function () {
-                setTimeout(showHint, 500);
-            },
-            function () {
-                setTimeout(hideHint, 1000);
-            }
-        );
-
-        function addBlock() {
-            var myButtonClass = $(document).find('.js-add-new-block');
-
-            myButtonClass.click(function () {
-                $(this).each(function () {
-                    var myButton = $(this),
-                        myBlock = $(this).parent().prev('.js-current-block-wrapper').children('.js-current-block');
-                    if (myButton.attr('data-block-add') === myBlock.attr('data-block')) {
-                        if (myBlock.hasClass('hidden')) {
-                            myBlock.removeClass('hidden')
-                        } else {
-                            var cloneBlock = myBlock.first().clone().appendTo(myBlock.parent('.js-current-block-wrapper'));
-                            cloneBlock.addClass('js-clone');
-                            cloneBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown, .jq-checkbox__div').remove();
-                            cloneBlock.find('.jq-selectbox > .select').unwrap();
-                            cloneBlock.find('.jq-checkbox > .my-checkbox').unwrap();
-                            cloneBlock.find('.select').styler();
-                            cloneBlock.find('.my-checkbox').styler();
-                        }
-                    }
-                })
-
-                $('.js-close-box').click(function () {
-                    var myCloseButton = $(this),
-                        myBlock = myCloseButton.parent('.js-clone');
-                    myBlock.remove();
-                })
-            });
-        }
-
-        addBlock();
-
-        $('.js-close-box').click(function () {
-            var myCloseButton = $(this),
-                myBlock = myCloseButton.parent('.js-current-block');
-            myBlock.addClass('hidden');
-        })
-
-        $('.js-show-block').click(function () {
-            var myShowButton = $(this),
-                myBlock = myShowButton.parent().next('.js-current-block-wrapper').children('.js-current-block');
-            if (myBlock.hasClass('hidden'))
-                myBlock.removeClass('hidden');
-        })
-
-        function checkboxSwitcher() {
-            var $this = $('.custom-checkbox-switcher');
-            if ($this.children('input').is(':checked'))
-                $this.find('span').text('Вакансия активна').css('color', '#1C9D22')
-            else
-                $this.find('span').text('Вакансия не активна').css('color', '#5B6A91')
-
-            $this.click(function () {
-                if ($this.children('input').is(':checked'))
-                    $(this).find('span').text('Вакансия активна').css('color', '#1C9D22')
-                else
-                    $(this).find('span').text('Вакансия не активна').css('color', '#5B6A91')
-            })
-        }
-        checkboxSwitcher();
-
-        $('.jq-vacancy-trigger').click(function () {
-            var myVacancy = $(this).siblings('.jq-vacancy');
-            console.log(myVacancy);
+    YOURAPPNAME.prototype.vacancyTrigger = function () {
+        var $this = $('.jq-vacancy-trigger');
+        $this.click(function () {
+            var myVacancy = $(this).parent().siblings('.jq-vacancy').find('.js-current-block');
             if (myVacancy.hasClass('hidden'))
-                myVacancy.removeClass('hidden')
+                myVacancy.removeClass('hidden');
             else
                 myVacancy.addClass('hidden')
         })
-    }
+    };
+
+    YOURAPPNAME.prototype.vacancyHints = function () {
+        var $this = $('.js-open-hint');
+        $this.hover(
+            function () {
+                $(this).siblings('.js-hint').addClass('active');
+            },
+            function () {
+                $(this).siblings('.js-hint').removeClass('active');
+            }
+        );
+    };
+
+    YOURAPPNAME.prototype.childrenCounts = function () {
+        var childrenCountSelect = $('.jq-children-count').find('select'),
+            ageTitle = $('.jq-age-title');
+        childrenCountSelect.change(function () {
+            var countChildrens = childrenCountSelect.find('option:selected').attr('data-childrens'),
+                wrapper = $('.jq-year-birth-child-wrapper'),
+                wrapperChilds = wrapper.children('.jq-year-birth-child').length;
+            if (parseInt(wrapperChilds)<parseInt(countChildrens)) {
+                for (var i = 0; i < (parseInt(countChildrens)-parseInt(wrapperChilds)); i++) {
+                    wrapper.append(
+                        '<input class="jq-year-birth-child input cabinet-employer-main__input cabinet-employer-main_children-count input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Год рождения">'
+                    )
+                }
+                console.log(parseInt(wrapperChilds)-parseInt(countChildrens));
+            } else if (parseInt(wrapperChilds)>parseInt(countChildrens)) {
+                for (var i = 0; i < (parseInt(wrapperChilds)-parseInt(countChildrens)); i++) {
+                    wrapper.children(".jq-year-birth-child").last().remove();
+                    console.log('hi')
+                }
+            }
+            if (parseInt(countChildrens) < 1)
+                ageTitle.addClass('hidden')
+            else
+                ageTitle.removeClass('hidden')
+        });
+    };
+
+    return YOURAPPNAME;
+
+})();
+
+    var app = new YOURAPPNAME(document);
+
+    app.appLoad('loading', function () {
+        (function ($) {
+            $(function () {
+                $('input, select').not('.js-destroy-form-styler').styler();
+            });
+        })(jQuery);
+
+    });
+
+    app.appLoad('dom', function () {
+        app.initSwitcher(); // data-switcher="{target: 'anything'}" , data-switcher-target="anything"
+
+        app.checkboxSwitcherCheck();
+
+    });
+
+    app.appLoad('full', function (e) {
+
+        $('.main-content__banner').owlCarousel({
+            items: 1,
+            loop: true,
+            dots: 0,
+            autoplay: true,
+            animateOut: 'fadeOut',
+            mouseDrag: false
+        });
+
+        $('.auth-slider').owlCarousel({
+            items: 1,
+            loop: true,
+            dots: 1,
+            nav: true,
+            autoplay: 5,
+            responsive: {
+                0: {
+                    nav: false
+                },
+                768: {
+                    nav: true
+                }
+            }
+        });
+
+        app.filterCloneCurrency();
+
+        app.popups();
+
+        app.openStatisticTables();
+
+        app.openHistory();
+
+        app.fileUpload();
+
+        app.vacancySmallHints();
+
+        app.addBlock();
+
+        app.closeBlock();
+
+        app.showBlock();
+
+        app.autoComplete();
+
+        app.checkboxSwitcher();
+
+        app.vacancyTrigger();
+
+        app.vacancyHints();
+
+        app.childrenCounts();
+        }
 );
