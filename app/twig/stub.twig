@@ -1,11 +1,13 @@
 {% extends "layouts/app.twig" %}
 
 {% block pageTitle %}Функция сайта не доступна на мобильной версии{% endblock %}
+
 {% set mobile = 'true' %}
+{% set page_clear = 'true' %}
 
 {% block content %}
 
-    <div class="stub-wrapper">
+    <div class="gray-wrapper">
         <div class="container">
             <div class="stub">
                 <i class="fri fri_warning mb15"></i>

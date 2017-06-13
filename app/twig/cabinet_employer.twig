@@ -4,6 +4,7 @@
 
 {% set auth = 'true' %}
 {% set mobile = 'false' %}
+{% set page_clear = 'false' %}
 
 {% block content %}
 
@@ -324,6 +325,11 @@
                                             </div>
                                             <div class="cabinet-employer-vacancy-grid flex-space-between">
                                                 <div class="checkbox-switcher-wrapper">
+                                                    <label class="custom-checkbox-switcher jq-checkbox-switcher js-open-hint mr25">
+                                                        <input class="js-destroy-form-styler" checked type="checkbox">
+                                                        <i class="custom-checkbox__div"></i>
+                                                        <span class="fz12 text-light text-uppercase cursor-pointer">Вакансия активна</span>
+                                                    </label>
                                                     <div class="cabinet-employer-hint js-hint">
                                                         <p class="text-white fz12 text-italic">Чтобы активировать или деактивировать
                                                             вакансию, кликните по ползунку.</p>

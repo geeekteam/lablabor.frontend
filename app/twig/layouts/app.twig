@@ -27,25 +27,30 @@
     {% include "stylesheets.twig" %}
 </head>
 <body>
-    {% if mobile == 'false' %}
-        <div class="site-wrapper-mobile-false">
+    {% if page_clear == 'false' %}
+        {% if mobile == 'false' %}
+            <div class="site-wrapper-mobile-false">
+        {% else %}
+            <div class="site-wrapper">
+        {% endif %}
+            <!-- Header block -->
+            {% include "header.twig" %}
+            <!-- Header block end -->
+
+            <!-- Block content -->
+            {% block content %}{% endblock %}
+            <!-- Block content end -->
+
+            <!-- Footer block -->
+            {% include "footer.twig" %}
+            <!-- Footer block end -->
+        </div>
+        {% include "popups.twig" %}
+        <!-- Scripts -->
+        {% include "scripts.twig" %}
     {% else %}
-        <div class="site-wrapper">
-    {% endif %}
-        <!-- Header block -->
-        {% include "header.twig" %}
-        <!-- Header block end -->
-
-        <!-- Block content -->
         {% block content %}{% endblock %}
-        <!-- Block content end -->
-
-        <!-- Footer block -->
-        {% include "footer.twig" %}
-        <!-- Footer block end -->
-    </div>
-    {% include "popups.twig" %}
-    <!-- Scripts -->
-    {% include "scripts.twig" %}
+        {% include "scripts.twig" %}
+    {% endif %}
 </body>
 </html>

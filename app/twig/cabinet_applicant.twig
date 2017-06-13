@@ -4,6 +4,7 @@
 
 {% set auth = 'true' %}
 {% set mobile = 'false' %}
+{% set page_clear = 'false' %}
 
 {% block content %}
 
@@ -163,7 +164,7 @@
                                     <input class="radio" type="radio" name="sex" id="men">
                                     <span class="text-italic fz14">Мужской</span>
                                 </label>
-                                <label class="cv-finder__line radio-buttons radio_green-dot">
+                                <label class="radio-buttons radio_green-dot">
                                     <input class="radio" type="radio" name="sex" id="woman">
                                     <span class="text-italic fz14">Женский</span>
                                 </label>
@@ -315,7 +316,7 @@
                                 <div class="cabinet-employer-main-grid__left">
                                     <span class="cabinet-input-title flex-align-center mr10">Город</span>
                                 </div>
-                                <div class="cabinet-employer-main-grid__righ">
+                                <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Алматы">
                                 </div>
                             </div>
@@ -393,7 +394,7 @@
                                 <div class="cabinet-employer-main-grid__left">
                                     <span class="cabinet-input-title flex-align-center mr10">Город</span>
                                 </div>
-                                <div class="cabinet-employer-main-grid__righ">
+                                <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Алматы">
                                 </div>
                             </div>
@@ -533,7 +534,7 @@
                                 </div>
                             </div>
                             <div class="grid mb15">
-                                <div class="cabinet-employer-vacancy-grid__right">
+                                <div class="cabinet-employer-vacancy-grid__left">
                                     <span class="cabinet-input-title flex-align-center mr10">Вид деятельности</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
@@ -652,7 +653,6 @@
                             <option>Пункт 2</option>
                             <option>Пункт 3</option>
                         </select>
-                        <div class="close-button-gray js-close-box close-button-gray js-close-box_relative flex-align-center"></div>
                     </div>
 
                     <p class="pl70 mb25"><span class="text-medium fz14 text-uppercase text-dark-dull-gray">Знание спец программ</span></p>

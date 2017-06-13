@@ -331,6 +331,7 @@ var YOURAPPNAME = (function () {
                     myBlock = myCloseButton.parent('.js-clone');
                 myBlock.remove();
             })
+            app.checkboxSwitcher();
         });
     };
 
@@ -431,7 +432,7 @@ var YOURAPPNAME = (function () {
     };
 
     YOURAPPNAME.prototype.checkboxSwitcher = function () {
-        var $this = $('.custom-checkbox-switcher');
+        var $this = $(document).find('.custom-checkbox-switcher');
         $this.each(function () {
             $(this).click(function () {
                 if ($(this).children('input').is(':checked'))
@@ -444,10 +445,14 @@ var YOURAPPNAME = (function () {
 
     YOURAPPNAME.prototype.checkboxSwitcherCheck = function () {
         var $this = $('.custom-checkbox-switcher');
-        if ($this.children('input').is(':checked'))
-            $this.find('span').text('Вакансия активна').css('color', '#1C9D22')
-        else
-            $this.find('span').text('Вакансия не активна').css('color', '#5B6A91')
+        $this.each(function () {
+            if ($(this).children('input').is(':checked')) {
+                $(this).find('span').text('Вакансия активна').css('color', '#1C9D22')
+            }
+            else
+                $(this).find('span').text('Вакансия не активна').css('color', '#5B6A91')
+        })
+
     };
 
     YOURAPPNAME.prototype.autoComplete = function () {
@@ -612,5 +617,5 @@ var YOURAPPNAME = (function () {
         app.vacancyHints();
 
         app.childrenCounts();
-        }
+    }
 );
