@@ -316,6 +316,8 @@ var YOURAPPNAME = (function () {
                         myBlock.removeClass('hidden')
                     } else {
                         var cloneBlock = myBlock.first().clone().appendTo(myBlock.parent('.js-current-block-wrapper'));
+                        cloneBlock.find('input').val('');
+                        cloneBlock.find('textarea').val('');
                         cloneBlock.addClass('js-clone');
                         cloneBlock.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown, .jq-checkbox__div').remove();
                         cloneBlock.find('.jq-selectbox > .select').unwrap();
@@ -332,7 +334,25 @@ var YOURAPPNAME = (function () {
                 myBlock.remove();
             })
             app.checkboxSwitcher();
+            app.vacancyHints();
+            app.vacancyTrigger();
         });
+    };
+
+    YOURAPPNAME.prototype.cloneVacancy = function () {
+        var addButton = $('.jq-add-new-vacancy');
+
+        addButton.click(function () {
+            var $this = $(this),
+                vacancyList = $(this).parent().siblings('.jq-vacancy-list'),
+                vacancyItem = vacancyList.find('.jq-vacancy-item'),
+                cloneVacancy = vacancyItem.first();
+            if ($this.attr('data-block-add') === vacancyItem.attr('data-block')) {
+                cloneVacancy = cloneVacancy.clone().appendTo(vacancyList);
+                cloneVacancy.removeClass('hidden');
+
+            }
+        })
     };
 
     YOURAPPNAME.prototype.closeBlock = function () {
@@ -342,7 +362,7 @@ var YOURAPPNAME = (function () {
                 myBlock = myCloseButton.closest('.js-current-block');
             myBlock.addClass('hidden');
         })
-    }
+    };
 
     YOURAPPNAME.prototype.filterCloneCurrency = function () {
         $(document).on('click', '.js-add-filter-select-currency', function (e) {
@@ -494,26 +514,28 @@ var YOURAPPNAME = (function () {
     };
 
     YOURAPPNAME.prototype.vacancyTrigger = function () {
-        var $this = $('.jq-vacancy-trigger');
-        $this.click(function () {
+        $(this.doc).on('click', '.jq-vacancy-trigger', function(e) {
             var myVacancy = $(this).parent().siblings('.jq-vacancy').find('.js-current-block');
-            if (myVacancy.hasClass('hidden'))
-                myVacancy.removeClass('hidden');
-            else
-                myVacancy.addClass('hidden')
-        })
+
+            (myVacancy.hasClass('hidden'))
+                ? myVacancy.removeClass('hidden')
+                : myVacancy.addClass('hidden');
+        });
     };
 
     YOURAPPNAME.prototype.vacancyHints = function () {
         var $this = $('.js-open-hint');
-        $this.hover(
-            function () {
-                $(this).siblings('.js-hint').addClass('active');
-            },
-            function () {
-                $(this).siblings('.js-hint').removeClass('active');
-            }
-        );
+        $this.each(function () {
+            $(this).hover(
+                function () {
+                    $(this).siblings('.js-hint').addClass('active');
+                },
+                function () {
+                    $(this).siblings('.js-hint').removeClass('active');
+                }
+            );
+        })
+
     };
 
     YOURAPPNAME.prototype.childrenCounts = function () {
@@ -603,6 +625,8 @@ var YOURAPPNAME = (function () {
         app.vacancySmallHints();
 
         app.addBlock();
+
+        app.cloneVacancy();
 
         app.closeBlock();
 
