@@ -335,7 +335,6 @@ var YOURAPPNAME = (function () {
             })
             app.checkboxSwitcher();
             app.vacancyHints();
-            app.vacancyTrigger();
         });
     };
 
@@ -350,9 +349,11 @@ var YOURAPPNAME = (function () {
             if ($this.attr('data-block-add') === vacancyItem.attr('data-block')) {
                 cloneVacancy = cloneVacancy.clone().appendTo(vacancyList);
                 cloneVacancy.removeClass('hidden');
-
             }
-        })
+            app.checkboxSwitcher();
+            app.vacancyHints();
+        });
+
     };
 
     YOURAPPNAME.prototype.closeBlock = function () {
