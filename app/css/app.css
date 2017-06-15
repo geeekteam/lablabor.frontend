@@ -503,6 +503,9 @@ button {
 .select_currency .jq-selectbox__select {
   padding: 0 10px;
 }
+.select_currency .jq-selectbox__dropdown {
+  padding: 5px 10px;
+}
 
 .select_hover-green:hover .jq-selectbox__select {
   border-color: #1c9d22;
@@ -3745,13 +3748,16 @@ ol ol > li:last-child {
   width: 21px;
   height: 21px;
   background-color: #1c9d22;
-  opacity: 0.5;
   border-radius: 50%;
   flex-shrink: 0;
   font-size: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+}
+.vacancy-list__statistic-count:hover {
+  opacity: 0.5;
 }
 
 .vacancy-list__statistic-count {
