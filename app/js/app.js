@@ -349,9 +349,18 @@ var YOURAPPNAME = (function () {
             if ($this.attr('data-block-add') === vacancyItem.attr('data-block')) {
                 cloneVacancy = cloneVacancy.clone().appendTo(vacancyList);
                 cloneVacancy.removeClass('hidden');
+                cloneVacancy.find('input').val('');
+                cloneVacancy.find('textarea').val('');
+                cloneVacancy.addClass('js-clone');
+                cloneVacancy.find('.jq-selectbox__select, .jq-selectbox__select-text, .jq-selectbox__dropdown, .jq-checkbox__div').remove();
+                cloneVacancy.find('.jq-selectbox > .select').unwrap();
+                cloneVacancy.find('.jq-checkbox > .my-checkbox').unwrap();
+                cloneVacancy.find('.select').styler();
+                cloneVacancy.find('.my-checkbox').styler();
             }
             app.checkboxSwitcher();
             app.vacancyHints();
+            app.closeBlock();
         });
 
     };

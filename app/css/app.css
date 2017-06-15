@@ -1455,6 +1455,7 @@ button {
   width: 100%;
   flex-grow: 1;
   flex-basis: 0;
+  flex-shrink: 0;
 }
 .select_currency .jq-selectbox__select {
   padding: 0 10px;
@@ -1543,6 +1544,7 @@ button {
   font-family: "PT Serif Italic";
   border-radius: 15px;
   outline: none;
+  border: 1px solid #616161;
 }
 .textarea:focus, .textarea:active, .textarea:hover {
   border-color: #1c9d22;
@@ -4477,6 +4479,8 @@ ol ol > li:last-child {
 
 .cabinet-employer-main__input {
   flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
   color: #616161;
 }
 .cabinet-employer-main__input::-webkit-input-placeholder {
@@ -4493,6 +4497,10 @@ ol ol > li:last-child {
 .cabinet-employer-main__input:-ms-input-placeholder {
   color: #616161;
   opacity: 1;
+}
+
+.input_work-period-input {
+  max-width: 140px;
 }
 
 .cabinet-employer-main_children-count {
@@ -5230,12 +5238,14 @@ ol ol > li:last-child {
   visibility: hidden;
   opacity: 0;
   width: 100%;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   transition: opacity 0.3s ease;
 }
 .ads .ads-item.active {
+  display: inline-block;
   position: relative;
   visibility: visible;
   opacity: 1;
@@ -6710,15 +6720,6 @@ footer {
   }
 }
 @media screen and (max-width: 991px) {
-  .cabinet-employer-main {
-    flex-direction: column;
-  }
-
-  .cabinet-employer-main__left {
-    padding-left: 0;
-    margin: 0 auto;
-  }
-
   .user-menu__dropdown {
     display: none;
   }
@@ -7021,11 +7022,6 @@ footer {
 
   .not-found {
     padding: 25px;
-  }
-
-  .cabinet-employer-main-grid__left {
-    max-width: 170px;
-    width: 100%;
   }
 
   .main-guest-content-area {
@@ -7633,26 +7629,6 @@ footer {
   }
 }
 @media screen and (max-width: 500px) {
-  .cabinet-employer-main-grid__right {
-    width: 100%;
-  }
-
-  .cabinet-employer-main-grid {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .cabinet-employer-main-grid__left {
-    margin-right: 0;
-    margin-bottom: 10px;
-    padding-left: 10px;
-  }
-
-  .cabinet-employer-main-grid__left_pl25 {
-    padding-left: 10px;
-    margin-bottom: 10px;
-  }
-
   .order-employer-content-inner-grid {
     align-items: center;
     justify-content: space-between;
