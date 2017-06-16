@@ -524,7 +524,7 @@ var YOURAPPNAME = (function () {
     };
 
     YOURAPPNAME.prototype.vacancyTrigger = function () {
-        $(this.doc).on('click', '.jq-vacancy-trigger', function(e) {
+        $(this.doc).on('click', '.jq-vacancy-trigger', function (e) {
             var myVacancy = $(this).parent().siblings('.jq-vacancy').find('.js-current-block');
 
             (myVacancy.hasClass('hidden'))
@@ -549,20 +549,20 @@ var YOURAPPNAME = (function () {
     };
 
     YOURAPPNAME.prototype.childrenCounts = function () {
-        var childrenCountSelect = $('.jq-children-count'),
-            ageTitle = $('.jq-age-title');
-        childrenCountSelect.on('change', function () {
-            var countChildrens = childrenCountSelect.find('option:selected').attr('data-childrens'),
+        // var childrenCountSelect = $(''),
+        var ageTitle = $('.jq-age-title');
+        $(document).on('change', '.jq-children-count select', function () {
+            var countChildrens = $(this).find('option:selected').attr('data-childrens'),
                 wrapper = $('.jq-year-birth-child-wrapper'),
                 wrapperChilds = wrapper.children('.jq-year-birth-child').length;
-            if (parseInt(wrapperChilds)<parseInt(countChildrens)) {
-                for (var i = 0; i < (parseInt(countChildrens)-parseInt(wrapperChilds)); i++) {
+            if (parseInt(wrapperChilds) < parseInt(countChildrens)) {
+                for (var i = 0; i < (parseInt(countChildrens) - parseInt(wrapperChilds)); i++) {
                     wrapper.append(
                         '<div class="children-count-wrapper jq-year-birth-child"><input class="input cabinet-employer-main__input cabinet-employer-main_children-count input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Год рождения"></div>'
                     )
                 }
-            } else if (parseInt(wrapperChilds)>parseInt(countChildrens)) {
-                for (var i = 0; i < (parseInt(wrapperChilds)-parseInt(countChildrens)); i++) {
+            } else if (parseInt(wrapperChilds) > parseInt(countChildrens)) {
+                for (var i = 0; i < (parseInt(wrapperChilds) - parseInt(countChildrens)); i++) {
                     wrapper.children(".jq-year-birth-child").last().remove();
                 }
             }
@@ -577,25 +577,25 @@ var YOURAPPNAME = (function () {
 
 })();
 
-    var app = new YOURAPPNAME(document);
+var app = new YOURAPPNAME(document);
 
-    app.appLoad('loading', function () {
-        (function ($) {
-            $(function () {
-                $('input, select').not('.js-destroy-form-styler').styler();
-            });
-        })(jQuery);
+app.appLoad('loading', function () {
+    (function ($) {
+        $(function () {
+            $('input, select').not('.js-destroy-form-styler').styler();
+        });
+    })(jQuery);
 
-    });
+});
 
-    app.appLoad('dom', function () {
-        app.initSwitcher(); // data-switcher="{target: 'anything'}" , data-switcher-target="anything"
+app.appLoad('dom', function () {
+    app.initSwitcher(); // data-switcher="{target: 'anything'}" , data-switcher-target="anything"
 
-        app.checkboxSwitcherCheck();
+    app.checkboxSwitcherCheck();
 
-    });
+});
 
-    app.appLoad('full', function (e) {
+app.appLoad('full', function (e) {
 
         $('.main-content__banner').owlCarousel({
             items: 1,
