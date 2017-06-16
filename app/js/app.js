@@ -549,10 +549,10 @@ var YOURAPPNAME = (function () {
     };
 
     YOURAPPNAME.prototype.childrenCounts = function () {
-        var childrenCountSelect = $('.jq-children-count').find('.select'),
+        var childrenCountSelect = $('.jq-children-count'),
             ageTitle = $('.jq-age-title');
         childrenCountSelect.change(function () {
-            console.log('hi');
+
             var countChildrens = childrenCountSelect.find('option:selected').attr('data-childrens'),
                 wrapper = $('.jq-year-birth-child-wrapper'),
                 wrapperChilds = wrapper.children('.jq-year-birth-child').length;
@@ -625,6 +625,8 @@ var YOURAPPNAME = (function () {
 
         app.filterCloneCurrency();
 
+        app.childrenCounts();
+
         app.popups();
 
         app.openStatisticTables();
@@ -651,6 +653,5 @@ var YOURAPPNAME = (function () {
 
         app.vacancyHints();
 
-        app.childrenCounts();
     }
 );
