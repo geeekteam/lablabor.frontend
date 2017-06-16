@@ -549,16 +549,17 @@ var YOURAPPNAME = (function () {
     };
 
     YOURAPPNAME.prototype.childrenCounts = function () {
-        var childrenCountSelect = $('.jq-children-count').find('select'),
+        var childrenCountSelect = $('.jq-children-count').find('.select'),
             ageTitle = $('.jq-age-title');
         childrenCountSelect.change(function () {
+            console.log('hi');
             var countChildrens = childrenCountSelect.find('option:selected').attr('data-childrens'),
                 wrapper = $('.jq-year-birth-child-wrapper'),
                 wrapperChilds = wrapper.children('.jq-year-birth-child').length;
             if (parseInt(wrapperChilds)<parseInt(countChildrens)) {
                 for (var i = 0; i < (parseInt(countChildrens)-parseInt(wrapperChilds)); i++) {
                     wrapper.append(
-                        '<input class="jq-year-birth-child input cabinet-employer-main__input cabinet-employer-main_children-count input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Год рождения">'
+                        '<div class="children-count-wrapper jq-year-birth-child"><input class="input cabinet-employer-main__input cabinet-employer-main_children-count input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Год рождения"></div>'
                     )
                 }
             } else if (parseInt(wrapperChilds)>parseInt(countChildrens)) {

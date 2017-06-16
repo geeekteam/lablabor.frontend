@@ -305,7 +305,7 @@ button
 
 .input
 	border-radius: 25px
-	padding: 0 25px
+	padding: 0 15px
 	height: 30px
 	width: 100%
 
@@ -343,7 +343,7 @@ button
 		border: 1px solid #b5b5b5
 		border-radius: 25px
 		background-color: $white
-		padding: 0 10px 0 25px
+		padding: 0 15px
 		height: 30px
 		display: flex
 		align-items: center
@@ -367,7 +367,7 @@ button
 		border-color: #b5b5b5 transparent transparent transparent
 
 	.jq-selectbox__dropdown
-		padding: 5px 5px 0 25px
+		padding: 5px 5px 0 15px
 		border: 1px solid #b5b5b5
 		border-radius: 15px
 		width: 100%
@@ -468,9 +468,12 @@ button
 	font-family: "PT Serif Italic"
 	border-radius: 15px
 	outline: none
-	border: 1px solid $dark-dull-gray
+	border: 1px solid #b5b5b5
 	&:focus, &:active, &:hover
 		border-color: $forest-green
+	+placeholder
+		opacity: 1
+		color: #616161
 
 .pagination
 	display: flex
@@ -756,7 +759,13 @@ button
 
 .flex-shrink-0
 	flex-shrink: 0
-	
+
+.flex-grow-1
+	flex-grow: 1
+
+.flex-basis-0
+	flex-basis: 0
+
 .display-block
 	display: block
 

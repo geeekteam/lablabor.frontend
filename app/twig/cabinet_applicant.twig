@@ -29,10 +29,10 @@
         </div>
         <div class="container container_1140">
             <ul class="tab-bar" data-switcher="{target: 'applicant-tabs'}">
-                <li class="tab-bar__item active">Общие сведения</li>
+                <li class="tab-bar__item">Общие сведения</li>
                 <li class="tab-bar__item">Образование</li>
                 <li class="tab-bar__item">Опыт работы</li>
-                <li class="tab-bar__item">Доп/спец навыки</li>
+                <li class="tab-bar__item active">Доп/спец навыки</li>
                 <li class="tab-bar__item">Портфолио</li>
                 <li class="tab-bar__item">Вакансии</li>
             </ul>
@@ -74,18 +74,18 @@
                         </div>
                     </div>
                     <div class="cabinet-employer-main__right">
-                        <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid mb15">
                             <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
-                                <span class="text-italic fz14 text-dark-dull-gray mr5">ФИО</span>
+                                <span class="text-italic fz14 text-dark-dull-gray">ФИО</span>
                                 <i class="fri fri_required"></i>
                             </div>
                             <div class="cabinet-employer-main-grid__right">
                                 <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Иванов Иван Иванович">
                             </div>
                         </div>
-                        <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid mb15">
                             <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
-                                <span class="text-italic fz14 text-dark-dull-gray mr5">Дата рождения</span>
+                                <span class="text-italic fz14 text-dark-dull-gray">Дата рождения</span>
                             </div>
                             <div class="cabinet-employer-main-grid__right">
                                 <select class="select cabinet-employer-main__day select_hover-green mr10">
@@ -155,24 +155,24 @@
                                 <span class="text-italic fz14 text-dark-dull-gray flex-align-center">ГГГГ</span>
                             </div>
                         </div>
-                        <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid mb15">
                             <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
-                                <span class="text-italic fz14 text-dark-dull-gray mr5">Пол</span>
+                                <span class="text-italic fz14 text-dark-dull-gray">Пол</span>
                             </div>
                             <div class="cabinet-employer-main-grid__right">
                                 <label class="radio-buttons radio_green-dot mr20">
                                     <input class="radio" type="radio" name="sex" id="men">
-                                    <span class="text-italic fz14">Мужской</span>
+                                    <span class="text-italic fz14 cursor-pointer">Мужской</span>
                                 </label>
                                 <label class="radio-buttons radio_green-dot">
                                     <input class="radio" type="radio" name="sex" id="woman">
-                                    <span class="text-italic fz14">Женский</span>
+                                    <span class="text-italic fz14 cursor-pointer">Женский</span>
                                 </label>
                             </div>
                         </div>
-                        <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid mb15">
                             <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
-                                <p class="text-italic fz14 text-dark-dull-gray">Город</p>
+                                <span class="text-italic fz14 text-dark-dull-gray">Город</span>
                             </div>
                             <div class="cabinet-employer-main-grid__right">
                                 <select class="select">
@@ -183,7 +183,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid mb15">
                             <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
                                 <p class="text-italic fz14 text-dark-dull-gray">Адрес проживания</p>
                             </div>
@@ -191,17 +191,21 @@
                                 <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: ул. Абая, д. 50, кв. 11">
                             </div>
                         </div>
-                        <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid mb15">
                             <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
                                 <p class="text-italic fz14 text-dark-dull-gray">Телефон</p>
                                 <i class="fri fri_required"></i>
                             </div>
                             <div class="cabinet-employer-main-grid__right">
-                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray mr20" type="text" placeholder="+7(код города)ххххххх">
-                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="+7(7хх)ххххххх">
+                                <div class="flex-grow-1 flex-shrink-0 mr20">
+                                    <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="+7(код города)ххххххх">
+                                </div>
+                                <div class="flex-grow-1 flex-shrink-0">
+                                    <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="+7(7хх)ххххххх">
+                                </div>
                             </div>
                         </div>
-                        <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid mb15">
                             <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
                                 <p class="text-italic fz14 text-dark-dull-gray">Email</p>
                                 <i class="fri fri_required"></i>
@@ -210,7 +214,7 @@
                                 <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: ivanov@mail.ru">
                             </div>
                         </div>
-                        <div class="cabinet-employer-main-grid mb25">
+                        <div class="cabinet-employer-main-grid mb15">
                             <div class="cabinet-employer-main-grid__left cabinet-employer-main-grid__left_pl25">
                                 <p class="text-italic fz14 text-dark-dull-gray">Семейное положение</p>
                             </div>
@@ -236,8 +240,7 @@
                                     <option data-childrens="3">Три ребёнка</option>
                                 </select>
                                 <span class="text-italic fz14 text-dark-dull-gray mr15 hidden jq-age-title pt5">Возраст</span>
-                                <div class="grid grid_column jq-year-birth-child-wrapper">
-
+                                <div class="grid grid_column jq-year-birth-child-wrapper flex-grow-1">
                                 </div>
                             </div>
                         </div>
@@ -255,33 +258,33 @@
                     <div class="js-current-block-wrapper">
                         <div class="cabinet-education-box js-current-block mb50">
                             <div class="close-button-gray js-close-box"></div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Страна</span>
+                                    <span class="cabinet-input-title flex-align-center">Страна</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Казахстан">
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Город</span>
+                                    <span class="cabinet-input-title flex-align-center">Город</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Алматы">
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Школа номер</span>
+                                    <span class="cabinet-input-title flex-align-center">Школа номер</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: гимназия №113">
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Год начала</span>
+                                    <span class="cabinet-input-title flex-align-center">Год начала</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: 1994">
@@ -289,7 +292,7 @@
                             </div>
                             <div class="grid">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Год окончания</span>
+                                    <span class="cabinet-input-title flex-align-center">Год окончания</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                 <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: 2006">
@@ -304,17 +307,17 @@
                     <div class="js-current-block-wrapper">
                         <div class="cabinet-education-box mb15 js-current-block" data-block="vocational-education">
                             <div class="close-button-gray js-close-box"></div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Страна</span>
+                                    <span class="cabinet-input-title flex-align-center">Страна</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Казахстан">
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Город</span>
+                                    <span class="cabinet-input-title flex-align-center">Город</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Алматы">
@@ -323,45 +326,49 @@
 
                             <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Учебное заведение</span>
+                                    <span class="cabinet-input-title flex-align-center">Учебное заведение</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
-                                    <select class="select select__children-count mr10">
-                                        <option disabled selected>Колледж</option>
-                                        <option>Пункт 1</option>
-                                        <option>Пункт 2</option>
-                                        <option>Пункт 3</option>
-                                    </select>
-                                    <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: при КБТУ">
+                                    <div class="mr10">
+                                        <select class="select select__children-count">
+                                            <option disabled selected>Колледж</option>
+                                            <option>Пункт 1</option>
+                                            <option>Пункт 2</option>
+                                            <option>Пункт 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex-shrink-0 flex-grow-1">
+                                        <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: при КБТУ">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Год начала</span>
+                                    <span class="cabinet-input-title flex-align-center">Год начала</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: 1994">
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Год окончания</span>
+                                    <span class="cabinet-input-title flex-align-center">Год окончания</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: 2006">
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Специальность</span>
+                                    <span class="cabinet-input-title flex-align-center">Специальность</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Журналистика">
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title mr10">Доп. сведения</span>
+                                    <span class="cabinet-input-title">Доп. сведения</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <textarea class="textarea" placeholder="Дополните информацию, если это необходимо"></textarea>
@@ -382,17 +389,17 @@
                     <div class="js-current-block-wrapper">
                         <div class="cabinet-education-box mb15 js-current-block" data-block="higher-education">
                             <div class="close-button-gray js-close-box"></div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Страна</span>
+                                    <span class="cabinet-input-title flex-align-center">Страна</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Казахстан">
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Город</span>
+                                    <span class="cabinet-input-title flex-align-center">Город</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Алматы">
@@ -401,7 +408,7 @@
 
                             <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Учебное заведение</span>
+                                    <span class="cabinet-input-title flex-align-center">Учебное заведение</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <select class="select select__children-count mr10">
@@ -413,33 +420,33 @@
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: при КБТУ">
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Год начала</span>
+                                    <span class="cabinet-input-title flex-align-center">Год начала</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: 1994">
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Год окончания</span>
+                                    <span class="cabinet-input-title flex-align-center">Год окончания</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: 2006">
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Специальность</span>
+                                    <span class="cabinet-input-title flex-align-center">Специальность</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Журналистика">
                                 </div>
                             </div>
-                            <div class="grid mb30">
+                            <div class="grid">
                                 <div class="cabinet-employer-main-grid__left">
-                                    <span class="cabinet-input-title mr10">Доп. сведения</span>
+                                    <span class="cabinet-input-title">Доп. сведения</span>
                                 </div>
                                 <div class="cabinet-employer-main-grid__right">
                                     <textarea class="textarea" placeholder="Дополните информацию, если это необходимо"></textarea>
@@ -456,56 +463,70 @@
 
                     <p class="pl70 mb10"><span class="cabinet-education-box-title">Дополнительное</span></p>
                     <div class="js-current-block-wrapper">
-                        <div class="cabinet-education-box js-current-block mb15 hidden"
-                             data-block="additional-education">
+                        <div class="cabinet-education-box js-current-block mb15 hidden" data-block="additional-education">
                             <div class="close-button-gray js-close-box"></div>
-                            <div class="grid mb30">
-                                <span class="cabinet-input-title flex-align-center mr10">Страна</span>
-                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                       type="text" placeholder="Например: Казахстан">
+                            <div class="grid mb15">
+                                <div class="cabinet-employer-main-grid__left">
+                                    <span class="cabinet-input-title flex-align-center">Страна</span>
+                                </div>
+                                <div class="cabinet-employer-main-grid__right">
+                                    <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Казахстан">
+                                </div>
                             </div>
-                            <div class="grid mb30">
-                                <span class="cabinet-input-title flex-align-center mr10">Город</span>
-                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                       type="text" placeholder="Например: Алматы">
+                            <div class="grid mb15">
+                                <div class="cabinet-employer-main-grid__left">
+                                    <span class="cabinet-input-title flex-align-center">Город</span>
+                                </div>
+                                <div class="cabinet-employer-main-grid__right">
+                                    <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Алматы">
+                                </div>
                             </div>
 
                             <div class="grid mb15">
-                                <span class="cabinet-input-title flex-align-center mr10">Учебное заведение</span>
-                                <select class="select select__children-count mr10">
-                                    <option disabled selected>Колледж</option>
-                                    <option>Пункт 1</option>
-                                    <option>Пункт 2</option>
-                                    <option>Пункт 3</option>
-                                </select>
-                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                       type="text" placeholder="Например: при КБТУ">
+                                <div class="cabinet-employer-main-grid__left">
+                                    <span class="cabinet-input-title flex-align-center">Учебное заведение</span>
+                                </div>
+                                <div class="cabinet-employer-main-grid__right">
+                                    <select class="select select__children-count mr10">
+                                        <option disabled selected>Колледж</option>
+                                        <option>Пункт 1</option>
+                                        <option>Пункт 2</option>
+                                        <option>Пункт 3</option>
+                                    </select>
+                                    <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: при КБТУ">
+                                </div>
                             </div>
-                            <div class="grid mb30">
-                                <span class="cabinet-input-title flex-align-center mr10">Год начала</span>
-                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                       type="text" placeholder="Например: 1994">
+                            <div class="grid mb15">
+                                <div class="cabinet-employer-main-grid__left">
+                                    <span class="cabinet-input-title flex-align-center">Год начала</span>
+                                </div>
+                                <div class="cabinet-employer-main-grid__right">
+                                    <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: 1994">
+                                </div>
                             </div>
-                            <div class="grid mb30">
-                                <span class="cabinet-input-title flex-align-center mr10">Год окончания</span>
-                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                       type="text" placeholder="Например: 2006">
+                            <div class="grid mb15">
+                                <div class="cabinet-employer-main-grid__left">
+                                    <span class="cabinet-input-title flex-align-center">Год окончания</span>
+                                </div>
+                                <div class="cabinet-employer-main-grid__right">
+                                    <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: 2006">
+                                </div>
                             </div>
-                            <div class="grid mb30">
-                                <span class="cabinet-input-title flex-align-center mr10">Факультет</span>
-                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                       type="text" placeholder="Например: Информационные технологии">
-                            </div>
-                            <div class="grid mb30">
-                                <span class="cabinet-input-title flex-align-center mr10">Специальность</span>
-                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray"
-                                       type="text"
-                                       placeholder="Например: Вычислительная техника и программное обеспечение">
+                            <div class="grid mb15">
+                                <div class="cabinet-employer-main-grid__left">
+                                    <span class="cabinet-input-title flex-align-center">Специальность</span>
+                                </div>
+                                <div class="cabinet-employer-main-grid__right">
+                                    <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Журналистика">
+                                </div>
                             </div>
                             <div class="grid">
-                                <span class="cabinet-input-title mr10">Доп. сведения</span>
-                                <textarea class="textarea"
-                                          placeholder="Дополните информацию, если это необходимо"></textarea>
+                                <div class="cabinet-employer-main-grid__left">
+                                    <span class="cabinet-input-title">Доп. сведения</span>
+                                </div>
+                                <div class="cabinet-employer-main-grid__right">
+                                    <textarea class="textarea" placeholder="Дополните информацию, если это необходимо"></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -527,7 +548,7 @@
                             <div class="close-button-gray js-close-box"></div>
                             <div class="grid mb15">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Название компании</span>
+                                    <span class="cabinet-input-title flex-align-center">Название компании</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Beeline">
@@ -535,7 +556,7 @@
                             </div>
                             <div class="grid mb15">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Вид деятельности</span>
+                                    <span class="cabinet-input-title flex-align-center">Вид деятельности</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <select class="select">
@@ -552,16 +573,20 @@
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <span class="text-italic fz14 mr10 flex-align-center">с</span>
-                                    <input class="input cabinet-employer-main__input input_work-period-input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray mr15"
-                                           type="text" placeholder="месяц">
-                                    <input class="input cabinet-employer-main__input input_work-period-input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray mr25"
-                                           type="text" placeholder="год">
+                                    <div class="work-period-wrapper">
+                                    <input class="input cabinet-employer-main__input input_work-period-input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="месяц">
+                                    </div>
+                                    <div class="work-period-wrapper">
+                                        <input class="input cabinet-employer-main__input input_work-period-input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray " type="text" placeholder="год">
+                                    </div>
                                     <span class="text-italic fz14 mr10 flex-align-center">по</span>
-                                    <input class="input cabinet-employer-main__input input_work-period-input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray mr15"
-                                           type="text" placeholder="месяц">
-                                    <input class="input cabinet-employer-main__input input_work-period-input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray mr25"
-                                           type="text" placeholder="год">
-                                    <label class="grid green-checkbox cursor-pointer flex-shrink-0 flex-align-center">
+                                    <div class="work-period-wrapper">
+                                        <input class="input cabinet-employer-main__input input_work-period-input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray " type="text" placeholder="месяц">
+                                    </div>
+                                    <div class="work-period-wrapper">
+                                        <input class="input cabinet-employer-main__input input_work-period-input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="год">
+                                    </div>
+                                    <label class="grid green-checkbox cursor-pointer flex-shrink-0 flex-grow-1 flex-basis-0 flex-align-center">
                                         <input type="checkbox" class="flex-align-center mr10">
                                         <span class="text-italic fz14 text-dark-dull-gray flex-align-center">Работаю по сегодняшний день</span>
                                     </label>
@@ -569,7 +594,7 @@
                             </div>
                             <div class="grid mb15">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Должность</span>
+                                    <span class="cabinet-input-title flex-align-center">Должность</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: главный бухгалтер">
@@ -577,15 +602,15 @@
                             </div>
                             <div class="grid mb15">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title mr10">Краткое описание обязанностей</span>
+                                    <span class="cabinet-input-title">Краткое описание обязанностей</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <textarea class="textarea" placeholder="Чем вам приходилось заниматься на работе"></textarea>
                                 </div>
                             </div>
-                            <div class="grid mb15">
+                            <div class="grid">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title mr10">Доп. сведения</span>
+                                    <span class="cabinet-input-title">Доп. сведения</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <textarea class="textarea" placeholder="Дополните информацию, если это необходимо"></textarea>
@@ -612,7 +637,7 @@
                             <div class="close-button-gray js-close-box"></div>
                             <div class="grid mb15">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Язык</span>
+                                    <span class="cabinet-input-title flex-align-center">Язык</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <select class="select">
@@ -625,7 +650,7 @@
                             </div>
                             <div class="grid">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Уровень владения</span>
+                                    <span class="cabinet-input-title flex-align-center">Уровень владения</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <select class="select">
@@ -661,7 +686,7 @@
                             <div class="close-button-gray js-close-box"></div>
                             <div class="grid mb15">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Программа</span>
+                                    <span class="cabinet-input-title flex-align-center">Программа</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: 1С Бухгалтерия">
@@ -669,7 +694,7 @@
                             </div>
                             <div class="grid">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Уровень владения</span>
+                                    <span class="cabinet-input-title flex-align-center">Уровень владения</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <select class="select">
@@ -715,7 +740,7 @@
                             <div class="close-button-gray js-close-box"></div>
                             <div class="grid mb15">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Страна</span>
+                                    <span class="cabinet-input-title flex-align-center">Страна</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Казахстан">
@@ -723,7 +748,7 @@
                             </div>
                             <div class="grid mb15">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Город</span>
+                                    <span class="cabinet-input-title flex-align-center">Город</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: Алматы">
@@ -731,7 +756,7 @@
                             </div>
                             <div class="grid mb15">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Год получения</span>
+                                    <span class="cabinet-input-title flex-align-center">Год получения</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <select class="select">
@@ -744,7 +769,7 @@
                             </div>
                             <div class="grid mb15">
                                 <div class="cabinet-employer-vacancy-grid__left">
-                                    <span class="cabinet-input-title flex-align-center mr10">Наименование курса/сертификата</span>
+                                    <span class="cabinet-input-title flex-align-center">Наименование курса/сертификата</span>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray" type="text" placeholder="Например: МСФО">
@@ -768,7 +793,9 @@
                     <div class="js-current-block-wrapper">
                         <div class="cabinet-box cabinet-box_portfolio mb10 js-current-block" data-block="portfolio">
                             <div class="close-button-gray js-close-box"></div>
-                            <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border fz14 text-signal-black mb25" type="text" placeholder="НАЗВАНИЕ АЛЬБОМА/ПОРТФОЛИО">
+                            <div class="mb25">
+                                <input class="input cabinet-employer-main__input input__gray-border input_hover-green input__active-green-border fz14 text-signal-black" type="text" placeholder="НАЗВАНИЕ АЛЬБОМА/ПОРТФОЛИО">
+                            </div>
                             <textarea class="textarea text-italic text-signal-black mb20" placeholder="Краткое описание Вашей работы"></textarea>
                             <div class="grid">
                                 <div class="thumbnail cursor-pointer portfolio_thumbnail mr20">
@@ -841,20 +868,9 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="grid mb25">
+                            <div class="grid mb15">
                                 <div class="cabinet-employer-vacancy-grid__left">
                                     <span class="text-italic fz14 text-signal-black">Уровень зарплаты</span>
-                                </div>
-                                <div class="cabinet-employer-vacancy-grid__right">
-                                    <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray cabinet-employer-vacancy__salary-input"
-                                           type="text" placeholder="Введите число">
-                                    <span class="text-italic fz14 text-signal-black mr5">валюта</span>
-                                    <select class="select select_hover-green select_currency">
-                                        <option disabled selected>KZT</option>
-                                        <option>Пункт 1</option>
-                                        <option>Пункт 2</option>
-                                        <option>Пункт 3</option>
-                                    </select>
                                 </div>
                                 <div class="cabinet-employer-vacancy-grid__right">
                                     <input class="input input__gray-border input_hover-green input__active-green-border text-italic fz14 text-dark-dull-gray cabinet-employer-vacancy__salary-input"

@@ -139,7 +139,10 @@
 		color: $dark-dull-gray
 		opacity: 1
 
-.input_work-period-input
+.work-period-wrapper
+	flex-shrink: 0
+	width: 100%
+	margin-right: 15px
 	max-width: 140px
 
 .cabinet-employer-main_children-count
@@ -169,7 +172,7 @@
 	z-index: 1000
 	position: absolute
 	top: 200%
-	right: 25%
+	right: 0
 	background-color: $pigeon-blue
 	max-width: 320px
 	width: 100%
@@ -573,11 +576,11 @@
 	flex-shrink: 0
 	flex-basis: 0
 	.jq-selectbox__select
-		padding-left: 20px
+		padding-left: 15px
 		display: flex
 		justify-content: space-between
 	.jq-selectbox__dropdown
-		padding-left: 20px
+		padding-left: 15px
 		&::after
 			content: none
 			//right: 20px
@@ -586,11 +589,11 @@
 
 .cabinet-employer-main__year
 	.jq-selectbox__select
-		padding-left: 20px
+		padding-left: 15px
 		display: flex
 		justify-content: space-between
 	.jq-selectbox__dropdown
-		padding-left: 20px
+		padding-left: 15px
 		&::after
 			content: none
 		//right: 20px
@@ -602,13 +605,18 @@
 	flex-shrink: 0
 	flex-basis: 0
 	.jq-selectbox__select
-		padding-left: 20px
+		padding-left: 15px
 		display: flex
 		justify-content: space-between
 	.jq-selectbox__dropdown
-		padding-left: 20px
+		padding-left: 15px
 		&::after
 			right: 10px
+
+.children-count-wrapper
+	margin-bottom: 10px
+	&:last-child
+		margin-bottom: 0
 
 .cabinet-input-title
 	width: 160px
