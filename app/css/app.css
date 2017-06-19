@@ -211,7 +211,7 @@ button {
 
 .button_save-changes {
   padding: 0 50px;
-  min-height: 40px;
+  height: 40px;
   display: inline-flex;
   align-items: center;
 }
