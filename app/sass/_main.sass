@@ -58,6 +58,10 @@ button
 .section__body-without-subheader
 	background: linear-gradient(to bottom, #cecece 0%, #f9f9f9 10%, #c0c0c0 95%, #9f9f9f 100%)
 
+.section__body-settings
+	background: linear-gradient(to bottom, #ffffff, #8f8f8f)
+	box-shadow: inset 0 0 50px #d0d0d0
+
 .container
 	max-width: 1500px
 	margin: 0 auto
@@ -171,6 +175,14 @@ button
 	&:hover
 		background-color: $forest-green
 		color: $white
+
+.button_empty-green
+	border: 1px solid #646464
+	color: #646464
+	background: transparent
+	&:hover
+		background: #646464
+		color: #FFFFFF
 
 .button_empty-white
 	border: 1px solid $white
@@ -309,8 +321,14 @@ button
 	height: 30px
 	width: 100%
 
+.input__transparent
+	background-color: transparent
+
 .input__gray-border
 	border: 1px solid #b5b5b5
+
+.input__dark-gray-border
+	border: 1px solid #a1a1a1
 
 .input__active-green-border
 	&:focus, :active
@@ -850,17 +868,48 @@ ol
 	cursor: pointer
 
 .checkbox-switcher
-	//.checkbox-switcher_span-active
-	//	display: none
-	//.checkbox-switcher_span-inactive
-	//	display: inline-block
-
 	.checked
 		&.checkbox-switcher_span-active
 			display: inline-block
 	.checked
 		&.checkbox-switcher_span-inactive
 			display: none
+
+.round-checkbox
+	display: inline-flex
+	align-items: flex-start
+	.js-destroy-form-styler
+		display: none
+	.checkbox__div
+		position: relative
+		cursor: pointer
+		width: 14px
+		height: 14px
+		border-radius: 50%
+		border: 1px solid #616161
+		margin-right: 5px
+		margin-top: 3px
+	input[type=checkbox]:checked
+		& + .checkbox__div
+			&::after
+				content: ''
+				position: absolute
+				width: 8px
+				height: 8px
+				background-color: $forest-green
+				border-radius: 50%
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+.round-checkbox_blue
+	input[type=checkbox]:checked
+		& + .checkbox__div
+			&::after
+				background-color: $pigeon-blue
+
+.settings-head-item
+	width: 250px
 
 .add-vacancy
 	position: relative

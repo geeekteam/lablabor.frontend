@@ -21,19 +21,19 @@
 			&:before
 				+sprite(arrow-down)
 
-.fri_facebook
+.fri_facebook, .settings-network-facebook
 	+sprite(facebook)
 
-.fri_google
+.fri_google, .settings-network-google
 	+sprite(google)
 
-.fri_instagram
+.fri_instagram, .settings-network-instagram
 	+sprite(instagram)
 
-.fri_twitter
+.fri_twitter, .settings-network-twitter
 	+sprite(twitter)
 
-.fri_vkontakte
+.fri_vkontakte, .settings-network-vkontakte
 	+sprite(vkontakte)
 
 .fri_vkontakte-green
@@ -50,6 +50,35 @@
 
 .fri_facebook-green
 	+sprite(facebook-green)
+
+.settings-network-facebook
+	+sprite(settings-network-facebook)
+	&:hover
+		+sprite(facebook-green)
+
+.settings-network-google
+	+sprite(settings-network-google)
+	&:hover
+		+sprite(google-green)
+
+.settings-network-instagram
+	+sprite(settings-network-instagram)
+	&:hover
+		+sprite(instagram-green)
+
+.settings-network-twitter
+	+sprite(settings-network-twitter)
+	&:hover
+		+sprite(twitter-green)
+
+.settings-network-vkontakte
+	+sprite(settings-network-vkontakte)
+	&:hover
+		+sprite(vkontakte-green)
+
+.settings-network-facebook
+	&:hover
+		+sprite(facebook-green)
 
 .fri_logo-footer
 	+sprite(logo-footer)
@@ -92,7 +121,6 @@
 		& + .jq-checkbox__div
 			&:after
 				opacity: 1
-
 
 .fri_resume
 	+sprite(resume)

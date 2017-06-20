@@ -573,6 +573,27 @@ var YOURAPPNAME = (function () {
         });
     };
 
+    YOURAPPNAME.prototype.settingsPasswordTrigger = function () {
+        var triggerPasswordSettings = $('.jq-settings-password-trigger'),
+            passwordSettings = $('.jq-settings-password'),
+            triggerSocialSettings = $('.jq-settings-binding-trigger'),
+            bindingSettings = $('.jq-settings-binding');
+        triggerPasswordSettings.click(function () {
+            if (passwordSettings.hasClass('hidden'))
+                passwordSettings.removeClass('hidden');
+            else
+                passwordSettings.addClass('hidden');
+        });
+
+        triggerSocialSettings.click(function () {
+            if (bindingSettings.hasClass('hidden'))
+                bindingSettings.removeClass('hidden');
+            else
+                bindingSettings.addClass('hidden');
+        })
+
+    };
+
     return YOURAPPNAME;
 
 })();
@@ -651,6 +672,8 @@ app.appLoad('full', function (e) {
         app.vacancyTrigger();
 
         app.vacancyHints();
+
+        app.settingsPasswordTrigger();
 
     }
 );

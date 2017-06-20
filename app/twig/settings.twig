@@ -1,0 +1,151 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Настройки учётной записи{% endblock %}
+
+{% set auth = 'true' %}
+{% set mobile = 'false' %}
+{% set page_clear = 'false' %}
+
+{% block content %}
+
+    <div class="section section__body-settings pt75 pb45">
+        <div class="container container_1140">
+            <div class="settings">
+                <div class="settings__title fz24 text-dark-dull-gray text-medium text-uppercase">
+                    Настройки учётной записи
+                </div>
+                <div class="settings__subtitle text-light fz18 text-signal-black text-uppercase">Личные данные</div>
+                <div class="settings-password">
+                    <div class="settings-password__head">
+                        <div class="settings-head-item">
+                            <span class="fz14 text-italic text-signal-black">Пароль</span>
+                        </div>
+                        <div class="settings-head-item text-center">
+                            <span class="fz14 text-italic text-signal-black">Последнее обновление: 30.01.2017</span>
+                        </div>
+                        <div class="settings-head-item text-right">
+                            <span class="fz14 text-italic text-green text-underline cursor-pointer jq-settings-password-trigger">Изменить пароль</span>
+                        </div>
+                    </div>
+                    <form class="settings-password__body hidden jq-settings-password" action="#">
+                        <div class="grid mb15">
+                            <div class="settings-password__left-item">
+                                <span class="text-italic fz14 text-signal-black">Текущий пароль</span>
+                            </div>
+                            <div class="settings-password__right-item">
+                                <input class="input input__dark-gray-border input__active-green-border input__transparent" type="password">
+                            </div>
+                        </div>
+                        <div class="grid mb15">
+                            <div class="settings-password__left-item">
+                                <span class="text-italic fz14 text-signal-black">Новый пароль</span>
+                            </div>
+                            <div class="settings-password__right-item">
+                                <input class="input input__dark-gray-border input__active-green-border input__transparent" type="password">
+                            </div>
+                        </div>
+                        <div class="grid mb25">
+                            <div class="settings-password__left-item">
+                                <span class="text-italic fz14 text-signal-black">Повторите пароль</span>
+                            </div>
+                            <div class="settings-password__right-item">
+                                <input class="input input__dark-gray-border input__active-green-border input__transparent" type="password">
+                            </div>
+                        </div>
+                        <div class="settings-password__buttons">
+                            <span class="button button_green settings__button">Сохранить</span>
+                            <span class="button button_empty-green settings__button">Отменить</span>
+                        </div>
+                    </form>
+                </div>
+                <form class="settings-options" action="#">
+                    <div class="settings-options__head">
+                        <div class="settings-head-item">
+                            <span class="fz14 text-italic text-signal-black">Привязанные соцсети</span>
+                        </div>
+                        <div class="settings-section-networks settings-head-item flex-centered">
+                            <i class="fri cursor-pointer mr15 settings-network-facebook"></i>
+                            <i class="fri cursor-pointer mr15 settings-network-google"></i>
+                            <i class="fri cursor-pointer mr15 settings-network-twitter"></i>
+                            <i class="fri cursor-pointer mr15 settings-network-instagram"></i>
+                            <i class="fri cursor-pointer settings-network-vkontakte"></i>
+                        </div>
+                        <div class="settings-head-item text-right">
+                            <span class="fz14 text-italic text-green text-underline cursor-pointer jq-settings-binding-trigger">Изменить привязку</span>
+                        </div>
+                    </div>
+                    <div class="settings-social__body jq-settings-binding hidden">
+                        <div class="grid mb15">
+                            <i class="settings-social__icon fri fri_facebook"></i>
+                            <span class="settings-social__bindings">Нет привязанной сети</span>
+                            <span class="settings-social__action settings-social__action-bind">Привязать</span>
+                        </div>
+                        <div class="grid mb15">
+                            <i class="settings-social__icon fri fri_google-green"></i>
+                            <span class="settings-social__bindings">kakoi-to-e-mail@gmail.com</span>
+                            <span class="settings-social__action settings-social__action-delete">Удалить</span>
+                        </div>
+                        <div class="grid mb15">
+                            <i class="settings-social__icon fri fri_instagram"></i>
+                            <span class="settings-social__bindings">Нет привязанной сети</span>
+                            <span class="settings-social__action settings-social__action-bind">Привязать</span>
+                        </div>
+                        <div class="grid mb15">
+                            <i class="settings-social__icon fri fri_twitter"></i>
+                            <span class="settings-social__bindings">Нет привязанной сети</span>
+                            <span class="settings-social__action settings-social__action-bind">Привязать</span>
+                        </div>
+                        <div class="grid">
+                            <i class="settings-social__icon fri fri_vkontakte"></i>
+                            <span class="settings-social__bindings">Нет привязанной сети</span>
+                            <span class="settings-social__action settings-social__action-bind">Привязать</span>
+                        </div>
+                    </div>
+                    <div class="settings-options__body">
+                        <p class="text-light fz18 text-signal-black text-uppercase mb20">Рассылка</p>
+                        <div class="display-block mb15">
+                            <label class="round-checkbox">
+                                <input class="js-destroy-form-styler" type="checkbox">
+                                <div class="checkbox__div"></div>
+                                <span class="fz14 text-dark-dull-gray text-italic cursor-pointer">Новости сайта и рекламная информация</span>
+                            </label>
+                        </div>
+                        <div class="display-block mb15">
+                            <label class="round-checkbox">
+                                <input class="js-destroy-form-styler" type="checkbox">
+                                <div class="checkbox__div"></div>
+                                <span class="fz14 text-dark-dull-gray text-italic cursor-pointer">Извещение о просмотре Вашей вакансии</span>
+                            </label>
+                        </div>
+                        <div class="display-block mb15">
+                            <label class="round-checkbox">
+                                <input class="js-destroy-form-styler" type="checkbox">
+                                <div class="checkbox__div"></div>
+                                <span class="fz14 text-dark-dull-gray text-italic cursor-pointer">Извещение о приглашении (об отклике)</span>
+                            </label>
+                        </div>
+                        <div class="display-block mb30">
+                            <label class="round-checkbox">
+                                <input class="js-destroy-form-styler" type="checkbox">
+                                <div class="checkbox__div"></div>
+                                <span class="fz14 text-dark-dull-gray text-italic cursor-pointer">Еще какой-нибудь пункт</span>
+                            </label>
+                        </div>
+                        <p class="text-light fz18 text-signal-black text-uppercase mb20">Практика</p>
+                        <div class="display-block mb30">
+                            <label class="round-checkbox round-checkbox_blue">
+                                <input class="js-destroy-form-styler" type="checkbox">
+                                <div class="checkbox__div"></div>
+                                <span class="fz14 text-dark-dull-gray text-italic cursor-pointer">Активировать вкладку “Практика” в личном кабинете</span>
+                            </label>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="button button_green settings-network__button centered">Сохранить</span>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
