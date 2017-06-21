@@ -324,6 +324,7 @@
 
 <div class="popup-wrapper js-popup" data-popup="delete-vacancy">
     <div class="delete-vacancy">
+        <div class="close-popup popup__close js-close-popup"></div>
         <p class="fz18 text-light text-uppercase text-dark-dull-gray mb5">Удаление вакансии</p>
         <p class="fz18 text-medium text-uppercase text-dark-dull-gray mb25">Название удаляемой вакансии</p>
         <p class="text-italic fz18 text-dark-dull-gray mb30 text-center">Вы действительно хотите удалить вакансию без возможности автоматического восстановления?</p>
@@ -331,5 +332,14 @@
             <span class="delete-vacancy__button button button_green mr30 text-center">Да</span>
             <span class="delete-vacancy__button button button_blue text-center js-close-popup">Нет</span>
         </div>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="save-settings">
+    <div class="save-settings">
+        <div class="close-popup popup__close js-close-popup save-settings__close"></div>
+        <p class="fz16 text-light text-uppercase text-center mb30 text-signal-black">Уведомление</p>
+        <p class="fz18 text-medium text-uppercase text-center mb50 text-signal-black">Обновления по кабинету сохранены!</p>
+        <p><span class="button button_green save-settings__button js-close-popup">Закрыть</span></p>
     </div>
 </div>
