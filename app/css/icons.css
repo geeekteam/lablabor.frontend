@@ -57,10 +57,30 @@
   height: 30px;
   width: 30px;
 }
+.fri_facebook.active, .settings-network-facebook.active {
+  background-image: url('../images/icons-sa7a51ed212.png');
+  background-position: 0 -822px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
 
 .fri_google, .settings-network-google {
   background-image: url('../images/icons-sa7a51ed212.png');
   background-position: 0 -980px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+.fri_google.active, .settings-network-google.active {
+  background-image: url('../images/icons-sa7a51ed212.png');
+  background-position: 0 -945px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -79,6 +99,16 @@
   height: 30px;
   width: 30px;
 }
+.fri_instagram.active, .settings-network-instagram.active {
+  background-image: url('../images/icons-sa7a51ed212.png');
+  background-position: 0 -1015px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
 
 .fri_twitter, .settings-network-twitter {
   background-image: url('../images/icons-sa7a51ed212.png');
@@ -90,10 +120,30 @@
   height: 30px;
   width: 30px;
 }
+.fri_twitter.active, .settings-network-twitter.active {
+  background-image: url('../images/icons-sa7a51ed212.png');
+  background-position: 0 -2847px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
 
 .fri_vkontakte, .settings-network-vkontakte {
   background-image: url('../images/icons-sa7a51ed212.png');
   background-position: 0 -3054px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+}
+.fri_vkontakte.active, .settings-network-vkontakte.active {
+  background-image: url('../images/icons-sa7a51ed212.png');
+  background-position: 0 -3019px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -188,7 +238,7 @@
   height: 30px;
   width: 30px;
 }
-.settings-network-google:hover {
+.settings-network-google:hover, .settings-network-google.active {
   background-image: url('../images/icons-sa7a51ed212.png');
   background-position: 0 -945px;
   background-repeat: no-repeat;
@@ -209,7 +259,7 @@
   height: 30px;
   width: 30px;
 }
-.settings-network-instagram:hover {
+.settings-network-instagram:hover, .settings-network-instagram.active {
   background-image: url('../images/icons-sa7a51ed212.png');
   background-position: 0 -1015px;
   background-repeat: no-repeat;
@@ -230,7 +280,7 @@
   height: 30px;
   width: 30px;
 }
-.settings-network-twitter:hover {
+.settings-network-twitter:hover, .settings-network-twitter.active {
   background-image: url('../images/icons-sa7a51ed212.png');
   background-position: 0 -2847px;
   background-repeat: no-repeat;
@@ -251,7 +301,7 @@
   height: 30px;
   width: 30px;
 }
-.settings-network-vkontakte:hover {
+.settings-network-vkontakte:hover, .settings-network-vkontakte.active {
   background-image: url('../images/icons-sa7a51ed212.png');
   background-position: 0 -3019px;
   background-repeat: no-repeat;
@@ -262,7 +312,7 @@
   width: 30px;
 }
 
-.settings-network-facebook:hover {
+.settings-network-facebook:hover, .settings-network-facebook.active {
   background-image: url('../images/icons-sa7a51ed212.png');
   background-position: 0 -822px;
   background-repeat: no-repeat;

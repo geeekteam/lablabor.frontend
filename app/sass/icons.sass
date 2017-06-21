@@ -23,18 +23,28 @@
 
 .fri_facebook, .settings-network-facebook
 	+sprite(facebook)
+	&.active
+		+sprite(facebook-green)
 
 .fri_google, .settings-network-google
 	+sprite(google)
+	&.active
+		+sprite(google-green)
 
 .fri_instagram, .settings-network-instagram
 	+sprite(instagram)
+	&.active
+		+sprite(instagram-green)
 
 .fri_twitter, .settings-network-twitter
 	+sprite(twitter)
+	&.active
+		+sprite(twitter-green)
 
 .fri_vkontakte, .settings-network-vkontakte
 	+sprite(vkontakte)
+	&.active
+		+sprite(vkontakte-green)
 
 .fri_vkontakte-green
 	+sprite(vkontakte-green)
@@ -58,26 +68,26 @@
 
 .settings-network-google
 	+sprite(settings-network-google)
-	&:hover
+	&:hover, &.active
 		+sprite(google-green)
 
 .settings-network-instagram
 	+sprite(settings-network-instagram)
-	&:hover
+	&:hover, &.active
 		+sprite(instagram-green)
 
 .settings-network-twitter
 	+sprite(settings-network-twitter)
-	&:hover
+	&:hover, &.active
 		+sprite(twitter-green)
 
 .settings-network-vkontakte
 	+sprite(settings-network-vkontakte)
-	&:hover
+	&:hover, &.active
 		+sprite(vkontakte-green)
 
 .settings-network-facebook
-	&:hover
+	&:hover, &.active
 		+sprite(facebook-green)
 
 .fri_logo-footer
