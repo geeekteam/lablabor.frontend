@@ -221,7 +221,7 @@ var YOURAPPNAME = (function () {
         };
 
         plugin.bindings = function () {
-            plugin.openPopupEl.on('click', function (e) {
+            $(_self.doc).on('click', options.currentElementClass, function (e) {
                 e.preventDefault();
                 var pop = $(this).attr('data-open-popup');
                 var popup = plugin.reachPopups.filter('[data-popup="' + pop + '"]');
@@ -231,7 +231,7 @@ var YOURAPPNAME = (function () {
                     plugin.openPopup(pop);
             });
 
-            plugin.closePopupEl.on('click', function (e) {
+            $(_self.doc).on('click', options.closePopupClass, function (e) {
                 e.preventDefault();
                 var pop;
                 if (this.hasAttribute('data-close-popup')) {
@@ -243,7 +243,7 @@ var YOURAPPNAME = (function () {
                 plugin.closePopup(pop);
             });
 
-            plugin.changePopupEl.on('click', function (e) {
+            $(_self.doc).on('click', options.changePopupClass, function (e) {
                 e.preventDefault();
                 var closingPop = $(this).attr('data-closing-popup');
                 var openingPop = $(this).attr('data-opening-popup');
@@ -332,7 +332,7 @@ var YOURAPPNAME = (function () {
                 var myCloseButton = $(this),
                     myBlock = myCloseButton.parent('.js-clone');
                 myBlock.remove();
-            })
+            });
             app.checkboxSwitcher();
             app.vacancyHints();
         });
