@@ -5426,7 +5426,7 @@ footer {
   font-size: 14px;
 }
 
-.save-settings {
+.save-settings, .save-cabinet {
   position: relative;
   max-width: 500px;
   width: 90%;
@@ -5449,6 +5449,18 @@ footer {
 .save-settings__close {
   top: -10px;
   right: -30px;
+}
+
+.save-cabinet__button {
+  margin-right: 20px;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+.save-cabinet__button:last-child {
+  margin-right: 0;
 }
 
 .lnh0 {
